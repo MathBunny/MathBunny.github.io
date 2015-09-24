@@ -343,7 +343,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 #home {
-	background: url(../images/cover.jpg);
+	background: url(../images/cover.jpg); /* CHANGE THIS: cover2.jpg */
 	background-color: #222;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
