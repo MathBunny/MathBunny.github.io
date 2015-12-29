@@ -1,5 +1,5 @@
 # Horatiu Lazu's Personal Website
-####The purpose of this website is to inform the public about what I love to do along with my accomplishments.
+> The goal of this website is to inform about what I love to do along with my accomplishments.
 
 ####Features:
 * Nice parallax scrolling
