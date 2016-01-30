@@ -6,14 +6,13 @@
 * Serves as an introduction to BOOTSTRAP
 * Appealing graphics
 * Provides links to software development sub-site
-* Provides 
+* Provides access to résumé 
 
 ####Known Issues:
-* Certain links are dead
 * Email form does not work
 
 ####Future Upgrades:
-* Add resumé
-* Implement more experience-emphasized content
+* Implement more experience-emphasized content (ex: langauges, technologies)
+* Update project list to include Newton Raphson
 
-#####Updated as of: December 28, 2015
+#####Updated as of: January 30, 2016
