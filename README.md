@@ -8,7 +8,7 @@
 * Provides relevant links
 * Provides access to résumé 
 
-####Software Development Sub-site (/software):
+####Software Development Sub-site:
 * Provides specific information about technical skills
 * Provides details about projects, including design and specifications
 * Material design inspiration
