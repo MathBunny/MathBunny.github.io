@@ -2,17 +2,23 @@
 > The goal of this website is to inform about what I love to do along with my accomplishments.
 
 ####Features:
-* Nice parallax scrolling
-* Serves as an introduction to BOOTSTRAP
-* Appealing graphics
-* Provides links to software development sub-site
+* Introduces who I am
+* Features nice and simple graphics
+* Fluid animations
+* Provides relevant links
 * Provides access to résumé 
+
+####Software Development Sub-site (/software):
+* Provides specific information about technical skills
+* Provides details about projects, including design and specifications
+* Material design inspiration
 
 ####Known Issues:
 * Email form does not work
 
 ####Future Upgrades:
-* Implement more experience-emphasized content (ex: langauges, technologies)
 * Update project list to include Newton Raphson
+* Complete software development subsite
+* Include .com and .ca with personal domain
 
-#####Updated as of: January 30, 2016
+#####Updated as of: March 17, 2016
