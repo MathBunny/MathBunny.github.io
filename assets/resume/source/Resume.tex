@@ -1,0 +1,291 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template 
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Lazu}{Horatiu}{ \urlstyle{same}\url{mathbunny.github.io} \\ \href{mailto:horatiulazu@gmail.com}{horatiulazu@gmail.com} | (647) 884 7053
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Waterloo}
+\descript{Bachelors of Computer Science}
+\location{Expected May 2021 | Waterloo, CA \\ Double-Degree BCS/BBA}
+\sectionsep
+
+\subsection{Wilfrid Laurier University}
+\descript{Bachelors of Business Administration}
+\location{Expected May 2021 | Waterloo, CA}
+\sectionsep
+
+%\descript{BS in Computer Science}
+%\location{Expected May 2014 | Ithaca, NY}
+%Conc. in Software Engineering \\
+%College of Engineering \\
+%Dean's List (All Semesters) \\
+%\location{ Cum. GPA: 3.92 / 4.0 \\
+%Major GPA: 3.94 / 4.0}
+%\sectionsep
+
+\subsection{William Lyon Mackenzie CI}
+\descript {Admitted Average: 96\%}
+\location{Grad. June 2016|  Toronto, CA}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Coursework}
+%\subsection{Graduate}
+%Advanced Machine Learning \\
+%Open Source Software Engineering \\
+%Advanced Interactive Graphics \\
+%Compilers + Practicum \\
+%Cloud Computing \\
+%\sectionsep
+
+%\subsection{Undergraduate}
+%Information Retrieval \\
+%Operating Systems \\
+%Artificial Intelligence + Practicum \\
+%Functional Programming \\
+%Computer Graphics + Practicum \\
+%{\footnotesize \textit{\textbf{(Research Asst. \& Teaching %Asst) }}} \\
+%Unix Tools and Scripting \\
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming Languages}
+\location{Experienced:}
+Java \textbullet{}  Turing \textbullet{} Visual Basic \textbullet{}
+Visual C\# \\ 
+\vspace{1mm}
+\location{Familiar:}
+Objective-C \textbullet{} C \textbullet{} Assembly 8085
+\sectionsep
+
+\subsection{Technologies}
+\location{Experienced:}
+exp4j \textbullet{}   Unity Engine \textbullet{} VEX \textbullet{} NXT \textbullet{} Arduino \textbullet{} Git 
+\textbullet{} Javadoc \textbullet{} hsa \textbullet{} \LaTeX\
+\\ 
+\vspace{1mm}
+\location{Familiar:}
+Objective-C \textbullet{} Assembly 8085 \textbullet{} Android \textbullet{} MySQL \textbullet{} HTML \textbullet{} CSS
+\sectionsep
+
+\subsection{Certifications}
+\textbullet{} Cisco IT Essentials\\
+\textbullet{} FIT Software Design and Development \\
+\textbullet{} FIT Network Systems and Operations \\
+\vspace{1mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+GitHub:// \href{https://github.com/MathBunny}{\custombold{MathBunny}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/horatiulazu}{\custombold{HoratiuLazu}} \\
+YouTube://  \href{https://www.youtube.com/user/SoftwareEngenius}{\custombold{SoftwareEngenius}} \\
+Strava://  \href{https://www.strava.com/athletes/6214103}{\custombold{@HoratiuLazu}} \\
+CodeForces://  \href{http://codeforces.com/profile/MathBunny}{\custombold{MathBunny}}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Computer Programming Club}
+\descript{| President }
+\location{September 2013 - Present | William Lyon Mackenzie CI}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Coordinate and organize lessons for club with over 100 members
+\item Created HTML/CSS website (tinyurl.com/mackenzie-cpt)
+\item Organized school-wide Hour of Code, over 140 participants
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Audio / Visuals Team}
+\descript{| President }
+\location{June 2014 – Present | William Lyon Mackenzie CI}
+\begin{tightemize}
+\item Coordinated, recruited and trained tech team for Mackenzie
+\item Setup for assemblies, school events and shows
+\item Designed HTML/CSS to request tech events, used by administration and clubs
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Robotics Team}
+\descript{| President}
+\location{September 2015 – Present | William Lyon Mackenzie CI}
+\begin{tightemize}
+\item Lead team to construct sumo-bots for MSEO (Middle School Science Olympics)
+\item Prepared event, promoted Robotics, Engineering and Programming
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Math Club}
+\descript{| Executive}
+\location{September 2015 - Present | William Lyon Mackenzie CI}
+\begin{tightemize}
+\item Helped create lessons, communications, made HTML/CSS website
+\item Website led to rise in contest participation rates, up to 100\%
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Newton Raphson Approximation Utility}
+\descript{| Java, exp4j}
+\location{October 2015 – January 2016 | GitHub Available}
+Application that finds the root in any algebraic expression, using Newton's Approximation. Parses expressions using exp4j, input error-trapped through UI
+\sectionsep
+
+
+\runsubsection{Synthetic Division Calculator}
+\descript{| Java}
+\location{Mar 2015 – April 2015 | GitHub Available}
+Application that can compute the division of any set of polynomial expressions. Shows full solution in JTable, sorts and formats expressions
+\sectionsep
+
+\runsubsection{Basilisk}
+\descript{| Unity Engine, Javascript, C\#}
+\location{February 2013 – September 2014}
+3D snake game with various game-modes including local multiplayer up to 6 players. Mobile optimized (iOS, Android), creative menus, works on web
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Additional Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Additional Side-Projects} 
+
+\begin{tabular}{rll}
+2015 	& Personal Website    & Designed with HTML/CSS (software.horatiulazu.paperplane.io)\\
+2015 	& Various Robots    & Maze Traverse, Sumobots with NXT, VEX \& Arduino\\
+2014   & Atomic Smasher   & Particle simulation game made in Java\\
+2014   &  Tower of Hanoi  & Classic game of Tower of Hanoi made in Java\\
+2013   &  Bunny OS   & Application that mimicks an operating system, with VB\\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Computing Contests} 
+\begin{tabular}{rll}
+2015	     & Top-50 Nationally  & Canadian Computing Competition (Senior)\\
+2014	     & First Place  & Canadian Computing Competition (Junior)\\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Societies} 
+
+%\begin{tabular}{rll}
+%2014 	& top 12\%ile    & Tau Beta Pi Engineering Honor %Society\\
+%2014   & National   & The Global Leadership and Education %Forum (tGELF)\\
+%2012   &  National  & Golden Key International Honor Society\\
+%%2012   &  National   & National Society of Collegiate Scholars\\
+%\end{tabular}
+%\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
