@@ -7,6 +7,7 @@
 * Fluid animations
 * Provides relevant links
 * Provides access to résumé 
+* Custom domain => `horatiulazu.ca`
 
 ####Software Development Sub-site:
 * Provides specific information about technical skills
@@ -19,6 +20,5 @@
 ####Future Upgrades:
 * Update project list to include Newton Raphson
 * Complete software development subsite
-* Include .com and .ca with personal domain
 
 #####Updated as of: March 17, 2016
