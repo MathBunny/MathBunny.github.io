@@ -21,5 +21,6 @@
 * Update project list to include Newton Raphson
 * Complete software development subsite
 * Implement `software.horatiulazu.ca` redirect
+* Add images for the scrolling newsfeed
 
 #####Updated as of: March 17, 2016
