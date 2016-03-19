@@ -9,7 +9,7 @@
 * Provides access to résumé 
 * Custom domain => `horatiulazu.ca`
 
-####Software Development Sub-site:
+####Software Development Subsite:
 * Provides specific information about technical skills
 * Provides details about projects, including design and specifications
 * Material design inspiration
@@ -20,5 +20,6 @@
 ####Future Upgrades:
 * Update project list to include Newton Raphson
 * Complete software development subsite
+* Implement `software.horatiulazu.ca` redirect
 
 #####Updated as of: March 17, 2016
