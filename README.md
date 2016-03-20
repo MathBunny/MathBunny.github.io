@@ -7,7 +7,9 @@
 * Fluid animations
 * Provides relevant links
 * Provides access to résumé 
-* Custom domain => `horatiulazu.ca`
+* Custom domain: `horatiulazu.ca`
+* Features metatags and follows SEO principles
+* Reduced CSS footprint by using minimize
 
 ####Software Development Subsite:
 * Provides specific information about technical skills
@@ -22,6 +24,6 @@
 * Complete software development subsite
 * Implement `software.horatiulazu.ca` redirect
 * Add images for the scrolling newsfeed
-* Use minify to reduce footprint on HTML/CSS/JS files
+* Use minify to reduce footprint on HTML/JS files
 
 #####Updated as of: March 17, 2016
