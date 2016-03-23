@@ -1,7 +1,0 @@
-<form method="post">
-	{% csrf_token %}
-	{{ form }}
-	<div class="form-actions">
-	  <button type="submit">Send</button>
-	</div>
-</form>
