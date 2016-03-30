@@ -29,12 +29,12 @@
 			<li><a href="pyforms.html"><span class="blue-text text-lighten-1">pyForms</span></a></li>
 			<li><a href="essay.html"><span class="blue-text text-lighten-1">Essay Generator</span></a></li>
 			<li><a href="mario.html"><span class="blue-text text-lighten-1">Mario MyCreation</span></a></li>
-			<li><a href="projects/address.html"><span class="blue-text text-lighten-1">AddressBook</span></a></li>
-			<li><a href="projects/miscellaneous.html"><span class="blue-text text-lighten-1">Miscellaneous </span></a></li>
+			<li><a href="address.html"><span class="blue-text text-lighten-1">AddressBook</span></a></li>
+			<li><a href="miscellaneous.html"><span class="blue-text text-lighten-1">Miscellaneous </span></a></li>
 		</ul>
 		<nav class="blue darken-2">
 			<div class="navbar-wrapped container">
-				<a href="#" class="brand-logo"> Horatiu Lazu </a>
+				<a href="horatiulazu.ca" class="brand-logo"> Horatiu Lazu </a>
 				<ul class = "right">
 					<li> <a href="../index.html"> Home </a> </li>
 					<li> <a href="../skills/index.html"> Skills </a> </li>
@@ -59,7 +59,7 @@
 					<!-- Add text here about me -->
 					<div class="card-panel">
 						<h5 class="blue-text"> What does the program do?</h5>
-						<p>The purpose of this application is to allow a user to find the quotient when dividing two polynomials - one by another. This application uses a GUI to do so, and uses a JTable to illustrate Ruffini's Law at work.</p>
+						<p>The purpose of this program is to allow a user to find the quotient when dividing two polynomials - one by another, along with its remainder. The program divides using the Synthetic Division algorithm. This application uses a GUI to do so, and uses a JTable to illustrate Ruffini's Law at work. The program also has a Console version that does not need a GUI to run, so it can be executed in terminal with <code>java SyntheticConsole.java</code> and it outputs everything to the output stream.</p>
 					</div>
 				</div>
 			</div>
@@ -70,7 +70,7 @@
 					<!-- Add text here about me -->
 					<div class="card">
 						<div class="card-image">
-							<img src="https://camo.githubusercontent.com/cb0a54e641867b830cd9925b13e90a7a90edd010/687474703a2f2f736f6674776172652e686f72617469756c617a752e7061706572706c616e652e696f2f53796e7468657469634469766973696f6e332e706e67">
+							<img src="../images/syntheticdivision.png">
 							<!--<span class="card-title black-text">Main Screen</span> -->
 						</div>
 						<div class="card-content">
@@ -103,20 +103,19 @@
 						<h5 class="blue-text"> Features:</h5>
 						<p>The following features are present as of version 1.2:</p>
 						 <div class="collection">
-							<a href="" class="collection-item black-text"> Develops chart demonstrating synthetic division (with coefficients and consideration of monic expressions)</a>
+							<a href="" class="collection-item black-text">Develops chart demonstrating synthetic division (with coefficients and consideration of monic expressions)</a>
 							<a href="" class="collection-item black-text">Can divide any two polynomials regardless of power, although reasonable division (aka dividend's degree greater divisor's degree and degrees less than 1000 recommended) </a>
 							<a href="" class="collection-item black-text">Chart automatically resizes based off of coefficients </a>
 							<a href="" class="collection-item black-text">Two chart design, in two perspectives, with one output via Console and another via JTable to ensure user can comprehend data </a>
 							<a href="" class="collection-item black-text">Ability to export table via File IO (*.txt) </a>
 							<a href="" class="collection-item black-text">Analyzes table, and retrieves resultant ƒ(x) representing quotient and remainder </a>
 							<a href="" class="collection-item black-text">Easy to use graphical user interface </a>
-							<a href="" class="collection-item black-text">Identifies terms, sorts terms using built-in time complexity: O(n) = nlog(n) Collections.sort() by extending Comparable class </a>
+							<a href="" class="collection-item black-text">Identifies terms, sorts terms using built-in time complexity: O(n) = nlog(n) Collections.sort() by extending Comparable class</a>
 							<a href="" class="collection-item black-text">Automatically fills terms if required to ensure proper synthetic division occurs using filler algorithm </a>
-							<a href="" class="collection-item black-text">Dynamically adjusts array size using ArrayList </a>
+							<a href="" class="collection-item black-text">Dynamically adjusts array size using ArrayList Datastructure</a>
 							<a href="" class="collection-item black-text">OOP (Object Oriented Programming) Paradigm designed to encapsulate data and be upgradable, usable through Console </a>
 							<a href="" class="collection-item black-text">Efficient algorithm </a>
-							<a href="" class="collection-item black-text">Developed in Java (multi-platform) </a>
-							<a href="" class="collection-item black-text">JavaDoced Index files for program documentation</a>
+							<a href="" class="collection-item black-text">JavaDoc'ed Index files for program documentation</a>
 
 						</div>
 					</div>
@@ -138,10 +137,7 @@
 			</div>
 		</div>
 
-		
-
-			
-				<!--Import jQuery before materialize.js-->
+		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="../js/materialize.min.js"></script>
 	</body>
@@ -150,7 +146,9 @@
 			<div class = "container">
 				<div class="footer-copyright">
 					Copyright 2016 Horatiu Lazu
+					<iframe style = "float:right;" src="https://ghbtns.com/github-btn.html?user=MathBunny&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 				</div>
+
 			</div>
 		</footer>
 	</footer>
