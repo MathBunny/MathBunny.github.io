@@ -47,7 +47,7 @@
 		
 		<div class="intro blue lighten-2 z-depth-1">
 			<center>
-				<h3 class="grey-text text-lighten-5">Synthetic Division Calculator</h1>
+				<h3 class="grey-text text-lighten-5">Newton Raphson Approximation</h1>
 				<!-- <h5 class="grey lighten-4 grey-text text-darken-1"></h5> -->
 			</center>
 		</div>
@@ -59,7 +59,7 @@
 					<!-- Add text here about me -->
 					<div class="card-panel">
 						<h5 class="blue-text"> What does the program do?</h5>
-						<p>The purpose of this program is to allow a user to find the quotient when dividing two polynomials - one by another, along with its remainder. The program divides using the Synthetic Division algorithm. This application uses a GUI to do so, and uses a JTable to illustrate Ruffini's Law at work. The program also has a Console version that does not need a GUI to run, so it can be executed in terminal with <code>java SyntheticConsole.java</code> and it outputs everything to the output stream.</p>
+						<p>The purpose of this program (made in Java using exp4j framework) is to identify a root of an algebric expression using Newton's Approximation. Newton's Approximation is an algorithm that uses calculus and tangency of curves to quickly find roots. The program allows the user to input expressions using a GUI, and error traps input as it is being inputted (for example invalid bracket proportions).</p>
 					</div>
 				</div>
 			</div>
@@ -70,17 +70,17 @@
 					<!-- Add text here about me -->
 					<div class="card">
 						<div class="card-image">
-							<img src="../images/SyntheticDivision.png">
+							<img src="../images/newtonraphson.png">
 						</div>
 						<div class="card-content">
 							
-								<p>This is the main screen of the program.</p>
+								<p>This is the main screen of the program, with the solution window.</p>
 						</div>
 						<!-- <div class="card-action">
 							<a href="#">Learn more</a>
 						</div> -->
 					</div>
-
+					<!--
 					<div class="card">
 						<div class="card-image">
 							<img src="../images/SyntheticAbout.png">
@@ -89,10 +89,7 @@
 							
 								<p>This is the about screen.</p>
 						</div>
-						<!-- <div class="card-action">
-							<a href="#">Learn more</a>
-						</div> -->
-					</div>
+					</div> -->
 				</div>
 
 				<div class="col l6">
@@ -101,19 +98,15 @@
 						<h5 class="blue-text"> Features:</h5>
 						<p>The following features are present as of version 1.2:</p>
 						 <div class="collection">
-							<a href="" class="collection-item black-text">Develops chart demonstrating synthetic division (with coefficients and consideration of monic expressions)</a>
-							<a href="" class="collection-item black-text">Can divide any two polynomials regardless of power, although reasonable division (aka dividend's degree greater divisor's degree and degrees less than 1000 recommended) </a>
-							<a href="" class="collection-item black-text">Chart automatically resizes based off of coefficients </a>
-							<a href="" class="collection-item black-text">Two chart design, in two perspectives, with one output via Console and another via JTable to ensure user can comprehend data </a>
-							<a href="" class="collection-item black-text">Ability to export table via File IO (*.txt) </a>
-							<a href="" class="collection-item black-text">Analyzes table, and retrieves resultant ƒ(x) representing quotient and remainder </a>
+							<a href="" class="collection-item black-text">Nice interface to input equation (inspired by Apple's calculator design)</a>
+							<a href="" class="collection-item black-text">All input is error trapped right when entered by the user </a>
+							<a href="" class="collection-item black-text">User's estimate is error-trapped to prevent guessing when the tangent is equal to zero </a>
+							<a href="" class="collection-item black-text">Can compute over 1,000 iterations of Newton's method </a>
+							<a href="" class="collection-item black-text">Supports various different trignometric functions </a>
+							<a href="" class="collection-item black-text">Uses OOP (Object Oriented Programming) principles</a>
 							<a href="" class="collection-item black-text">Easy to use graphical user interface </a>
-							<a href="" class="collection-item black-text">Identifies terms, sorts terms using built-in time complexity: O(n) = nlog(n) Collections.sort() by extending Comparable class</a>
-							<a href="" class="collection-item black-text">Automatically fills terms if required to ensure proper synthetic division occurs using filler algorithm </a>
-							<a href="" class="collection-item black-text">Dynamically adjusts array size using ArrayList Datastructure</a>
-							<a href="" class="collection-item black-text">OOP (Object Oriented Programming) Paradigm designed to encapsulate data and be upgradable, usable through Console </a>
-							<a href="" class="collection-item black-text">Efficient algorithm </a>
-							<a href="" class="collection-item black-text">JavaDoc'ed Index files for program documentation</a>
+							<a href="" class="collection-item black-text">Supports various scientific constants (ex: Pi)</a>
+							<a href="" class="collection-item black-text">Program Documentation</a>
 
 						</div>
 					</div>
