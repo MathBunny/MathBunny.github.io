@@ -43,16 +43,15 @@
 					<li> <a href="../about/index.html"> About </a> </li>
 				</ul>
 			</div>
-
 		</nav>
+		
 		<div class="intro blue lighten-2 z-depth-1" style="margin-top: -21.5px;
   margin-bottom: 0px;">
 			<center>
-				<h3 class="grey-text text-lighten-5">Synthetic Division Calculator</h1>
+				<h3 class="grey-text text-lighten-5">Tower of Hanoi</h1>
 				<!-- <h5 class="grey lighten-4 grey-text text-darken-1"></h5> -->
 			</center>
 		</div>
-		
 
 
 		<div class="container">
@@ -61,7 +60,7 @@
 					<!-- Add text here about me -->
 					<div class="card-panel">
 						<h5 class="blue-text"> What does the program do?</h5>
-						<p>The purpose of this program is to allow a user to find the quotient when dividing two polynomials - one by another, along with its remainder. The program divides using the Synthetic Division algorithm. This application uses a GUI to do so, and uses a JTable to illustrate Ruffini's Law at work. The program also has a Console version that does not need a GUI to run, so it can be executed in terminal with <code>java SyntheticConsole.java</code> and it outputs everything to the output stream.</p>
+						<p>Tower of Hanoi is a game involving moving a tower one piece at a time, with the restriction that you cannot place a larger piece over a smaller piece and that there are only three places where you can put the pieces. This game is developed in Java, and uses the hsa Console library for outputting graphics.</p>
 					</div>
 				</div>
 			</div>
@@ -72,24 +71,23 @@
 					<!-- Add text here about me -->
 					<div class="card">
 						<div class="card-image">
-							<img src="../images/SyntheticDivision.png">
+							<img src="../images/TowerOfHanoiGameplay.png">
 						</div>
 						<div class="card-content">
 							
-								<p>This is the main screen of the program, featuring a table that demonstrates Ruffini's Law and two text fields that allow the user to input the polynomial (in any term order).</p>
+								<p>This is the game in hard difficulty.</p>
 						</div>
 						<!-- <div class="card-action">
 							<a href="#">Learn more</a>
 						</div> -->
 					</div>
-
 					<div class="card">
 						<div class="card-image">
-							<img src="../images/SyntheticAbout.png">
+							<img src="../images/TowerOfHanoiSplashscreen.png">
 						</div>
 						<div class="card-content">
 							
-								<p>This is a simple about screen.</p>
+								<p>This is splashscreen, showing a solution of a simple Tower of Hanoi game with three pieces.</p>
 						</div>
 						<!-- <div class="card-action">
 							<a href="#">Learn more</a>
@@ -101,32 +99,33 @@
 					<!-- Add text here about me -->
 					<div class="card-panel">
 						<h5 class="blue-text"> Features:</h5>
-						<p>The following features are present as of version 1.2:</p>
+						<p>The following features are present as of the latest release:</p>
 						 <div class="collection">
-							<a href="" class="collection-item black-text">Develops chart demonstrating synthetic division (with coefficients and consideration of monic expressions)</a>
-							<a href="" class="collection-item black-text">Can divide any two polynomials regardless of power, although reasonable division (aka dividend's degree greater divisor's degree and degrees less than 1000 recommended) </a>
-							<a href="" class="collection-item black-text">Ability to export table via File IO (*.txt) </a>
-							<a href="" class="collection-item black-text">Analyzes table, and retrieves resultant ƒ(x) representing quotient and remainder </a>
-							<a href="" class="collection-item black-text">Easy to use graphical user interface </a>
-							<a href="" class="collection-item black-text">Identifies terms, sorts terms using built-in time complexity: O(n) = nlog(n) Collections.sort() by extending Comparable class</a>
-							<a href="" class="collection-item black-text">Automatically fills terms if required to ensure proper synthetic division occurs using filler algorithm </a>
-							<a href="" class="collection-item black-text">OOP (Object Oriented Programming) Paradigm designed to encapsulate data and be upgradable, usable through Console </a>
-							<a href="" class="collection-item black-text">Efficient algorithm </a>
-							<a href="" class="collection-item black-text">JavaDoc'ed Index files for program documentation</a>
+						 	<a href="" class="collection-item black-text">Creative splashscreen animation (uses threads)</a>
+						 	<a href="" class="collection-item black-text">Integrated high-scores with creative design (pyramid in the formation of a tower)</a>
+							<a href="" class="collection-item black-text">Includes 3 levels, easy medium and hard</a>
+							<a href="" class="collection-item black-text">Very efficient algorithm (core-game can be played in only 90 lines of code!)</a>
+							<a href="" class="collection-item black-text">Tower pieces are drawn with drawPolygon method within hsa Console, and is relative in sizing</a>
+							<a href="" class="collection-item black-text">Menus are responsive to user input</a>
+
+							<a href="" class="collection-item black-text">Includes ability to save game and continue later </a>
+							<a href="" class="collection-item black-text">Save and continue files are verified for corruptedness upon loading</a>
+							<a href="" class="collection-item black-text">All input error-trapped through Console </a>
+							<a href="" class="collection-item black-text">Fully documented </a>
 
 						</div>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
-		<!-- GH Links -->
-		<!-- https://github.com/MathBunny/synthetic-division-calculator/subscription -->
-		<!--<div class="container">
+		<!--
+		<div class="container">
 			<div class = "row">
+				
 				<iframe src="https://ghbtns.com/github-btn.html?user=MathBunny&repo=synthetic-division-calculator&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+				
 				<iframe src="https://ghbtns.com/github-btn.html?user=MathBunny&repo=synthetic-division-calculator&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+				
 				<iframe src="https://ghbtns.com/github-btn.html?user=MathBunny&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
 			</div>
@@ -141,7 +140,7 @@
 			<div class = "container">
 				<div class="footer-copyright">
 					Copyright 2016 Horatiu Lazu
-					<!-- <iframe style = "float:right;" src="https://ghbtns.com/github-btn.html?user=MathBunny&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe> -->
+					<!--<iframe style = "float:right;" src="https://ghbtns.com/github-btn.html?user=MathBunny&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe> -->
 				</div>
 
 			</div>
