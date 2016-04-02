@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Newton Raphson Approximation Utility</title>
+		<meta name="description" content="Demonstration of Horatiu Lazu's Colorimetric Image Analysis Software, that uses regression analysis to compute blood-alocohol concentration from a SpitStrip.">
+		<meta name="author" content="Horatiu Lazu">
+		<meta name="keywords" content="Horatiu,Lazu,Horatiu Lazu,Horatiu Stefan Lazu,Programming,Newton,Newton's Algorithm,algorithm,program">
+
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="../css/footer.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body class="grey lighten-3">
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="karnaugh.html"><span class="blue-text text-lighten-1">Karnaugh Map</span></a></li>
+			<li><a href="synthetic.html"><span class="blue-text text-lighten-1">Synthetic Division</span></a></li>
+			<li><a href="colorimetric.html"><span class="blue-text text-lighten-1">Colorimetric Analysis</span></a></li>
+			<li><a href="newton.html"><span class="blue-text text-lighten-1">Newton Raphson</span></a></li>
+			<li class="divider"></li>
+			<li><a href="atomicsmasher.html"><span class="blue-text text-lighten-1">AtomicSmasher</span></a></li>
+			<li><a href="basilisk.html"><span class="blue-text text-lighten-1">Basilisk 3D</span></a></li>
+			<li><a href="tower.html"><span class="blue-text text-lighten-1">Tower of Hanoi</span></a></li>
+			<li><a href="connect.html"><span class="blue-text text-lighten-1">Connect-4</span></a></li>
+			<li><a href="pong.html"><span class="blue-text text-lighten-1">Pong</span></a></li>
+			<li class="divider"></li>
+			<li class="divider"></li>
+			<!--
+			<li><a href="dp.html"><span class="blue-text text-lighten-1">dp-imposing </span></a></li>
+			<li class="divider"></li>
+			<li><a href="arduino.html"><span class="blue-text text-lighten-1">Arduino Robotics</span></a></li>
+			<li><a href="nxt.html"><span class="blue-text text-lighten-1">NXT/VEX Robotics</span></a></li>
+			<li class="divider"></li>
+			<li><a href="lyons.html"><span class="blue-text text-lighten-1">Lyon's Den App 2.0</span></a></li>
+			<li><a href="pyforms.html"><span class="blue-text text-lighten-1">pyForms</span></a></li>
+			<li><a href="essay.html"><span class="blue-text text-lighten-1">Essay Generator</span></a></li>
+			<li><a href="mario.html"><span class="blue-text text-lighten-1">Mario MyCreation</span></a></li>
+			<li><a href="address.html"><span class="blue-text text-lighten-1">AddressBook</span></a></li> -->
+			<li><a href="miscellaneous.html"><span class="blue-text text-lighten-1">Additional Projects</span></a></li>
+		</ul>
+		<nav class="blue darken-2">
+			<div class="navbar-wrapped container">
+				<a href="http://horatiulazu.ca" class="brand-logo"> Horatiu Lazu </a>
+				<ul class = "right">
+					<li> <a href="../index.html"> Home </a> </li>
+					<li> <a href="../skills/index.html"> Skills </a> </li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Personal Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li> <a href="../youtube/index.html"> YouTube </a> </li>
+					<li> <a href="../about/index.html"> About </a> </li>
+				</ul>
+			</div>
+		</nav>
+		
+		<div class="intro blue lighten-2 z-depth-1" style="margin-top: -21.5px;
+  margin-bottom: 0px;">
+			<center>
+				<h3 class="grey-text text-lighten-5">Colorimetric Image Analysis</h1>
+				<!-- <h5 class="grey lighten-4 grey-text text-darken-1"></h5> -->
+			</center>
+		</div>
+
+
+		<div class="container">
+			<div class = "row">
+				<div class="col l12">
+					<!-- Add text here about me -->
+					<div class="card-panel">
+						<h5 class="blue-text"> What does the program do?</h5>
+						<p>The purpose of this program is to compute the blood alcohol concentration after using a SpitStrip. SpitStrip is a product of a student-run business that uses reacts to the saliva of a human and changes color. This software then analyzes the color, and can return the exact BAC (Blood Alcohol Concentration). In order to assure accuracy in the image quality, both the scale and the results are inputted so the program automatically calibrates. This program is developed in Java.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class = "row">
+				
+				<div class="col l6">
+					<!-- Add text here about me -->
+					<div class="card">
+						<div class="card-image">
+							<img src="../images/ColorimetricAnalysis.png">
+						</div>
+						<div class="card-content">
+							
+								<p>This is the main screen of the program, with sample images used.</p>
+						</div>
+						<!-- <div class="card-action">
+							<a href="#">Learn more</a>
+						</div> -->
+					</div>
+					<!--
+					<div class="card">
+						<div class="card-image">
+							<img src="../images/SyntheticAbout.png">
+						</div>
+						<div class="card-content">
+							
+								<p>This is the about screen.</p>
+						</div>
+					</div> -->
+				</div>
+
+				<div class="col l6">
+					<!-- Add text here about me -->
+					<div class="card-panel">
+						<h5 class="blue-text"> Features:</h5>
+						<p>The following features are present as of the latest version:</p>
+						 <div class="collection">
+							<a href="" class="collection-item black-text">Capable of accurately determining BAC level with SpitStrip</a>
+							<a href="" class="collection-item black-text">Automatically calibrates with inputted scale</a>
+							<a href="" class="collection-item black-text">Cubic equation <code>ƒ(x) = 0.015x^3 -0.06x^2 +0.075x -0.002</code> used to adjust input to scale (with <code>r= 0.998123</code>)</a>
+							<a href="" class="collection-item black-text">Uses linear regression analysis for each Red Green Blue to accurately determine BAC </a>
+							<a href="" class="collection-item black-text">Gets reading from Java AWT Robot (images can be inputted even outside of the window)</a>
+							<a href="" class="collection-item black-text">Uses basic OOP (Object Oriented Programming) principles</a>
+							<a href="" class="collection-item black-text">Easy to use graphical user interface </a>
+							<a href="" class="collection-item black-text">Program Documentation</a>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/materialize.min.js"></script>
+	</body>
+	<footer>
+		<footer class ="page-footer blue lighten-2">
+			<div class = "container">
+				<div class="footer-copyright">
+					Copyright 2016 Horatiu Lazu
+					<!-- <iframe style = "float:right;" src="https://ghbtns.com/github-btn.html?user=MathBunny&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe> -->
+				</div>
+
+			</div>
+		</footer>
+	</footer>
+</html>
