@@ -6,6 +6,10 @@
 * Provide screenshots, links and code
 * Have good graphics
 
+##Future Updates:
+* Fix contact form
+* Include GitHub link to projects, screenshot gallery on imgur
+
 ##Expected Completion Date:
 * June 30, 2016
 

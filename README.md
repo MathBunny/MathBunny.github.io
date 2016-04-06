@@ -10,6 +10,7 @@
 * Custom domain: `horatiulazu.ca`
 * Features metatags and follows SEO principles
 * Reduced CSS footprint by using minimize
+* Includes software subsite with more information regarding projects
 
 ####Software Development Subsite:
 * Provides specific information about technical skills
@@ -21,9 +22,8 @@
 
 ####Future Upgrades:
 * Update project list to include Newton Raphson
-* Complete software development subsite
 * Implement `software.horatiulazu.ca` redirect
 * Add images for the scrolling newsfeed
 * Use minify to reduce footprint on HTML/JS files
 
-#####Updated as of: March 17, 2016
+#####Updated as of: April 5, 2016
