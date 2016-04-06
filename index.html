@@ -27,6 +27,36 @@
 		<div id="preloader">
 			<div id="status"></div>
 		</div>
+		<!-- Redirect feature Make more efficient by using an array, and then processing through the array and append the value in link-->
+
+		<script>
+				if(window.location.toString().indexOf("?synthetic")>=0) {
+    				window.location = "software/projects/synthetic.html";
+				}
+				else if (window.location.toString().indexOf("?newton")>=0) {
+    				window.location = "software/projects/newton.html";
+				}
+				else if (window.location.toString().indexOf("?basilisk")>=0) {
+    				window.location = "software/projects/basilisk.html";
+				}
+				else if (window.location.toString().indexOf("?colorimetric")>=0) {
+    				window.location = "software/projects/colorimetric.html";
+				}
+				else if (window.location.toString().indexOf("?tower")>=0) {
+    				window.location = "software/projects/tower.html";
+				}
+				else if (window.location.toString().indexOf("?atomicsmasher")>=0) {
+    				window.location = "software/projects/atomicsmasher.html";
+				}
+				else if (window.location.toString().indexOf("?miscellaneous")>=0) {
+    				window.location = "software/projects/miscellaneous.html";
+				}
+				else if (window.location.toString().indexOf("?karnaugh")>=0) {
+    				window.location = "software/projects/karnaugh.html";
+				}
+		</script>
+
+
 		<!-- Home start -->
 		<section id="home" class="pfblock-image screen-height">
 			<div class="home-overlay"></div>

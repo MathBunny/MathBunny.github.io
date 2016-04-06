@@ -14,6 +14,36 @@
 
 	</head>
 	<body class="grey lighten-3">
+			<!-- Redirect feature 
+				 Make more efficient by using an array, and then processing through the array and append the value in link
+				-->
+			<script>
+				if(window.location.toString().indexOf("?synthetic")>=0) {
+    				window.location = "projects/synthetic.html";
+				}
+				else if (window.location.toString().indexOf("?~newton")>=0) {
+    				window.location = "projects/newton.html";
+				}
+				else if (window.location.toString().indexOf("?~basilisk")>=0) {
+    				window.location = "projects/basilisk.html";
+				}
+				else if (window.location.toString().indexOf("?~colorimetric")>=0) {
+    				window.location = "projects/colorimetric.html";
+				}
+				else if (window.location.toString().indexOf("?~tower")>=0) {
+    				window.location = "projects/tower.html";
+				}
+				else if (window.location.toString().indexOf("?~atomicsmasher")>=0) {
+    				window.location = "projects/atomicsmasher.html";
+				}
+				else if (window.location.toString().indexOf("?~miscellaneous")>=0) {
+    				window.location = "projects/miscellaneous.html";
+				}
+				else if (window.location.toString().indexOf("?~karnaugh")>=0) {
+    				window.location = "projects/karnaugh.html";
+				}
+			</script>
+
 		<ul id="dropdown1" class="dropdown-content">
 			<li><a href="projects/karnaugh.html"> <span class="blue-text text-lighten-1"> Karnaugh Map</span>  </a></li>
 			<li><a href="projects/synthetic.html"><span class="blue-text text-lighten-1">Synthetic Division</span></a></li>
@@ -98,7 +128,7 @@
 			ga('send', 'pageview');
 			
 		</script>
-		
+
 	</body>
 	<footer>
 		<footer class ="page-footer blue lighten-2">
