@@ -11,6 +11,7 @@
 * Features metatags and follows SEO principles
 * Reduced CSS footprint by using minimize
 * Includes software subsite with more information regarding projects
+* Has quick redirect feature to access projects, example: `horatiulazu.ca?synthetic`
 
 ####Software Development Subsite:
 * Provides specific information about technical skills
@@ -26,4 +27,4 @@
 * Add images for the scrolling newsfeed
 * Use minify to reduce footprint on HTML/JS files
 
-#####Updated as of: April 5, 2016
+#####Updated as of: April 7, 2016
