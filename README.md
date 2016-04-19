@@ -1,4 +1,4 @@
-# Horatiu Lazu's Personal Website
+# Personal Website
 > The goal of this website is to inform about what I love to do along with my accomplishments.
 
 ####Features:
@@ -23,8 +23,7 @@
 
 ####Future Upgrades:
 * Update project list to include Newton Raphson
-* Implement `software.horatiulazu.ca` redirect
+* Add simple HTML5/Javascript games on software website
 * Add images for the scrolling newsfeed
-* Use minify to reduce footprint on HTML/JS files
 
 #####Updated as of: April 7, 2016
