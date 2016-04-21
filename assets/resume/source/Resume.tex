@@ -1,51 +1,5 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
-% LaTeX Template 
-% Version 1.1 (30/4/2014)
-%
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
-% 2. Hacky space on the first bullet point on the second column.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[]{deedy-resume-openfont}
-
+\usepackage{enumitem}
 
 \begin{document}
 
@@ -81,13 +35,13 @@
 \section{Education} 
 
 \subsection{University of Waterloo}
-\descript{Bachelors of Computer Science}
+\descript{Bachelor of Computer Science}
 \location{Expected May 2021 | Waterloo, CA \\ Double-Degree BCS/BBA}
 \sectionsep
 \vspace{2mm}
 
 \subsection{Wilfrid Laurier University}
-\descript{Bachelors of Business Admin}
+\descript{Bachelor of Business Admin}
 \location{Expected May 2021 | Waterloo, CA}
 \sectionsep
 \vspace{2mm}
@@ -137,31 +91,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Skills}
-\subsection{Programming Languages}
+\subsection{Programming}
 \location{Experienced:} %what languages...
-Java \textbullet{} Python\\  %Turing \textbullet{} Visual Basic \textbullet{}
+Java  \textbullet{} HTML \textbullet{} CSS \textbullet{} Arduino \textbullet{} NXT/VEX\\  %Turing \textbullet{} Visual Basic \textbullet{}
 %Visual C\# \\ 
 \vspace{1mm}
 \location{Familiar:}
-C/C++  \textbullet{} Javascript \textbullet{} Visual C\# \textbullet{}Visual Basic \textbullet{} PHP \textbullet{} Turing \textbullet{} \LaTeX
+Javascript  \textbullet{} jQuery \textbullet{} C/C++ \textbullet{} Turing \textbullet{} Python\textbullet{} Visual Basic\\
 \sectionsep
 
-\subsection{Technologies}
+\subsection{Tools}
 \location{Experienced:}
-HTML \textbullet{} Git  \textbullet{} Arduino \textbullet{} NXT/VEX
-\\ 
+Git \textbullet{} Eclipse \textbullet{} Sublime \textbullet{} Visual Studio\\
 \vspace{1mm}
 \location{Familiar:}
-CSS \textbullet{} Terminal  \textbullet{} Sublime \textbullet{} Eclipse \textbullet{} Xcode \textbullet{} Batch \textbullet{} Unity \textbullet{} Linux
-
+Terminal \textbullet{} Xcode \textbullet{} Coda \textbullet{} Batch \textbullet{} Unity \textbullet{} Linux \textbullet{} PixelMator \textbullet{} Sketch 
 \sectionsep
 
 \subsection{Certifications}
-\textbullet{} Cisco IT Essentials\\
-\textbullet{} Machine Learning - Stanford \\
-\textbullet{} Interactive Javascript - Michigan \\
-\textbullet{} FIT Software Design and Development \\
-\textbullet{} FIT Network Systems and Operations \\
+Cisco IT Essentials\\
+%Machine Learning - Stanford \\
+%Interactive Javascript - Michigan \\
+FIT Software Design and Development \\
+FIT Network Systems and Operations \\
 \sectionsep
 \vspace{2mm}
 
@@ -171,8 +123,8 @@ CSS \textbullet{} Terminal  \textbullet{} Sublime \textbullet{} Eclipse \textbul
 %\vspace{2mm}
 
 \subsection{Volunteering}
-\textbullet{} Youth Advisory Group (2012-Present)\\
-\textbullet{} Math/CS Tutor (2011-Present)\\
+Youth Advisory Group (2012-Present)\\
+Math/CS Tutor (2011-Present)\\
 %\textbullet{} Programming Club President (3 years)\\
 %\textbullet{} Audio/Visuals Team President (2 years) \\
 %\textbullet{} Robotics Team President (1 year) \\
@@ -183,21 +135,22 @@ CSS \textbullet{} Terminal  \textbullet{} Sublime \textbullet{} Eclipse \textbul
 \vspace{2mm}
 
 \subsection{Hobbies}
-\textbullet{} YouTube Channel (SoftwareEngenius)\\
-\textbullet{} Road Cycling\\
+YouTube Channel (SoftwareEngenius)\\
+Road Cycling, Ice Skating\\
 
 \vspace{2mm}
 
 \subsection{Awards}
-%\vspace{3mm}
+%\vspace{\topsep}
 %\begin{tightemize}
 %\item Waterloo Mathematics Scholarship valued at \$10,000 (2016)
 %\item 3$^{rd}$ place Toronto Highschool Team Chess Championships (2016)
 %\end{tightemize}
 
 
-\textbullet{} Waterloo Mathematics Scholarship valued at \$10,000 (2016) \\
-\textbullet{} 3$^{rd}$ place Toronto Highschool Team Chess Championships (2016) \\
+Waterloo Math Scholarship (2016) \\
+%Waterloo Math Scholarship, 1 of 10 valued at \$10,000 (2016)\\
+3$^{rd}$ place Toronto Team Highschool Chess Championships (2016) \\
 %\textbullet{} SAGE Best Startup Award (2015) \\
 %\textbullet{} CCC Metro Toronto Champion (2014) \\
 
@@ -230,38 +183,39 @@ YouTube://  \href{https://www.youtube.com/user/SoftwareEngenius}{\custombold{Sof
 
 \section{Experience}
 
+\runsubsection{SpitStrips}
+\descript{| Software Developer}
+\location{September 2015 – Present | Toronto, ON}
+\vspace{\topsep}
+\begin{tightemize}
+\item Worked with IT team to develop website (spitstrips.com)
+\item Created dp-filter web app to impose images and company logo with jQuery/CSS
+%\item Currently improving imposing by using HTML5 canvas, while also adding Facebook integration with PHP Facebook API
+\item Developed software that does colorimetric analysis for detection of saliva alcohol concentration with RGB color calibration from images
+\item Utilized regression analysis on readings from images to achieve accuracy
+\end{tightemize}
+\sectionsep
+
 \runsubsection{Computer Programming Team}
 \descript{| President }
 \location{September 2013 - Present | William Lyon Mackenzie CI}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item Lead club with over 120 members, organized weekly computing contests
-\item Delivered lectures related to algorithms and data structures
-\item Created HTML/CSS website (tinyurl.com/mackenzie-cpt)
+\item Delivered lectures pretaining to algorithms and data structures
+\item Created and maintained HTML/CSS website (bit.ly/mackenzie-cpt)
 \item Organized school-wide Hour of Code, over 140 participants
 \end{tightemize}
 \sectionsep
 
-\runsubsection{SpitStrips}
-\descript{| Software Developer}
-\location{September 2015 – Present | Toronto, ON}
-\begin{tightemize}
-\item Worked with IT team to develop website (spitstrips.com)
-\item Created dp-filter web app to impose image and company logo with jQuery/CSS
-%\item Currently improving imposing by using HTML5 canvas, while also adding Facebook integration with PHP Facebook API
-\item Developed software that does colorimetric analysis for detection of saliva alcohol concentration with RGB color calibration
-\item Utilized regression analysis on RGB readings from images to achieve accuracy
-\end{tightemize}
-\sectionsep
-
-\runsubsection{Math Club}
-\descript{| Executive}
-\location{September 2015 - Present | William Lyon Mackenzie CI}
-\begin{tightemize}
-\item Assisted in club meetings, made HTML/CSS site (tinyurl.com/mackenzie-math)
-\item Developed contest registration system with automated email confirmation and unique registration ID, used by over 250 students and 600 registrations 
-\item Contest participation increased by over 100\% due to registration accessibility
-\end{tightemize}
+%\runsubsection{Math Club}
+%\descript{| Executive}
+%\location{September 2015 - Present | William Lyon Mackenzie CI}
+%\begin{tightemize}
+%\item Assisted in club meetings, made HTML/CSS site (tinyurl.com/mackenzie-math)
+%\item Developed contest registration system with automated email confirmation and unique registration ID, used by over 250 students and 600 registrations 
+%\item Contest participation increased by over 100\% due to registration accessibility
+%\end{tightemize}
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -274,39 +228,46 @@ YouTube://  \href{https://www.youtube.com/user/SoftwareEngenius}{\custombold{Sof
 \descript{| Java}
 \location{Aug 2015 – Present | horatiulazu.ca/software/projects/karnaugh.html}
 \begin{tightemize}
-\item Currently experimenting with Quine-McCluskey technique to simply boolean algebra expressions\\
-\item Developing method for visual representation and simplification of expressions\\
+\item Simplifies boolean algebra expressions, currently experimenting with Quine-McCluskey technique to simplify SOP expressions\\
+\item Developing visual representation of expressions with Karnaugh-Map\\
 \item Applied knowledge of graph theory and bitwise operators\\
 \end{tightemize}
 \sectionsep
 
-
-\runsubsection{Newton Raphson Approximation Utility}
-\descript{| Java, exp4j}
-\location{Oct 2015 – Jan 2016 | horatiulazu.ca/software/projects/newton.html}
-\begin{tightemize}
-\item Finds the roots in any algabraic expression using Newton's algorithm\\
-\item Parses expressions using exp4j framework, input error-trapped through UI\\
-\end{tightemize}
-\sectionsep
-
-
 \runsubsection{Synthetic Division Calculator}
 \descript{| Java}
-\location{Mar 2015 – Apr 2015 | horatiulazu.ca/software/projects/synthetic.html}
+\location{Oct 2015 – Jan 2016 | horatiulazu.ca/software/projects/synthetic.html}
 \begin{tightemize}
 \item Computes the division of any set of polynomials (not limited to Ruffini's law)\\
 \item Shows full solution (with steps) in table, parses, sorts and formats expressions\\
 \end{tightemize}
 \sectionsep
 
+
+\runsubsection{Newton Raphson Approximation}
+\descript{| Java, exp4j}
+\location{Mar 2015 – Apr 2015 | horatiulazu.ca/software/projects/newton.html}
+\begin{tightemize}
+\item Finds the roots in any algabraic expression using Newton's algorithm\\
+\item Parses expressions using exp4j framework, input error-trapped through UI\\
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Maze Solving Robot \& SumoBot}
+\descript{| C, Arduino}
+\location{Mar 2015 – Apr 2015 | horatiulazu.ca/software/projects/miscelaneous.html}
+\begin{tightemize}
+\item Implemented algorithm to traverse maze using readings from LDR sensor \\
+\item Designed algorithm that strategically controls robot based off of 4 ultrasonic sensors and LDR readings to push other robots off of platform\\
+\end{tightemize}
+\sectionsep
+
 \runsubsection{Atomic Smasher}
 \descript{| Java}
-\location{Feb 2013 – Sept 2014 | horatiulazu.ca/software/projects/atomic.html}
+\location{Feb 2014 – Sept 2014 | horatiulazu.ca/software/projects/atomic.html}
 \begin{tightemize}
 \item Strategy game involving building transportation systems for particles to collide forming compounds through interchange pieces and pipes\\
-\item Features 8 levels, unique graphics, highscores and more\\
-\item Includes full code documentation, user manual and installation DVD\\
+\item Applied OOP concepts throughout, utilized UML to plan software design \\
 \end{tightemize}
 \sectionsep
 
@@ -318,7 +279,7 @@ YouTube://  \href{https://www.youtube.com/user/SoftwareEngenius}{\custombold{Sof
 
 \runsubsection{Basilisk}
 \descript{| Unity Engine, Javascript, C\#}
-\location{Feb 2013 – Sept 2014 | horatiulazu.ca/software/projects/basilisk.html}
+\location{Feb 2013 – Jan 2014 | horatiulazu.ca/software/projects/basilisk.html}
 \begin{tightemize}
 \item 3D snake game with various game-modes, including local multiplayer\\
 \item Mobile optimized (iOS), includes creative menus, works on web\\
@@ -333,9 +294,9 @@ YouTube://  \href{https://www.youtube.com/user/SoftwareEngenius}{\custombold{Sof
 %\section{Additional Side-Projects} 
 
 %\begin{tabular}{rll}
-%2016 	& K-Map Simplification & Graphically simplifies Karnaugh Maps (In-Progress)\\
-%2016 	& MaCS Alumni Database & Website to connect MaCS Alumni (Team \&In-Progress)\\
-%2016 	& Various Robots    & Maze Traverse, Sumobots with mBot, VEX \& Arduino\\
+%2016   & K-Map Simplification & Graphically simplifies Karnaugh Maps (In-Progress)\\
+%2016   & MaCS Alumni Database & Website to connect MaCS Alumni (Team \&In-Progress)\\
+%2016   & Various Robots    & Maze Traverse, Sumobots with mBot, VEX \& Arduino\\
 %2014   & Atomic Smasher   & Particle simulation game made in Java (Team)\\
 %2014   &  Tower of Hanoi  & Classic game of Tower of Hanoi made in %Java\\
 %2014   &  Lyon's Den App 2.0  & School iOS App for WL Mackenzie CI (Team)\\
@@ -348,15 +309,17 @@ YouTube://  \href{https://www.youtube.com/user/SoftwareEngenius}{\custombold{Sof
 
 \section{Computing Contests} 
 \begin{tabular}{rll}
-2015	     & Top-50 & Canadian Computing Competition (Senior)\\
+2015         & Top-50 & Canadian Computing Competition (Senior)\\
 %\vspace{2mm}
-2014	     & First Place  & Canadian Computing Competition (Junior)\\
+2014         & First Place  & Canadian Computing Competition (Junior)\\
 
-%2016	     & National  &  Waterloo Mathematics Scholarship (\$10,000)\\
-%2016	     & Third Place  & Toronto High-school Chess Championships\\
-%2015	     & First Place  & SAGE Innovation Hackathon - SpitStrips\\
-%2015	     & National  & Best Startup Award for Macparrel\\
+%2016        & National  &  Waterloo Mathematics Scholarship (\$10,000)\\
+%2016        & Third Place  & Toronto High-school Chess Championships\\
+%2015        & First Place  & SAGE Innovation Hackathon - SpitStrips\\
+%2015        & National  & Best Startup Award for Macparrel\\
 \end{tabular}
+\sectionsep
+
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -366,7 +329,7 @@ YouTube://  \href{https://www.youtube.com/user/SoftwareEngenius}{\custombold{Sof
 %\section{Societies} 
 
 %\begin{tabular}{rll}
-%2014 	& top 12\%ile    & Tau Beta Pi Engineering Honor %Society\\
+%2014   & top 12\%ile    & Tau Beta Pi Engineering Honor %Society\\
 %2014   & National   & The Global Leadership and Education %Forum (tGELF)\\
 %2012   &  National  & Golden Key International Honor Society\\
 %%2012   &  National   & National Society of Collegiate Scholars\\
