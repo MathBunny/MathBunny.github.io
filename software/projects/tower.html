@@ -100,6 +100,24 @@
 			</div>
 		</div>
 
+		<div class="container">
+			<div class = "row">
+				<div class="col l12">
+					<div class="card-panel">
+						<h5 class="blue-text"> YouTube Demonstration:</h5>
+						<p> Simple demonstration of the game and its features. </p>
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/5HzfC8zUQmE" frameborder="0" allowfullscreen id="youtube"></iframe>
+					</div>
+					<script>
+						console.log(document.getElementById("youtube").clientHeight, document.getElementById("youtube").clientWidth);
+						document.getElementById("youtube").height = document.getElementById("youtube").clientWidth*0.66;
+						
+					</script>
+				</div>
+			</div>
+		</div>
+
+
 		<!--Import jQuery before materialize.js-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="../js/materialize.min.js"></script>
