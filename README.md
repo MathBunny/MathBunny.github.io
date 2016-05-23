@@ -25,5 +25,3 @@
 * Update project list to include Newton Raphson
 * Add simple HTML5/Javascript games on software website
 * Add images for the scrolling newsfeed
-
-#####Updated as of: April 7, 2016
