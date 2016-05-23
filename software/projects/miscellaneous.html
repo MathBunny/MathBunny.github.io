@@ -24,25 +24,48 @@
 			<li class="divider"></li>
 			<li><a href="miscellaneous.html"><span class="blue-text text-lighten-1">Additional Projects</span></a></li>
 		</ul>
+		<!-- Second dropdown for mobile phones -->
+		<ul id="dropdown2" class="dropdown-content">
+			<li><a href="karnaugh.html"><span class="blue-text text-lighten-1">Karnaugh Map</span></a></li>
+			<li><a href="synthetic.html"><span class="blue-text text-lighten-1">Synthetic Division</span></a></li>
+			<li><a href="colorimetric.html"><span class="blue-text text-lighten-1">Colorimetric Analysis</span></a></li>
+			<li><a href="newton.html"><span class="blue-text text-lighten-1">Newton Raphson</span></a></li>
+			<li class="divider"></li>
+			<li><a href="atomicsmasher.html"><span class="blue-text text-lighten-1">Atomic Smasher</span></a></li>
+			<li><a href="basilisk.html"><span class="blue-text text-lighten-1">Basilisk 3D</span></a></li>
+			<li><a href="tower.html"><span class="blue-text text-lighten-1">Tower of Hanoi</span></a></li>
+			<li class="divider"></li>
+			<li><a href="miscellaneous.html"><span class="blue-text text-lighten-1">Additional Projects</span></a></li>
+		</ul>
+
 		<nav class="blue darken-2">
 			<div class="navbar-wrapped container">
 				<a href="http://horatiulazu.ca" class="brand-logo"> Horatiu Lazu </a>
-				<ul class = "right">
+				<a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class = "right hide-on-med-and-down">
 					<li> <a href="../index.html"> Home </a> </li>
 					<li> <a href="../skills/index.html"> Skills </a> </li>
 					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Personal Projects<i class="material-icons right">arrow_drop_down</i></a></li>
 					<li> <a href="../youtube/index.html"> YouTube </a> </li>
 					<li> <a href="../about/index.html"> About </a> </li>
 				</ul>
+
+				<ul class="side-nav" id = "mobile">
+					<li> <a href="../index.html"> Home </a> </li>
+					<li> <a href="../skills/index.html"> Skills </a> </li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown2">Personal Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li> <a href="../youtube/index.html"> YouTube </a> </li>
+					<li> <a href="../about/index.html"> About </a> </li>
+				</ul>
 			</div>
 		</nav>
 		
-		<div class="intro blue lighten-2 z-depth-1" style="margin-top: -21.5px;margin-bottom: 0px;">
+		<!-- <div class="intro blue lighten-2 z-depth-1" style="margin-top: -21.5px;margin-bottom: 0px;">
 			<center>
 				<h3 class="grey-text text-lighten-5">
 				Additional Projects</h1>
 			</center>
-		</div>
+		</div> -->
 		<div class="container">
 			<div class = "row">
 					<div class="col l12">
@@ -282,6 +305,8 @@
 			
 			ga('create', 'UA-74979520-1', 'auto');
 			ga('send', 'pageview');
+
+			$(".button-collapse").sideNav();
 			
 		</script>
 	</body>

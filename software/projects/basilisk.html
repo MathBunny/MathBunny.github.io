@@ -24,33 +24,55 @@
 			<li><a href="tower.html"><span class="blue-text text-lighten-1">Tower of Hanoi</span></a></li>
 			<li class="divider"></li>
 			<li><a href="miscellaneous.html"><span class="blue-text text-lighten-1">Additional Projects</span></a></li>
+		</ul> <!-- Duplicate for mobile devices -->
+		<ul id="dropdown2" class="dropdown-content">
+			<li><a href="karnaugh.html"><span class="blue-text text-lighten-1">Karnaugh Map</span></a></li>
+			<li><a href="synthetic.html"><span class="blue-text text-lighten-1">Synthetic Division</span></a></li>
+			<li><a href="colorimetric.html"><span class="blue-text text-lighten-1">Colorimetric Analysis</span></a></li>
+			<li><a href="newton.html"><span class="blue-text text-lighten-1">Newton Raphson</span></a></li>
+			<li class="divider"></li>
+			<li><a href="atomicsmasher.html"><span class="blue-text text-lighten-1">Atomic Smasher</span></a></li>
+			<li><a href="basilisk.html"><span class="blue-text text-lighten-1">Basilisk 3D</span></a></li>
+			<li><a href="tower.html"><span class="blue-text text-lighten-1">Tower of Hanoi</span></a></li>
+			<li class="divider"></li>
+			<li><a href="miscellaneous.html"><span class="blue-text text-lighten-1">Additional Projects</span></a></li>
 		</ul>
+
 		<nav class="blue darken-2">
 			<div class="navbar-wrapped container">
 				<a href="http://horatiulazu.ca" class="brand-logo"> Horatiu Lazu </a>
-				<ul class = "right">
+				<a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class = "right hide-on-med-and-down">
 					<li> <a href="../index.html"> Home </a> </li>
 					<li> <a href="../skills/index.html"> Skills </a> </li>
 					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Personal Projects<i class="material-icons right">arrow_drop_down</i></a></li>
 					<li> <a href="../youtube/index.html"> YouTube </a> </li>
 					<li> <a href="../about/index.html"> About </a> </li>
 				</ul>
+
+				<ul class="side-nav" id = "mobile">
+					<li> <a href="../index.html"> Home </a> </li>
+					<li> <a href="../skills/index.html"> Skills </a> </li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown2">Personal Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li> <a href="../youtube/index.html"> YouTube </a> </li>
+					<li> <a href="../about/index.html"> About </a> </li>
+				</ul>
 			</div>
 		</nav>
 		
-		<div class="intro blue lighten-2 z-depth-1" style="margin-top: -21.5px;
+		<!-- <div class="intro blue lighten-2 z-depth-1" style="margin-top: -21.5px;
   margin-bottom: 0px;">
 			<center>
 				<h3 class="grey-text text-lighten-5">Basilisk 3D</h1>
 			</center>
-		</div>
+		</div> -->
 
 
 		<div class="container">
 			<div class = "row">
 				<div class="col l12">
 					<div class="card-panel">
-						<h5 class="blue-text"> What does the program do?</h5>
+						<h5 class="blue-text"> What does Basilisk do?</h5>
 						<p>Basilisk is a 3D game that allows the user to play a variation of the traditional snake game. Featuring over 10 game modes, Basilisk provides an entertaining twist on the classic game. The game features a moving snake that is composed of cubes, and you need to avoid hitting the edge or obstacles. Contrary to the original game, you can still hit your own body, however as you get larger you go faster and geting the apples becomes more difficult! This game is created using the Unity Engine, and scripted using primarily Javascript with a bit of C#. Feel free to look at some code on <a href="https://github.com/MathBunny/basilisk"> GitHub</a>.</p>
 					</div>
 				</div>
@@ -118,6 +140,8 @@
 			
 			ga('create', 'UA-74979520-1', 'auto');
 			ga('send', 'pageview');
+
+			$(".button-collapse").sideNav();
 			
 		</script>
 	</body>
