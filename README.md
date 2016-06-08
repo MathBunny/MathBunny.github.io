@@ -22,6 +22,5 @@
 * Email form does not work
 
 ####Future Upgrades:
-* Update project list to include Newton Raphson
 * Add simple HTML5/Javascript games on software website
 * Add images for the scrolling newsfeed
