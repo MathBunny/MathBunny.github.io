@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Strava Segment Analysis</title>
-        <meta name="description" content="Analyzes Strava segments for their wind influence">
+        <title>Slope Field Generator</title>
+        <meta name="description" content="Android app that allows the user to generate slope fields of a given first-order differential function.">
         <meta name="author" content="Horatiu Lazu">
-        <meta name="keywords" content="Horatiu,Lazu,Horatiu Lazu,Horatiu Stefan Lazu,Programming,Strava,Segments">
+        <meta name="keywords" content="Horatiu,Lazu,Horatiu Lazu,Horatiu Stefan Lazu,Programming,Android,Slope,Field">
 
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
@@ -19,22 +19,27 @@
             <li><a href="synthetic.html"><span class="blue-text text-lighten-1">Synthetic Division</span></a></li>
             <li><a href="colorimetric.html"><span class="blue-text text-lighten-1">Colorimetric Analysis</span></a></li>
             <li><a href="newton.html"><span class="blue-text text-lighten-1">Newton Raphson</span></a></li>
+            
             <li><a href="segment.html"><span class="blue-text text-lighten-1">Strava Wind Impact</span></a></li>
             <li><a href="slope.html"><span class="blue-text text-lighten-1">Slope Field Generator</span></a></li>
+
             <li class="divider"></li>
             <li><a href="atomicsmasher.html"><span class="blue-text text-lighten-1">Atomic Smasher</span></a></li>
             <li><a href="basilisk.html"><span class="blue-text text-lighten-1">Basilisk 3D</span></a></li>
             <li><a href="tower.html"><span class="blue-text text-lighten-1">Tower of Hanoi</span></a></li>
             <li class="divider"></li>
             <li><a href="miscellaneous.html"><span class="blue-text text-lighten-1">Additional Projects</span></a></li>
+
         </ul> <!-- Dropdown duplicate for mobile -->
          <ul id="dropdown2" class="dropdown-content">
             <li><a href="karnaugh.html"><span class="blue-text text-lighten-1">Karnaugh Map</span></a></li>
             <li><a href="synthetic.html"><span class="blue-text text-lighten-1">Synthetic Division</span></a></li>
             <li><a href="colorimetric.html"><span class="blue-text text-lighten-1">Colorimetric Analysis</span></a></li>
             <li><a href="newton.html"><span class="blue-text text-lighten-1">Newton Raphson</span></a></li>
+
             <li><a href="segment.html"><span class="blue-text text-lighten-1">Strava Wind Impact</span></a></li>
             <li><a href="slope.html"><span class="blue-text text-lighten-1">Slope Field Generator</span></a></li>
+            
             <li class="divider"></li>
             <li><a href="atomicsmasher.html"><span class="blue-text text-lighten-1">Atomic Smasher</span></a></li>
             <li><a href="basilisk.html"><span class="blue-text text-lighten-1">Basilisk 3D</span></a></li>
@@ -74,8 +79,8 @@
                 <div class="col l12">
                     <!-- Add text here about me -->
                     <div class="card-panel">
-                        <h5 class="blue-text"> What does Strava segment analysis do?</h5>
-                        <p>The purpose of this JS web app is to analyze segment efforts on Strava and determine if wind was a considerable influencer in performance. To fetch information this app uses the Strava API V3 and OpenWeather API. Apart from fetching information, most of the operations were done using vectors, trigonometry, and some longitude/latitude knowledge and working with cardinal directions! Finally, it uses the Google Maps API to show the segment, by converting the summary polyline from Strava API into points on the map. Feel free to view the project on <a href="https://github.com/MathBunny/segment-weather-analyzer" target="_blank"> GitHub</a>.</p>
+                        <h5 class="blue-text"> What does Slope Field Generator do?</h5>
+                        <p>The Slope Field Generator app allows you to generate slope fields for first-order differential functions. This app permits the use of multi-touch gestures to navigate through the graph and zoom in/out in a given domain and range. Slopes are indicated with RGB gradients to easily distinguish between rapidly increasing tangents and decreasing. Supported functions include basic trigonometry (sin, cos, tan), and scientific constants (e, pi). Feel free to view the project on <a href="https://github.com/MathBunny/slope-field-generator" target="_blank"> GitHub</a>.</p>
                     </div>
                 </div>
             </div>
@@ -86,10 +91,10 @@
                     <!-- Add text here about me -->
                     <div class="card">
                         <div class="card-image">
-                            <img src="../images/SegmentScreenshot.png">
+                            <img src="../images/SlopeLandscape.png">
                         </div>
                         <div class="card-content">
-                            <p>This is a screenshot of the website.</p>
+                            <p>These is a simple screenshot of the app, showing a slope field with the differential equation of <code>dy / dx = (x + y) / 10</code>.</p>
                         </div>
                     </div>
                 </div>
@@ -98,17 +103,13 @@
                     <!-- Add text here about me -->
                     <div class="card-panel">
                         <h5 class="blue-text"> Features:</h5>
-                        <p>The following are some features in Strava segment analysis:</p>
                          <div class="collection">
+                            <a class="collection-item black-text">Parses expressions with exp4j Dijkstra Shunting Yard Algorithm including trignometric functions and constants</a>
+                            <a class="collection-item black-text">Allows for multi-touch gestures to zoom in/out and pan graph</a>
+                            <a class="collection-item black-text">Tangent colors change RGB values dynamically like gradients</a>
+                            <a class="collection-item black-text">Compatible with mobile phones and tablets</a>
+                            <a class="collection-item black-text">Dynamically adjusting graph grids and text</a>
                             <a class="collection-item black-text">Easy to use interface</a>
-                            <a class="collection-item black-text">Quick operation with simple compute option and minimal user intervention by using Strava API</a>
-                            <a class="collection-item black-text">Includes Google maps to visually see and confirm segment location through polyline parsing</a>
-                            <a class="collection-item black-text">Allows to compare data easily with automatically generated correlation calculation</a>
-                            <a class="collection-item black-text">Fetches accurate weather data with OpenWeather API</a>
-                            <a class="collection-item black-text">Utilizes and manipulates vectors to achieve accuracy</a>
-                            <a class="collection-item black-text">Responsive design and works well on mobile</a>
-                            <a class="collection-item black-text">Includes explanations about how the app works</a>
-                            <a class="collection-item black-text">Received over 5,000 users in the first week of release</a>
                         </div>
                     </div>
                 </div>
@@ -116,13 +117,13 @@
 
             </div>
         </div>
-        <div class="container">
+        <!--<div class="container">
             <div class = "row">
                 <div class="col l12">
                     <div class="card-panel">
                         <h5 class="blue-text"> YouTube Demonstration:</h5>
-                        <p> Demonstration of the Strava segment analysis website. </p>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/v57Ok0zRMNI" frameborder="0" allowfullscreen id="youtube"></iframe>
+                        <p> Rough demonstration of how the maze solving robot works. </p>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MwWELXI1nP4" frameborder="0" allowfullscreen id="youtube"></iframe>
                     </div>
                     <script>
                         console.log(document.getElementById("youtube").clientHeight, document.getElementById("youtube").clientWidth);
@@ -131,7 +132,8 @@
                     </script>
                 </div>
             </div>
-        </div>
+        </div> -->
+
         <!-- GH Links -->
         <!-- https://github.com/MathBunny/synthetic-division-calculator/subscription -->
         <!--<div class="container">
