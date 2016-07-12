@@ -16,11 +16,11 @@
 ##Software Development Subsite:
 * Provides specific information about technical skills
 * Provides details about projects, including design and specifications
-* Material design inspiration
+* Includes embedded links to YouTube videos
+* Material design
 
 ##Known Issues:
-* Email form does not work
+* Email form does not work (this site is hosted statically)
 
 ##Future Upgrades:
-* Add simple HTML5/Javascript games on software website
 * Add images for the scrolling newsfeed
