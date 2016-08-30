@@ -12,6 +12,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Horatiu Lazu (Software)</title>
 
+		<style>
+			#footer {
+			   position:absolute;
+			   bottom:0;
+			   width:100%;
+			   height:60px;   /* Height of the footer */
+			   background:#6cf;
+			}
+
+			body { 
+			    background: url('images/Karnaugh4Variable.png') no-repeat center center fixed; 
+		        -webkit-background-size: cover;
+		        -moz-background-size: cover;
+		        -o-background-size: cover;
+		        background-size: cover;
+			}
+		</style>
+
 	</head>
 	<body class="grey lighten-3">
 			<!-- Redirect feature 
@@ -106,13 +124,38 @@
 		</div> -->
 		<div class="container">
 			<div class = "row">
-				<div class="col l5 m4 s12">
-					<!--<div class="card-panel teal lighten-4"> -->
+				<div class="col l12">
+					<br><br>
+
 					<div class="card-panel">
 						<h5 class="blue-text"> Welcome! </h5>
-						Hi, I am currently a high-school student attending William Lyon Mackenzie CI, and will attend the University of Waterloo next year to study Computer Science & Business Administration (Double-Degree). I enjoy competitive programming, software engineering and cycling. I'm currently an intern at Bluesun, a financial services company. <br>Hope you enjoy my site! 
+						Hi, I'm currently a first year Computer Science & Business Administration Double-Degree student. My home school is the University of Waterloo, where I study Computer Science, but I also am a full-time student at Wilfrid Laurier University studying Business. I enjoy competitive programming and software engineering. Hope you find my projects interesting!
+						<br><br>
+						Not sure where to look? How does a <a href="projects/karnaugh.html"> boolean algebra simplifier</a>, <a href="projects/atomicsmasher.html"> particle simulator</a>, or <a href="projects/newton.html"> equation root solver</a> sound? 
+					</div> 
+
+					
+				</div>
+
+				<!--<div class="col l7 m8 xs10">
+					<div class="card">
+						<div class="card-image">
+							<img src="images/BasiliskMainMenuMobile.png">
+							<span class="card-title">Basilisk 3D</span>
+						</div>
+						<div class="card-content">
+							<p>I love making cool programs. In my spare time I'm always working on new projects, because I love seeing things starting from nothing and finishing off as a functional product.</p>
+						</div>
+						<div class="card-action">
+							<a href="projects/basilisk.html">Learn more about Basilisk</a>
+						</div>
 					</div>
 
+				</div> -->
+			</div>
+			<!--
+			<div class="row">
+				<div class= "col l6 s12">
 					<div class="card">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="images/KarnaughMap4Variable.png">
@@ -127,22 +170,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="col l7 m8 xs10">
+
+				<div class= "col l6 s12">
 					<div class="card">
-						<div class="card-image">
-							<img src="images/BasiliskMainMenuMobile.png">
-							<span class="card-title">Basilisk 3D</span>
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="images/slope-field-screenshot-main.png">
 						</div>
 						<div class="card-content">
-							<p>I love making cool programs. In my spare time I'm always working on new projects, because I love seeing things starting from nothing and finishing off as a functional product.</p>
+							<span class="card-title activator grey-text text-darken-4">Slope Field Generator<i class="material-icons right">more_vert</i></span>
+							<p><a href="projects/karnaugh.html">Click here to learn more about this Android app.</a></p>
 						</div>
-						<div class="card-action">
-							<a href="projects/basilisk.html">Learn more about Basilisk</a>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Project in Development<i class="material-icons right">close</i></span>
+							<p>This is the latest project that I'm currently working on. The purpose is to visually show the simplification of boolean algebra expressions. I am currently experimenting with graph theory to find pairings and patterns. The SOP conversion has been done, and uses bitmasking to emulate the truth-table.</p>
 						</div>
 					</div>
-
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<!--
 		<div class="container">
@@ -207,7 +251,7 @@
 		</script>
 
 	</body>
-	<footer>
+	<footer style="bottom: 0px;" id = "footer">
 		<footer class ="page-footer blue lighten-2">
 			<div class = "container">
 				<div class="footer-copyright">

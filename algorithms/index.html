@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="Horatiu Lazu's personal website for software development.">
+		<meta name="author" content="Horatiu Lazu">
+		<meta name="keywords" content="Horatiu,Lazu,Horatiu Lazu,Horatiu Stefan Lazu,Programming,Website,SoftwareEngenius,Portfolio,Programming">
+
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/footer.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Horatiu Lazu (Software)</title>
+
+	</head>
+	<body class="grey lighten-3">
+			<!-- Redirect feature 
+				 Make more efficient by using an array, and then processing through the array and append the value in link
+				-->
+			<script>
+				if(window.location.toString().indexOf("?synthetic")>=0) {
+    				window.location = "projects/synthetic.html";
+				}
+				else if (window.location.toString().indexOf("?newton")>=0) {
+    				window.location = "projects/newton.html";
+				}
+				else if (window.location.toString().indexOf("?basilisk")>=0) {
+					
+    				window.location = "projects/basilisk.html";
+				}
+				else if (window.location.toString().indexOf("?colorimetric")>=0) {
+    				window.location = "projects/colorimetric.html";
+				}
+				else if (window.location.toString().indexOf("?tower")>=0) {
+    				window.location = "projects/tower.html";
+				}
+				else if (window.location.toString().indexOf("?atomicsmasher")>=0) {
+    				window.location = "projects/atomicsmasher.html";
+				}
+				else if (window.location.toString().indexOf("?miscellaneous")>=0) {
+    				window.location = "projects/miscellaneous.html";
+				}
+				else if (window.location.toString().indexOf("?karnaugh")>=0) {
+    				window.location = "projects/karnaugh.html";
+				}
+
+			</script>
+
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="projects/karnaugh.html"> <span class="orange-text text-darken-1"> Insertion Sort</span>  </a></li>
+			<li><a href="projects/synthetic.html"><span class="orange-text text-darken-1"> Selection Sort</span></a></li>
+			<li><a href="projects/colorimetric.html"><span class="orange-text text-darken-1"> Merge Sort</span></a></li>
+			<li><a href="projects/newton.html"><span class="orange-text text-darken-1"> Quick Sort</span></a></li>
+			<li><a href="projects/segment.html"><span class="orange-text text-darken-1"> Radix Sort</span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/atomicsmasher.html"> <span class="orange-text text-darken-1"> Binary Search</span></a></li>
+			<li><a href="projects/basilisk.html"><span class="orange-text text-darken-1"> Ternary Search</span></a></li>
+			<li><a href="projects/tower.html"><span class="orange-text text-darken-1"> Interpolation Search</span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/miscellaneous.html"><span class="orange-text text-darken-1">2-pointers</span></a></li>
+			<li><a href="projects/miscellaneous.html"><span class="orange-text text-darken-1">Quick Select</span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/miscellaneous.html"><span class="orange-text text-darken-1">Mo's Algorithm</span></a></li>
+		</ul>
+		<!-- Need to do it twice for some reason ... -->
+		<ul id="dropdown2" class="dropdown-content">
+			<li><a href="projects/karnaugh.html"> <span class="orange-text text-darken-1"> Insertion Sort</span>  </a></li>
+			<li><a href="projects/synthetic.html"><span class="orange-text text-darken-1"> Selection Sort</span></a></li>
+			<li><a href="projects/colorimetric.html"><span class="orange-text text-darken-1"> Merge Sort</span></a></li>
+			<li><a href="projects/newton.html"><span class="orange-text text-darken-1"> Quick Sort</span></a></li>
+			<li><a href="projects/segment.html"><span class="orange-text text-darken-1"> Radix Sort</span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/atomicsmasher.html"> <span class="orange-text text-darken-1"> Binary Search</span></a></li>
+			<li><a href="projects/basilisk.html"><span class="orange-text text-darken-1"> Ternary Search</span></a></li>
+			<li><a href="projects/tower.html"><span class="orange-text text-darken-1"> Interpolation Search</span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/miscellaneous.html"><span class="orange-text text-darken-1">2-pointers</span></a></li>
+			<li><a href="projects/miscellaneous.html"><span class="orange-text text-darken-1">Quick Select</span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/miscellaneous.html"><span class="orange-text text-darken-1">Mo's Algorithm</span></a></li>
+		</ul>
+
+		<ul id="dropdown4" class="dropdown-content">
+			<li><a href="projects/karnaugh.html"> <span class="orange-text text-darken-1"> Breadth First Search </span>  </a></li>
+			<li><a href="projects/synthetic.html"><span class="orange-text text-darken-1"> Dijkstra </span></a></li>
+			<li><a href="projects/colorimetric.html"><span class="orange-text text-darken-1"> Bellman Ford </span></a></li>
+			<li><a href="projects/newton.html"><span class="orange-text text-darken-1"> Floyd Warshall </span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/atomicsmasher.html"> <span class="orange-text text-darken-1"> Prim's </span></a></li>
+			<li><a href="projects/basilisk.html"><span class="orange-text text-darken-1"> Kruskal's </span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/tower.html"><span class="orange-text text-darken-1"> Topological Search </span></a></li>
+			<li><a href="projects/tower.html"><span class="orange-text text-darken-1"> Floyd's Cycle Finding </span></a></li>
+		</ul>
+
+		<ul id="dropdown8" class="dropdown-content">
+			<li><a href="projects/karnaugh.html"> <span class="orange-text text-darken-1"> Linked List </span>  </a></li>
+			<li><a href="projects/synthetic.html"><span class="orange-text text-darken-1"> Hash Map </span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/colorimetric.html"><span class="orange-text text-darken-1"> Binary Search Tree </span></a></li>
+			<li><a href="projects/newton.html"><span class="orange-text text-darken-1"> AVL Tree </span></a></li>
+			<li><a href="projects/newton.html"><span class="orange-text text-darken-1"> Binary Heap </span></a></li>
+			<li><a href="projects/newton.html"><span class="orange-text text-darken-1"> Binary Index Tree </span></a></li>
+			<li class="divider"></li>
+			<li><a href="projects/newton.html"><span class="orange-text text-darken-1"> Priority Queue </span></a></li>
+		</ul>
+
+
+		<nav class="orange darken-2">
+			<div class="navbar-wrapped container">
+				<a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class = "right hide-on-med-and-down">
+					<li> <a href="index.html"> Home </a> </li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown2">General Algorithms<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown4">Graph Theory<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown6">Dynamic Programming<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown8">Data Structures<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown10">Problems<i class="material-icons right">arrow_drop_down</i></a></li>
+
+					<li> <a href="youtube/index.html"> About </a> </li>
+				</ul>
+				<ul class="side-nav" id = "mobile">
+					<li> <a href="index.html"> Home </a> </li>
+					<li> <a href="skills/index.html"> Time Complexities </a> </li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Sort/Search<i class="material-icons right">arrow_drop_down</i></a></li>
+					<li> <a href="youtube/index.html"> YouTube </a> </li>
+					<li> <a href="about/index.html"> About </a> </li>
+				</ul>
+			</div>
+		</nav>
+
+
+
+		<!--<div class="intro blue lighten-2 z-depth-1" style="margin-top: -31.5px;margin-bottom: 0px;">
+			<center>
+				<h2 class="grey-text text-lighten-5" style="text-align:center;">Software Engineer</h2>
+			</center>
+		</div> -->
+		<div class="container">
+			<div class = "row">
+				<div class="col s12">
+					<!--<div class="card-panel teal lighten-4"> -->
+					<div class="card-panel">
+						<h5 class="blue-text"> Welcome! </h5>
+						This website is intended to be a quick reference for implementation of data-structures and algorithms. This website is especially intended for those getting started in competitive programming. Currently all algorithm implementations are in Java, feel free to contribute to add more languages.
+					</div>
+				</div>
+			</div>
+			<div class = "row">
+				<div class="col s6">
+					<!--<div class="card-panel teal lighten-4"> -->
+					<div class="card-panel">
+						<h5 class="blue-text"> Time Complexity: Sorting </h5>
+						<table class="centered">
+					        <thead>
+					          <tr>
+					            <th>Name</th>
+					            <th>Sort (Best)</th>
+					            <th>Sort (Worst)</th>
+					            <th>Space</th>
+					            <th>Stable</th>
+					          </tr>
+					        </thead>
+					        <tbody>
+					          <tr>
+					            <td>Insertion Sort</td>
+					            <td class="green">O(n)</td>
+					            <td class="red">O(n^2)</td>
+					            <td class="green">O(1)</td>
+					            <td class="green">Stable</td>
+					          </tr>
+					          <tr>
+					            <td>Selection Sort</td>
+					            <td class="red">O(n^2)</td>
+					            <td class="red lighten-2">O(n^2)</td>
+					            <td class="green">O(1)</td>
+					            <td class="green">Stable</td>
+					          </tr>
+					          <tr>
+					            <td>Bubble Sort</td>
+					            <td class="red">O(n^2)</td>
+					            <td class="red">O(n^2)</td>
+					            <td class="green lighten-3">O(1)</td>
+					            <td class="green">Stable</td>
+					          </tr>
+					          <tr>
+					            <td>Radix Sort</td>
+					            <td class="green darken-2">O(nk)</td>
+					            <td class="green">O(nk)</td>
+					            <td class="red">O(nk)</td>
+					            <td class="green">Stable</td>
+					          </tr>
+					          <tr>
+					            <td>Quick Sort</td>
+					            <td class="orange">O(nlogn)</td>
+					            <td class="red">O(n^2)</td>
+					            <td class="green">O(1)</td>
+					            <td class="green">Stable</td>
+					          </tr>
+					          <tr>
+					            <td>Merge Sort</td>
+					            <td class="orange">O(nlogn)</td>
+					            <td class="orange">O(nlogn)</td>
+					            <td class="red">O(n)</td>
+					            <td class="green">Stable</td>
+					          </tr>
+					          <tr>
+					            <td>Heap Sort</td>
+					            <td class="orange">O(nlogn)</td>
+					            <td class="orange">O(nlogn)</td>
+					            <td class="red">O(n)</td>
+					            <td class="green">Stable</td>
+					          </tr>
+					        </tbody>
+					     </table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<!-- Javascript file for analytics-->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-74979520-1', 'auto');
+			ga('send', 'pageview');
+			$(".button-collapse").sideNav();
+			$('.collapsible').collapsible();
+			$('.slider').slider({full_width: true});
+		</script>
+
+	</body>
+	<footer>
+		<footer class ="page-footer orange lighten-2">
+			<div class = "container">
+				<div class="footer-copyright">
+					Copyright 2016 Horatiu Lazu
+				</div>
+			</div>
+		</footer>
+	</footer>
+</html>
