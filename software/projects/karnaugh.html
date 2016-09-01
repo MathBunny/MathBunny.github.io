@@ -7,6 +7,28 @@
 		<link type="text/css" rel="stylesheet" href="../css/footer.css"  media="screen,projection"/>
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<style>
+			#footer {
+			   position: fixed;
+    		   bottom: 0pt;
+    		   left: 0pt;
+			   width:100%;
+			   height:90px;   /* Height of the footer */
+			   background:#6cf;
+			}
+
+			body { 
+			    background: url('../images/Karnaugh4VariableBlurred.png') no-repeat center center fixed; 
+		        -webkit-background-size: cover;
+		        -moz-background-size: cover;
+		        -o-background-size: cover;
+		        background-size: cover;
+			}
+
+			.icon-block .material-icons {
+				font-size: inherit;
+			}
+		</style>
 	</head>
 	<body class="grey lighten-3">
 		<ul id="dropdown1" class="dropdown-content">
@@ -76,32 +98,54 @@
 			</center>
 		</div> -->
 
+		<nav>
+			<div class="nav-wrapper blue darken-1">
+				<div class="container">
+		      <div class="col s12">
+		        <a href="#" class="breadcrumb">Karnaugh Map</a>
+		        <a href="#" class="breadcrumb">Home</a>
+		      </div>
+		  </div>
+		    </div>
+		  </nav>
+
 
 		<div class="container">
-			<div class = "row">
-				<div class="col l12">
-					<!-- Add text here about me -->
-					<div class="card-panel">
-						<h5 class="blue-text"> What does Karnaugh Map do? </h5>
-						<p><i> Note: This program is currently under development. </i> The purpose of this program is to assist in the simplification of boolean algebra expressions. Current experiments include exploring the Quine-McClusky technique in simplifying SOP expressions, and visual representations of Karnaugh Maps. Knowledge of bitwise operators have been applied in utilizing information from truth-tables. The interface has been completed in Swing.
+			<h1 class="header center blue-text">Karnaugh Map Simplifier</h1>
 
-						<br><br>Feel free to visit the <a href= "https://github.com/MathBunny/karnaugh-map-simplifier" target="_blank"> GitHub</a> repository. For more info contact me at horatiulazu@gmail.com</p>
-					</div>
-				</div>
-			</div>
+			<div class="row center">
+	        <h5 class="header col s12 light">Boolean Expression Simplification Software</h5>
+	      </div>
+
+	      <br><br><br><br><br><br><br><br><br><br><br><br>
+	      <div class="row center">
+        	<a href="karnaugh/general.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+      		</div>
+
 		</div>
+		
 		<div class="container">
-			<div class = "row">
-				<div class="col l12">
-					<div class="card">
-						<div class="card-image">
-							<img src="../images/KarnaughScreenshot.png">
-						</div>
-						<div class="card-content">
-							<p>This is a screenshot of the program in development.</p>
-						</div>
-					</div>
-				</div>
+			<div class="row">
+				<div class="col s12 m4">
+		          <div class="icon-block">
+		            <a href="karnaugh/features.html"> <h2 class="center light-blue-text"><i class="material-icons">redeem</i></h2> </a>
+		            <h5 class="center">Features <br><br><br><br><br></h5>
+		          </div>
+		        </div>
+
+		        <div class="col s12 m4">
+		          <div class="icon-block">
+		            <a href="karnaugh/documentation.html"> <h2 class="center light-blue-text"><i class="material-icons">library_books</i></h2> </a>
+		            <h5 class="center">Documentation</h5>
+		          </div>
+		        </div>
+
+		        <div class="col s12 m4">
+		          <div class="icon-block">
+		            <a href="karnaugh/updates.html"> <h2 class="center light-blue-text"><i class="material-icons">fast_forward</i></h2> </a>
+		            <h5 class="center">Updates</h5>
+		          </div>
+		        </div>
 			</div>
 		</div>
 				<!--Import jQuery before materialize.js-->
@@ -122,7 +166,7 @@
 			
 		</script>
 	</body>
-	<footer>
+	<footer style="bottom: 0px;" id = "footer">
 		<footer class ="page-footer blue lighten-2">
 			<div class = "container">
 				<div class="footer-copyright">
