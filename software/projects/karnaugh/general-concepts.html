@@ -105,10 +105,88 @@
                 <div class="col l12">
                     <!-- Add text here about me -->
                     <div class="card-panel">
-                        <h5 class="blue-text"> Karnaugh Map Documentation - General Concepts </h5>
-                        The purpose of this program is to simplify boolean algebra expressions. The software makes use of Karnaugh Maps, which are a grid labelled with grey codes (reflected binary values), with the potential of be used to find patterns leading to variable simplification. 
+                        <h5 class="blue-text"> Introduction to Boolean Algebra </h5>
+                        Boolean algebra is a branch of algebra where the values of variables can only be <code>true</code> or <code>false</code> (often denoted by 1 and 0 respectfully). We use boolean algebra in circuits, general two-valued logic (such as in mathematics), and boolean operations.
 
-                        <br><br>Feel free to visit the <a href= "https://github.com/MathBunny/karnaugh-map-simplifier" target="_blank"> GitHub</a> repository. For more info contact me at horatiulazu@gmail.com</p>
+                        <h5 class="blue-text"> Boolean Algebra Operations</h5>
+                        There are multiple operations in boolean algebra, but the ones we will focus on are <code>AND</code> and <code>OR</code>. We denote <code>AND</code> through multiplication (ex: <code>AB</code>) and we denote <code>OR</code> through addition (ex: <code>A+B</code>). These operations follow the <i>commutative property</i>, meaning that the order in which we place the operands does not matter.
+
+                        <h5 class="blue-text"> Truth-Tables</h5>
+                        Whenever we have a boolean expression, we can express it as a function. Similar to <code>F(x)</code> we can express a two variable function: <code>F(AB)</code>, where we can say our domain is <code>A B</code>. Since our input values can only be <code>true</code>/<code>false</code>, we can create a truth-table that will show all possible cases with their inputs to the function and the result. Let's take a look at a simple two variable expression, and see how the logic gates <code>AND</code> and <code>OR</code> work.
+                        <br><br>
+                        <div class="col s6">
+                        Expression: <code>F(AB)=AB</code>
+                             <table>
+                                <thead>
+                                  <tr>
+                                      <th data-field="id">A</th>
+                                      <th data-field="name">B</th>
+                                      <th data-field="price">F(AB)</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="col s6">
+                        Expression: <code>F(AB)=A+B</code>
+                             <table>
+                                <thead>
+                                  <tr>
+                                      <th data-field="id">A</th>
+                                      <th data-field="name">B</th>
+                                      <th data-field="price">F(A+B)</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+
+                        <h5 class="blue-text">Negation</h5>
+                        Negation is a simple concept, as you simply flip the bit. We denote not by a line over the number, or by using <code>'</code>, for example <code>A'B</code>, which we would read as <i>A not B </i>.
                     </div>
                 </div>
             </div>

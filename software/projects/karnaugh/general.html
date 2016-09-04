@@ -114,11 +114,14 @@
             </div>
 
             <div class="carousel carousel-slider center" data-indicators="true">
-    <a class="carousel-item" href="https://github.com/MathBunny/karnaugh-map-simplifier/blob/master/screenshots/Karnaugh4Variable.png?raw=true"><img src="https://github.com/MathBunny/karnaugh-map-simplifier/blob/master/screenshots/Karnaugh4Variable.png?raw=true"></a>
-    <a class="carousel-item" href="../../images/Karnaugh4VariableSimplifiedb.png"><img src="../../images/Karnaugh4VariableSimplifiedb.png"></a>
-    <a class="carousel-item" href="../../images/Karnaugh2VariableSimplified.png"><img src="../../images/Karnaugh2VariableSimplified.png"></a>
-    <a class="carousel-item" href="../../images/Karnaugh3VariableSimplified.png"><img src="../../images/Karnaugh3VariableSimplified.png"></a>
-  </div>
+                <a class="carousel-item" href="https://github.com/MathBunny/karnaugh-map-simplifier/blob/master/screenshots/Karnaugh4Variable.png?raw=true"><img src="https://github.com/MathBunny/karnaugh-map-simplifier/blob/master/screenshots/Karnaugh4Variable.png?raw=true"></a>
+
+                <a class="carousel-item" href="../../images/Karnaugh4VariableSimplifiedb.png"><img src="../../images/Karnaugh4VariableSimplifiedb.png"></a>
+
+                <a class="carousel-item" href="../../images/Karnaugh2VariableSimplified.png"><img src="../../images/Karnaugh2VariableSimplified.png"></a>
+
+                <a class="carousel-item" href="../../images/Karnaugh3VariableSimplified.png"><img src="../../images/Karnaugh3VariableSimplified.png"></a>
+            </div>
   <br><br><br><br><br><br>
         
 
@@ -139,6 +142,11 @@
 
             $(".button-collapse").sideNav();
             $('.carousel.carousel-slider').carousel({full_width: true});
+            autoplay()   
+            function autoplay() {
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 4500);
+            }
         </script>
     </body>
     <footer style="bottom: 0px;" id = "footer">
