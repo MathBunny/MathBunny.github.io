@@ -150,7 +150,7 @@
                               </table>
                         </div>
                         <div class="col s6">
-                        Expression: <code>F(AB)=A+B</code>
+                             Expression: <code>F(AB)=A+B</code>
                              <table>
                                 <thead>
                                   <tr>
@@ -187,7 +187,145 @@
 
                         <h5 class="blue-text">Negation</h5>
                         Negation is a simple concept, as you simply flip the bit. We denote not by a line over the number, or by using <code>'</code>, for example <code>A'B</code>, which we would read as <i>A not B </i>.
-                    </div>
+
+                        <h5 class="blue-text">Example Expression</h5>
+                        Let's do an example and look at the truth-table for:
+                        <br><br>
+                        <code>F(ABCD)=AB'C+BD+CD+D</code>
+                        <div class="col s12">
+                             <table>
+                                <thead>
+                                  <tr>
+                                      <th data-field="id">A</th>
+                                      <th data-field="name">B</th>
+                                      <th data-field="name">C</th>
+                                      <th data-field="name">D</th>
+                                      <th data-field="price">F(ABCD)</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    
+                    <h5 class="blue-text">Truth-Table Explanation & SOP Expressions</h5>
+                    We first notice from the expression <code>F(ABCD)</code> that the domain of the expression is <code>ABCD</code>, so we have four variables. We then simulate all possible combinations of binary codes, in order of ascending binary value, so a total of <code>2^N-1</code>, where <code>N</code> is the number of variables. We then evalute each expression, taking note of the logic gates. On the right side, we have our expression result when inputted into the function. This type of expression is called <i> sum of product </i>because we are summing the product of functions. The interesting property of SOP (sum of product) expressions is that if one term is true, the expression becomes true because <code>1+1=1</code> and <code>1+0=1</code>. This technique becomes powerful in both Karnaugh Maps and simplifying expressions by hand.
+
+                    <h5 class="blue-text">NAND and XOR Logic Gates</h5>
+                    There also two more logic gates that were not mentioned yet, but are not used in logic gates, and these include NAND and XOR logic gates. Also note that NOT is also considered a logic gate. Like the name suggests, NAND is <i>not and</i> and XOR would be the same as OR but <code>1XOR1=0</code>.
                 </div>
             </div>
         </div>
