@@ -4,13 +4,9 @@
 ##Features:
 * Introduces who I am
 * Features nice and simple graphics
-* Fluid animations
 * Provides relevant links
-* Provides access to résumé 
 * Custom domain: `horatiulazu.ca`
 * Features metatags and follows SEO principles
-* Reduced CSS footprint by using minimize
-* Includes software subsite with more information regarding projects
 * Has quick redirect feature to access projects, example: `horatiulazu.ca?synthetic`
 
 ##Software Development Subsite:
