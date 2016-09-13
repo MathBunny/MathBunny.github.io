@@ -105,16 +105,34 @@
                     <!-- Add text here about me -->
                     <div class="card-panel">
                         <h5 class="blue-text"> Karnaugh Map Documentation</h5>
-                        Welcome to Karnaugh Map Documentation! This document will cover any questions regarding how Karnaugh Maps, how this software works, and how to use this software. Note: This page is still in development.
+                        Welcome to Karnaugh Map Documentation! This document will cover any questions regarding how Karnaugh Maps, how this software works, and how to use this software.
                         <br><br>
-                        For an introduction to boolean algebra, click <a href="general-concepts.html"> here</a>.
-                        <br>
-                        For an introduction to Karnaugh Maps, click <a href="karnaugh-concepts.html"> here</a>.
+                        For an introduction to boolean algebra, click <a href="general-concepts.html"> here. </a>
+                       To learn about Karnaugh Maps, click <a href="karnaugh-concepts.html"> here</a>.
 
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class = "row">
+                <div class="col l12">
+                    <div class="card-panel">
+                        <h5 class="blue-text"> YouTube Demonstration</h5>
+                        <p> Demonstration of the application and how it works. </p>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/X0nBVJF_jio" frameborder="0" allowfullscreen id="youtube"></iframe>
+                    </div>
+                    <script>
+                        console.log(document.getElementById("youtube").clientHeight, document.getElementById("youtube").clientWidth);
+                        document.getElementById("youtube").height = document.getElementById("youtube").clientWidth*0.50;
+                        
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
                 <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="../../js/materialize.min.js"></script>
