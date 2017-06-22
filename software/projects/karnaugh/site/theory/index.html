@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Theory - Karnaugh Map Simplification Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Theory";
+    var mkdocs_page_input_path = "theory.md";
+    var mkdocs_page_url = "/theory/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Karnaugh Map Simplification Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Theory</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#boolean-algebra-and-operators">Boolean Algebra and Operators</a></li>
+    
+
+    <li class="toctree-l2"><a href="#truth-tables">Truth Tables</a></li>
+    
+
+    <li class="toctree-l2"><a href="#sum-of-product-expressions-sop">Sum of Product Expressions (SOP)</a></li>
+    
+
+    <li class="toctree-l2"><a href="#example-algebraic-simplification">Example Algebraic Simplification</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Karnaugh Map Simplification Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Theory</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="boolean-algebra-and-operators">Boolean Algebra and Operators</h2>
+<p>Boolean algebra is a branch of algebra where the values of variables can only be <code>true</code> or <code>false</code> (often denoted by <code>1</code> and <code>0</code> respectfully). We use boolean algebra in circuits, general two-valued logic (such as in mathematics), and boolean operations.</p>
+<p>There are multiple operations in boolean algebra, but the ones we will focus on are <code>AND</code> and <code>OR</code>. We denote <code>AND</code> through multiplication (ex: <code>AB</code>) and we denote <code>OR</code> through addition (ex: <code>A+B</code>). These operations follow the commutative property, meaning that the order in which we place the operands does not matter.</p>
+<h2 id="truth-tables">Truth Tables</h2>
+<p>Whenever we have a boolean expression, we can express it as a function. Similar to <code>F(x)</code> we can express a two variable function: <code>F(AB)</code>, where we can say our domain is <code>{A,B}</code>. Since our input values can only be <code>true</code> or <code>false</code>, we can create a truth table that will show all possible cases with their inputs to the function and the result. Let's take a look at a simple two variable expression, and see how the logic gates <code>AND</code> and <code>OR</code> work. </p>
+<p>For example, let's take the equation <code>F(AB) = AB</code> and generate the truth table: </p>
+<table>
+<thead>
+<tr>
+<th>F(AB)</th>
+<th align="center">A</th>
+<th align="right">B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td align="center">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">1</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>We can also take the equation <code>F(AB) = A+B</code> and generate the truth table:</p>
+<table>
+<thead>
+<tr>
+<th>F(A+B)</th>
+<th align="center">A</th>
+<th align="right">B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td align="center">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>Truth tables are important because we can easily evaluate for the behavior of a function. For user input, it is easier to input truth-tables because we can specify cases such as <code>Don't Cares</code>, which will be discussed later on.</p>
+<h2 id="sum-of-product-expressions-sop">Sum of Product Expressions (SOP)</h2>
+<p>Let's consider a more complicated expression <code>F(ABCD)= AB'C+BD+CD+D</code> and generate its truth table:</p>
+<table>
+<thead>
+<tr>
+<th>F(AB'C+BD+CD+D)</th>
+<th align="center">A</th>
+<th align="right">B</th>
+<th align="right">C</th>
+<th align="right">D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td align="center">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td align="center">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>This example was definately more involved than the previous expressions. An interesting observation is that we are doing a sum of product evaluation, that is, <code>AB'C+BD+CD+D</code> is a sum of products. The significance of a sum of product is that when we are doing <code>+</code> we are in fact invoking the <code>OR</code> operator. </p>
+<p>Moreover, the <code>OR</code> operator returns <code>true</code> so long as any one of its arguements returns <code>true</code>. Therefore, if <em>any</em> of the terms in the sum of product (SOP) expressions is <code>true</code>, then we know that the final expression is <code>true</code> for certain.</p>
+<h2 id="example-algebraic-simplification">Example Algebraic Simplification</h2>
+<p>Let's simplify our expression from the previous truth table example. We can apply ordinary algebra tricks such as factoring. Remember that the <code>+</code> operator invokes the <code>OR</code> gate, and that <code>true or x</code> always returns <code>true</code> regardless of <code>x</code> (as shown in our first truth-table).</p>
+<pre><code>AB'C+BD+CD+D // Initial expression
+AB'C+BD+D(C+1) // Factor out a D
+AB'C+BD+D // Since (C+1) is always true, as C OR true is always true
+AB'C+D(B+1) // Factor out a D again
+AB'C+D // Since (B+1) is always true, as B OR true is always true
+=AB'C+D // Final expression
+</code></pre>
+
+<p>As an exercise to the reader, complete the truth-table to show that they are logically equivalent. </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
