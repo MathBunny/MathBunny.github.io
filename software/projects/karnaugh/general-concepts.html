@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Karnaugh Map Simplifier </title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../../css/footer.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            #footer {
+               position: fixed;
+               bottom: 0pt;
+               left: 0pt;
+               width:100%;
+               height:90px;   /* Height of the footer */
+               background:#6cf;
+            }
+        </style>
+    </head>
+    <body class="grey lighten-3">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="../karnaugh.html"><span class="blue-text text-lighten-1">Karnaugh Map</span></a></li>
+            <li><a href="../synthetic.html"><span class="blue-text text-lighten-1">Synthetic Division</span></a></li>
+            <li><a href="../colorimetric.html"><span class="blue-text text-lighten-1">Colorimetric Analysis</span></a></li>
+            <li><a href="../newton.html"><span class="blue-text text-lighten-1">Newton Raphson</span></a></li>
+            <li><a href="../segment.html"><span class="blue-text text-lighten-1">Strava Wind Impact</span></a></li>
+            <li><a href="../slope.html"><span class="blue-text text-lighten-1">Slope Field Generator</span></a></li>
+
+            <li class="divider"></li>
+            <li><a href="../atomicsmasher.html"><span class="blue-text text-lighten-1">Atomic Smasher</span></a></li>
+            <li><a href="../basilisk.html"><span class="blue-text text-lighten-1">Basilisk 3D</span></a></li>
+            <li><a href="../tower.html"><span class="blue-text text-lighten-1">Tower of Hanoi</span></a></li>
+
+            <!-- <li><a href="connect.html"><span class="blue-text text-lighten-1">Connect-4</span></a></li>
+            <li><a href="pong.html"><span class="blue-text text-lighten-1">Pong</span></a></li> -->
+            <li class="divider"></li>
+            <!--<li><a href="lyons.html"><span class="blue-text text-lighten-1">Lyon's Den App 2.0</span></a></li>
+            <li><a href="pyforms.html"><span class="blue-text text-lighten-1">pyForms</span></a></li>
+            <li><a href="essay.html"><span class="blue-text text-lighten-1">Essay Generator</span></a></li>
+            <li><a href="mario.html"><span class="blue-text text-lighten-1">Mario MyCreation</span></a></li>
+            <li><a href="address.html"><span class="blue-text text-lighten-1">AddressBook</span></a></li> -->
+            <li><a href="../miscellaneous.html"><span class="blue-text text-lighten-1">Additional Projects</span></a></li>
+        </ul>
+        <!-- Duplicate for mobile -->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="../karnaugh.html"><span class="blue-text text-lighten-1">Karnaugh Map</span></a></li>
+            <li><a href="../synthetic.html"><span class="blue-text text-lighten-1">Synthetic Division</span></a></li>
+            <li><a href="../colorimetric.html"><span class="blue-text text-lighten-1">Colorimetric Analysis</span></a></li>
+            <li><a href="../newton.html"><span class="blue-text text-lighten-1">Newton Raphson</span></a></li>
+            <li><a href="../segment.html"><span class="blue-text text-lighten-1">Strava Wind Impact</span></a></li>
+            <li><a href="../slope.html"><span class="blue-text text-lighten-1">Slope Field Generator</span></a></li>
+            <li class="divider"></li>
+            <li><a href="../atomicsmasher.html"><span class="blue-text text-lighten-1">Atomic Smasher</span></a></li>
+            <li><a href="../basilisk.html"><span class="blue-text text-lighten-1">Basilisk 3D</span></a></li>
+            <li><a href="../tower.html"><span class="blue-text text-lighten-1">Tower of Hanoi</span></a></li>
+            <li class="divider"></li>
+            <li><a href="../miscellaneous.html"><span class="blue-text text-lighten-1">Additional Projects</span></a></li>
+        </ul>
+
+        <nav class="blue darken-2">
+            <div class="navbar-wrapped container">
+                <a href="http://horatiulazu.ca" class="brand-logo"> Horatiu Lazu </a>
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class = "right hide-on-med-and-down">
+                    <li> <a href="../../index.html"> Home </a> </li>
+                    <li> <a href="../../skills/index.html"> Skills </a> </li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Personal Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li> <a href="../../resume/index.html"> Résumé</a> </li>
+                    <li> <a href="../../about/index.html"> About </a> </li>
+                </ul>
+
+                <ul class="side-nav" id = "mobile">
+                    <li> <a href="../../index.html"> Home </a> </li>
+                    <li> <a href="../../skills/index.html"> Skills </a> </li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Personal Projects<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li> <a href="../../resume/index.html"> Résumé</a> </li>
+                    <li> <a href="../../about/index.html"> About </a> </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- <div class="intro blue lighten-2 z-depth-1" style="margin-top: -21.5px;margin-bottom: 0px;">
+            <center>
+                <h3 class="grey-text text-lighten-5">Karnaugh Map Simplification Software</h1>
+            </center>
+        </div> -->
+
+        <nav>
+            <div class="nav-wrapper blue darken-1">
+                <div class="container">
+              <div class="col s12">
+                <a href="../karnaugh.html" class="breadcrumb">Karnaugh Map</a>
+                <a href="documentation.html" class="breadcrumb">Documentation</a>
+                <a href="#" class="breadcrumb">General Concepts</a>
+              </div>
+          </div>
+            </div>
+          </nav>
+
+
+        <div class="container">
+
+            <div class = "row">
+                <div class="col l12">
+                    <!-- Add text here about me -->
+                    <div class="card-panel">
+                        <h5 class="blue-text"> Introduction to Boolean Algebra </h5>
+                        Boolean algebra is a branch of algebra where the values of variables can only be <code>true</code> or <code>false</code> (often denoted by 1 and 0 respectfully). We use boolean algebra in circuits, general two-valued logic (such as in mathematics), and boolean operations.
+
+                        <h5 class="blue-text"> Boolean Algebra Operations</h5>
+                        There are multiple operations in boolean algebra, but the ones we will focus on are <code>AND</code> and <code>OR</code>. We denote <code>AND</code> through multiplication (ex: <code>AB</code>) and we denote <code>OR</code> through addition (ex: <code>A+B</code>). These operations follow the <i>commutative property</i>, meaning that the order in which we place the operands does not matter.
+
+                        <h5 class="blue-text"> Truth-Tables</h5>
+                        Whenever we have a boolean expression, we can express it as a function. Similar to <code>F(x)</code> we can express a two variable function: <code>F(AB)</code>, where we can say our domain is <code>A B</code>. Since our input values can only be <code>true</code>/<code>false</code>, we can create a truth-table that will show all possible cases with their inputs to the function and the result. Let's take a look at a simple two variable expression, and see how the logic gates <code>AND</code> and <code>OR</code> work.
+                        <br><br>
+                        <div class="col s6">
+                        Expression: <code>F(AB)=AB</code>
+                             <table>
+                                <thead>
+                                  <tr>
+                                      <th data-field="id">A</th>
+                                      <th data-field="name">B</th>
+                                      <th data-field="price">F(AB)</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="col s6">
+                             Expression: <code>F(AB)=A+B</code>
+                             <table>
+                                <thead>
+                                  <tr>
+                                      <th data-field="id">A</th>
+                                      <th data-field="name">B</th>
+                                      <th data-field="price">F(A+B)</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+
+                        <h5 class="blue-text">Negation</h5>
+                        Negation is a simple concept, as you simply flip the bit. We denote not by a line over the number, or by using <code>'</code>, for example <code>A'B</code>, which we would read as <i>A not B </i>.
+
+                        <h5 class="blue-text">Example Expression</h5>
+                        Let's do an example and look at the truth-table for:
+                        <br><br>
+                        <code>F(ABCD)=AB'C+BD+CD+D</code>
+                        <div class="col s12">
+                             <table>
+                                <thead>
+                                  <tr>
+                                      <th data-field="id">A</th>
+                                      <th data-field="name">B</th>
+                                      <th data-field="name">C</th>
+                                      <th data-field="name">D</th>
+                                      <th data-field="price">F(ABCD)</th>
+                                  </tr>
+                                </thead>
+
+                                <tbody>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    
+                    <h5 class="blue-text">Truth-Table Explanation & SOP Expressions</h5>
+                    We first notice from the expression <code>F(ABCD)</code> that the domain of the expression is <code>ABCD</code>, so we have four variables. We then simulate all possible combinations of binary codes, in order of ascending binary value, so a total of <code>2^N-1</code>, where <code>N</code> is the number of variables. We then evalute each expression, taking note of the logic gates. On the right side, we have our expression result when inputted into the function. This type of expression is called <i> sum of product </i>because we are summing the product of functions. The interesting property of SOP (sum of product) expressions is that if one term is true, the expression becomes true because <code>1+1=1</code> and <code>1+0=1</code>. This technique becomes powerful in both Karnaugh Maps and simplifying expressions by hand.
+
+                    <h5 class="blue-text">NAND and XOR Logic Gates</h5>
+                    There also two more logic gates that were not mentioned yet, but are not used in logic gates, and these include NAND and XOR logic gates. Also note that NOT is also considered a logic gate. Like the name suggests, NAND is <i>not and</i> and XOR would be the same as OR but <code>1XOR1=0</code>.
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br>
+                <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../../js/materialize.min.js"></script>
+
+        <!-- Javascript file for analytics-->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-74979520-1', 'auto');
+            ga('send', 'pageview');
+
+            $(".button-collapse").sideNav();
+            
+        </script>
+    </body>
+    <footer style="bottom: 0px;" id = "footer">
+        <footer class ="page-footer blue lighten-2">
+            <div class = "container">
+                <div class="footer-copyright">
+                    Copyright 2017 Horatiu Lazu
+                </div>
+            </div>
+        </footer>
+    </footer>
+</html>
