@@ -4,15 +4,23 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-06-21</lastmod>
+     <lastmod>2017-07-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/theory/</loc>
-     <lastmod>2017-06-21</lastmod>
+     <loc>/Boolean Algebra/</loc>
+     <lastmod>2017-07-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Karnaugh Maps/</loc>
+     <lastmod>2017-07-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
