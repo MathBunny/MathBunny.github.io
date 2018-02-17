@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Dynamic Programming - Karnaugh Map Simplification Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Dynamic Programming";
+    var mkdocs_page_input_path = "Dynamic Programming.md";
+    var mkdocs_page_url = "/Dynamic Programming/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Karnaugh Map Simplification Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Boolean Algebra/">Boolean Algebra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Karnaugh Maps/">Karnaugh Maps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Simplification Examples/">Simplification Examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Efficient Exhaustion Algorithm/">Efficient Exhaustion Algorithm</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Dynamic Programming</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#dynamic-programming">Dynamic Programming</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#kadanes-algorithm-in-1d">Kadane's Algorithm in 1D</a></li>
+        
+            <li><a class="toctree-l3" href="#relating-kadanes-algorithm-to-karnaugh-maps">Relating Kadane's Algorithm to Karnaugh Maps</a></li>
+        
+            <li><a class="toctree-l3" href="#extending-algorithm-to-2d">Extending Algorithm to 2D</a></li>
+        
+            <li><a class="toctree-l3" href="#storing-results">Storing Results</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Karnaugh Map Simplification Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Dynamic Programming</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="dynamic-programming">Dynamic Programming</h1>
+<p>Dynamic programming is a technique used in solving problems bottom-up (or top-down), and use solutions from overlapping subproblems to build up our larger solutions. In this example, if we figure out that we can make a small 2x2 grouping, can we use that to form larger groupings?</p>
+<h2 id="kadanes-algorithm-in-1d">Kadane's Algorithm in 1D</h2>
+<p>Kadane's algorithm finds the largest subarray in an array containing numbers in O(N) time with O(1) space. For example:</p>
+<pre><code class="text">[3, 6, -1, 3, -6, -7, 3, 15, -432, 2]
+Largest subarray =&gt; [3, 15] =&gt; 3+15 =&gt; 18
+</code></pre>
+
+<p>This can be computed efficient by taking into consideration the following facts which are at the core of Kadane's algorithm:</p>
+<ul>
+<li>Start iterating through the array</li>
+<li>Keep a cumulative sum</li>
+<li>If, so far, our sum is positive, we should keep our elements</li>
+<li>If we get a negative number, then we should start over</li>
+</ul>
+<p>This is efficient, because at each iteration of Kadane's algorithm, we don't have to look back, and we use constant memory. A naive solution would have a complexity of <code>O(2^N)</code></p>
+<h2 id="relating-kadanes-algorithm-to-karnaugh-maps">Relating Kadane's Algorithm to Karnaugh Maps</h2>
+<p>If we can extend Kadane's Algorithm to 2D, and instead find the largest submatrices such that all rows/columns are filled, we would solve our problem. How can this be solved? First, consider the Karnaugh Map is a grid of <code>0's</code> and <code>1's</code>. From before, we know that it is a filled matrix if and only if the sum is equal to width * height.</p>
+<p>Hence, we need to extend Kadane's algorithm to 2D, taking note of the perfectly filled matrices.</p>
+<h2 id="extending-algorithm-to-2d">Extending Algorithm to 2D</h2>
+<p>The following describes the algorithm, which takes <code>O(N^2*M)</code> time:</p>
+<ol>
+<li>Store the cumulative sums of all columns in the matrix. That is, the top-most row should contain just that item, and the row below should contain that item plus the item at its row/columns</li>
+<li>Start iterating through from the top row to the bottom row, called <code>x1</code></li>
+<li>Start another loop, which iterates from x1 to the bottom as well, called <code>x2</code></li>
+<li>Subtract, for all columns, the difference in height between <code>x2</code> and <code>x1</code>. This is the sum using the prefix sums array</li>
+<li>For the produced difference array, run 1D Kadane's algorithm</li>
+<li>When runnning Kadane's algorithm, do not include results who have different consecutive values in the 1D array. These potential matrices have holes with <code>0</code>. Also ignore cases of illegal sizes.</li>
+</ol>
+<p>The end result contains the largest matrix possible. To store the results, you can store them in a data-structure like a heap and sort based on <code>Math.abs(x1-x2) * Math.abs(y1-y2)</code></p>
+<p>For example:</p>
+<pre><code>[0, 1, 0, 0      =&gt;         [0, 1, 0, 0
+ 1, 1, 1, 1      =&gt;          1, 2, 1, 1 
+ 0, 1, 1, 1      =&gt;          1, 3, 2, 1
+ 0, 0, 1, 0]     =&gt;          1, 3, 3, 1]
+
+</code></pre>
+
+<p>Following the algorithm previously illustrated, we first store the cumulative sums going down the columns. We then iterate through the indices with our <code>x1</code> and <code>x2</code> pointers.</p>
+<p>So we first get <code>[0, 1, 0, 0]</code> as our array, with <code>x1 = 0</code> and <code>x2 = 1</code>, which we consider <code>1</code> to be the largest. We know it is <code>1x1</code> in size because (<code>x2-x1=1</code>) and we cover a range of <code>1</code>.</p>
+<p>We then extend this further, increasing <code>x2</code> until we get to <code>4</code>, then increment <code>x1</code> by one and repeat, resulting in <code>O(N^2)</code> time before invoking 1D Kadane's algorithm, which takes <code>O(N)</code> time.</p>
+<p>When we get <code>x1=1</code> and <code>x2=3</code>, we have <code>[0, 2, 2, 1]</code>, which gives us <code>[2, 2]</code> with <code>x2-x1=2</code>, hence we have our maximum here being a grouping of 4.</p>
+<h2 id="storing-results">Storing Results</h2>
+<p>We can have several algorithms for storing the results. The easiest way is to store another 2D grid with the maximum pairing so far that encompasses that specific grid cell. If your new candidate is larger and it satisfies, you can set that grid. Else, you can discard it unless another cell requires it to be occupied. This will result in <code>O(N*M)</code> memory, which is optimal.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Efficient Exhaustion Algorithm/" class="btn btn-neutral" title="Efficient Exhaustion Algorithm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Efficient Exhaustion Algorithm/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
