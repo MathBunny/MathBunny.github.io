@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-08-13</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/Boolean Algebra/</loc>
-     <lastmod>2017-08-13</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>/Karnaugh Maps/</loc>
-     <lastmod>2017-08-13</lastmod>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,23 @@
     
     <url>
      <loc>/Simplification Examples/</loc>
-     <lastmod>2017-08-13</lastmod>
+     <lastmod>2018-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Efficient Exhaustion Algorithm/</loc>
+     <lastmod>2018-02-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Dynamic Programming/</loc>
+     <lastmod>2018-02-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

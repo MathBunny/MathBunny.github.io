@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Efficient Exhaustion Algorithm - Karnaugh Map Simplification Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Efficient Exhaustion Algorithm";
+    var mkdocs_page_input_path = "Efficient Exhaustion Algorithm.md";
+    var mkdocs_page_url = "/Efficient Exhaustion Algorithm/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Karnaugh Map Simplification Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Boolean Algebra/">Boolean Algebra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Karnaugh Maps/">Karnaugh Maps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Simplification Examples/">Simplification Examples</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Efficient Exhaustion Algorithm</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#algorithm-overview">Algorithm Overview</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#fundamental-theorem-of-calculus">Fundamental Theorem of Calculus</a></li>
+        
+            <li><a class="toctree-l3" href="#principle-of-inclusion-exclusion">Principle of Inclusion-Exclusion</a></li>
+        
+            <li><a class="toctree-l3" href="#priority-groupings-heuristic">Priority Groupings + Heuristic</a></li>
+        
+            <li><a class="toctree-l3" href="#approach-drawbacks">Approach Drawbacks</a></li>
+        
+            <li><a class="toctree-l3" href="#memory-optimization-cell-wise-priority-queues">Memory Optimization: Cell-Wise Priority Queues</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dynamic Programming/">Dynamic Programming</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Karnaugh Map Simplification Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Efficient Exhaustion Algorithm</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="algorithm-overview">Algorithm Overview</h1>
+<p>The process of simplifying variables essentially involves greedily obtaining larger rectangles to encompass as many <code>1</code> unit within a grid. To ensure that we cover all the possible pairings, we need to devise an algorithm to generate a sample space containing all possible outcomes, and then we can pick out the pairings that we need from there.</p>
+<p>The process begins by plotting the points <code>0</code> and <code>1</code> in the Karnaugh Map. We can assume that the up left corner in <code>(x,y)</code> coordinate is <code>(a,b)</code> and bottom right corner is <code>(c,d)</code>. An interesting property is that:</p>
+<blockquote>
+<p>Consider the grouping <code>(a,b)</code> to <code>(c,d)</code>. The group is valid if and only if sum of all <code>1</code>s in the rectangle is equal to <code>(c-a)*(d-b)</code>.</p>
+</blockquote>
+<p>The significance of this property is that we can quickly identify if a grouping is valid or not in <code>O(1)</code> time. Thus, we can exhaust all possible scenarios and we saved a linear (or quadratic) factor.</p>
+<h2 id="fundamental-theorem-of-calculus">Fundamental Theorem of Calculus</h2>
+<p>The first part of the fundamental theorem of calculus claims that we can take the anti-derivative of a function <code>ƒ</code>, and find the area under the curve from point <code>A</code> to <code>B</code> by doing <code>F(A)-F(B)</code>. Extending this definition to arrays, we can generate an anti-derivative for an array and find the summation from point <code>A</code> to <code>B</code> in <code>O(1)</code> time.</p>
+<p>Consider:</p>
+<pre><code>arr = [1, 0, 1, 1, 0, 1]
+arr* = [0, 1, 1, 2, 3, 3, 4]
+</code></pre>
+
+<p>We can then find the summation from item <code>arr[i]</code> for <code>i = [a, b]</code> by doing:</p>
+<pre><code>sum = arr*[b+1] - arr*[a];
+</code></pre>
+
+<p>This alow us to sum up values very quickly, and extending this to two dimensions we can rule out impossible cases.</p>
+<p>Remark: Notice the length of the array is one index larger.</p>
+<h2 id="principle-of-inclusion-exclusion">Principle of Inclusion-Exclusion</h2>
+<p>Due to the nature of Karnaugh Maps, we would want to be able to do summation in two dimensions. This can be achieved using the principle of inclusion-exclusion. </p>
+<p>Applying the exact same algorithm as before, except now the size of the array is one larger on the horizontal axis and one larger on the vertical access as well. </p>
+<p>The final formula for retrieving the area is:</p>
+<pre><code>sum = arr*[d+1][c+1] - arr*[d+1][c] - arr*[d][c+1] + arr*[b][a];
+</code></pre>
+
+<h2 id="priority-groupings-heuristic">Priority Groupings + Heuristic</h2>
+<p>Generating valid groupings becomes trivial upon being able to check the validity using 2D prefix sum arrays. Iterate through all the <code>(x,y)</code> pairs, then try all possible starting and ending coordinates. This operation will take <code>O((NM)^2)</code>, where <code>N</code> = # of rows, <code>M</code> = # of columns.</p>
+<p>When deciding the final groupings, insert all of the candidate groupings as an encapsulated object into a priority queue. The key in the priority queue used will be the size of the grouping. If two groupings are equal in size, the one with the more "square" shape will get a higher priority. The method for determining the "square-ness" of a candidate is the absolute difference in its width and height.</p>
+<h2 id="approach-drawbacks">Approach Drawbacks</h2>
+<p>The first drawback for this approach is speed. Despite being able to eliminate all solutions that don't satisfy the rectangular property of a grouping in <code>O(1)</code> time, we still exhaust all possibilities. Moreover, we also store the entire solution space in a priority queue which is very memory intensive.</p>
+<h2 id="memory-optimization-cell-wise-priority-queues">Memory Optimization: Cell-Wise Priority Queues</h2>
+<p>An important observation to make is that we are only interested in the largest possible grouping from each particular cell. This means that during each iteration of the algorithm, we should have at most <code>NxM</code> items in our priority queue, because the rest aren't useful! We can extend this idea by simply have a cell-wise 2D array that represents the grid used by cell, that is, a grouping that warrants its existence because it is the largest grouping to satisfy a given cell.</p>
+<p>This however adds a factor of time complexity, how do we know that a rectangular grouping is a maximum for any of the cells within the area it surrounds? One approach is to manually check each cell, but it isn't good because it takes <code>NxM</code> amount of time. </p>
+<p>We could also, when generating the groups, start at the best cases, and keep iterating until you get to the worst case, but this presents another problem because if it's the only cell, then we do <code>NxM</code> iterations. To make things worse, we have to repeat this for all rows/cols, thus we will end up with <code>N^2*M^2</code>. The following would be a worse case, as we don't quit any options we're exhausting to until we end up with just 1 size grouping:</p>
+<p><img alt="''" src="https://i.imgur.com/pZuPzrR.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Dynamic Programming/" class="btn btn-neutral float-right" title="Dynamic Programming">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Simplification Examples/" class="btn btn-neutral" title="Simplification Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Simplification Examples/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Dynamic Programming/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
