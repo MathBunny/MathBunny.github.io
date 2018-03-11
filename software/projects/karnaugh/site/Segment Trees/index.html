@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Segment Trees - Karnaugh Map Simplification Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Segment Trees";
+    var mkdocs_page_input_path = "Segment Trees.md";
+    var mkdocs_page_url = "/Segment Trees/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Karnaugh Map Simplification Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Boolean Algebra/">Boolean Algebra</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Karnaugh Maps/">Karnaugh Maps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Simplification Examples/">Simplification Examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Efficient Exhaustion Algorithm/">Efficient Exhaustion Algorithm</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Dynamic Programming/">Dynamic Programming</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Segment Trees</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#segment-trees">Segment Trees</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#understanding-1d-interpretation">Understanding 1D Interpretation</a></li>
+        
+            <li><a class="toctree-l3" href="#extending-interpretation-to-2d">Extending Interpretation to 2D</a></li>
+        
+            <li><a class="toctree-l3" href="#what-do-we-achieve">What do we achieve?</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Karnaugh Map Simplification Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Segment Trees</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="segment-trees">Segment Trees</h1>
+<p>Segment trees are a good avenue for exploration because they allow us to quickly do updates, along with quickly finding properties for a range of our search space. However, it turns out that they are not a good approach for our Karnaugh Map simplifier, as illustrated below.</p>
+<p>First, it's important to take note of what is a segment tree. Segment trees are a data-structure that allow us to do range queries, while working with updates. They provide similar performance to binary indexed trees / fenwick trees, but they are more useful because we can do it on more properties. Though they have been papers published on doing RMQ (range minimum query) and other operations on BIT, they are more commonly performed on segment trees.</p>
+<h2 id="understanding-1d-interpretation">Understanding 1D Interpretation</h2>
+<p>While a full explanation of segment trees is beyond the scope of this page, the main idea behind them is to pre-process the dataset in the form of a binary tree, and each node as you go down the binary will represent the answer within a range that gets divided into two components each time.</p>
+<p><img alt="alt text" src="https://www.geeksforgeeks.org/wp-content/uploads/segment-tree1.png" title="GeeksForGeeks Segment Tree Example" /></p>
+<p>Consider the following segment tree designed for subarray sum, taken from GeeksForGeeks. We notice that the leafs are values from the original array, and the represent segments. The advantage is that if we want to query for any segment, we can do so in <code>O(logn)</code> time! We can also constructor the tree in <code>O(n)</code> time.</p>
+<h2 id="extending-interpretation-to-2d">Extending Interpretation to 2D</h2>
+<p>Moving segment trees to 2D can take two approaches. The first approach is that we generate an array of segment trees bounded by an axis, such that when you do a query you repeat it against each segment tree on that row. For instance, if you have an <code>NxM</code> grid, you will have <code>N</code> values along the <code>x</code> axis and <code>M</code> values for <code>y</code>. To perform a query, we will iterate along the <code>x</code> axis, thus each query takes <code>O(n*log(y))</code> time. The other, better approach would do to make two sets of segment trees which with some tricky processing you can achieve <code>O(log(x) * log(y))</code> time. Any further explanation is beyond the scope of this documentation.</p>
+<h2 id="what-do-we-achieve">What do we achieve?</h2>
+<p>We can use a similar algorithm as the 2D prefix sum approach from before, except we do not need to recompute the 2D prefix sum array entirely, and instead we can just update the binary trees. However, this quickly becomes a not-so-good solution when we notice that the actual query operations take significantly more time than updating. Hence, this solution becomes strictly inferior to the solution we had prior, because before we took range sum in <code>O(1)</code> time versus <code>O((logM) * (logN))</code> time using 2D segment trees.</p>
+<p>To conclude, 2D segment trees are not a good approach for this problem.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../Dynamic Programming/" class="btn btn-neutral" title="Dynamic Programming"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Dynamic Programming/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
