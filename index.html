@@ -119,10 +119,10 @@
 					<div class="col-sm-12 col-sm-offset-0">
 						<div class="pfblock-header wow fadeInUp">
 							<!-- Maybe make it wider? -->
-							<a href=""> <img src="./assets/images/YelpLogo.png"> </a>
-							<a href=""> <img src="./assets/images/BloombergLogo.png"> </a>
-							<a href=""> <img src="./assets/images/BloombergLogo.png"> </a>
-							<a href=""> <img src="./assets/images/WealthServLogo.png"> </a>
+							<a href="#" id="yelp-show"> <img src="./assets/images/YelpLogo.png"> </a>
+							<a href="#" id="bloomberg2-show"> <img src="./assets/images/BloombergLogo.png"> </a>
+							<a href="#" id="bloomberg1-show"> <img src="./assets/images/BloombergLogo.png"> </a>
+							<a href="#" id="bluesun-show"> <img src="./assets/images/WealthServLogo.png"> </a>
 						</div>
 					</div>
 				</div>
@@ -155,6 +155,50 @@
 						</div>
 					</div>
 				</div>
+				
+				<div class="row" id="bloomberg1-coop">
+					<div class="col-lg-12">
+						<img src="./assets/images/BloombergLogoLarge.png">
+						<div class="pfblock-subtitle" style="font-size:15px">
+							For my first co-op term, I decided to go to Bloomberg LP in New York City! I went my Summer 2017 term there and it was nothing short of fantastic. Bloomberg is the world's largest financial data provider employing over 5,000 developers. The Bloomberg Terminal, their core revenue generating product, has over 325,000 subscribers and costs over $24,000 per user! The Terminal provides real-time financial analytics, news, electronic trading platform and much much more.
+							
+							<br><br>
+							I was part of the Excel Add-In team, also known as Desktop API. The Bloomberg Terminal comes with an Excel Add-In, allowing for users to import financial data from Bloomberg straight into their Excel spreadsheets and perform financial analysis. This includes both historical data in addition to real-time (for which the Excel cells update in real-time). There was a wide gamut of other features as well, such as charting and templates for financial documents. 
+							
+							<br><br> My first project was developing a machine learning collaborative filtering recommender system to generate personalized recommendations for the 250,000+ monthly Excel Add-In users in terms of which Excel Add-In functions they should try. This was part of "Feature Explorer", in an effort to make the users to become acquainted with the various functions Bloomberg provides in their Add-In. As part of my project, I worked with Python and several scientific/machine learning frameworks and libraries including NumPy, SciPy, Matplotlib and Scikit-Learn.    
+							
+							<br><br> I initially prototyped several different approaches to solving this problem, but after guidance from members of Bloomberg's data-science teams we settled on an approach using statistical analysis on different clusters of users based on Bloomberg Terminal data. While I cannot go into details of the algorithm, some neat optimizations included lazily precomputing recommendations per-cluster instead of per-user, such that only once the service is queried - then it would look-up the historical (i.e., 6 months) of usage data and provide a recommendation. This significantly sped-up training time for the algorithm, while generating the recommendations remained near-constant time.
+							
+							<br><br> After completing my first project I received another one, which was prototyping chatbot approaches for generating associated BQL (Bloomberg Query Language) queries for financial questions. Since my team was heavily invested in the Microsoft eco-system it was worth testing their newly released Microsoft Bot Framework, which leverages their Cognitive Services suite for ML/NLP. 
+							
+							<br><br> This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
+							
+							<br><br>All in all, I enjoyed my first real work-term and had an amazing mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
+						</div>
+					</div>
+				</div>
+					
+				<div class="row" id="bluesun-coop">
+					<div class="col-lg-12">
+						<img src="./assets/images/BluesunLogoLarge.png">
+						<div class="pfblock-subtitle" style="font-size:15px">
+							<br>
+							In Summer 2016, I joined Bluesun in Burlington, Ontario for an internship. Bluesun is the largest provider of insurance software (WealthServ) in Canada for the private channel. I am extremely grateful for the opportunity I had at Bluesun, since I had only graduated high-school but they were willing to take me on-board even though I had very little experience with software development at the time. Despite the 2 hour commute it took to get to work, I enjoyed my time there very much.
+							
+							<br><br>
+							Before I discuss what I contributed to Bluesun, I will highlight my application process. I essentially cold-emailed every company I could find near Toronto, and out of all applications I heard back from two companies willing to interview me. During my Bluesun interview (being my first interview ever), I was absolutely terrified but it was my only chance at getting an internship that summer. The first question asked was "What do you have to offer us?". Of course, I didn't have much at all to offer. Essentially I answered something along the lines of "potential and motivation". But I think what helped was that I demonstrated why I thought I had potential and why I was motivated. After, my interviewer asked me "What do you want me to ask you?". I responded with an algorithm question, since that was my strength at the time. He asked me two questions he normally asked candidates and I answered both correctly. Luckily, I ended up getting the job and accepting the offer!
+							
+							<br><br>My project for that summer was migrating their version control from TFS (Team Foundation Server) to Git. Manually migrating isn't a difficult task, but they have 8+ years of changesets across multiple repositories, and the migration has to occur seamlessly. Hence, I worked on creating a program in C# that leveraged git-tf (official migration tool for TFS to Git) that added features we needed to successfully migrate the repositories. 
+							
+							<br><br>Features I added in my C# git-tf wrapper included parallel processing for each Git branch running as a separate thread improving migration performance by up to 70%, the ability to recognize any working tree file corruptions and fix them automatically, in addition to queuing all the repos to automatically bulk convert all the company repositories automatically. The program successfully migrated their entire codebase overnight, and by 6:30am the next day everything was on converted and on BitBucket! 
+							
+							<br><br>After completing the migration program, I updated their Jenkins Continous Integration pipeline to fetch from BitBucket (Git) instead of TFS, which involved a bit of Groovy scripting. I had completed my project early, so after I worked on several miscellaneous tasks such as writing a JavaScript plugin for PMs to use for the internal timesheet system.
+							
+							<br><br>The project was really rewarding since I got to see it deployed/used before I left. My mentor was really helpful in debugging issues, in addition to other co-workers who helped me along the way. Bluesun had a very nice company culture and all the employees seemed very happy and passionate about their work, and I am very glad to have spent 2 months interning there!
+						</div>
+					</div>
+				</div>
+
 				
 				<hr>
 				
@@ -579,7 +623,29 @@
 		<!-- Javascript Files -->
 		<script src="assets/js/jquery-1.11.1.min.js"></script>
 		<script>
-			$("#bloomberg2-coop").hide();
+			function hideAll() {
+				$("#yelp-coop").hide();
+				$("#bloomberg2-coop").hide();
+				$("#bloomberg1-coop").hide();
+				$("#bluesun-coop").hide();
+			}
+		 	hideAll();
+			$("#bluesun-show").click(() => {
+				hideAll();
+				$("#bluesun-coop").show();
+			});
+			$("#bloomberg1-show").click(() => {
+				hideAll();
+				$("#bloomberg1-coop").show();
+			});
+			$("#bloomberg2-show").click(() => {
+				hideAll();
+				$("#bloomberg2-coop").show();
+			});
+			$("#yelp-show").click(() => {
+				hideAll();
+				$("#yelp-coop").show();
+			});
 		</script>
 		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<script src="assets/js/jquery.parallax-1.1.3.js"></script>
