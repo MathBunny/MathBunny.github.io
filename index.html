@@ -115,23 +115,25 @@
 				
 				<hr>
 				
-				<div class="row" style="display: center; margin-bottom:-20px">
+				<div class="row" style="display: center; margin-bottom:-20px" id="coops">
 					<div class="col-sm-12 col-sm-offset-0">
 						<div class="pfblock-header wow fadeInUp">
 							<!-- Maybe make it wider? -->
-							<a href="#" id="yelp-show"> <img src="./assets/images/YelpLogo.png"> </a>
-							<a href="#" id="bloomberg2-show"> <img src="./assets/images/BloombergLogo.png"> </a>
-							<a href="#" id="bloomberg1-show"> <img src="./assets/images/BloombergLogo.png"> </a>
-							<a href="#" id="bluesun-show"> <img src="./assets/images/WealthServLogo.png"> </a>
+
+							<a href="#coops" id="yelp-show"> <img src="./assets/images/YelpLogo.png"> </a>
+							<a href="#coops" id="bloomberg2-show"> <img src="./assets/images/BloombergLogo.png"> </a>
+							<a href="#coops" id="bloomberg1-show"> <img src="./assets/images/BloombergLogo.png"> </a>
+							<a href="#coops" id="bluesun-show"> <img src="./assets/images/WealthServLogo.png"> </a>
 						</div>
 					</div>
 				</div>
 				
 				<div class="row" id="yelp-coop">
-					<div class="col-lg-10">
+					<div class="col-lg-12">
 						<img src="./assets/images/YelpLogoLarge.png">
 						<div class="pfblock-subtitle">
 							In Fall 2018, I will be joining Yelp in San Francisco, California to work on infrastructure in their operations team. I am looking forward to understanding how a site with 100 million+ monthly active users scales their backend systems!
+							<br><br><center><button class="SeeMore3" data-toggle="collapse" onclick="hideAll()">Hide</button></center>
 						</div>
 					</div>
 				</div>
@@ -139,19 +141,21 @@
 				<div class="row" id="bloomberg2-coop">
 					<div class="col-lg-12">
 						<img src="./assets/images/BloombergLogoLarge.png">
+						<br>
 						<div class="pfblock-subtitle" style="font-size:15px">
 							In Winter 2018, I returned to Bloomberg LP for another term in New York! My team was responsible for powering all Fixed Income Search functionality on Bloomberg Terminals (including <code>SRCH</code> and 70+ other functions including <code>DDIS</code> and <code>LEAG</code>). My work was heavily focused on their search infrastructure, and extending the capabilities of Apache Solr's (open-source search platform) cross-collection join. 
 							
 							<br><br>
 							Introducing high-performance join capabilities for sharded collections and SolrCloud clusters to Solr was my primary project. By allowing for joins across sharded collections, the Lucene indices could be scaled horizontally across many nodes allowing for larger collections and faster performance. Joins across SolrCloud clusters allows different teams to perform joins across their datasets without the need of duplicate data - which was an issue for our team. As teams shift towards Bloomberg's new infrastructure for "Solr as a service", teams could very quickly join across data-sets by simply providing the ZooKeeper host address for the other SolrCloud cluster. This has impact not only for my team, but for many other teams across all of Bloomberg.
 							
-							<br><br>Performance is critical for Bloomberg Terminal users, and the join was appropriately very heavily profiled and optimized. In short, migrating from streaming expression's intersect to the newer join code reduces query times on average by 87.3%! I created an automated benchmarking system allowing for chart visualizations, appropriate JVM warming up, collection cache resetting along with deploying SolrCloud clusters and ZooKeeper ensembles across New York/New Jersey data-centers.
+							<br><br>Performance is critical for Bloomberg Terminal users, and as a result the join was very heavily profiled and optimized. In short, migrating from streaming expression's intersect to the newer join code reduces query times on average by 87.3%! I created an automated benchmarking system allowing for chart visualizations and regressions, appropriate JVM warming up, collection cache resetting along with deploying SolrCloud clusters and ZooKeeper ensembles across Bloomberg's New York and New Jersey datacenters.
 							
 							<br><br>The most significant speed-up came from leveraging uninverting data-structures from Lucene, which allow for rapid field-lookups. By creating a custom request handler endpoint on Solr, this allows for rapid retrieval of fields that can be sent back in proprietary binary format over the network. I also researched heavily different data-structures and compression techniques. This included leveraging LZ4, Burrows-Wheeler Transform and Huffman Coding for strings, in addition to a custom join for my team leveraging compressed (roaring) bitmaps. At the end, I prepared the patch to be pushed upstream, which included documentation and unit tests.
 							
 							<br><br>Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg's service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.
 							
 							<br><br>As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.
+							<br><br><center><button class="SeeMore3" data-toggle="collapse" onclick="hideAll()">Hide</button></center>
 						</div>
 					</div>
 				</div>
@@ -159,6 +163,7 @@
 				<div class="row" id="bloomberg1-coop">
 					<div class="col-lg-12">
 						<img src="./assets/images/BloombergLogoLarge.png">
+						<br>
 						<div class="pfblock-subtitle" style="font-size:15px">
 							For my first co-op term, I decided to go to Bloomberg LP in New York City! I went my Summer 2017 term there and it was nothing short of fantastic. Bloomberg is the world's largest financial data provider employing over 5,000 developers. The Bloomberg Terminal, their core revenue generating product, has over 325,000 subscribers and costs over $24,000 per user! The Terminal provides real-time financial analytics, news, electronic trading platform and much much more.
 							
@@ -174,6 +179,7 @@
 							<br><br> This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
 							
 							<br><br>All in all, I enjoyed my first real work-term and had an amazing mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
+							<br><br><center><button class="SeeMore3" data-toggle="collapse" onclick="hideAll()">Hide</button></center>
 						</div>
 					</div>
 				</div>
@@ -185,8 +191,6 @@
 							<br>
 							In Summer 2016, I joined Bluesun in Burlington, Ontario for an internship. Bluesun is the largest provider of insurance software (WealthServ) in Canada for the private channel. I am extremely grateful for the opportunity I had at Bluesun, since I had only graduated high-school but they were willing to take me on-board even though I had very little experience with software development at the time. Despite the 2 hour commute it took to get to work, I enjoyed my time there very much.
 							
-							<br><br>
-							Before I discuss what I contributed to Bluesun, I will highlight my application process. I essentially cold-emailed every company I could find near Toronto, and out of all applications I heard back from two companies willing to interview me. During my Bluesun interview (being my first interview ever), I was absolutely terrified but it was my only chance at getting an internship that summer. The first question asked was "What do you have to offer us?". Of course, I didn't have much at all to offer. Essentially I answered something along the lines of "potential and motivation". But I think what helped was that I demonstrated why I thought I had potential and why I was motivated. After, my interviewer asked me "What do you want me to ask you?". I responded with an algorithm question, since that was my strength at the time. He asked me two questions he normally asked candidates and I answered both correctly. Luckily, I ended up getting the job and accepting the offer!
 							
 							<br><br>My project for that summer was migrating their version control from TFS (Team Foundation Server) to Git. Manually migrating isn't a difficult task, but they have 8+ years of changesets across multiple repositories, and the migration has to occur seamlessly. Hence, I worked on creating a program in C# that leveraged git-tf (official migration tool for TFS to Git) that added features we needed to successfully migrate the repositories. 
 							
@@ -195,6 +199,8 @@
 							<br><br>After completing the migration program, I updated their Jenkins Continous Integration pipeline to fetch from BitBucket (Git) instead of TFS, which involved a bit of Groovy scripting. I had completed my project early, so after I worked on several miscellaneous tasks such as writing a JavaScript plugin for PMs to use for the internal timesheet system.
 							
 							<br><br>The project was really rewarding since I got to see it deployed/used before I left. My mentor was really helpful in debugging issues, in addition to other co-workers who helped me along the way. Bluesun had a very nice company culture and all the employees seemed very happy and passionate about their work, and I am very glad to have spent 2 months interning there!
+							
+							<br><br><center><button class="SeeMore3" data-toggle="collapse" onclick="hideAll()">Hide</button></center>
 						</div>
 					</div>
 				</div>
