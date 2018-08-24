@@ -143,13 +143,15 @@
 							In Winter 2018, I returned to Bloomberg LP for another term in New York! My team was responsible for powering all Fixed Income Search functionality on Bloomberg Terminals (including <code>SRCH</code> and 70+ other functions including <code>DDIS</code> and <code>LEAG</code>). My work was heavily focused on their search infrastructure, and extending the capabilities of Apache Solr's (open-source search platform) cross-collection join. 
 							
 							<br><br>
-							Introducing high-performance cross-collection join capabilities for sharded collections and SolrCloud clusters to Solr was my primary project. By allowing for joins across sharded collections, the Lucene indices could be scaled horizontally across many nodes allowing for larger collections and faster performance. Joins across SolrCloud clusters allows different teams to perform joins across their datasets without the need of duplicate data - which was an issue for our team. As teams shift towards Bloomberg's new infrastructure for "Solr as a service", teams could very quickly join across data-sets by simply providing the ZooKeeper host address for the other SolrCloud cluster. This has impact not only for my team, but for many other teams across all of Bloomberg.
+							Introducing high-performance join capabilities for sharded collections and SolrCloud clusters to Solr was my primary project. By allowing for joins across sharded collections, the Lucene indices could be scaled horizontally across many nodes allowing for larger collections and faster performance. Joins across SolrCloud clusters allows different teams to perform joins across their datasets without the need of duplicate data - which was an issue for our team. As teams shift towards Bloomberg's new infrastructure for "Solr as a service", teams could very quickly join across data-sets by simply providing the ZooKeeper host address for the other SolrCloud cluster. This has impact not only for my team, but for many other teams across all of Bloomberg.
 							
 							<br><br>Performance is critical for Bloomberg Terminal users, and the join was appropriately very heavily profiled and optimized. In short, migrating from streaming expression's intersect to the newer join code reduces query times on average by 87.3%! I created an automated benchmarking system allowing for chart visualizations, appropriate JVM warming up, collection cache resetting along with deploying SolrCloud clusters and ZooKeeper ensembles across New York/New Jersey data-centers.
 							
-							<br><br>The most significant speed-up came from leveraging uninverting data-structures from Lucene, which allow for rapid field-lookups. By creating a custom request handler endpoint on Solr, this allows for rapid retrieval of fields that can be sent back in proprietary binary format for the join to use. I also researched heavily different data-structures and compression techniques. This included leveraging LZ4, Burrows-Wheeler Transform and Huffman Coding for strings, in addition to a custom join for my team leveraging compressed (roaring) bitmaps.
+							<br><br>The most significant speed-up came from leveraging uninverting data-structures from Lucene, which allow for rapid field-lookups. By creating a custom request handler endpoint on Solr, this allows for rapid retrieval of fields that can be sent back in proprietary binary format over the network. I also researched heavily different data-structures and compression techniques. This included leveraging LZ4, Burrows-Wheeler Transform and Huffman Coding for strings, in addition to a custom join for my team leveraging compressed (roaring) bitmaps. At the end, I prepared the patch to be pushed upstream, which included documentation and unit tests.
 							
-							<br><br>As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work.
+							<br><br>Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg's service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.
+							
+							<br><br>As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.
 						</div>
 					</div>
 				</div>
@@ -576,6 +578,9 @@
 		</script>
 		<!-- Javascript Files -->
 		<script src="assets/js/jquery-1.11.1.min.js"></script>
+		<script>
+			$("#bloomberg2-coop").hide();
+		</script>
 		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<script src="assets/js/jquery.parallax-1.1.3.js"></script>
 		<script src="assets/js/imagesloaded.pkgd.js"></script>
