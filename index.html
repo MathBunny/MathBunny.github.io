@@ -1,667 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Horatiu Lazu's personal portfolio of programming projects, accomplishments, and relevant links such as GitHub and software development site.">
-		<meta name="author" content="Horatiu Lazu">
-		<meta name="keywords" content="Horatiu,Lazu,Horatiu Lazu,Horatiu Stefan Lazu,Programming,Website,SoftwareEngenius,Portfolio">
-		<link rel="shortcut icon" href="/assets/images/ThumbnailDesign_1.ico">
-		<title>Horatiu Lazu - Personal Website</title>
-		<!-- CSS -->
-		<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
-		<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
-		<link href="assets/css/animate.css" rel="stylesheet">
-		<!-- Custom styles CSS -->
-		<link href="assets/css/style.css" rel="stylesheet" media="screen">
-		<script src="assets/js/modernizr.custom.js"></script>
-	</head>
-	<!-- Horatiu Lazu - thank you to all the online resources. 
-	Current development focus is on the software subsite, which is created in HTML/CSS with the CSS Materialize Framework!
-	This website went from 9.4MB page size to 1.4MB! That's a 85% reduction in size!
-	UPDATE: Complete! Small adjustments will continue to be made!
-	Thanks for visiting, hope you enjoy ^_^
-	 -->
-	
-	<body>
-		<!-- Preloader -->
-		<!--<div id="preloader">
-			<div id="status"></div>
-		</div>-->
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Horatiu Lazu's personal portfolio of programming projects, accomplishments, and relevant links such as GitHub and software development site.">
+      <meta name="author" content="Horatiu Lazu">
+      <meta name="keywords" content="Horatiu,Lazu,Horatiu Lazu,Horatiu Stefan Lazu,Programming,Website,SoftwareEngenius,Portfolio">
+      <link rel="shortcut icon" href="/assets/images/ThumbnailDesign_1.ico">
+      <title>Horatiu Lazu - Personal Website</title>
+      <!-- CSS -->
+      <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+      <link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+      <link href="assets/css/animate.css" rel="stylesheet">
+      <!-- Custom styles CSS -->
+      <link href="assets/css/style.css" rel="stylesheet" media="screen">
+      <script src="assets/js/modernizr.custom.js"></script>
+   </head>
+   <body>
+      <!-- Redirect feature Make more efficient by using an array, and then processing through the array and append the value in link-->
+      <script>
+         if(window.location.toString().indexOf("?synthetic")>=0) {
+         	window.location = "software/projects/synthetic.html";
+         }
+         else if (window.location.toString().indexOf("?newton")>=0) {
+         	window.location = "software/projects/newton.html";
+         }
+         else if (window.location.toString().indexOf("?basilisk")>=0) {
+         	window.location = "software/projects/basilisk.html";
+         }
+         else if (window.location.toString().indexOf("?colorimetric")>=0) {
+         	window.location = "software/projects/colorimetric.html";
+         }
+         else if (window.location.toString().indexOf("?tower")>=0) {
+         	window.location = "software/projects/tower.html";
+         }
+         else if (window.location.toString().indexOf("?atomicsmasher")>=0) {
+         	window.location = "software/projects/atomicsmasher.html";
+         }
+         else if (window.location.toString().indexOf("?miscellaneous")>=0) {
+         	window.location = "software/projects/miscellaneous.html";
+         }
+         else if (window.location.toString().indexOf("?karnaugh")>=0) {
+         	window.location = "software/projects/karnaugh.html";
+         }
+         else if (window.location.toString().indexOf("?slope")>=0) {
+         	window.location = "software/projects/slope.html";
+         }
+         else if (window.location.toString().indexOf("?decanting")>=0) {
+         	window.location = "software/projects/decanting.html";
+         }
+         else if (window.location.toString().indexOf("?convex")>=0) {
+         	window.location = "software/projects/convex.html";
+         }
+         else if (window.location.toString().indexOf("?arduino")>=0) {
+         	window.location = "software/projects/arduino.html";
+         }
+         else if (window.location.toString().indexOf("?template")>=0) {
+         	window.location = "software/tutorials/contest-template.html";
+         }
+      </script>
+      <!-- Home start -->
+      <!--<section id="home" class="pfblock-image screen-height">
+         <div class="home-overlay"></div>
+         <div class="intro">
+         	<div class="start">Hello, my name is:</div>
+         	<h1>Horatiu Lazu</h1>
+         	<div class="start">Welcome to my personal website!</div>
+         </div>
+         <a href="#passions">
+         	<div class="scroll-down">
+         		<span>
+         		<i class="fa fa-angle-down fa-2x"></i>
+         		</span>
+         	</div>
+         </a>
+         </section> -->
+      <!-- Home end -->
+      <!-- Portfolio start -->
+      <section id="portfolio" class="pfblock-gray">
+         <div class="container">
+         <div class="row" style="display: inline-block; margin-bottom: -50px;">
+            <div class="col-sm-12 col-sm-offset-0">
+               <div class="pfblock-header wow fadeInUp">
+                  <br><br><br>
+                  <h1 class="pfblock-title" id="mainTitle">Welcome to my homepage!</h1>
+                  <br>
+                  <!-- Maybe make it wider? -->
+                  <div class="pfblock-subtitle">
+                     Hi, I'm Horatiu Lazu. I am studying Computer Science at the University of Waterloo, and interned twice at <a href="https://www.bloomberg.com/professional/" target="_blank">Bloomberg LP</a> in New York City working on machine learning projects and contributing to the open-source distributed search platform and engine <a href="http://lucene.apache.org/solr/" target="_blank">Apache Solr/Lucene</a>.
+                     <br><br>
+                     Road cycling is my hobby, with my <a href="http://stravawindanalysis.com" target="_blank">Strava Wind Analysis</a> site providing analytics and data visualization to over 50,000 users.<br> Feel free to also checkout my <a href="http://github.com/MathBunny" target="_blank">GitHub profile </a> or my <a href="http://youtube.com/ComputerBunnyMath123" target="_blank">YouTube Channel</a> that has over 1 million views.
+                  </div>
+                  <!-- <div class="pfblock-line"></div> -->
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="row" style="display: center; margin-bottom:-20px" id="coops">
+            <div class="col-sm-12 col-sm-offset-0">
+               <div class="pfblock-header wow fadeInUp">
+                  <!-- Maybe make it wider? -->
+                  <a href="#coops" id="citadel-show"> <img src="./assets/images/CitadelLogo.png"> </a>
+                  <a href="#coops" id="yelp-show"> <img src="./assets/images/YelpLogo.png"> </a>
+                  <a href="#coops" id="bloomberg2-show"> <img src="./assets/images/BloombergLogo.png"> </a>
+                  <a href="#coops" id="bloomberg1-show"> <img src="./assets/images/BloombergLogo.png"> </a>
+                  <a href="#coops" id="bluesun-show"> <img src="./assets/images/WealthServLogo.png"> </a>
+               </div>
+            </div>
+         </div>
+         <div class="row" id="citadel-coop">
+            <div class="col-lg-12">
+               <div class="iconbox wow fadeIn">
+                  <div class="iconbox-text">
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="CitadelAccordian">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#CitadelAccordian" href="#CitadelCollapse">
+                                 </a>
+                              </div>
+                              <div id="CitadelCollapse" class="accordion-body collapse">
+                                 <img src="./assets/images/CitadelLogoLarge.png">
+                                 <br>
+                                 <div class="pfblock-subtitle" style="font-size:15px">
+                                    In Summer 2019 I will be joining Citadel Securities in Chicago, Illinois. Being the world's second largest multistrategy hedge fund with over $30 billion in assets under management, Citadel trades millions of stocks daily constituting over 39% of US retail equities trade volume and is the largest designated market maker on the New York Stock Exchange.
+                                    <br><br>
+                                    <center><button onclick="hideAll();" href="#mainTitle">Hide</button></center>
+                                 </div>
+                                 <button id="CitadelShow" style="display:none;"class="CitadelSeeMore" data-toggle="collapse" href="#CitadelCollapse">See More</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row" id="yelp-coop">
+            <div class="col-lg-12">
+               <div class="iconbox wow fadeIn">
+                  <div class="iconbox-text">
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="YelpAccordian">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#YelpAccordian" href="#YelpCollapse">
+                                 </a>
+                              </div>
+                              <div id="YelpCollapse" class="accordion-body collapse">
+                                 <img src="./assets/images/YelpLogoLarge.png">
+                                 <br>
+                                 <div class="pfblock-subtitle" style="font-size:15px">
+                                    In Fall 2018, I joined Yelp on their Production Engineering Team in San Francisco, California. During this internship I learned a lot about how Yelp developed their infrastructure to handle over 100 million active users. My experience was great with an outstanding mentor and tean who were extremely supportive and resourceful in getting this project up and running!
+                                    <br> <br>I developed and shipped a scalable cloud metadata inventory search service using Elasticsearch, Python, Terraform and AWS products. This service allowed for expressive discovery using a custom defined DSL, featured a RESTful interface powered by a serverless architecture and provides an elegant dashboard written using React.
+                                    <br><br>
+                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#YelpCollapse">Hide</button></center>
+                                 </div>
+                                 <button id="YelpShow" style="display:none;"class="YelpSeeMore" data-toggle="collapse" href="#YelpCollapse">See More</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row" id="bloomberg2-coop">
+            <div class="col-lg-12">
+               <div class="iconbox wow fadeIn">
+                  <div class="iconbox-text">
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="Bloomberg2Accordian">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#Bloomberg2Accordian" href="#Bloomberg2Collapse">
+                                 </a>
+                              </div>
+                              <div id="Bloomberg2Collapse" class="accordion-body collapse">
+                                 <img src="./assets/images/BloombergLogoLarge.png">
+                                 <br>
+                                 <div class="pfblock-subtitle" style="font-size:15px">
+                                    In Winter 2018, I returned to Bloomberg LP for another term in New York! My team was responsible for powering all Fixed Income Search functionality on Bloomberg Terminals (including <code>SRCH</code> and 70+ other functions including <code>DDIS</code> and <code>LEAG</code>). My work was heavily focused on their search infrastructure, and extending the capabilities of Apache Solr's (open-source search platform) cross-collection join. 
+                                    <br><br>
+                                    Introducing high-performance join capabilities for sharded collections and SolrCloud clusters to Solr was my primary project. By allowing for joins across sharded collections, the Lucene indices could be scaled horizontally across many nodes allowing for larger collections and faster performance. Joins across SolrCloud clusters allows different teams to perform joins across their datasets without the need of duplicate data - which was an issue for our team. As teams shift towards Bloomberg's new infrastructure for "Solr as a service", teams could very quickly join across data-sets by simply providing the ZooKeeper host address for the other SolrCloud cluster. This has impact not only for my team, but for many other teams across all of Bloomberg.
+                                    <br><br>Performance is critical for Bloomberg Terminal users, and as a result the join was very heavily profiled and optimized. In short, migrating from streaming expression's intersect to the newer join code reduces query times on average by 87.3%! I created an automated benchmarking system allowing for chart visualizations and regressions, appropriate JVM warming up, collection cache resetting along with deploying SolrCloud clusters and ZooKeeper ensembles across Bloomberg's New York and New Jersey datacenters.
+                                    <br><br>The most significant speed-up came from leveraging uninverting data-structures from Lucene, which allow for rapid field-lookups. By creating a custom request handler endpoint on Solr, this allows for rapid retrieval of fields that can be sent back in proprietary binary format over the network. I also researched heavily different data-structures and compression techniques. This included leveraging LZ4, Burrows-Wheeler Transform and Huffman Coding for strings, in addition to a custom join for my team leveraging compressed (roaring) bitmaps. At the end, I prepared the patch to be pushed upstream, which included documentation and unit tests.
+                                    <br><br>Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg's service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.
+                                    <br><br>As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.
+                                    <br><br>
+                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#Bloomberg2Collapse">Hide</button></center>
+                                 </div>
+                                 <button id="Bloomberg2Show" style="display:none;"class="Bloomberg2SeeMore" data-toggle="collapse" href="#Bloomberg2Collapse">See More</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row" id="bloomberg1-coop">
+            <div class="col-lg-12">
+               <div class="iconbox wow fadeIn">
+                  <div class="iconbox-text">
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="BloombergAccordian">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#BloombergAccordian" href="#Bloomberg1Collapse">
+                                 </a>
+                              </div>
+                              <div id="Bloomberg1Collapse" class="accordion-body collapse">
+                                 <img src="./assets/images/BloombergLogoLarge.png">
+                                 <br>
+                                 <div class="pfblock-subtitle" style="font-size:15px">
+                                    In Summer 2017, for my first co-op term, I decided to go to Bloomberg LP in New York City! The experience was nothing short of fantastic. Bloomberg is the world's largest financial data provider employing over 5,000 developers. The Bloomberg Terminal, their core revenue generating product, has over 325,000 subscribers and costs over $24,000 per user. The Terminal provides real-time financial analytics, news, an electronic trading platform and much much more.
+                                    <br><br>
+                                    I was part of the Excel Add-In team, also known as Desktop API. The Bloomberg Terminal comes with an Excel Add-In, allowing for users to import financial data from Bloomberg straight into their Excel spreadsheets and perform financial analysis. This includes both historical data in addition to real-time (for which the Excel cells update in real-time). There was a wide gamut of other features as well, such as charting and templates for financial documents. 
+                                    <br><br> My first project was developing a machine learning collaborative filtering recommender system to generate personalized recommendations for the 250,000+ monthly Excel Add-In users in terms of which Excel Add-In functions they should try. This was part of "Feature Explorer", in an effort to make the users to become acquainted with the various functions Bloomberg provides in their Add-In. As part of my project, I worked with Python and several scientific/machine learning frameworks and libraries including NumPy, SciPy, Matplotlib and Scikit-Learn.    
+                                    <br><br> I initially prototyped several different approaches to solving this problem, but after guidance from members of Bloomberg's data-science teams we settled on an approach using statistical analysis on different clusters of users based on Bloomberg Terminal data. While I cannot go into details of the algorithm, some neat optimizations included lazily precomputing recommendations per-cluster instead of per-user, such that only once the service is queried - then it would lookup the historical feature usage data for that user and provide a recommendation. This significantly sped-up training time for the algorithm, while generating the recommendations remained near-constant time.
+                                    <br><br> After completing my first project I received another one, which was prototyping chatbot approaches for generating associated BQL (Bloomberg Query Language) queries for financial questions. Since my team was heavily invested in the Microsoft eco-system it was worth testing their newly released Microsoft Bot Framework, which leverages their Cognitive Services suite for ML/NLP. 
+                                    <br><br> This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
+                                    <br><br>All in all, I enjoyed my first real work-term and had an amazing mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
+                                    <br><br>
+                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#Bloomberg1Collapse">Hide</button></center>
+                                 </div>
+                                 <button id="Bloomberg1Show" style="display:none;"class="BloombergSeeMore" data-toggle="collapse" href="#Bloomberg1Collapse">See More</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row" id="bluesun-coop">
+            <div class="col-lg-12">
+               <div class="iconbox wow fadeIn">
+                  <div class="iconbox-text">
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="BluesunAccordian">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#BluesunAccordian" href="#BluesunCollapse">
+                                 </a>
+                              </div>
+                              <div id="BluesunCollapse" class="accordion-body collapse">
+                                 <img src="./assets/images/BluesunLogoLarge.png">
+                                 <div class="pfblock-subtitle" style="font-size:15px">
+                                    <br>
+                                    In Summer 2016, I joined Bluesun in Burlington, Ontario for an internship. Bluesun is the largest provider of insurance software (WealthServ) in Canada for the private channel. I am extremely grateful for the opportunity I had at Bluesun, since I had only graduated high-school but they were willing to take me on-board even though I had very little experience with software development at the time. Despite the 2 hour commute it took to get to work, I enjoyed my time there very much.
+                                    <br><br>My project for that summer was migrating their version control from TFS (Team Foundation Server) to Git. Manually migrating isn't a difficult task, but they have 8+ years of changesets across multiple repositories, and the migration has to occur seamlessly. Hence, I worked on creating a program in C# that leveraged git-tf (official migration tool for TFS to Git) that added features we needed to successfully migrate the repositories. 
+                                    <br><br>Features I added to the C# git-tf wrapper included parallel processing for each Git branch running as a separate thread improving migration performance by up to 70%, the ability to recognize any working tree file corruptions and fix them automatically, in addition to queuing all the repos for bulk converting all the company repositories automatically. The program successfully migrated their entire codebase overnight, and by 6:30am the next day everything was on converted and on BitBucket! 
+                                    <br><br>After completing the migration program, I updated their Jenkins Continous Integration pipeline to fetch from BitBucket (Git) instead of TFS, which involved a bit of Groovy scripting. I had completed my project early, so after I worked on several miscellaneous tasks such as writing a JavaScript plugin for PMs to use for the internal timesheet system.
+                                    <br><br>The project was really rewarding since I got to see it deployed/used before I left. My mentor was really helpful in debugging issues, in addition to other co-workers who helped me along the way. Bluesun had a very nice company culture and all the employees seemed very happy and passionate about their work, and I am very glad to have spent 2 months interning there!
+                                    <br><br>
+                                    <center><button data-toggle="collapse" onclick="hideAll()">Hide</button></center>
+                                 </div>
+                              </div>
+                           </div>
+                           <button id="BluesunShow" style="display:none;"class="BluesunSeeMore" data-toggle="collapse" href="#BluesunCollapse">See More</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="row">
+            <div class="col-lg-6">
+               <div class="iconbox wow slideInLeft">
+                  <div class="iconbox-icon">
+                     <i class="fa fa-code" aria-hidden="true"></i>
+                     <i class="fa fa-trophy" aria-hidden="true"></i>
+                     <i class="fa fa-book" aria-hidden="true"></i>
+                     <i class="fa fa-terminal" aria-hidden="true"></i>
+                     <!--<span class="fa fa-car" aria-hidden="true"></span> -->
+                  </div>
+                  <div class="iconbox-text">
+                     <h3 class="iconbox-title">Computing Competitions & Awards</h3>
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="accordion3">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
+                                 </a>
+                              </div>
+                              <div id="collapseThree" class="accordion-body collapse">
+                                 HackerRank Algorithm Contests - 98th Percentile Rating, O(1) Division <br>
+                                 USA Computing Olympiad 2016 - Platinum Division (Top Division) <br>
+                                 Canadian Computing Competition Senior 2015 - Group 2 (Top-50 of 1500) <br>
+                                 Canadian Computing Competition Junior 2014 - Group 1 (Perfect Score) <br>
+                                 Strava Worldwide API Developer Challenge 2016 - Winner <br>
+                                 <br>
+                                 University of Waterloo - $10,000 Mathematics Scholarship (1 of 10) <br>
+                                 William Lyon Mackenzie - Computer Programming Excellence Award <br>
+                                 Toronto Secondary School Chess Championships - Bronze Medal <br>
+                                 Euclid Mathematics Contest - Distinction (Top 10%) <br>
+                                 <br>
+                              </div>
+                              <button class="SeeMore3" data-toggle="collapse" href="#collapseThree">See More</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6">
+               <div class="iconbox wow slideInRight">
+                  <div class="iconbox-icon">
+                     <i class="fa fa-building" aria-hidden="true"></i>
+                     <i class="fa fa-briefcase" aria-hidden="true"></i>
+                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                     <i class="fa fa-university" aria-hidden="true"></i>
+                  </div>
+                  <div class="iconbox-text">
+                     <h3 class="iconbox-title">Experience & Education</h3>
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="accordion4">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseThree">
+                                 </a>
+                              </div>
+                              <div id="collapseFour" class="accordion-body collapse">
+                                 Bloomberg LP / Fixed Income Search - Software Engineering Intern - 2018 <br>
+                                 Bloomberg LP / Excel Add-In (DAPI) - Software Engineering Intern - 2017 <br>
+                                 Bluesun (WealthServ) - Software Developer Intern - 2016 <br>
+                                 <br>
+                                 University of Waterloo - Computer Science (3.97 mGPA) - 2016/2021 <br>
+                                 Teaching Assistant - Linear Algebra (Math 136) - Fall 2017 <br>
+                                 <br>
+                              </div>
+                              <button class="SeeMore4" data-toggle="collapse" href="#collapseFour">See More</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+               <a href="http://stravawindanalysis.com" target="_blank" style="text-decoration:none;color:white;" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <img src="assets/images/stravawindanalysis.png" alt="Horatiu Lazu"/><!-- b -->
+                        <figcaption>
+                           <h2>
+               <a href = "http://stravawindanalysis.com" target="_blank" style="text-decoration:none;color:white;"> Strava Wind <span>Analysis</span> </a></h2>
+               <p>Provides historical and aggregate ride/segment analytics, data visualization and machine learning for cyclists on the Strava platform</p>
+               </figcaption>
+               </figure>
+               </div>
+               </a> 
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+               <a href="software/projects/karnaugh/site/index.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <img src="assets/images/KarnaughMap4VariableWide.png" alt="Horatiu Lazu"/>
+                        <figcaption>
+                           <h2>
+               <a href = "software/projects/karnaugh/site/index.html" target="_blank" style="text-decoration:none;color:white;">Karnaugh <span>Simplification</span></a></h2>
+               <p>Simplifies boolean expressions visually.</p>
+               </figcaption>
+               </figure>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="software/projects/slope.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <!-- assets/images/item-8b.png BasiliskMainMenuMobile.png --> 
+                        <img src="assets/images/slope-field-screenshot-main.png" alt="Horatiu Lazu"/> 
+                        <!-- <img src="software/images/BasiliskMainScreenshot.png"/> -->
+                        <figcaption>
+                           <h2>
+               <a href="software/projects/slope.html" target="_blank" style="text-decoration:none;color:white;">Slope Field <span>Generator</span></a></h2>
+               <p>Graphs slope fields from seperable differentials.</p>
+               </figcaption>
+               </figure>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="software/projects/decanting.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <img src="assets/images/decanting-screenshot-main.png" alt="Horatiu Lazu"/> 
+                        <figcaption>
+                           <h2>
+               <a href="software/projects/decanting.html" target="_blank" style="text-decoration:none;color:white;">Decanting<span>Puzzle</span></a></h2>
+               <p><a href = "software/projects/decanting.html" target="_blank" style="text-decoration:none;color:white;">Android puzzle game with level generator & solver.</a></p>
+               </figcaption>			
+               </figure>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="software/projects/convex.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <img src="assets/images/Convex-hull-screenshot-sample.png" alt="Horatiu Lazu"/>
+                        <figcaption>
+                           <h2>
+               <a href="software/projects/convex.html" target="_blank" style="text-decoration:none;color:white;">Convex Hull <span>Visualizer</span></a></h2>
+               <p><a href = "software/projects/convex.html" target="_blank" style="text-decoration:none;color:white;">Generates convex hulls with Graham Scan algorithm.</a></p>
+               </figcaption>			
+               </figure>
+               </div>
+            </div>
+         </div>
+         <!-- .row -->
+         <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="https://github.com/MathBunny/mandelbrot-fractal-generator" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <img src="assets/images/AndroidFractals.png" alt="Horatiu Lazu"/><!-- b -->
+                        <figcaption>
+                           <h2>
+               <a href = "https://github.com/MathBunny/mandelbrot-fractal-generator" target="_blank" style="text-decoration:none;color:white;"> Mandlebrot Set <span>Generator</span> </a></h2>
+               <p>Generates fractals.</p>
+               </figcaption>
+               </figure>
+               </div>
+               </a> 
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="software/projects/synthetic.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <img src="assets/images/item-2b.png" alt="Horatiu Lazu"/>
+                        <figcaption>
+                           <h2>
+               <a href = "software/projects/synthetic.html" target="_blank" style="text-decoration:none;color:white;">Synthetic <span>Division</span></a></h2>
+               <p>Demonstrates Ruffini's extended law of division.</p>
+               </figcaption>
+               </figure>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="software/projects/atomicsmasher.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <img src="assets/images/item-3b.png" alt="Horatiu Lazu"/>
+                        <figcaption>
+                           <h2>
+               <a href = "software/projects/atomicsmasher.html" target="_blank" style="text-decoration:none;color:white;"> Atomic <span>Smasher</span></a></h2>
+               <p>Demonstrates the basics of chemistry in a game.</p>
+               </figcaption>
+               </figure>
+               </div>
+               </a>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="software/projects/segment.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <!-- assets/images/item-8b.png BasiliskMainMenuMobile.png --> 
+                        <img src="assets/images/strava-segment.png" alt="Horatiu Lazu"/> 
+                        <!-- <img src="software/images/BasiliskMainScreenshot.png"/> -->
+                        <figcaption>
+                           <h2>
+               <a href="software/projects/segment.html" target="_blank" style="text-decoration:none;color:white;">Segment <span>Analysis</span></a></h2>
+               <p>Calculates wind influence on cycling rides.</p>
+               </figcaption>
+               </figure>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="software/projects/newton.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <img src="assets/images/newton-raphson2.png" alt="Horatiu Lazu"/> 
+                        <figcaption>
+                           <h2>
+               <a href="software/projects/newton.html" target="_blank" style="text-decoration:none;color:white;"> Newton's <span>Approximation</span></a></h2>
+               <p><a href = "software/projects/newton.html" target="_blank" style="text-decoration:none;color:white;">Finds roots of any expression.</a></p>
+               </figcaption>			
+               </figure>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+               <a href="software/projects/basilisk.html" target="_blank" style="text-decoration:none;">
+                  <div class="grid wow zoomIn">
+                     <figure class="effect-bubba">
+                        <!-- assets/images/item-8b.png BasiliskMainMenuMobile.png --> 
+                        <img src="assets/images/item-8b.png" alt="Horatiu Lazu"/> 
+                        <!-- <img src="software/images/BasiliskMainScreenshot.png"/> -->
+                        <figcaption>
+                           <h2>
+               <a href="software/projects/basilisk.html" target="_blank" style="text-decoration:none;color:white;">Basilisk <span>3D</span></a></h2>
+               <p>Snake game with various game-modes.</p>
+               </figcaption>
+               </figure>
+               </div>
+            </div>
+         </div>
+         <br><br>
+         <!-- .contaier -->
+      </section>
+      <!-- Portfolio end -->
+      <!-- Contact end -->
+      <!-- Footer start -->
+      <footer id="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <ul class="social-links">
+                     <!-- Get more links? -->
+                     <li><a href="https://www.facebook.com/horatiu.lazu#" class="wow fadeInUp"><i class="fa fa-facebook"></i></a></li>
+                     <li><a href="https://www.youtube.com/channel/UC1x8xbTXmulYknwNDyrBImQ" class="wow fadeInUp" data-wow-delay=".1s"><i class="fa fa-youtube"></i></a></li>
+                     <li><a href="https://github.com/MathBunny" class="wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-github"></i></a></li>
+                     <!-- <li><a href="https://www.strava.com/athletes/6214103" class="wow fadeInUp" data-wow-delay=".2s"><i class="fa fa-bicycle"></i></a></li> -->
+                     <li><a href="https://ca.linkedin.com/in/horatiulazu" class="wow fadeInUp" data-wow-delay=".5s"><i class="fa fa-linkedin"></i></a></li>
+                  </ul>
+                  <p class="copyright">
+                     © 2018 Horatiu Lazu</a>
+                  </p>
+               </div>
+            </div>
+            <!-- .row -->
+         </div>
+         <!-- .container -->
+      </footer>
+      <!-- Footer end -->
+      <!-- Javascript file for analytics-->
+      <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-74979520-1', 'auto');
+         ga('send', 'pageview');
+         
+      </script>
+      <!-- Javascript Files -->
+      <script src="assets/js/jquery-1.11.1.min.js"></script>
+      <script>
 
-		<!-- Redirect feature Make more efficient by using an array, and then processing through the array and append the value in link-->
+      	// The bug is because you're closing Citadel when opening it the second time from another!
+      	 open_panes = {}
+      	 fnc_map = {}
+		 companies = ['citadel-coop', 'yelp-coop', 'bloomberg2-coop', 'bloomberg1-coop', 'bluesun-coop'];
+		 for (const company of companies) {
+		   	  open_panes[company] = false;   	 	
+		 }
 
-		<script>
-				if(window.location.toString().indexOf("?synthetic")>=0) {
-    				window.location = "software/projects/synthetic.html";
-				}
-				else if (window.location.toString().indexOf("?newton")>=0) {
-    				window.location = "software/projects/newton.html";
-				}
-				else if (window.location.toString().indexOf("?basilisk")>=0) {
-    				window.location = "software/projects/basilisk.html";
-				}
-				else if (window.location.toString().indexOf("?colorimetric")>=0) {
-    				window.location = "software/projects/colorimetric.html";
-				}
-				else if (window.location.toString().indexOf("?tower")>=0) {
-    				window.location = "software/projects/tower.html";
-				}
-				else if (window.location.toString().indexOf("?atomicsmasher")>=0) {
-    				window.location = "software/projects/atomicsmasher.html";
-				}
-				else if (window.location.toString().indexOf("?miscellaneous")>=0) {
-    				window.location = "software/projects/miscellaneous.html";
-				}
-				else if (window.location.toString().indexOf("?karnaugh")>=0) {
-    				window.location = "software/projects/karnaugh.html";
-				}
-				else if (window.location.toString().indexOf("?slope")>=0) {
-    				window.location = "software/projects/slope.html";
-				}
-				else if (window.location.toString().indexOf("?decanting")>=0) {
-    				window.location = "software/projects/decanting.html";
-				}
-				else if (window.location.toString().indexOf("?convex")>=0) {
-    				window.location = "software/projects/convex.html";
-				}
-				else if (window.location.toString().indexOf("?arduino")>=0) {
-    				window.location = "software/projects/arduino.html";
-				}
-				else if (window.location.toString().indexOf("?template")>=0) {
-    				window.location = "software/tutorials/contest-template.html";
-				}
-		</script>
-
-
-		<!-- Home start -->
-		<!--<section id="home" class="pfblock-image screen-height">
-			<div class="home-overlay"></div>
-			<div class="intro">
-				<div class="start">Hello, my name is:</div>
-				<h1>Horatiu Lazu</h1>
-				<div class="start">Welcome to my personal website!</div>
-			</div>
-			<a href="#passions">
-				<div class="scroll-down">
-					<span>
-					<i class="fa fa-angle-down fa-2x"></i>
-					</span>
-				</div>
-			</a>
-		</section> -->
-
-		<!-- Home end -->
-		<!-- Portfolio start -->
-		<section id="portfolio" class="pfblock-gray">
-			<div class="container">
-				<div class="row" style="display: inline-block; margin-bottom: -50px;">
-					<div class="col-sm-12 col-sm-offset-0">
-						<div class="pfblock-header wow fadeInUp">
-							<br><br><br>
-							<h2 class="pfblock-title">Welcome to my homepage!</h2>
-							
-							<!-- Maybe make it wider? -->
-							<div class="pfblock-subtitle">
-								Hi, I'm Horatiu Lazu. I am studying Computer Science at the University of Waterloo, and interned twice at <a href="https://www.bloomberg.com/professional/" target="_blank">Bloomberg LP</a> in New York City working on machine learning projects and contributing to the open-source distributed search platform and engine <a href="http://lucene.apache.org/solr/" target="_blank">Apache Solr/Lucene</a>.
-								<br><br>
-								Road cycling is my hobby, with my <a href="http://stravawindanalysis.com" target="_blank">Strava Wind Analysis</a> site providing analytics and data visualization to over 50,000 users.<br> Feel free to also checkout my <a href="http://github.com/MathBunny" target="_blank">GitHub profile </a> or my <a href="http://youtube.com/ComputerBunnyMath123" target="_blank">YouTube Channel</a> that has over 1 million views.
-							</div>
-							<!-- <div class="pfblock-line"></div> -->
-						</div>
-					</div>
-				</div>
-				
-				<hr>
-				
-				<div class="row" style="display: center; margin-bottom:-20px" id="coops">
-					<div class="col-sm-12 col-sm-offset-0">
-						<div class="pfblock-header wow fadeInUp">
-							<!-- Maybe make it wider? -->
-
-							<a href="#coops" id="yelp-show"> <img src="./assets/images/YelpLogo.png"> </a>
-							<a href="#coops" id="bloomberg2-show"> <img src="./assets/images/BloombergLogo.png"> </a>
-							<a href="#coops" id="bloomberg1-show"> <img src="./assets/images/BloombergLogo.png"> </a>
-							<a href="#coops" id="bluesun-show"> <img src="./assets/images/WealthServLogo.png"> </a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="row" id="yelp-coop">
-					<div class="col-lg-12">
-						<img src="./assets/images/YelpLogoLarge.png">
-						<div class="pfblock-subtitle">
-							In Fall 2018, I will be joining Yelp in San Francisco, California to work on infrastructure in their operations team. I am looking forward to understanding how a site with 100 million+ monthly active users scales their backend systems!
-							<br><br><center><button data-toggle="collapse" onclick="hideAll()">Hide</button></center>
-						</div>
-					</div>
-				</div>
-				
-				<div class="row" id="bloomberg2-coop">
-					<div class="col-lg-12">
-						<img src="./assets/images/BloombergLogoLarge.png">
-						<br>
-						<div class="pfblock-subtitle" style="font-size:15px">
-							In Winter 2018, I returned to Bloomberg LP for another term in New York! My team was responsible for powering all Fixed Income Search functionality on Bloomberg Terminals (including <code>SRCH</code> and 70+ other functions including <code>DDIS</code> and <code>LEAG</code>). My work was heavily focused on their search infrastructure, and extending the capabilities of Apache Solr's (open-source search platform) cross-collection join. 
-							
-							<br><br>
-							Introducing high-performance join capabilities for sharded collections and SolrCloud clusters to Solr was my primary project. By allowing for joins across sharded collections, the Lucene indices could be scaled horizontally across many nodes allowing for larger collections and faster performance. Joins across SolrCloud clusters allows different teams to perform joins across their datasets without the need of duplicate data - which was an issue for our team. As teams shift towards Bloomberg's new infrastructure for "Solr as a service", teams could very quickly join across data-sets by simply providing the ZooKeeper host address for the other SolrCloud cluster. This has impact not only for my team, but for many other teams across all of Bloomberg.
-							
-							<br><br>Performance is critical for Bloomberg Terminal users, and as a result the join was very heavily profiled and optimized. In short, migrating from streaming expression's intersect to the newer join code reduces query times on average by 87.3%! I created an automated benchmarking system allowing for chart visualizations and regressions, appropriate JVM warming up, collection cache resetting along with deploying SolrCloud clusters and ZooKeeper ensembles across Bloomberg's New York and New Jersey datacenters.
-							
-							<br><br>The most significant speed-up came from leveraging uninverting data-structures from Lucene, which allow for rapid field-lookups. By creating a custom request handler endpoint on Solr, this allows for rapid retrieval of fields that can be sent back in proprietary binary format over the network. I also researched heavily different data-structures and compression techniques. This included leveraging LZ4, Burrows-Wheeler Transform and Huffman Coding for strings, in addition to a custom join for my team leveraging compressed (roaring) bitmaps. At the end, I prepared the patch to be pushed upstream, which included documentation and unit tests.
-							
-							<br><br>Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg's service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.
-							
-							<br><br>As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.
-							<br><br><center><button class="SeeMore3" data-toggle="collapse" onclick="hideAll()">Hide</button></center>
-						</div>
-					</div>
-				</div>
-				
-				<div class="row" id="bloomberg1-coop">
-					<div class="col-lg-12">
-						<img src="./assets/images/BloombergLogoLarge.png">
-						<br>
-						<div class="pfblock-subtitle" style="font-size:15px">
-							In Summer 2017, for my first co-op term, I decided to go to Bloomberg LP in New York City! The experience was nothing short of fantastic. Bloomberg is the world's largest financial data provider employing over 5,000 developers. The Bloomberg Terminal, their core revenue generating product, has over 325,000 subscribers and costs over $24,000 per user. The Terminal provides real-time financial analytics, news, an electronic trading platform and much much more.
-							
-							<br><br>
-							I was part of the Excel Add-In team, also known as Desktop API. The Bloomberg Terminal comes with an Excel Add-In, allowing for users to import financial data from Bloomberg straight into their Excel spreadsheets and perform financial analysis. This includes both historical data in addition to real-time (for which the Excel cells update in real-time). There was a wide gamut of other features as well, such as charting and templates for financial documents. 
-							
-							<br><br> My first project was developing a machine learning collaborative filtering recommender system to generate personalized recommendations for the 250,000+ monthly Excel Add-In users in terms of which Excel Add-In functions they should try. This was part of "Feature Explorer", in an effort to make the users to become acquainted with the various functions Bloomberg provides in their Add-In. As part of my project, I worked with Python and several scientific/machine learning frameworks and libraries including NumPy, SciPy, Matplotlib and Scikit-Learn.    
-							
-							<br><br> I initially prototyped several different approaches to solving this problem, but after guidance from members of Bloomberg's data-science teams we settled on an approach using statistical analysis on different clusters of users based on Bloomberg Terminal data. While I cannot go into details of the algorithm, some neat optimizations included lazily precomputing recommendations per-cluster instead of per-user, such that only once the service is queried - then it would lookup the historical feature usage data for that user and provide a recommendation. This significantly sped-up training time for the algorithm, while generating the recommendations remained near-constant time.
-							
-							<br><br> After completing my first project I received another one, which was prototyping chatbot approaches for generating associated BQL (Bloomberg Query Language) queries for financial questions. Since my team was heavily invested in the Microsoft eco-system it was worth testing their newly released Microsoft Bot Framework, which leverages their Cognitive Services suite for ML/NLP. 
-							
-							<br><br> This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
-							
-							<br><br>All in all, I enjoyed my first real work-term and had an amazing mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
-							<br><br><center><button data-toggle="collapse" onclick="hideAll()">Hide</button></center>
-						</div>
-					</div>
-				</div>
-					
-				<div class="row" id="bluesun-coop">
-					<div class="col-lg-12">
-						<img src="./assets/images/BluesunLogoLarge.png">
-						<div class="pfblock-subtitle" style="font-size:15px">
-							<br>
-							In Summer 2016, I joined Bluesun in Burlington, Ontario for an internship. Bluesun is the largest provider of insurance software (WealthServ) in Canada for the private channel. I am extremely grateful for the opportunity I had at Bluesun, since I had only graduated high-school but they were willing to take me on-board even though I had very little experience with software development at the time. Despite the 2 hour commute it took to get to work, I enjoyed my time there very much.
-							
-							
-							<br><br>My project for that summer was migrating their version control from TFS (Team Foundation Server) to Git. Manually migrating isn't a difficult task, but they have 8+ years of changesets across multiple repositories, and the migration has to occur seamlessly. Hence, I worked on creating a program in C# that leveraged git-tf (official migration tool for TFS to Git) that added features we needed to successfully migrate the repositories. 
-							
-							<br><br>Features I added to the C# git-tf wrapper included parallel processing for each Git branch running as a separate thread improving migration performance by up to 70%, the ability to recognize any working tree file corruptions and fix them automatically, in addition to queuing all the repos for bulk converting all the company repositories automatically. The program successfully migrated their entire codebase overnight, and by 6:30am the next day everything was on converted and on BitBucket! 
-							
-							<br><br>After completing the migration program, I updated their Jenkins Continous Integration pipeline to fetch from BitBucket (Git) instead of TFS, which involved a bit of Groovy scripting. I had completed my project early, so after I worked on several miscellaneous tasks such as writing a JavaScript plugin for PMs to use for the internal timesheet system.
-							
-							<br><br>The project was really rewarding since I got to see it deployed/used before I left. My mentor was really helpful in debugging issues, in addition to other co-workers who helped me along the way. Bluesun had a very nice company culture and all the employees seemed very happy and passionate about their work, and I am very glad to have spent 2 months interning there!
-							
-							<br><br><center><button data-toggle="collapse" onclick="hideAll()">Hide</button></center>
-						</div>
-					</div>
-				</div>
-
-				
-				<hr>
-				
-
-
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="iconbox wow slideInLeft">
-							<div class="iconbox-icon">
-								<i class="fa fa-code" aria-hidden="true"></i>
-								<i class="fa fa-trophy" aria-hidden="true"></i>
-								<i class="fa fa-book" aria-hidden="true"></i>
-								<i class="fa fa-terminal" aria-hidden="true"></i>
-
-								<!--<span class="fa fa-car" aria-hidden="true"></span> -->
-							</div>
-							<div class="iconbox-text">
-								<h3 class="iconbox-title">Computing Competitions & Awards</h3>
-								<div class="iconbox-desc">
-									<div class="accordion" id="accordion3">
-										<div class="accordion-group">
-											<div class="accordion-heading">
-												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
-												</a>
-											</div>
-											<div id="collapseThree" class="accordion-body collapse">
-												HackerRank Algorithm Contests - 98th Percentile Rating, O(1) Division <br>
-												USA Computing Olympiad 2016 - Platinum Division (Top Division) <br>
-												Canadian Computing Competition Senior 2015 - Group 2 (Top-50 of 1500) <br>
-												Canadian Computing Competition Junior 2014 - Group 1 (Perfect Score) <br>
-												Strava Worldwide API Developer Challenge 2016 - Winner <br>
-
-												<br>
-												University of Waterloo - $10,000 Mathematics Scholarship (1 of 10) <br>
-												William Lyon Mackenzie - Computer Programming Excellence Award <br>
-												Toronto Secondary School Chess Championships - Bronze Medal <br>
-												Euclid Mathematics Contest - Distinction (Top 10%) <br>
-
-
-												<br>
-
-											</div>
-											<button class="SeeMore3" data-toggle="collapse" href="#collapseThree">See More</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="iconbox wow slideInRight">
-							<div class="iconbox-icon">
-								<i class="fa fa-building" aria-hidden="true"></i>
-								<i class="fa fa-briefcase" aria-hidden="true"></i>
-								
-								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-								<i class="fa fa-university" aria-hidden="true"></i>
-							</div>
-							<div class="iconbox-text">
-								<h3 class="iconbox-title">Experience & Education</h3>
-								<div class="iconbox-desc">
-									<div class="accordion" id="accordion4">
-										<div class="accordion-group">
-											<div class="accordion-heading">
-												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseThree">
-												</a>
-											</div>
-											<div id="collapseFour" class="accordion-body collapse">
-												Bloomberg LP / Fixed Income Search - Software Engineering Intern - 2018 <br>
-												Bloomberg LP / Excel Add-In (DAPI) - Software Engineering Intern - 2017 <br>
-												Bluesun (WealthServ) - Software Developer Intern - 2016 <br>
-
-												<br>
-												University of Waterloo - Computer Science (3.97 mGPA) - 2016/2021 <br>
-												Teaching Assistant - Linear Algebra (Math 136) - Fall 2017 <br>
-												<br>
-											</div>
-											<button class="SeeMore4" data-toggle="collapse" href="#collapseFour">See More</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-6">
-							<a href="http://stravawindanalysis.com" target="_blank" style="text-decoration:none;color:white;" target="_blank" style="text-decoration:none;"> 
-							<div class="grid wow zoomIn">
-								<figure class="effect-bubba">
-									<img src="assets/images/stravawindanalysis.png" alt="Horatiu Lazu"/><!-- b -->
-									<figcaption>
-										<h2><a href = "http://stravawindanalysis.com" target="_blank" style="text-decoration:none;color:white;"> Strava Wind <span>Analysis</span> </a></h2>
-										<p>Provides historical and aggregate ride/segment analytics, data visualization and machine learning for cyclists on the Strava platform</p>
-									</figcaption>
-								</figure>
-							</div>
-							</a> 
-						</div>
-					
-					<div class="col-xs-12 col-sm-6 col-md-6">
-						<a href="software/projects/karnaugh/site/index.html" target="_blank" style="text-decoration:none;"> 
-						<div class="grid wow zoomIn">
-							<figure class="effect-bubba">
-								<img src="assets/images/KarnaughMap4VariableWide.png" alt="Horatiu Lazu"/>
-								<figcaption>
-									<h2><a href = "software/projects/karnaugh/site/index.html" target="_blank" style="text-decoration:none;color:white;">Karnaugh <span>Simplification</span></a></h2>
-									<p>Simplifies boolean expressions visually.</p>
-								</figcaption>
-							</figure>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-						<div class="col-xs-12 col-sm-4 col-md-4">
-							<a href="software/projects/slope.html" target="_blank" style="text-decoration:none;"> 
-							<div class="grid wow zoomIn">
-								<figure class="effect-bubba"> <!-- assets/images/item-8b.png BasiliskMainMenuMobile.png --> 
-									 <img src="assets/images/slope-field-screenshot-main.png" alt="Horatiu Lazu"/> 
-									<!-- <img src="software/images/BasiliskMainScreenshot.png"/> -->
-									<figcaption>
-										<h2><a href="software/projects/slope.html" target="_blank" style="text-decoration:none;color:white;">Slope Field <span>Generator</span></a></h2>
-										<p>Graphs slope fields from seperable differentials.</p>
-									</figcaption>
-								</figure>
-							</div>
-						</div>
-					
-					    
-					    <div class="col-xs-12 col-sm-4 col-md-4">
-					        <a href="software/projects/decanting.html" target="_blank" style="text-decoration:none;"> 
-					        <div class="grid wow zoomIn">
-					            <figure class="effect-bubba">
-					                <img src="assets/images/decanting-screenshot-main.png" alt="Horatiu Lazu"/> 
-					                <figcaption>
-					                    <h2><a href="software/projects/decanting.html" target="_blank" style="text-decoration:none;color:white;">Decanting<span>Puzzle</span></a></h2>
-					                    <p><a href = "software/projects/decanting.html" target="_blank" style="text-decoration:none;color:white;">Android puzzle game with level generator & solver.</a></p>
-					                </figcaption>			
-					            </figure>
-					        </div>
-					    </div>
-					
-					    
-					    <div class="col-xs-12 col-sm-4 col-md-4">
-							<a href="software/projects/convex.html" target="_blank" style="text-decoration:none;"> 
-					        <div class="grid wow zoomIn">
-					            <figure class="effect-bubba">
-					                <img src="assets/images/Convex-hull-screenshot-sample.png" alt="Horatiu Lazu"/>
-					                <figcaption>
-					                    <h2><a href="software/projects/convex.html" target="_blank" style="text-decoration:none;color:white;">Convex Hull <span>Visualizer</span></a></h2>
-					                    <p><a href = "software/projects/convex.html" target="_blank" style="text-decoration:none;color:white;">Generates convex hulls with Graham Scan algorithm.</a></p>
-					                </figcaption>			
-					            </figure>
-					        </div>
-					    </div>
-
-					</div>
-			
-
-				<!-- .row -->
-				<div class="row">
-						<div class="col-xs-12 col-sm-4 col-md-4">
-							<a href="https://github.com/MathBunny/mandelbrot-fractal-generator" target="_blank" style="text-decoration:none;"> 
-							<div class="grid wow zoomIn">
-								<figure class="effect-bubba">
-									<img src="assets/images/AndroidFractals.png" alt="Horatiu Lazu"/><!-- b -->
-									<figcaption>
-										<h2><a href = "https://github.com/MathBunny/mandelbrot-fractal-generator" target="_blank" style="text-decoration:none;color:white;"> Mandlebrot Set <span>Generator</span> </a></h2>
-										<p>Generates fractals.</p>
-									</figcaption>
-								</figure>
-							</div>
-							</a> 
-						</div>
-					
-					<div class="col-xs-12 col-sm-4 col-md-4">
-						<a href="software/projects/synthetic.html" target="_blank" style="text-decoration:none;"> 
-						<div class="grid wow zoomIn">
-							<figure class="effect-bubba">
-								<img src="assets/images/item-2b.png" alt="Horatiu Lazu"/>
-								<figcaption>
-									<h2><a href = "software/projects/synthetic.html" target="_blank" style="text-decoration:none;color:white;">Synthetic <span>Division</span></a></h2>
-									<p>Demonstrates Ruffini's extended law of division.</p>
-								</figcaption>
-							</figure>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-4">
-						<a href="software/projects/atomicsmasher.html" target="_blank" style="text-decoration:none;"> 
-						<div class="grid wow zoomIn">
-							<figure class="effect-bubba">
-								<img src="assets/images/item-3b.png" alt="Horatiu Lazu"/>
-								<figcaption>
-									<h2><a href = "software/projects/atomicsmasher.html" target="_blank" style="text-decoration:none;color:white;"> Atomic <span>Smasher</span></a></h2>
-									<p>Demonstrates the basics of chemistry in a game.</p>
-								</figcaption>
-							</figure>
-						</div>
-						</a>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-4">
-						<a href="software/projects/tower.html" target="_blank" style="text-decoration:none;"> 
-						<div class="grid wow zoomIn">
-							<figure class="effect-bubba">
-								<img src="assets/images/item-6b.png" alt="Horatiu Lazu"/>
-								<figcaption>
-									<h2><a href = "software/projects/tower.html" target="_blank" style="text-decoration:none;color:white;"> Tower of <span>Hanoi</span></a></h2>
-									<p>Java Tower of Hanoi game using hsa framework.</p>
-									<!-- Should you include a hyperlink? -->
-								</figcaption>
-							</figure>
-						</div>
-						</a>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-4">
-						<a href="software/projects/miscellaneous.html#utilities" target="_blank" style="text-decoration:none;"> 
-						<div class="grid wow zoomIn">
-							<figure class="effect-bubba">
-								<img src="assets/images/item4c.png" alt="Horatiu Lazu"/>
-								<figcaption>
-									<h2><a href="software/projects/miscellaneous.html#utilities" target="_blank" style="text-decoration:none;color:white;"> Maze Solving <span>Robot</span></a></h2>
-									<p>Robot that traverses a maze.</p>
-								</figcaption>
-							</figure>
-						</div>
-						</a>
-					</div>
-					<div class="col-xs-12 col-sm-4 col-md-4">
-						<a href="software/projects/basilisk.html" target="_blank" style="text-decoration:none;"> 
-						<div class="grid wow zoomIn">
-							<figure class="effect-bubba"> <!-- assets/images/item-8b.png BasiliskMainMenuMobile.png --> 
-								 <img src="assets/images/item-8b.png" alt="Horatiu Lazu"/> 
-								<!-- <img src="software/images/BasiliskMainScreenshot.png"/> -->
-								<figcaption>
-									<h2><a href="software/projects/basilisk.html" target="_blank" style="text-decoration:none;color:white;">Basilisk <span>3D</span></a></h2>
-									<p>Snake game with various game-modes.</p>
-								</figcaption>
-							</figure>
-						</div>
-					</div>
-				</div>
-				<!-- Row #3 -->
-				<div class="row">
-						<div class="col-xs-12 col-sm-4 col-md-4">
-							<a href="software/projects/segment.html" target="_blank" style="text-decoration:none;"> 
-							<div class="grid wow zoomIn">
-								<figure class="effect-bubba"> <!-- assets/images/item-8b.png BasiliskMainMenuMobile.png --> 
-									 <img src="assets/images/strava-segment.png" alt="Horatiu Lazu"/> 
-									<!-- <img src="software/images/BasiliskMainScreenshot.png"/> -->
-									<figcaption>
-										<h2><a href="software/projects/segment.html" target="_blank" style="text-decoration:none;color:white;">Segment <span>Analysis</span></a></h2>
-										<p>Calculates wind influence on cycling rides.</p>
-									</figcaption>
-								</figure>
-							</div>
-						</div>
-					
-					    
-					    <div class="col-xs-12 col-sm-4 col-md-4">
-					        <a href="software/projects/newton.html" target="_blank" style="text-decoration:none;"> 
-					        <div class="grid wow zoomIn">
-					            <figure class="effect-bubba">
-					                <img src="assets/images/newton-raphson2.png" alt="Horatiu Lazu"/> 
-					                <figcaption>
-					                    <h2><a href="software/projects/newton.html" target="_blank" style="text-decoration:none;color:white;"> Newton's <span>Approximation</span></a></h2>
-					                    <p><a href = "software/projects/newton.html" target="_blank" style="text-decoration:none;color:white;">Finds roots of any expression.</a></p>
-					                </figcaption>			
-					            </figure>
-					        </div>
-					        
-					    </div>
-					
-					    
-					    <div class="col-xs-12 col-sm-4 col-md-4">
-							<a href="https://www.youtube.com/user/ComputerBunnyMath123" target="_blank" style="text-decoration:none;"> 
-					        <div class="grid wow zoomIn">
-					            <figure class="effect-bubba">
-					                <img src="assets/images/SoftwareEngenius.png" alt="Horatiu Lazu"/>
-					                <figcaption>
-					                    <h2><a href="https://www.youtube.com/user/ComputerBunnyMath123" target="_blank" style="text-decoration:none;color:white;">YouTube <span>Channel</span></a></h2>
-					                    <p><a href = "https://www.youtube.com/user/ComputerBunnyMath123" target="_blank" style="text-decoration:none;color:white;">Software channel with over 1 million worldwide views</a></p>
-					                </figcaption>			
-					            </figure>
-					        </div>
-					    </div>
-					</div>
-
-					<!-- Row #4 -->
-				<br><br>
-			<!-- .contaier -->
-		</section>
-		<!-- Portfolio end -->
-		<!-- 
-		<section id="Reasoning2" class="pfblock pfblock">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="iconbox wow slideInLeft">
-							<div class="iconbox-icon">
-								<i class="fa fa-code" aria-hidden="true"></i>
-								<i class="fa fa-trophy" aria-hidden="true"></i>
-								<i class="fa fa-book" aria-hidden="true"></i>
-								<i class="fa fa-terminal" aria-hidden="true"></i>
-							</div>
-							<div class="iconbox-text">
-								<h3 class="iconbox-title">Computing Competitions & Awards</h3>
-								<div class="iconbox-desc">
-									<div class="accordion" id="accordion3">
-										<div class="accordion-group">
-											<div class="accordion-heading">
-												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
-												</a>
-											</div>
-											<div id="collapseThree" class="accordion-body collapse">
-												USA Computing Olympiad 2016 - Platinum Division (Top Division) <br>
-												Canadian Computing Competition Senior 2015 - Group 2 (Top-50 of 1500) <br>
-												Canadian Computing Competition Junior 2014 - Group 1 (Perfect Score) <br>
-												HackerRank Algorithm Contests - 94th Percentile Rating <br>
-												Strava Worldwide Developer Challenge 2016 - Winner <br>
-
-												<br>
-												University of Waterloo - $10,000 Mathematics Scholarship (1 of 10) <br>
-												William Lyon Mackenzie - Computer Programming Excellence Award <br>
-												Toronto Secondary School Chess Championships - Bronze Medal <br>
-												Euclid Mathematics Contest - Distinction (Top 10%) <br>
-
-
-												<br>
-
-											</div>
-											<button class="SeeMore3" data-toggle="collapse" href="#collapseThree">See More</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="iconbox wow slideInRight">
-							<div class="iconbox-icon">
-								<i class="fa fa-building" aria-hidden="true"></i>
-								<i class="fa fa-briefcase" aria-hidden="true"></i>
-								
-								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-								<i class="fa fa-university" aria-hidden="true"></i>
-							</div>
-							<div class="iconbox-text">
-								<h3 class="iconbox-title">Experience & Education</h3>
-								<div class="iconbox-desc">
-									<div class="accordion" id="accordion4">
-										<div class="accordion-group">
-											<div class="accordion-heading">
-												<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" href="#collapseThree">
-												</a>
-											</div>
-											<div id="collapseFour" class="accordion-body collapse">
-												Bloomberg LP - Software Engineering Intern - 2017 <br>
-												Bluesun (WealthServ) - Software Developer Intern - 2016 <br>
-
-												<br>
-												University of Waterloo - Computer Science (3.8 GPA) - 2016/2021 <br>
-												William Lyon Mackenzie - MaCS Program (98% Average) - 2012/2016 <br>
-
-												<br>
-												Computer Programming Team (President) - 2015/2016 <br>
-												Chess Club (President) - 2014/2016<br>
-												Audio and Visuals Team (President) - 2014/2016<br>
-												Mathematics Club (Executive) - 2015/2016<br>
+		 fnc_map[companies[0]] = 'CitadelShow';
+		 fnc_map[companies[1]] = 'BluesunShow';
+		 fnc_map[companies[2]] = 'Bloomberg1Show';
+		 fnc_map[companies[3]] = 'Bloomberg2Show';
+		 fnc_map[companies[4]] = 'YelpShow';
 
 
-												<br>
-											</div>
-											<button class="SeeMore4" data-toggle="collapse" href="#collapseFour">See More</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		-->
-		
-		<!-- Contact end -->
-		<!-- Footer start -->
-		<footer id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<ul class="social-links">
-							<!-- Get more links? -->
-							<li><a href="https://www.facebook.com/horatiu.lazu#" class="wow fadeInUp"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://www.youtube.com/channel/UC1x8xbTXmulYknwNDyrBImQ" class="wow fadeInUp" data-wow-delay=".1s"><i class="fa fa-youtube"></i></a></li>
-							<li><a href="https://github.com/MathBunny" class="wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-github"></i></a></li>
-							<!-- <li><a href="https://www.strava.com/athletes/6214103" class="wow fadeInUp" data-wow-delay=".2s"><i class="fa fa-bicycle"></i></a></li> -->
-							<li><a href="https://ca.linkedin.com/in/horatiulazu" class="wow fadeInUp" data-wow-delay=".5s"><i class="fa fa-linkedin"></i></a></li>
-						</ul>
-						<p class="copyright">
-							© 2018 Horatiu Lazu</a>
-						</p>
-					</div>
-				</div>
-				<!-- .row -->
-			</div>
-			<!-- .container -->
-		</footer>
-		<!-- Footer end -->
+         function hideAll() {
+         	$("#citadel-coop").hide();
+         	$("#yelp-coop").hide();
+         	$("#bloomberg2-coop").hide();
+         	$("#bloomberg1-coop").hide();
+         	$("#bluesun-coop").hide();
 
-		<!-- Javascript file for analytics-->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			
-			ga('create', 'UA-74979520-1', 'auto');
-			ga('send', 'pageview');
-			
-		</script>
-		<!-- Javascript Files -->
-		<script src="assets/js/jquery-1.11.1.min.js"></script>
-		<script>
-			function hideAll() {
-				$("#yelp-coop").hide();
-				$("#bloomberg2-coop").hide();
-				$("#bloomberg1-coop").hide();
-				$("#bluesun-coop").hide();
-			}
-		 	hideAll();
-			$("#bluesun-show").click(() => {
-				hideAll();
-				$("#bluesun-coop").show();
-			});
-			$("#bloomberg1-show").click(() => {
-				hideAll();
-				$("#bloomberg1-coop").show();
-			});
-			$("#bloomberg2-show").click(() => {
-				hideAll();
-				$("#bloomberg2-coop").show();
-			});
-			$("#yelp-show").click(() => {
-				hideAll();
-				$("#yelp-coop").show();
-			});
-		</script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-		<script src="assets/js/jquery.parallax-1.1.3.js"></script>
-		<script src="assets/js/imagesloaded.pkgd.js"></script>
-		<script src="assets/js/jquery.sticky.js"></script>
-		<script src="assets/js/smoothscroll.js"></script>
-		<script src="assets/js/wow.min.js"></script>
-		<script src="assets/js/waypoints.min.js"></script>
-		<script src="assets/js/jquery.cbpQTRotator.js"></script>
-		<script src="assets/js/custom.js"></script>
-		<script src="assets/js/seemore.js"> </script>
-	</body>
+         	console.log('before');
+         	console.log(open_panes);
+
+         	/* for (const company of companies) {
+         		if (open_panes[company]) {
+         			open_panes[company] = false;
+         			let mappedCompany = fnc_map
+         			$(`#${fnc_map[company]}`).click();
+         		}
+         	} */
+
+         	console.log(open_panes);
+         }
+         
+         hideAll();
+         $("#citadel-show").click(() => {
+         	const company = 'citadel-coop';
+
+         	hideAll();
+         	$(`#${company}`).show();
+         	if (!open_panes[company]) {
+         		$(`#${fnc_map[company]}`).click();
+         	}
+
+         	open_panes[company] = true;
+         });
+         
+         $("#bluesun-show").click(() => {
+         	hideAll();
+         	$("#bluesun-coop").show();
+         	$("#BluesunShow").click();
+
+         	open_panes['bluesun-coop'] = true;
+         });
+         $("#bloomberg1-show").click(() => {
+         	hideAll();
+         	$("#bloomberg1-coop").show();
+         	$("#Bloomberg1Show").click();
+
+         	open_panes['bloomberg1-coop'] = true;
+         });
+         $("#bloomberg2-show").click(() => {
+         	hideAll();
+         	$("#bloomberg2-coop").show();
+         	$("#Bloomberg2Show").click();
+
+         	open_panes['bloomberg2-coop'] = true;
+         });
+         $("#yelp-show").click(() => {
+         	hideAll();
+         	$("#yelp-coop").show();
+         	$("#YelpShow").click();
+
+         	open_panes['yelp-coop'] = true;
+         });
+      </script>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/js/jquery.parallax-1.1.3.js"></script>
+      <script src="assets/js/imagesloaded.pkgd.js"></script>
+      <script src="assets/js/jquery.sticky.js"></script>
+      <script src="assets/js/smoothscroll.js"></script>
+      <script src="assets/js/wow.min.js"></script>
+      <script src="assets/js/waypoints.min.js"></script>
+      <script src="assets/js/jquery.cbpQTRotator.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <script src="assets/js/seemore.js"> </script>
+   </body>
 </html>
