@@ -155,7 +155,7 @@
                                     In Fall 2018, I joined Yelp on their Production Engineering Team in San Francisco, California. During this internship I learned a lot about how Yelp developed their infrastructure to handle over 100 million active users. My experience was great with an outstanding mentor and tean who were extremely supportive and resourceful in getting this project up and running!
                                     <br> <br>I developed and shipped a scalable cloud metadata inventory search service using Elasticsearch, Python, Terraform and AWS products. This service allowed for expressive discovery using a custom defined DSL, featured a RESTful interface powered by a serverless architecture and provides an elegant dashboard written using React.
                                     <br><br>
-                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#YelpCollapse">Hide</button></center>
+                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#mainTitle">Hide</button></center>
                                  </div>
                                  <button id="YelpShow" style="display:none;"class="YelpSeeMore" data-toggle="collapse" href="#YelpCollapse">See More</button>
                               </div>
@@ -189,7 +189,7 @@
                                     <br><br>Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg's service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.
                                     <br><br>As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.
                                     <br><br>
-                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#Bloomberg2Collapse">Hide</button></center>
+                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#mainTitle">Hide</button></center>
                                  </div>
                                  <button id="Bloomberg2Show" style="display:none;"class="Bloomberg2SeeMore" data-toggle="collapse" href="#Bloomberg2Collapse">See More</button>
                               </div>
@@ -224,7 +224,7 @@
                                     <br><br> This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
                                     <br><br>All in all, I enjoyed my first real work-term and had an amazing mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
                                     <br><br>
-                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#Bloomberg1Collapse">Hide</button></center>
+                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#mainTitle">Hide</button></center>
                                  </div>
                                  <button id="Bloomberg1Show" style="display:none;"class="BloombergSeeMore" data-toggle="collapse" href="#Bloomberg1Collapse">See More</button>
                               </div>
@@ -546,7 +546,7 @@
       	// The bug is because you're closing Citadel when opening it the second time from another!
       	 open_panes = {}
       	 fnc_map = {}
-		 companies = ['citadel-coop', 'yelp-coop', 'bloomberg2-coop', 'bloomberg1-coop', 'bluesun-coop'];
+		 companies = ['citadel-coop', 'bluesun-coop', 'bloomberg1-coop', 'bloomberg2-coop', 'yelp-coop'];
 		 for (const company of companies) {
 		   	  open_panes[company] = false;   	 	
 		 }
@@ -564,18 +564,6 @@
          	$("#bloomberg2-coop").hide();
          	$("#bloomberg1-coop").hide();
          	$("#bluesun-coop").hide();
-
-         	console.log('before');
-         	console.log(open_panes);
-
-         	/* for (const company of companies) {
-         		if (open_panes[company]) {
-         			open_panes[company] = false;
-         			let mappedCompany = fnc_map
-         			$(`#${fnc_map[company]}`).click();
-         		}
-         	} */
-
          	console.log(open_panes);
          }
          
@@ -593,32 +581,48 @@
          });
          
          $("#bluesun-show").click(() => {
-         	hideAll();
-         	$("#bluesun-coop").show();
-         	$("#BluesunShow").click();
+         	const company = 'bluesun-coop';
 
-         	open_panes['bluesun-coop'] = true;
+         	hideAll();
+         	$(`#${company}`).show();
+         	if (!open_panes[company]) {
+         		$(`#${fnc_map[company]}`).click();
+         	}
+
+         	open_panes[company] = true;
          });
          $("#bloomberg1-show").click(() => {
-         	hideAll();
-         	$("#bloomberg1-coop").show();
-         	$("#Bloomberg1Show").click();
+         	const company = 'bloomberg1-coop';
 
-         	open_panes['bloomberg1-coop'] = true;
+         	hideAll();
+         	$(`#${company}`).show();
+         	if (!open_panes[company]) {
+         		$(`#${fnc_map[company]}`).click();
+         	}
+
+         	open_panes[company] = true;
          });
          $("#bloomberg2-show").click(() => {
-         	hideAll();
-         	$("#bloomberg2-coop").show();
-         	$("#Bloomberg2Show").click();
+         	const company = 'bloomberg2-coop';
 
-         	open_panes['bloomberg2-coop'] = true;
+         	hideAll();
+         	$(`#${company}`).show();
+         	if (!open_panes[company]) {
+         		$(`#${fnc_map[company]}`).click();
+         	}
+
+         	open_panes[company] = true;
          });
          $("#yelp-show").click(() => {
-         	hideAll();
-         	$("#yelp-coop").show();
-         	$("#YelpShow").click();
+         	const company = 'yelp-coop';
 
-         	open_panes['yelp-coop'] = true;
+         	hideAll();
+         	$(`#${company}`).show();
+         	if (!open_panes[company]) {
+         		$(`#${fnc_map[company]}`).click();
+         	}
+
+         	open_panes[company] = true;
          });
       </script>
       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
