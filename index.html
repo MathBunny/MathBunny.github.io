@@ -88,9 +88,9 @@
                   <br>
                   <!-- Maybe make it wider? -->
                   <div class="pfblock-subtitle">
-                     Hi, I'm Horatiu Lazu. I am studying Computer Science at the University of Waterloo, and interned twice at <a href="https://www.bloomberg.com/professional/" target="_blank">Bloomberg LP</a> in New York City working on machine learning projects and contributing to the open-source distributed search platform and engine <a href="http://lucene.apache.org/solr/" target="_blank">Apache Solr/Lucene</a>.
+                     Hi, I'm Horatiu Lazu, currently studying Computer Science at the University of Waterloo. I've done an internship at <a href="https://www.yelp.com/" target="_blank">Yelp</a>  in San Francisco and two internships at <a href="https://www.bloomberg.com/professional/" target="_blank">Bloomberg LP</a> in New York</a>, and will be joining <a href="https://www.citadelsecurities.com/" target="_blank">Citadel Securities</a> in Chicago.
                      <br><br>
-                     Road cycling is my hobby, with my <a href="http://stravawindanalysis.com" target="_blank">Strava Wind Analysis</a> site providing analytics and data visualization to over 50,000 users.<br> Feel free to also checkout my <a href="http://github.com/MathBunny" target="_blank">GitHub profile </a> or my <a href="http://youtube.com/ComputerBunnyMath123" target="_blank">YouTube Channel</a> that has over 1 million views.
+                     Road cycling is my hobby, with my <a href="http://stravawindanalysis.com" target="_blank">Strava Wind Analysis</a> site providing analytics and data visualization to over 70,000 users.<br> Feel free to visit my <a href="" target="_blank">Blog</a>, <a href="http://github.com/MathBunny" target="_blank">GitHub</a>, or my <a href="http://youtube.com/ComputerBunnyMath123" target="_blank">YouTube Channel</a> that has over 1 million views.
                   </div>
                   <!-- <div class="pfblock-line"></div> -->
                </div>
@@ -99,7 +99,7 @@
          <hr>
          <div class="row" style="display: center; margin-bottom:-20px" id="coops">
             <div class="col-sm-12 col-sm-offset-0">
-               <div class="pfblock-header wow fadeInUp">
+               <div class="pfblock-header wow zoomIn">
                   <!-- Maybe make it wider? -->
                   <a href="#coops" id="citadel-show"> <img src="./assets/images/CitadelLogo.png"> </a>
                   <a href="#coops" id="yelp-show"> <img src="./assets/images/YelpLogo.png"> </a>
@@ -124,9 +124,14 @@
                                  <img src="./assets/images/CitadelLogoLarge.png">
                                  <br>
                                  <div class="pfblock-subtitle" style="font-size:15px">
-                                    In Summer 2019 I will be joining Citadel Securities in Chicago, Illinois. Being the world's second largest multistrategy hedge fund with over $30 billion in assets under management, Citadel trades millions of stocks daily constituting over 39% of US retail equities trade volume and is the largest designated market maker on the New York Stock Exchange.
+                                    In Summer 2019 I will be joining Citadel Securities in Chicago, Illinois. Being the world's second largest multistrategy hedge fund with over $30 billion in AUM, Citadel trades on average over a billion of stocks daily constituting over 39% of US retail equities trade volume and is the largest market maker on the NYSE.
                                     <br><br>
-                                    <center><button onclick="hideAll();" href="#mainTitle">Hide</button></center>
+                                    <center><a href="#mainTitle"> 
+                                    	<div class="scroll-up">
+							         	</div>
+                                    	<button onclick="hideAll();" href="#mainTitle">Hide</button>
+                                    	</a>
+                                    </center>
                                  </div>
                                  <button id="CitadelShow" style="display:none;"class="CitadelSeeMore" data-toggle="collapse" href="#CitadelCollapse">See More</button>
                               </div>
@@ -152,10 +157,15 @@
                                  <img src="./assets/images/YelpLogoLarge.png">
                                  <br>
                                  <div class="pfblock-subtitle" style="font-size:15px">
-                                    In Fall 2018, I joined Yelp on their Production Engineering Team in San Francisco, California. During this internship I learned a lot about how Yelp developed their infrastructure to handle over 100 million active users. My experience was great with an outstanding mentor and tean who were extremely supportive and resourceful in getting this project up and running!
-                                    <br> <br>I developed and shipped a scalable cloud metadata inventory search service using Elasticsearch, Python, Terraform and AWS products. This service allowed for expressive discovery using a custom defined DSL, featured a RESTful interface powered by a serverless architecture and provides an elegant dashboard written using React.
+                                    In Fall 2018, I joined Yelp on their Production Engineering Team in San Francisco, California. The Production Engineering Team is responsible for handling the scale of over 100 million monthly active users on Yelp, which includes lower level systems and infrastructure.
+                                    <br> <br>I developed and shipped a scalable cloud metadata search service using Elasticsearch, Python, Terraform and AWS. This service allows for expressive discovery using a custom defined DSL, features a RESTful interface powered by a serverless architecture and provides an elegant dashboard written in React.
                                     <br><br>
-                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#mainTitle">Hide</button></center>
+                                    <center><a href="#mainTitle"> 
+                                    	<div class="scroll-up">
+							         	</div>
+                                    	<button onclick="hideAll();" href="#mainTitle">Hide</button>
+                                    	</a>
+                                    </center>
                                  </div>
                                  <button id="YelpShow" style="display:none;"class="YelpSeeMore" data-toggle="collapse" href="#YelpCollapse">See More</button>
                               </div>
@@ -181,15 +191,20 @@
                                  <img src="./assets/images/BloombergLogoLarge.png">
                                  <br>
                                  <div class="pfblock-subtitle" style="font-size:15px">
-                                    In Winter 2018, I returned to Bloomberg LP for another term in New York! My team was responsible for powering all Fixed Income Search functionality on Bloomberg Terminals (including <code>SRCH</code> and 70+ other functions including <code>DDIS</code> and <code>LEAG</code>). My work was heavily focused on their search infrastructure, and extending the capabilities of Apache Solr's (open-source search platform) cross-collection join. 
+                                    In Winter 2018, I returned to Bloomberg LP for another term in New York! I joined the Fixed Income Core Search Team, which is responsible for powering all fixed income search related infrastructure and functionality across Bloomberg products.
                                     <br><br>
-                                    Introducing high-performance join capabilities for sharded collections and SolrCloud clusters to Solr was my primary project. By allowing for joins across sharded collections, the Lucene indices could be scaled horizontally across many nodes allowing for larger collections and faster performance. Joins across SolrCloud clusters allows different teams to perform joins across their datasets without the need of duplicate data - which was an issue for our team. As teams shift towards Bloomberg's new infrastructure for "Solr as a service", teams could very quickly join across data-sets by simply providing the ZooKeeper host address for the other SolrCloud cluster. This has impact not only for my team, but for many other teams across all of Bloomberg.
-                                    <br><br>Performance is critical for Bloomberg Terminal users, and as a result the join was very heavily profiled and optimized. In short, migrating from streaming expression's intersect to the newer join code reduces query times on average by 87.3%! I created an automated benchmarking system allowing for chart visualizations and regressions, appropriate JVM warming up, collection cache resetting along with deploying SolrCloud clusters and ZooKeeper ensembles across Bloomberg's New York and New Jersey datacenters.
-                                    <br><br>The most significant speed-up came from leveraging uninverting data-structures from Lucene, which allow for rapid field-lookups. By creating a custom request handler endpoint on Solr, this allows for rapid retrieval of fields that can be sent back in proprietary binary format over the network. I also researched heavily different data-structures and compression techniques. This included leveraging LZ4, Burrows-Wheeler Transform and Huffman Coding for strings, in addition to a custom join for my team leveraging compressed (roaring) bitmaps. At the end, I prepared the patch to be pushed upstream, which included documentation and unit tests.
-                                    <br><br>Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg's service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.
-                                    <br><br>As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.
+                                    I worked on contributing the ability to perform high-performance distributed joins across sharded collections and SolrCloud clusters via ZooKeeper host to Apache Solr. Using various optimizations including leveraging uninverting Lucene data-structures, extensive performance profiling,use of efficient data-structures (roaring bitmaps) and compression techniques: the average join query time was reduced by over 88.7% compared to streaming intersect expressions. 
                                     <br><br>
-                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#mainTitle">Hide</button></center>
+
+                                    <u> <a href="/blog/"> Read more about my experience in my blog post here. </a> </u>
+                                    
+                                    <center><a href="#mainTitle"> 
+                                    	<div class="scroll-up">
+							         	</div>
+                                    <br>
+                                    	<button onclick="hideAll();" href="#mainTitle">Hide</button>
+                                    	</a>
+                                    </center>
                                  </div>
                                  <button id="Bloomberg2Show" style="display:none;"class="Bloomberg2SeeMore" data-toggle="collapse" href="#Bloomberg2Collapse">See More</button>
                               </div>
@@ -215,16 +230,18 @@
                                  <img src="./assets/images/BloombergLogoLarge.png">
                                  <br>
                                  <div class="pfblock-subtitle" style="font-size:15px">
-                                    In Summer 2017, for my first co-op term, I decided to go to Bloomberg LP in New York City! The experience was nothing short of fantastic. Bloomberg is the world's largest financial data provider employing over 5,000 developers. The Bloomberg Terminal, their core revenue generating product, has over 325,000 subscribers and costs over $24,000 per user. The Terminal provides real-time financial analytics, news, an electronic trading platform and much much more.
+                                    In Summer 2017, for my first co-op term, I went to Bloomberg LP in New York. I joined the Excel Add-In team, responsible for bringing real-time and historical financial data from the Terminal straight into their Excel spreadsheets and perform financial analysis.
                                     <br><br>
-                                    I was part of the Excel Add-In team, also known as Desktop API. The Bloomberg Terminal comes with an Excel Add-In, allowing for users to import financial data from Bloomberg straight into their Excel spreadsheets and perform financial analysis. This includes both historical data in addition to real-time (for which the Excel cells update in real-time). There was a wide gamut of other features as well, such as charting and templates for financial documents. 
-                                    <br><br> My first project was developing a machine learning collaborative filtering recommender system to generate personalized recommendations for the 250,000+ monthly Excel Add-In users in terms of which Excel Add-In functions they should try. This was part of "Feature Explorer", in an effort to make the users to become acquainted with the various functions Bloomberg provides in their Add-In. As part of my project, I worked with Python and several scientific/machine learning frameworks and libraries including NumPy, SciPy, Matplotlib and Scikit-Learn.    
-                                    <br><br> I initially prototyped several different approaches to solving this problem, but after guidance from members of Bloomberg's data-science teams we settled on an approach using statistical analysis on different clusters of users based on Bloomberg Terminal data. While I cannot go into details of the algorithm, some neat optimizations included lazily precomputing recommendations per-cluster instead of per-user, such that only once the service is queried - then it would lookup the historical feature usage data for that user and provide a recommendation. This significantly sped-up training time for the algorithm, while generating the recommendations remained near-constant time.
-                                    <br><br> After completing my first project I received another one, which was prototyping chatbot approaches for generating associated BQL (Bloomberg Query Language) queries for financial questions. Since my team was heavily invested in the Microsoft eco-system it was worth testing their newly released Microsoft Bot Framework, which leverages their Cognitive Services suite for ML/NLP. 
-                                    <br><br> This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
-                                    <br><br>All in all, I enjoyed my first real work-term and had an amazing mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
+                                    My first project was developing a machine learning collaborative filtering recommender system to generate personalized recommendations for the 250,000+ monthly Excel Add-In users in terms of which Excel Add-In functions they should explore. For my second project I worked on prototyping a chatbot for composing Bloomberg Query Language queries for equity and bond questions posed by users and fetching the respective results.
                                     <br><br>
-                                    <center><button data-toggle="collapse" onclick="hideAll()" href="#mainTitle">Hide</button></center>
+                                    <u> <a href="/blog/"> Read more about my experience in my blog post here. </a> </u>
+                                    <br><br>
+                                    <center><a href="#mainTitle"> 
+                                    	<div class="scroll-up">
+							         	</div>
+                                    	<button onclick="hideAll();" href="#mainTitle">Hide</button>
+                                    	</a>
+                                    </center>
                                  </div>
                                  <button id="Bloomberg1Show" style="display:none;"class="BloombergSeeMore" data-toggle="collapse" href="#Bloomberg1Collapse">See More</button>
                               </div>
@@ -250,13 +267,15 @@
                                  <img src="./assets/images/BluesunLogoLarge.png">
                                  <div class="pfblock-subtitle" style="font-size:15px">
                                     <br>
-                                    In Summer 2016, I joined Bluesun in Burlington, Ontario for an internship. Bluesun is the largest provider of insurance software (WealthServ) in Canada for the private channel. I am extremely grateful for the opportunity I had at Bluesun, since I had only graduated high-school but they were willing to take me on-board even though I had very little experience with software development at the time. Despite the 2 hour commute it took to get to work, I enjoyed my time there very much.
-                                    <br><br>My project for that summer was migrating their version control from TFS (Team Foundation Server) to Git. Manually migrating isn't a difficult task, but they have 8+ years of changesets across multiple repositories, and the migration has to occur seamlessly. Hence, I worked on creating a program in C# that leveraged git-tf (official migration tool for TFS to Git) that added features we needed to successfully migrate the repositories. 
-                                    <br><br>Features I added to the C# git-tf wrapper included parallel processing for each Git branch running as a separate thread improving migration performance by up to 70%, the ability to recognize any working tree file corruptions and fix them automatically, in addition to queuing all the repos for bulk converting all the company repositories automatically. The program successfully migrated their entire codebase overnight, and by 6:30am the next day everything was on converted and on BitBucket! 
-                                    <br><br>After completing the migration program, I updated their Jenkins Continous Integration pipeline to fetch from BitBucket (Git) instead of TFS, which involved a bit of Groovy scripting. I had completed my project early, so after I worked on several miscellaneous tasks such as writing a JavaScript plugin for PMs to use for the internal timesheet system.
-                                    <br><br>The project was really rewarding since I got to see it deployed/used before I left. My mentor was really helpful in debugging issues, in addition to other co-workers who helped me along the way. Bluesun had a very nice company culture and all the employees seemed very happy and passionate about their work, and I am very glad to have spent 2 months interning there!
+                                    In Summer 2016, I joined Bluesun in Appleby Ontario for an internship. Bluesun is the largest provider of insurance software (WealthServ) in Canada for the private channel. I am very grateful for the opportunity I had at Bluesun, since I had only graduated high-school but they were still willing to take me on board. 
+                                    <br><br>My project for that summer was creating a multi-threaded wrapper of the git-tf migration tool in C# to convert all their TFS (Team Foundation Server) repositories to Git. The wrapper allowed for queuing, fixing working tree file corruptions, and executing branches as seperate threads improving performance by up to 70%.
                                     <br><br>
-                                    <center><button data-toggle="collapse" onclick="hideAll()">Hide</button></center>
+                                    <center><a href="#mainTitle"> 
+                                    	<div class="scroll-up">
+							         	</div>
+                                    	<button onclick="hideAll();" href="#mainTitle">Hide</button>
+                                    	</a>
+                                    </center>
                                  </div>
                               </div>
                            </div>
@@ -564,7 +583,6 @@
          	$("#bloomberg2-coop").hide();
          	$("#bloomberg1-coop").hide();
          	$("#bluesun-coop").hide();
-         	console.log(open_panes);
          }
          
          hideAll();
