@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2018-11-28T20:36:50-08:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
+</subtitle><entry><title type="html">YouTube: Analytics on 1.2 million views</title><link href="http://localhost:4000/blog/programming/2018/11/12/youtube.html" rel="alternate" type="text/html" title="YouTube: Analytics on 1.2 million views" /><published>2018-11-12T15:49:29-08:00</published><updated>2018-11-12T15:49:29-08:00</updated><id>http://localhost:4000/blog/programming/2018/11/12/youtube</id><content type="html" xml:base="http://localhost:4000/blog/programming/2018/11/12/youtube.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-cover.png&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve been running my YouTube channel &lt;a href=&quot;https://www.youtube.com/user/ComputerBunnyMath123&quot; target=&quot;_blank&quot;&gt;SoftwareEngenius&lt;/a&gt; for the past six years. Initially, it started as a place to post videos regarding my hobbies (mostly computer tutorials and programming videos). It has mostly stayed that way, with more recent videos being very focused on software development.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Sometimes it may count under 1.2 million -  it’s either statisics not updated or unlisted videos.&lt;/p&gt;
+
+&lt;h4&gt; Motivation&lt;/h4&gt;
+&lt;p&gt;I had a fantastic experience building out my YouTube channel, and I don’t regret the many hours spent on this channel. The following, however, is worth noting:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The goal of the channel isn’t about “becoming popular” or “getting rich”, rather it was more for me to genuinely produce content that I thought had some value. Unfortunately, this also means I don’t have much interest in production quality, and felt like getting my thoughts out are more important than spending time editing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I believe I was successful in reaching my goal. I was able to make a clear amount of videos covering a wide span of topics, though it clearly shows as some of my videos aren’t of the best quality. From 2013-2015 I gained momentum and my channel was growing, and to keep that going I was heavily invested in producing more quantity, which at the time led to saturation in my video content.&lt;/p&gt;
+
+&lt;h4&gt; Beginning: 2012/2013&lt;/h4&gt;
+&lt;p&gt;This was the starting phase of the channel, back when it was called &lt;code class=&quot;highlighter-rouge&quot;&gt;ComputerBunnyMath123&lt;/code&gt;. Clearly, I didn’t have any niche in mind, so I began by posting completely random videos including programming tutorials, software videos and some games including Minecraft, Chess and Brain Age 2. I didn’t get many views at the start, only after adding more content (~20 videos) did I start getting over 1,000 views per month.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-growth.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt; Growing Content and Saturation: 2013/2014/2015&lt;/h4&gt;
+&lt;p&gt;This period I would characterize as gaining many more views, which led me to wanting more and produce vasts amounts of videos. It was mostly sparked by my &lt;a href=&quot;https://www.youtube.com/watch?v=MEvY27PB6ZU&quot; target=&quot;_blank&quot;&gt;Ripley’s Aquarium video&lt;/a&gt;, which got over 20,000 views early on and motivated me to continue producing random content. This continued for some time, and I spent most of the Summer of 2014 reaching out to companies to review their products.&lt;/p&gt;
+
+&lt;p&gt;I wouldn’t say this period of time was used effectively - I ended up greatly saturating my channel with a wide array of random topics which led to very poor user retention.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-growing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt; Focused and Slowing Growth: 2016/2017&lt;/h4&gt;
+
+&lt;p&gt;During this time period I didn’t have a lot of time to devote to making videos (I was busy applying to university or in my freshmen year), so I had to focus my efforts. By this time, I gained some exposure to various Computer Science concepts more in-depth, and made the decision to change the focus of the channel to be &lt;em&gt;only software related&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-maturing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt; Matured and Rarely Updated: 2017 onwards&lt;/h4&gt;
+&lt;p&gt;I hadn’t uploaded many videos recently, occasionally only when I visit an interesting concept or learn something more niche I would bother to make a new video. I don’t actively pursuit creating videos for the views or fame. Instead, if I find something cool I’ll share it! Some notable videos during this time period includes my functional programming channel or an &lt;em&gt;upcoming series I am working on&lt;/em&gt;!&lt;/p&gt;
+
+&lt;p&gt;More interestingly though, is despite the lack of posting videos I didn’t drop much at all in terms of revenue or views. Personally, I find this surprising because many of my videos tags included &lt;code class=&quot;highlighter-rouge&quot;&gt;2014&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;2015&lt;/code&gt;, but seems despite this I’m still getting traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-current.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4&gt; Future Plans&lt;/h4&gt;
+
+&lt;p&gt;I have no plans for this channel. If I find something cool - I will make a video and post it :)&lt;/p&gt;
+
+&lt;h4&gt; More Analytics!&lt;/h4&gt;
+
+&lt;p&gt;Who doesn’t enjoy numbers and charts? Below are standard analytics provided by YouTube.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-views.png&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, my most popular videos aren’t representative at all of my channel as a whole - but this goes to show how luck with tags and spotting a niche can help bring in more viewers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-device.png&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I find it interesting how the time spent on mobile is almost as much as on the computer - and that such a large proportion of viewers watch on phone or tablet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-traffic.png&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Interestingly, it looks like YouTube’s recommender systems worked in my favour from August 2014 to February 2015 and then rarely suggested my videos until late 2016….&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-age.png&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are no surprises here, the vast majority of viewers will be “tech savvy” and likely near college age.&lt;/p&gt;
+
+&lt;p&gt;All in all, hope you enjoyed these facts and numbers :)&lt;/p&gt;
+
+&lt;!-- ![link](/blog/assets/youtube-os.png)
+
+Interestingly, there were more Macintosh users than Windows until around late 2015. This is likely because I used to have more content for Mac users. More interestingly, is that Mac and iOS users tend to watch my videos for longer!
+
+
+![link](/blog/assets/youtube-functional.png)
+--&gt;</content><summary type="html"></summary></entry><entry><title type="html">Postmortem: Tenderloin + Yet another stolen road bike</title><link href="http://localhost:4000/blog/cycling/2018/11/04/bike-stolen.html" rel="alternate" type="text/html" title="Postmortem: Tenderloin + Yet another stolen road bike" /><published>2018-11-04T15:49:29-08:00</published><updated>2018-11-04T15:49:29-08:00</updated><id>http://localhost:4000/blog/cycling/2018/11/04/bike-stolen</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/11/04/bike-stolen.html">&lt;p&gt;On Saturday November 3, 2018 I decided to spend the day going on a warmup 65km ride down to Mountain View from San Francisco, meet up with a couple friends, then come back by Caltrain as preparation for a hard Sunday ride going up King’s Mountain.&lt;/p&gt;
+
+&lt;p&gt;On the return trip, the Caltrain was closed for repairs, so I had to take a bus from San Bruno to San Francisco. I tried to put my bike inside the bus, but the driver refused stating that it’s against their policy - so I put it on the rack outside. Looking out the window into darkness, the bus drove comfortably on the highway until getting to Market and 6th avenue.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-mta-rack.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There was a red light at Market and 6th avenue, and out of the corner appears one person who rushes to the front of the bus, and before I could blink snatches the bike off the rack. I saw it unfold entirely with my own eyes, but by the time I could react it was too late.&lt;/p&gt;
+
+&lt;p&gt;The bus driver opened the door and I took a run for it, chasing the thief. I had my cycling shoes on, which if you aren’t aware allow me to clip my feet into my pedals. Of course, the disadvantage is that you can’t run in them - in fact even walking on pavement is difficult.&lt;/p&gt;
+
+&lt;p&gt;To make matters worse, it wasn’t just me and that guy who snatched the bike - he had a couple friends joining the party as well. They actually followed me on other road bikes, and warned me to not even try running after him. Eventually I lost sight, and getting into a physical fight with several other guys on me wouldn’t be wise. The bus driver already called 911 and the police arrived.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-went-well&quot;&gt;What went well&lt;/h3&gt;
+
+&lt;p&gt;Looking at the bright side first, there’s a couple things that went well.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I didn’t have my wallet in my saddle bag (which could have been stolen in the process)&lt;/li&gt;
+  &lt;li&gt;Did not get mugged in the process (so phone/wallet were ok)&lt;/li&gt;
+  &lt;li&gt;No injuries occured&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As well, my initial instinct was to chase them. But if I did catch up to them - what would I gain?&lt;/p&gt;
+
+&lt;p&gt;I may have knocked the guy off the bike, and taken off:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I would need to clip-in my pedals fast enough + accelerate so he can’t chase me
+    &lt;ul&gt;
+      &lt;li&gt;I could hold ~55km/h for 60 seconds to get far enough from him&lt;/li&gt;
+      &lt;li&gt;Crashing into people, cars or red lights are of concern to maintain that speed&lt;/li&gt;
+      &lt;li&gt;The benefit is that I would keep my bike&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Success rate of clipping in on for both feet is ~15%, high failure rate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If I failed to clip-in:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Extremely dangerous since I’d be in direct harm of the thief&lt;/li&gt;
+  &lt;li&gt;Partial clip-in means that I’m basically bolted to the bike&lt;/li&gt;
+  &lt;li&gt;It wasn’t just one person but at least one other
+    &lt;ul&gt;
+      &lt;li&gt;2 vs 1 and they likely have knives (which I’ve seen many people carry around)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below is a picture of sidewalk the thief rode on (though it happened at night):
+&lt;img src=&quot;/blog/assets/sf-market-six.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-didnt-go-well&quot;&gt;What didn’t go well&lt;/h3&gt;
+
+&lt;p&gt;I should have made sure my bike never leaves my hands. The issue with this is that you actually can’t lock the bike on the buses. I also explicitely asked to have the bike in the bus, but the driver refused.&lt;/p&gt;
+
+&lt;p&gt;Lastly, I also didn’t have the serial number with me. When the police was there on the scene, it would have been very valuable to have the serial number with me.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-i-did-after-it-got-stolen&quot;&gt;What I did after it got stolen&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The bus driver called 911 and I did as well after my failed chase - and the cops arrived on the scene&lt;/li&gt;
+  &lt;li&gt;I showed bike pictures and described the thief - and they alerted nearby cops to be aware of the event
+    &lt;ul&gt;
+      &lt;li&gt;Interestingly, I overheard the radios police actually describing bikes being ridden in the area&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;After getting home, I retrieved the serial number and reported the incident online to the police&lt;/li&gt;
+  &lt;li&gt;I religiously checked Kijiji, eBay and other websites for the bike or its respective components&lt;/li&gt;
+  &lt;li&gt;Posted on Facebook groups making other people aware of the theft&lt;/li&gt;
+  &lt;li&gt;Looked into renter’s insurance to see if I could make a claim&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;good-news&quot;&gt;Good news&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Update (November 13, 2018)&lt;/strong&gt;: My renter’s insurance happened to cover the entire road bike - so I got all my road bike’s value back and will be buying another one :)&lt;/p&gt;</content><summary type="html">On Saturday November 3, 2018 I decided to spend the day going on a warmup 65km ride down to Mountain View from San Francisco, meet up with a couple friends, then come back by Caltrain as preparation for a hard Sunday ride going up King’s Mountain.</summary></entry><entry><title type="html">Mount Tamalpais West Summit + Seven Sisters Climb</title><link href="http://localhost:4000/blog/cycling/2018/10/28/mt-tam.html" rel="alternate" type="text/html" title="Mount Tamalpais West Summit + Seven Sisters Climb" /><published>2018-10-28T16:49:29-07:00</published><updated>2018-10-28T16:49:29-07:00</updated><id>http://localhost:4000/blog/cycling/2018/10/28/mt-tam</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/10/28/mt-tam.html">&lt;p&gt;In my eyes, the ability to, within 20 minutes of riding, be immersed with stunning views, nature and elevation is the single best perk of being in San Francisco. You cannot find anything like it near Waterloo or Toronto, and it feels like you in picturesque scene in a movie!&lt;/p&gt;
+
+&lt;h3 id=&quot;gameplan&quot;&gt;Gameplan&lt;/h3&gt;
+&lt;p&gt;I had no prior experience climbing for extended periods of time. Depending on the derivative you choose, the route can vary widely in distance and elevation.&lt;/p&gt;
+
+&lt;p&gt;I chose one of the more difficult routes - which is doing the Alpine Dam, Seven Sisters and then the West Summit yielding 100km (62 miles) distance and 1500m (5000 feet) elevation gain.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/mount-tam-map.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ride-dynamics&quot;&gt;Ride Dynamics&lt;/h3&gt;
+&lt;p&gt;Waking up at 6:30am, I ate a full breakfast and set straight to riding. The beginning started off rough, with one of my friends actually crashing while crossing the Golden Gate Bridge due to extreme fog. Luckily he wasn’t badly hurt, and the fog cleared once we passed the bridge. Riding through Sausalito was a pleasure, and we eventually stopped at Fairfax before the climb to eat lunch.&lt;/p&gt;
+
+&lt;p&gt;The climbs started off challenging, at ~6% grade for around 20 minutes. We met up with two other locals, and we tried to hold on while climbing. After, the seven sisters (which is a series of seven descents and climbs) were grueling, since you pickup speed but that final stretch is extremely steep and tough. In fact, after doing the fourth sister I had to stop for a 1 minute break. Lastly, the final stretch was the west summit which was around 300 feet of elevation gain - but that made the view well worth it!&lt;/p&gt;
+
+&lt;p&gt;Descending was actually quite technical, reaching speeds of over 60km/h down the windy roads down a mountain for over 20 minutes will get your adrenaline rush going!&lt;/p&gt;
+
+&lt;h3 id=&quot;west-peak-view&quot;&gt;West Peak View&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/mount-tam.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;beach-view&quot;&gt;Beach View&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/mount-tam-west-bay.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">In my eyes, the ability to, within 20 minutes of riding, be immersed with stunning views, nature and elevation is the single best perk of being in San Francisco. You cannot find anything like it near Waterloo or Toronto, and it feels like you in picturesque scene in a movie!</summary></entry><entry><title type="html">Giant TCR Advanced Road Bike</title><link href="http://localhost:4000/blog/cycling/2018/10/20/giant.html" rel="alternate" type="text/html" title="Giant TCR Advanced Road Bike" /><published>2018-10-20T16:49:29-07:00</published><updated>2018-10-20T16:49:29-07:00</updated><id>http://localhost:4000/blog/cycling/2018/10/20/giant</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/10/20/giant.html">&lt;p&gt;What’s more exciting than spending a co-op in San Francisco California and purchased a Giant TCR Advanced with upgraded parts? This road bike is &lt;em&gt;extremely&lt;/em&gt; light, carbon fiber frame, latest generation Ultegra 11-speed shifters giving me a healthy upgrade to a mid-range ~$4000 bike.&lt;/p&gt;
+
+&lt;h3 id=&quot;looks&quot;&gt;Looks&lt;/h3&gt;
+&lt;p&gt;The brand isn’t joking, this bike is &lt;em&gt;giant&lt;/em&gt;… it’s designed for people around 6’1 - 6’5 so I barely fit this frame. I brought my Shimano SPD pedals from Canada, and the rest of the components are Shimano Ultegra including brakes, crank and shifters - with the exception of the groupset which is Shimano 105.
+&lt;img src=&quot;/blog/assets/giant-roadbike.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">What’s more exciting than spending a co-op in San Francisco California and purchased a Giant TCR Advanced with upgraded parts? This road bike is extremely light, carbon fiber frame, latest generation Ultegra 11-speed shifters giving me a healthy upgrade to a mid-range ~$4000 bike.</summary></entry><entry><title type="html">Living in New York for Eight Months</title><link href="http://localhost:4000/blog/coop/2018/05/03/nyc.html" rel="alternate" type="text/html" title="Living in New York for Eight Months" /><published>2018-05-03T16:49:29-07:00</published><updated>2018-05-03T16:49:29-07:00</updated><id>http://localhost:4000/blog/coop/2018/05/03/nyc</id><content type="html" xml:base="http://localhost:4000/blog/coop/2018/05/03/nyc.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;I am fortunate to have received the opportunity of spending 8 months in New York City! I spent a summer here (May - August 2017), and a winter term (January - April 2018) in the upper east side of Manhattan. The experience was fantastic, and this post will be reserved to showing some interesting pictures.&lt;/p&gt;
+
+&lt;h3 id=&quot;up-the-one-world-trade-center&quot;&gt;Up the One World Trade Center&lt;/h3&gt;
+&lt;p&gt;One of the tallest buildings in the world&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/nyc-worldtrade.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;governers-island&quot;&gt;Governer’s Island&lt;/h3&gt;
+&lt;p&gt;Here is the fanstatic view of Jersey City and Lower Manhattan
+&lt;img src=&quot;/blog/assets/nyc-jersey-view.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;yankees-stadium&quot;&gt;Yankee’s Stadium&lt;/h3&gt;
+&lt;p&gt;Of course, we got sent to a Toronto vs New York game :)
+&lt;img src=&quot;/blog/assets/nyc-yankee-game.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;/blog/assets/nyc-yankee-stadium.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;empire-state&quot;&gt;Empire State&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/nyc-empirestate.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hudson-mountain-range-breakneck-ridge&quot;&gt;Hudson Mountain Range (Breakneck Ridge)&lt;/h3&gt;
+&lt;p&gt;Challenging hike with lots of very steep rocks, but was fun
+&lt;img src=&quot;/blog/assets/nyc-breakneck1.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;/blog/assets/nyc-breakneck2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;intrepid&quot;&gt;Intrepid&lt;/h3&gt;
+&lt;p&gt;Located in west Manhattan, it was one of my favourite attractions
+&lt;img src=&quot;/blog/assets/nyc-intrepid.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+You get to go inside the ship, at the hangar, and also a submarine
+&lt;img src=&quot;/blog/assets/nyc-intrepid2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;/blog/assets/nyc-intrepid3.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;brooklyn-bridge&quot;&gt;Brooklyn Bridge&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/nyc-brooklyn-bridge.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;/blog/assets/nyc-brooklyn-bridge2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;american-museum-of-natural-history&quot;&gt;American Museum of Natural History&lt;/h3&gt;
+&lt;p&gt;You can get some very scenic shots here, and they have some cool exhibits
+&lt;img src=&quot;/blog/assets/nyc-amnh.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;/blog/assets/nyc-amnh2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-metropolitan&quot;&gt;The Metropolitan&lt;/h3&gt;
+&lt;p&gt;This takes many hours to propertly iterate, I visited at least 4 times (I think)
+&lt;img src=&quot;/blog/assets/nyc-met.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+Corporate housing, anyone?
+&lt;img src=&quot;/blog/assets/nyc-met2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;guggenheim&quot;&gt;Guggenheim&lt;/h3&gt;
+&lt;p&gt;The building looks nice, but that’s all I can understand
+&lt;img src=&quot;/blog/assets/nyc-guggenheim.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;statue-of-liberty&quot;&gt;Statue of Liberty&lt;/h3&gt;
+&lt;p&gt;I didn’t actually go inside, unfortunately
+&lt;img src=&quot;/blog/assets/nyc-statue-liberty.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;brooklyn-museum&quot;&gt;Brooklyn Museum&lt;/h3&gt;
+&lt;p&gt;Very nice location around prospect park
+&lt;img src=&quot;/blog/assets/nyc-brooklyn-museum.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;brooklyn-botanical-garden&quot;&gt;Brooklyn Botanical Garden&lt;/h3&gt;
+&lt;p&gt;My favourite part was the Japanese Bonsai
+&lt;img src=&quot;/blog/assets/nyc-brooklyn-botanical.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;/blog/assets/nyc-brooklyn-botanical2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;broadway-show&quot;&gt;Broadway Show&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/nyc-book-mormon.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;/blog/assets/nyc-book-mormon2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;volunteering-event---building-bikes&quot;&gt;Volunteering Event - Building Bikes&lt;/h3&gt;
+&lt;p&gt;Had a couple interns building a few hundred bikes in a day :)
+&lt;img src=&quot;/blog/assets/nyc-bob-event.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bronx-zoo&quot;&gt;Bronx Zoo&lt;/h3&gt;
+&lt;p&gt;The zoo was rather large, with quite some variety in animals
+&lt;img src=&quot;/blog/assets/nyc-bronx-zoo.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;/blog/assets/nyc-bronx-zoo2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;new-york-city-museum&quot;&gt;New York City Museum&lt;/h3&gt;
+&lt;p&gt;They included an older Bloomberg Terminal :)
+&lt;img src=&quot;/blog/assets/nyc-city-museum.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;blizzard--snow-day&quot;&gt;Blizzard / Snow Day&lt;/h3&gt;
+&lt;p&gt;Right outside my office, nearly nobody showed up to work
+&lt;img src=&quot;/blog/assets/nyc-blizzard.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;office-views&quot;&gt;Office Views&lt;/h3&gt;
+&lt;p&gt;View from 731 Lex Pantry (29th Floor)
+&lt;img src=&quot;/blog/assets/nyc-lex-29.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+View from 731 Lex (My Floor / 20th Floor)
+&lt;img src=&quot;/blog/assets/nyc-lex-20.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+View from 120 Park Upper Balcony
+&lt;img src=&quot;/blog/assets/nyc-park.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;/h3&gt;
+&lt;p&gt;This is 3rd avenue, the street behind the building where I lived
+&lt;img src=&quot;/blog/assets/nyc-third-avenue.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">Introduction</summary></entry><entry><title type="html">Software Engineering Internship: Bloomberg LP</title><link href="http://localhost:4000/blog/school/2018/05/02/bloomberg-internship.html" rel="alternate" type="text/html" title="Software Engineering Internship: Bloomberg LP" /><published>2018-05-02T16:49:29-07:00</published><updated>2018-05-02T16:49:29-07:00</updated><id>http://localhost:4000/blog/school/2018/05/02/bloomberg-internship</id><content type="html" xml:base="http://localhost:4000/blog/school/2018/05/02/bloomberg-internship.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt; Table of contents &lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro&quot;&gt; Introduction &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#whatidid&quot;&gt; What I did at Bloomberg &lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#term1b&quot;&gt; Term 1B: Desktop API / Excel Add-In Team &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#term2a&quot;&gt; Term 2A: Fixed Income Search Team &lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#application&quot;&gt; Application Process &lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#application&quot;&gt; Applying&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#interviews&quot;&gt; Interviews &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#compensation&quot;&gt; Compensation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#projectselection&quot;&gt; Project Selection&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#housing&quot;&gt; Corporate Housing &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#internevents&quot;&gt; Internship Events &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#perks&quot;&gt; Perks &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#office&quot;&gt; 731 Lexington + 120 Park Offices&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div id=&quot;intro&quot;&gt;
+&lt;/div&gt;
+&lt;p&gt;Bloomberg LP is the world’s largest financial data company and provider of real-time analytics for the financial world. The Bloomberg Terminal, which costs ~$25,000 per customer has over 325,000 subscribers. The Terminal is an entire ecosystem. This includes chat, email, news, financial data, electronic trading platform, and much more.&lt;/p&gt;
+
+&lt;p&gt;The interesting part of Bloomberg is - there’s millions of financial instruments including stocks ticking several times per second in the markets, how can you make use of all that data?&lt;/p&gt;
+
+&lt;p&gt;Just one example, apart from setting all the infrastructure to retrieve, process, refine and persist all the ticks from exchanges around the world - is using sentimental analysis on news stories to predict how the market will react to a news release before humans have time to react.&lt;/p&gt;
+
+&lt;p&gt;I interned at Bloomberg in Summer 2017 and returned for Winter 2018. Below you can see a Terminal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Bloomberg_Terminal.jpg/1200px-Bloomberg_Terminal.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
+&lt;img src=&quot;http://lebow.drexel.edu/sites/default/files/1422027615-bblaunchpadgraphic.PNG&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;term1b&quot;&gt; Term 1B: Desktop API / Excel Add-In Team&lt;/h3&gt;
+&lt;p&gt;Click &lt;a href=&quot;/blog/school/2017/08/26/firstcoop.html&quot; target=&quot;_blank&quot;&gt; here &lt;/a&gt; to learn about my work done during my first co-op.&lt;/p&gt;
+
+&lt;h3 id=&quot;term2a&quot;&gt; Term 2A: Fixed Income Search Team &lt;/h3&gt;
+&lt;p&gt;Click &lt;a href=&quot;/blog/school/2018/05/01/secondcoop.html&quot; target=&quot;_blank&quot;&gt; here &lt;/a&gt; to learn about my work done during my second co-op.&lt;/p&gt;
+
+&lt;h3 id=&quot;application&quot;&gt; Applying &lt;/h3&gt;
+&lt;p&gt;Since I attend the University of Waterloo, I went through our job board. I submitted my resume and grade report. I was then contacted for an on-campus interview. The position was fairly competitive, over 500 applicants for 8 spots. This was for the New York location.&lt;/p&gt;
+
+&lt;h4 id=&quot;interviews&quot;&gt; Interviews &lt;/h4&gt;
+&lt;p&gt;The interviews were similar to other top technology companies. First round was 60 minutes with two engineers mostly covering 2 algorithm problems (graphs, linked lists) and some language trivia in Java and C++. Second round was 15 minutes with human resources, 30 minutes with a hiring manager for team selection and 45 minutes with a senior developer for a system design question.&lt;/p&gt;
+
+&lt;h4 id=&quot;compensation&quot;&gt; Compensation &lt;/h4&gt;
+&lt;p&gt;Compensation is extremely competitive with the other giants (Google, Facebook), and for returning interns you get an additional $3/hr USD. You also receive corporate housing in Manhattan (or you can take $5100 post-tax stipend), and an additional $2000USD relocation stipend. There is also the option of doing overtime.&lt;/p&gt;
+
+&lt;h4 id=&quot;projectselection&quot;&gt; Project Selection &lt;/h4&gt;
+&lt;p&gt;I got to pick from 3-5 projects prior to accepting my offer. I have seen a large variety of projects, though generally you will work on your own self contained project. Common topics include research projects using machine learning which are more proof-of-concept work, or implementing a utility which may hit production. There’s a bunch of projects also involving databases (combdb2), distributed caches, and big data with Hadoop and Spark.&lt;/p&gt;
+
+&lt;h3 id=&quot;housing&quot;&gt; Corporate Housing &lt;/h3&gt;
+&lt;p&gt;Bloomberg provides housing. You can get to the office within 10 minutes taking the subway, or choose to walk within 25 minutes. The rooms themselves aren’t the best, but you get used to it. We also get access to the gym downstairs, swimming pool and a few events like concerts/talks within the 92y.&lt;/p&gt;
+
+&lt;p&gt;Below is a picture of the single-room dorm style corporate housing. There is also a shared kitchen and shared washrooms.
+&lt;img src=&quot;/blog/assets/bloomberg-housing.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Location wise, it is close to central park and several stores like Wholefoods.
+&lt;img src=&quot;/blog/assets/bloomberg-map.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;internevents&quot;&gt; Internship Events&lt;/h3&gt;
+&lt;p&gt;We had a ridiculous amount of events, though they are all optional if you’re not into them. Here’s a non-exhaustive list of my summer term:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data-center tour&lt;/li&gt;
+  &lt;li&gt;Broadway show&lt;/li&gt;
+  &lt;li&gt;Soccer game @ Yankees stadium&lt;/li&gt;
+  &lt;li&gt;Bloomberg’s annual picnic (rented island)&lt;/li&gt;
+  &lt;li&gt;Overnight puzzle challenge (16 hours overtime!)&lt;/li&gt;
+  &lt;li&gt;Volunteering day building bikes&lt;/li&gt;
+  &lt;li&gt;CodeCon algorithm contest&lt;/li&gt;
+  &lt;li&gt;Scavenger hunt around New York&lt;/li&gt;
+  &lt;li&gt;Board game nights&lt;/li&gt;
+  &lt;li&gt;Rubik’s cube event&lt;/li&gt;
+  &lt;li&gt;Laser tag&lt;/li&gt;
+  &lt;li&gt;Escape room trips&lt;/li&gt;
+  &lt;li&gt;Intern project showcase&lt;/li&gt;
+  &lt;li&gt;Speaker series (i.e, Michael Bloomberg)&lt;/li&gt;
+  &lt;li&gt;Weekly Tech Taco Tuesdays&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;740&quot; height=&quot;430&quot; src=&quot;https://www.youtube.com/embed/LUZZJq9JM4Q&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;perks&quot;&gt; Perks&lt;/h3&gt;
+&lt;p&gt;You get access and can bring guests to over 90 museums in New York including the 9/11 memorial museum, intrepid, MOMA, Guggenheim, etc. You just have to show your badge!&lt;/p&gt;
+
+&lt;p&gt;For the most important part of every internship, here’s the stuff we got first day in the Winter 2018 term:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Q08JnBU.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;office&quot;&gt;Office&lt;/h2&gt;
+&lt;p&gt;The office is sleek and modern throughout. In New York you will be placed in 1 of 3 offices, either in 731 Lexington (HQ), 120 Park or 919 3rd Avenue. Here are several pictures:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://pixel.nymag.com/imgs/daily/intelligencer/2013/12/02/02-bloomberg-tower-731-lexington.w710.h473.2x.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.vno.com/img/244d4a343d7d2823d1d444cea2acb53174612590++600+0/731l_731l731_lex_1_large_1486362882.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://segd.org/sites/default/files/styles/galleryformatter_slide/public/04-bloomberg-honor-2006-award-gdap.jpg?itok=HGHaSt5r&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.glassdoor.com/l/79/d4/37/c5/pantry.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.glassdoor.com/l/07/91/27/06/120-park-new-york-office-pantry.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You get breakfast, soup at 12:00pm, and dinner at 8:00pm. The pantry is always open, and stocked with healthy and unhealthy food, though sometimes there’s special food at certain hours like ice-cream on Fridays and hot chocolate during the winter terms.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
+&lt;p&gt;I had a great time at Bloomberg, as you can probably tell since I chose to return for another internship. When I got my return offer, I also had the option to work in the San Francisco, New York or London offices. Thanks for reading!&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #2: Distributed cross-collection joins</title><link href="http://localhost:4000/blog/school/2018/05/01/secondcoop.html" rel="alternate" type="text/html" title="Work Term #2: Distributed cross-collection joins" /><published>2018-05-01T16:49:29-07:00</published><updated>2018-05-01T16:49:29-07:00</updated><id>http://localhost:4000/blog/school/2018/05/01/secondcoop</id><content type="html" xml:base="http://localhost:4000/blog/school/2018/05/01/secondcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/blog/school/2018/05/02/bloomberg-internship.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to learn more about my overall experience at Bloomberg.&lt;/p&gt;
+
+&lt;h3 id=&quot;term1b&quot;&gt; Fixed Income Core - Search Team&lt;/h3&gt;
+&lt;p&gt;In Winter 2018, I joined the Fixed Income Search Team. My team was responsible for powering all Fixed Income Search functionality on Bloomberg Terminals (including &lt;code&gt;SRCH&lt;/code&gt; and 70+ other functions including &lt;code&gt;DDIS&lt;/code&gt; and &lt;code&gt;LEAG&lt;/code&gt;). My work was heavily focused on their search infrastructure, and extending the capabilities of Apache Solr’s (open-source search platform) cross-collection join.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/apache-solr-lucene.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Introducing high-performance join capabilities for sharded collections and SolrCloud clusters to Solr was my primary project. By allowing for joins across sharded collections, the Lucene indices could be scaled horizontally across many nodes allowing for larger collections and faster performance. Joins across SolrCloud clusters allows different teams to perform joins across their datasets without the need of duplicate data - which was an issue for our team. As teams shift towards Bloomberg’s new infrastructure for “Solr as a service”, teams could very quickly join across data-sets by simply providing the ZooKeeper host address for the other SolrCloud cluster. This has impact not only for my team, but for many other teams across all of Bloomberg.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// ZooKeeper host allows for retrieval of clusterstate for cross-cloud joins
+fq={!join from=inner_id to=outer_id zkHost=192.12.3.17 fromIndex=cB}zzz:vvv
+
+// Allows for nested joins as well
+fq={!join from=inner_id to=outer_id zkHost=192.12.3.17 fromFq=&quot;....&quot; fromIndex=cB}zzz:vvv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The general stages of the join are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The join is invoked as a &lt;code class=&quot;highlighter-rouge&quot;&gt;PostFilter&lt;/code&gt;, meaning that its caching behavior indicates it runs after the other &lt;code class=&quot;highlighter-rouge&quot;&gt;fq&lt;/code&gt; queries. This is the best practice for heavier queries.&lt;/li&gt;
+  &lt;li&gt;The containerization process begins in &lt;code class=&quot;highlighter-rouge&quot;&gt;JoinQParserPlugin&lt;/code&gt;, which then will create a new &lt;code class=&quot;highlighter-rouge&quot;&gt;CrossCloudJoinPostFilter&lt;/code&gt; instead of the traditional single-sharded cross-core joins.&lt;/li&gt;
+  &lt;li&gt;After instantiating the query object, it extends the &lt;code class=&quot;highlighter-rouge&quot;&gt;ExtendedQueryBase&lt;/code&gt;, meaning terms will be collected in &lt;code class=&quot;highlighter-rouge&quot;&gt;DelegatingCollector&lt;/code&gt; and intersected with the “from collection” documents.&lt;/li&gt;
+  &lt;li&gt;Fetching the ZooKeeper clusterstate information, making it possible to map/reduce to all the shards and retrieve the values in a distributed fashion.&lt;/li&gt;
+  &lt;li&gt;For rapid retrieval of fields, Lucene uninverting data-structures (namely &lt;code class=&quot;highlighter-rouge&quot;&gt;NumericDocValues&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;BinaryDocValues&lt;/code&gt;) are used allowing for &lt;code class=&quot;highlighter-rouge&quot;&gt;O(n)&lt;/code&gt; retrieval (&lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; = document count)&lt;/li&gt;
+  &lt;li&gt;To trigger the uninverting data-structures, a custom request handler is invoked allowing for nested joins and marshalling the results back in &lt;code class=&quot;highlighter-rouge&quot;&gt;javabin&lt;/code&gt; serialization format.&lt;/li&gt;
+  &lt;li&gt;Results are unmarshalled and aggregated in either a hashset or roaring bitmap (cache friendly compressed bitset) and intersected while traversing using &lt;code class=&quot;highlighter-rouge&quot;&gt;LeafReaderContext&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Collect documents that intersect in the &lt;code class=&quot;highlighter-rouge&quot;&gt;DelegatingCollector&lt;/code&gt; if they are found in the bitmap or hashset - these are the final join result documents.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Performance is critical for Bloomberg Terminal users, and as a result the join was very heavily profiled and optimized. In short, migrating from streaming expression’s intersect to the newer join code reduces query times on average by 87.3%! I created an automated benchmarking system allowing for chart visualizations and regressions, appropriate JVM warming up, collection cache resetting along with deploying SolrCloud clusters and ZooKeeper ensembles across Bloomberg’s New York and New Jersey datacenters.&lt;/p&gt;
+
+&lt;p&gt;The most significant speed-up came from leveraging uninverting data-structures from Lucene, which allow for rapid field-lookups. By creating a custom request handler endpoint on Solr, this allows for rapid retrieval of fields that can be sent back in proprietary binary format over the network. I also researched heavily different data-structures and compression techniques. This included leveraging LZ4, Burrows-Wheeler Transform and Huffman Coding for strings, in addition to a custom join for my team leveraging compressed (roaring) bitmaps. At the end, I prepared the patch to be pushed upstream, which included documentation and unit tests.&lt;/p&gt;
+
+&lt;p&gt;For my team specifically, the compressed roaring bitmaps allowed for much superior performance due to CPU spatial cache locality, improvement of runs and reducing over the network latency via compression. Following the original implementation of the roaring bitmaps, the bitmaps is partioning into three types of sub-bitmaps depending on the density of runs.&lt;/p&gt;
+
+&lt;p&gt;The size of the partions are set to align with CPU cache lines, below is an example (albiet using the simpler binary-type roaring model):
+&lt;img src=&quot;/blog/assets/bloomberg-roaring.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg’s service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.&lt;/p&gt;
+
+&lt;p&gt;As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #1: Recommender systems and chatbots</title><link href="http://localhost:4000/blog/school/2017/08/26/firstcoop.html" rel="alternate" type="text/html" title="Work Term #1: Recommender systems and chatbots" /><published>2017-08-26T16:49:29-07:00</published><updated>2017-08-26T16:49:29-07:00</updated><id>http://localhost:4000/blog/school/2017/08/26/firstcoop</id><content type="html" xml:base="http://localhost:4000/blog/school/2017/08/26/firstcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Click &lt;a href=&quot;/blog/school/2018/05/02/bloomberg-internship.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to learn more about my overall experience at Bloomberg.&lt;/p&gt;
+
+&lt;h3 id=&quot;term1b&quot;&gt; Desktop API / Excel Add-In Team&lt;/h3&gt;
+&lt;p&gt;In Summer 2017, for my first co-op term, I joined the Excel Add-In team, also known as Desktop API. The Bloomberg Terminal comes with an Excel Add-In, allowing for users to import financial data from Bloomberg straight into their Excel spreadsheets and perform financial analysis. This includes both historical data in addition to real-time (for which the Excel cells update in real-time). There was a wide gamut of other features as well, such as charting and templates for financial documents.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/bloomberg-excel.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My first project was developing a machine learning collaborative filtering recommender system to generate personalized recommendations for the 250,000+ monthly Excel Add-In users in terms of which Excel Add-In functions they should try. This was part of “Feature Explorer”, in an effort to make the users to become acquainted with the various functions Bloomberg provides in their Add-In. As part of my project, I worked with Python and several scientific/machine learning frameworks and libraries including NumPy, SciPy, Matplotlib and Scikit-Learn.  &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt; I initially prototyped several different approaches to solving this problem, but after guidance from members of Bloomberg’s data-science teams we settled on an approach using statistical analysis on different clusters of users based on Bloomberg Terminal data. While I cannot go into details of the algorithm, some neat optimizations included lazily precomputing recommendations per-cluster instead of per-user, such that only once the service is queried - then it would lookup the historical feature usage data for that user and provide a recommendation. This significantly sped-up training time for the algorithm, while generating the recommendations remained near-constant time.
+&lt;br /&gt;&lt;br /&gt; After completing my first project I received another one, which was prototyping chatbot approaches for generating associated BQL (Bloomberg Query Language) queries for financial questions. Since my team was heavily invested in the Microsoft ecosystem it was worth testing their newly released Microsoft Bot Framework, which leverages their Cognitive Services suite for ML/NLP. 
+&lt;br /&gt;&lt;br /&gt; This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
+&lt;br /&gt;&lt;br /&gt;All in all, I enjoyed my first real work-term and had a helpful mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Specialized Allez Elite Road Bike</title><link href="http://localhost:4000/blog/cycling/2017/06/02/road-biking.html" rel="alternate" type="text/html" title="Specialized Allez Elite Road Bike" /><published>2017-06-02T16:49:29-07:00</published><updated>2017-06-02T16:49:29-07:00</updated><id>http://localhost:4000/blog/cycling/2017/06/02/road-biking</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2017/06/02/road-biking.html">&lt;p&gt;As you may or may not know, I love road cycling. I remember when I was 9 years old and I went on a 50km ride to Etobikoe from North York. I really got into it in the summer before Grade 11, when I purchased this road bike and did over 2500km in 3 months!&lt;/p&gt;
+
+&lt;h3 id=&quot;looks&quot;&gt;Looks&lt;/h3&gt;
+&lt;p&gt;This road bike is an entry level bike, coming in at around $1300 CAD. The bike has a carbon fork, Shimano Tiagra 10-speed with 50/34T chain rings, 10-28 cassette and comes in at 21lbs. 
+&lt;img src=&quot;/blog/assets/specialized-roadbike.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;vdo-m6-cycling-computer&quot;&gt;VDO M6 Cycling Computer&lt;/h2&gt;
+&lt;p&gt;The VDO M6 cycling computer doesn’t use GPS, instead it uses a wireless receiver that you place on the fork and on a spoke along the front-wheel.&lt;/p&gt;
+
+&lt;p&gt;Features include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Heart rate using the chest-strap&lt;/li&gt;
+  &lt;li&gt;Cadence (rotation frequency for pedaling)&lt;/li&gt;
+  &lt;li&gt;Trip distance, overall distance&lt;/li&gt;
+  &lt;li&gt;Speedometer including current, average and maximum speed&lt;/li&gt;
+  &lt;li&gt;Barometer with current elevation, slope, average incline and maximum&lt;/li&gt;
+  &lt;li&gt;Temperature and clock&lt;/li&gt;
+  &lt;li&gt;Charts for heart rate, cadence, speed and elevation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Similar to the Garmin, though more limited, you can customize your screen views depending on how you enable/disable the different sensors.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/cycling-m6.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;740&quot; height=&quot;430&quot; src=&quot;https://www.youtube.com/embed/y6svCthLp5A&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><summary type="html">As you may or may not know, I love road cycling. I remember when I was 9 years old and I went on a 50km ride to Etobikoe from North York. I really got into it in the summer before Grade 11, when I purchased this road bike and did over 2500km in 3 months!</summary></entry><entry><title type="html">Reflections on Term 1A</title><link href="http://localhost:4000/blog/school/2016/12/31/term1a-over.html" rel="alternate" type="text/html" title="Reflections on Term 1A" /><published>2016-12-31T15:49:29-08:00</published><updated>2016-12-31T15:49:29-08:00</updated><id>http://localhost:4000/blog/school/2016/12/31/term1a-over</id><content type="html" xml:base="http://localhost:4000/blog/school/2016/12/31/term1a-over.html">&lt;p&gt;With the winter break in swing, I had some time to reflect on my first term in the University of Waterloo’s Computer Science and Business Administration Double Degree program.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-didnt-go-so-well&quot;&gt;What didn’t go so well&lt;/h1&gt;
+&lt;p&gt;I made several big mistakes throughout the semester, which led to more and more problems.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Why go to class if I have a midterm worth 30% of my grade tomorrow?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The issue with midterms in the Faculty of Mathematics at Waterloo is that you have midterms concurrently with lectures and assignments. Naturally, you would aim to prioritize midterms (which are worth from 10% - 30% of your grade) over lectures, however when midterms are disperced throughout the semester it becomes easy to fall behind. To provide perspective, DD students had seven midterms this year, starting from the first week of October until the middle of November.&lt;/p&gt;
+
+&lt;p&gt;Somehow I ended up falling behind by five weeks in my Algebra course, causing me to skip classes (since I was already too behind), and being totally lost on assignments. As a result, I spent the last three weeks before finals hardcore studying the textbook. I would go back home in Toronto, without my laptop charger, and all I would have is ~150 pages of notes for math. I would go through all the chapters, do all the proofs on paper and that is all. In the end, I managed to pass the course well enough so I can be a teaching assistant next year.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Having 5 exams in 6 days, while being 2 months behind in Economics and Business&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The exam schedule this year for DD students was brutal, especially when compared with just Math/CS students who had a solid two or three days before each exam. This was my exam schedule:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Friday @7:00pm - Math 137 (Calculus)&lt;/li&gt;
+  &lt;li&gt;Saturday @11:30am - Bus 111 (Business)&lt;/li&gt;
+  &lt;li&gt;Monday @ 9:00am - Math 135 (Algebra)&lt;/li&gt;
+  &lt;li&gt;Tuesday @ 7:00pm - Econ 120 (Microeconomics)&lt;/li&gt;
+  &lt;li&gt;Thursday @ 12:00pm - Cs 135 (Functional Programming)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This was by far the most intense week for the whole semester. Especially considering I went to no business classes before that exam (zero! I went to no classes since midterms and the exam only covered material past the first midter), along with only going to half of my economics classes, that was truly a horrifying experience. Nonetheless, surviving off of goldfish crackers, not talking to anyone for a week, I managed to survive and do well in all my exams.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-went-well&quot;&gt;What went well&lt;/h1&gt;
+&lt;p&gt;Having a strong foundation in mathematics along with computer science already set me ahead of my peers. In fact, I already covered most of the curriculum in the introductory Math 137 Calculus course, and I already was aquainted with all of the algorithms used in CS 135 Functional Programming course.&lt;/p&gt;
+
+&lt;p&gt;I also learned how to survive in university. This includes balancing time, finding the best places to eat food and where to go when you want to do what. Surprisingly, it took quite a while to fully figure everything out, from the endless websites you use to submit assignments to figuring out how to add courses on Loris. It was quite a struggle. To end off, here’s some Racket code.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scheme&quot; data-lang=&quot;scheme&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;term&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;equal?&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'1a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This code outputs a list with the terms ‘hello ‘term ‘1b. Thanks for reading.&lt;/p&gt;</content><summary type="html">With the winter break in swing, I had some time to reflect on my first term in the University of Waterloo’s Computer Science and Business Administration Double Degree program.</summary></entry></feed>
