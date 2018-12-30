@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Evolution of stravawindanalysis.com</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/programming/2018/11/09/strava.html">
+  <link rel="alternate" type="application/rss+xml" title="Horatiu&#39;s Blog" href="/blog/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/blog/">Horatiu&#39;s Blog</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/blog/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Evolution of stravawindanalysis.com</h1>
+    <p class="post-meta"><time datetime="2018-11-09T18:49:29-05:00" itemprop="datePublished">Nov 9, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <style type="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+<p><img src="/blog/assets/stravawindanalysis-logo.png" alt="I'm an inline-style link" /></p>
+
+<p><b> Table of contents </b></p>
+<ol>
+  <li><a href="#intro"> Motivation and Introduction </a></li>
+  <li><a href="#redesign"> Extensive Redesign </a>
+    <ul>
+      <li><a href="#features"> Features</a></li>
+      <li><a href="#architecture"> Architectural overview </a></li>
+      <li><a href="#models"> Models and algorithms</a></li>
+      <li><a href="#infrastructure"> Site infrastructure</a></li>
+      <li><a href="#youtube"> YouTube demo</a></li>
+    </ul>
+  </li>
+  <li><a href="#original"> Original Design </a>
+    <ul>
+      <li><a href="#origarchitecture"> Architectural overview </a></li>
+      <li><a href="#origyoutube"> YouTube demo </a></li>
+    </ul>
+  </li>
+  <li><a href="#future"> Future Plans </a>
+    <ul>
+      <li><a href="#global"> Global neural network models </a></li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="intro"> Motivation and Introduction </h3>
+
+<p>During high-school I was wondering if there was some way to determine how much wind affects road cyclists’ speeds.</p>
+
+<p>Strava is a popular cycling platform, where riders “record” their rides and share with others. This is accomplished by using GPS that periodically captures longitutde/latitude and timestamps it in GPX format - so at any given moment Strava can recollect your position and calculate your speed. Segments are defined roughly as a string following a polyline starting from one coordinate and ending at another coordinate with a predefined shape. Over time, many people upload their rides and we can get a leaderboard of different people’s attempts at segments over time.</p>
+
+<p>The critical issue with this segment functionality is that conditions aren’t always equal - if you have a 50km/h tailwind you will go have to displace less wattage to reach that winning speed - but how much does it really help you? Introducing Strava Wind Analysis!</p>
+
+<h2 id="redesign"> Extensive Redesign </h2>
+<p>The most apparent issue with the initial design is the absence of a backend which severely limits the capabilities of the web app since everything resides client-sided. The newer design features a cloud-hosted architecture stored on Amazon Web Services, opening a world of possibilities.</p>
+
+<h3 id="features"> Features </h3>
+<p>The newer version of the website expands beyond simply weather analytics to providing both historical and segment ride analytics. There are feature additions throughout, including:</p>
+<ul>
+  <li>Improved regression models for cycling wind impact determination</li>
+  <li>Content-based segment recommendation engine for scrolling feed</li>
+  <li>Interactive charts using chart.js</li>
+  <li>Performance analytics on historical segment and aggregate data</li>
+  <li>Individual modals with athlete-specific statistics on segment leaderboard</li>
+  <li>Linear regression and interpolation tools using scikit-learn</li>
+  <li>Segment and ride filtering options (distance, speed, etc.)</li>
+  <li>Improved performance with Redis caching</li>
+  <li>Integration with MongoDB including weather API throttling and user profiles</li>
+</ul>
+
+<p>After users login, they are presented with the feed page. Powered by a content-based recommender system, this feed aims at featuring segments that are recent and may be of interest.</p>
+
+<p>The new details page is redesigned, with tabs for different content for that segment.</p>
+
+<p><img src="/blog/assets/strava-details.png" alt="I'm an inline-style link" /></p>
+
+<p>There are modals now for individual athletes showing historical performance aggregate performance on segments. Similarily, there are modals on the ride selection screen showing a map of the ride.</p>
+
+<p><img src="/blog/assets/strava-modal.png" alt="I'm an inline-style link" /></p>
+
+<p>The charting system allows the ability to do speed overlay for different athletes on a single chart.</p>
+
+<p><img src="/blog/assets/strava-comparison.png" alt="I'm an inline-style link" /></p>
+
+<h3 id="architecture"> Architectural overview </h3>
+<p>The newer architecture runs on Amazon Web Services using EC2 instances and Route53 for Elastic IPs. The infrastructure is managed using Terraform, which allows for reproducability and high scalability.</p>
+
+<p>The core site is a monolithic repository written in Node.js leveraging Express to power the webserver layer, along with Handlebars as the templating engine for rendering the site headers and footers. The front-end leverages jQuery and Ink Framework. There is a seperate Python Flask service handling the machine learning components, which uses NumPy and Scikit-Learn for any statistical analysis and is communicated using a RESTful interface by the Node app. Both the Node and Python server are managed by PM2, which allows for thread forking and zero downtime restarts.</p>
+
+<p>Redis is used as an in-memory cache for API look-ups (30 minutes TTL), and provides lifetime caching for weather data requests from DarkSky. Elasticsearch provides an index for segment and rides by rides, which periodically indexes upon login based on a previously set epoch-update time. Lastly, MongoDB is used for user profiles including throttling for abusive users.</p>
+
+<p><img src="/blog/assets/strava-system.png" alt="I'm an inline-style link" /></p>
+
+<h3 id="models"> Models and Algorithms </h3>
+
+<h4> Wind Impact Determination Algorithm </h4>
+<p>The core intent of the Strava Wind Analysis site is to numerically quantify the impact of wind conditions on a cycling segment. Since this isn’t a solved problem and there is no method to verify the validity of the results, over time the algorithm evolved to take into consideration more factors which increases the likelyhood of accuracy.</p>
+
+<p>The original algorithm used basic theory from relative physics, that is, we take two vectors representing the wind direction and ride direction, add then tip-to-tail, and then take the displacement vector which would be the resultant vector. The impact would be the delta between the original ride vector and the displacement.</p>
+
+<p><img src="/blog/assets/strava-relative.gif" alt="" /></p>
+
+<p>The beginning set of improvements over the legacy vector-manipulation approach concerns drawing conclusions from the results of an empirical study on how wind affects cyclists. The following results are taken from Jobst Brandt’s <em>A Practical Analysis of Aerodynamic Drag</em>.</p>
+
+<p>The first observation is that the previous vector-based model falls victim to assuming that tailwind and headwind will equivalently affect riders which is incorrect.
+<img src="/blog/assets/strava-normalized.png" alt="I'm an inline-style link" /></p>
+
+<p>The second observation is to provide a mapping for how much a difference in speed makes for the wind impact. This is of course very difficult, but can be best modelled using a function. What is this function?</p>
+
+<p>$f(x) = -0.004x^2 + 0.616x + 0.863$</p>
+
+<p>How was this equation generated? Using quadratic regression on empirical riding data in a wind tunnel (assuming that the head-wind is direct), and with a constant wattage it’s possible to interpolate values.</p>
+
+<p><img src="/blog/assets/strava-wind-graph.png" alt="I'm an inline-style link" /></p>
+
+<p>Thus, $x$ is the wind-speed in direct head-wind, and $y$ would be the net change in wind-speed. Since wind isn’t always directed parallel to the cyclist, the former vector manipulation algorithm is executed but both units are turned into unit vectors, and then the displacement vector’s magnitude is multiplied by the value of this function yielding the final result.</p>
+
+<p>This works fairly well in practice, however there is more to consider. There is a plethora of data containing historical wind performance and the speed at which the cyclist rode. Ignoring factors (amount of effort or energy the rider places), it’s possible to use non-anomalous efforts as training data for a statistical model.</p>
+
+<p>Former segment efforts can be used as training data. Consider a function $H(x, y, z)$ where $x$ is the effort distance, $y$ is the effort slope, and $z$ is the direction-adjusted wind speed (see the former vector approach), and returns the expected segment effort speed. Clearly, every segment effort has values for $x$, $y$ and $z$ hence this becomes a classic application of regression and/or neural networks. At the end, calling the same function with $z=0$ will predict the speed without the influence of wind - hence $H(x, y, z) - H(x, y, 0)$ is the impact!</p>
+
+<p>First attempt used multivariate linear regression with several features including effort distance, moving time, ride bearing, average speed for the whole ride, wind speed and wind bearing. After normalizing the values with a standard scalar, applying the vector manipulation approach, and using a 70%/15%/15% training/cross-validation/test split, below are some sample results:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>sample predicted vs actual
+---
+25.26km/h vs 29.28km/h
+26.02km/h vs 28.65km/h
+26.57km/h vs 28.04km/h
+22.04km/h vs 22.6km/h
+22.11km/h vs 21.74km/h
+18.63km/h vs 19.85km/h
+27.04km/h vs 29.26km/h
+21.28km/h vs 23.02km/h
+26.2km/h vs 27.28km/h
+20.6km/h vs 22.46km/h
+26.34km/h vs 29.62km/h
+26.01km/h vs 27.42km/h
+29.27km/h vs 29.55km/h
+27.41km/h vs 29.61km/h
+---
+Root Mean Squared Error: 6.1968908459
+Coefficients:  [-0.31109429 -0.49802149 -3.11181539]
+Intercept:  25.9555685519
+</code></pre>
+</div>
+
+<p>While the results are accurate on the most part, some results greatly increase the RMSE:</p>
+
+<p>$RMSE(y)=\frac{1}{N}\sqrt{\sum_i{(f(x_i) - y_i)^2}}$</p>
+
+<p>During actual segment efforts, this model is significant off inflating the expected result since most efforts during KOM attempts <em>are</em> anomalous themselves! Hence, this model will be wrong, but that is OK since only $z$ is changing.</p>
+
+<p>The other approach is using neural networks. Using a multilayered perceptron neural network, a similar process was used as the multivariate linear regression model in terms of features and approach. While it certainly sounds fancy, using the Scikit-Learn library it makes it relatively straightforward to apply.</p>
+
+<p>The final results after doing some hyperparameter tuning (using the Stochastic Gradient Descent model):</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>sample predicted vs actual
+---
+24.75km/h vs 22.36km/h
+25.5km/h vs 32.15km/h
+25.29km/h vs 18.81km/h
+24.6km/h vs 28.44km/h
+25.12km/h vs 29.28km/h
+25.99km/h vs 28.65km/h
+26.61km/h vs 28.04km/h
+21.36km/h vs 22.6km/h
+21.43km/h vs 21.74km/h
+17.36km/h vs 19.85km/h
+27.18km/h vs 29.26km/h
+20.47km/h vs 23.02km/h
+26.2km/h vs 27.28km/h
+19.66km/h vs 22.46km/h
+26.36km/h vs 29.62km/h
+25.99km/h vs 27.42km/h
+29.75km/h vs 29.55km/h
+27.6km/h vs 29.61km/h
+Root Mean Squared Error: 5.60815702584
+</code></pre>
+</div>
+
+<p>While the root mean squared error is lower, this model performs better with the anomalous cases but poorer on median. With both models into consideration, the multivariate linear regression model remains the top choice as the core system for computing wind impact.</p>
+
+<h4> Infinite Scrolling Segment Feed Recommendation Algorithm </h4>
+<p>The motivator of the content-based feed from a product perspective is to provide:</p>
+<ol>
+  <li>Very fast way of showing relevant segments to the user (instead of searching for them)</li>
+  <li>Allow the user to discover potentially unique or anomalous segments</li>
+  <li>Provide an incentive for returning to the site by outlining fresh new content</li>
+</ol>
+
+<p>The most stressed factor is <em>new</em> content, hence the recommender system heavily boosts more recent rides. As such, below are some factors taken into consideration when ranking segments:</p>
+<ul>
+  <li>How recent was the ride that the segment took place on?</li>
+  <li>Has there been a KOM/QOM achieved?</li>
+  <li>Is there a new Personal Best or Top 10 rank achieved?</li>
+</ul>
+
+<p>Another criteria for this recommender system is that it must be quick to retrieve results - since this is the first thing the user lands on once logging in. The rough algorithm looks as follows:</p>
+
+<ol>
+  <li>Lazily fetch ride data from Strava API in sets of 3 rides
+    <ul>
+      <li>Redis will cache the newer than <code class="highlighter-rouge">index-epoch</code> rides faster than Elasticsearch indices</li>
+    </ul>
+  </li>
+  <li>Iterate through all segments from those rides and rank candidates
+    <ul>
+      <li>This will use the points system below</li>
+    </ul>
+  </li>
+  <li>If there are less than <code class="highlighter-rouge">16</code> segments retrieved, lazily load more until failure</li>
+</ol>
+
+<p>How are segments ranked? This is computed as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Factor</th>
+      <th style="text-align: center">Formula</th>
+      <th style="text-align: right">Factor Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ride Recency</td>
+      <td style="text-align: center"><code class="highlighter-rouge">10x, 5x or 1x</code></td>
+      <td style="text-align: right"><code class="highlighter-rouge">Multiplier</code></td>
+    </tr>
+    <tr>
+      <td>KOM/QOM Achievement</td>
+      <td style="text-align: center"><code class="highlighter-rouge">20</code></td>
+      <td style="text-align: right"><code class="highlighter-rouge">Addition</code></td>
+    </tr>
+    <tr>
+      <td>Leaderboard Ranking</td>
+      <td style="text-align: center"><code class="highlighter-rouge">20 - rank</code></td>
+      <td style="text-align: right"><code class="highlighter-rouge">Addition</code></td>
+    </tr>
+    <tr>
+      <td>Personal Best</td>
+      <td style="text-align: center"><code class="highlighter-rouge">5 - rank</code></td>
+      <td style="text-align: right"><code class="highlighter-rouge">Addition</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+This systematic scoring system provides a heuristic for rankings segments. In recommender system theory, this qualifies as a content-based recommender system since we rank content based solely on discrete characteristics.</p>
+
+<h3 id="youtube"> YouTube Demo </h3>
+
+<iframe width="740" height="430" src="https://www.youtube.com/embed/3eSN6_m8yao" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2><br /></h2>
+<hr />
+
+<h2 id="original"> Original Design </h2>
+<p>For my first web-app ever, I created a single page web-app in high-school using client sided jQuery and JavaScript along with a simple vector manipulation algorithm. This design features both critical design flaws and is extremely limiting in terms of capabilities.</p>
+
+<h3 id="origarchitecture"> Architectural Overview </h3>
+<p>As mention prior, everything is stored client-sided, so there is no session data persisted. The website design is created using Materialize CSS and jQuery. The core logic is written in JavaScript, which can actually be found at <code class="highlighter-rouge">src/js</code>. The site interacts with the Strava API using OAuth, Google Maps API and Dark Sky API to fetch the weather data. The site can be found at <code class="highlighter-rouge">stravawindanalysis.com/legacy</code>, with the exception of API keys which were stubbed with API calls to the newer backend.</p>
+
+<p>The simple algorithm worked by fetching the wind data, the ride direction, normalizing the vectors, scaling the vectors by their respective speeds, and then checking the displacement when added tip-to-tail.</p>
+
+<p><img src="/blog/assets/stravawindanalysis-legacy.png" alt="I'm an inline-style link" /></p>
+
+<h3 id="origyoutube"> Original Design YouTube Demo </h3>
+
+<iframe width="740" height="430" src="https://www.youtube.com/embed/v57Ok0zRMNI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="future"> Future Plans </h2>
+<h3 id="global"> Global Neural Networks </h3>
+
+<p>Extending from the idea of the current models, adding the ability to expand the training set to use information from other riders can allow for significantly more advanced capabilities. Additional features will be created dependent on the rider, for example the rider’s average speed, riding patterns, and then every user’s behavior can be contributed to a global state neural network.</p>
+
+<p>Of course, users can subscribe/unsubscribe from donating their personal data - but these capabilites will allow for pooling more data and attempting to create a more accurate model for estimating speed given the ride environment and player type.</p>
+
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Horatiu&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Horatiu&#39;s Blog
+            
+            </li>
+            
+            <li><a href="mailto:horatiulazu@gmail.com">horatiulazu@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/MathBunny"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">MathBunny</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>My blog, discussing topics from university life.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

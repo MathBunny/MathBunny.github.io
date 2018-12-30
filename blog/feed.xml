@@ -1,5 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2018-11-28T20:36:50-08:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
-</subtitle><entry><title type="html">YouTube: Analytics on 1.2 million views</title><link href="http://localhost:4000/blog/programming/2018/11/12/youtube.html" rel="alternate" type="text/html" title="YouTube: Analytics on 1.2 million views" /><published>2018-11-12T15:49:29-08:00</published><updated>2018-11-12T15:49:29-08:00</updated><id>http://localhost:4000/blog/programming/2018/11/12/youtube</id><content type="html" xml:base="http://localhost:4000/blog/programming/2018/11/12/youtube.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-cover.png&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2018-12-29T22:52:04-05:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
+</subtitle><entry><title type="html">Work Term #3: Scalable cloud metadata search</title><link href="http://localhost:4000/blog/coop/2018/11/24/thirdcoop.html" rel="alternate" type="text/html" title="Work Term #3: Scalable cloud metadata search" /><published>2018-11-24T18:49:29-05:00</published><updated>2018-11-24T18:49:29-05:00</updated><id>http://localhost:4000/blog/coop/2018/11/24/thirdcoop</id><content type="html" xml:base="http://localhost:4000/blog/coop/2018/11/24/thirdcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/yelp-logo-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;During my third co-op, I developed and shipped a scalable cloud metadata search service at Yelp. The core service is written in Python, and I used Terraform and Puppet to provision and configure the infrastructure promoting reproducability and scalability. This is hosted on AWS, more specifically using a serverless architecture leveraging API Gateway and Lambda.&lt;/p&gt;
+
+&lt;p&gt;What is a &lt;em&gt;cloud metadata search service&lt;/em&gt;? Put simply, it keeps an inventory of all the servers that Yelp has and any facts about them. Some examples of facts include software that is provisioned on that machine, operating system information, memory available, geographical regions and hundreds of other fields.&lt;/p&gt;
+
+&lt;p&gt;This service presents the following features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Expressive discovery using custom DSL querying capabilities in 2 languages (JSON and query string)&lt;/li&gt;
+  &lt;li&gt;Significantly faster querying (&amp;lt;100ms per query, real-time event-based invalidation, 5 minute refreshes)&lt;/li&gt;
+  &lt;li&gt;Highly scalable serverless architecture which is reproducable and configured using code&lt;/li&gt;
+  &lt;li&gt;Deployment process using S3 and Jenkins, unit tests and end-to-end tests using Docker&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My favourite part of this project is that I went through all stages of the development process, and got to see something created from scratch go through to production!&lt;/p&gt;
+
+&lt;p&gt;Formerly, there was a solution using MCollective that would distribute the request to all known hosts and fetch information then. The issue with that solution is that the query time is essentially a function of the slowest host to respond - since it would wait for all hosts to respond and filter afterwards.&lt;/p&gt;
+
+&lt;p&gt;Meanwhile, the inventory service works in the other direction. Instead, each host contains a cron-job that emits metadata on that machine to the inventory service.&lt;/p&gt;
+
+&lt;p&gt;The service has its own DSL query language, which can be provided in JSON:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;filter&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AND&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;args&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+             &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;matching&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+             &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;arg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hostname: interndev1-us[east,west]1dev*&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+             &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;matching&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+             &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;arg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cpu_count &amp;gt;= 16&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;sort&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;uptime asc, hostname desc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;limit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;offset&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;index_epoch_threshold&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Alternatively using the string query syntax (inspired by Apache Solr’s streaming syntax):&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ search(filter(AND(&quot;hostname: interndev1-us[east,west]1dev*&quot;, &quot;cpu_count &amp;gt;= 16&quot;)), sort(&quot;uptime asc, hostname desc&quot;), limit(1000), offset(10), index_epoch_threshold(2000))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As part of this project, I also implemented query parsers for both that convert the associated query into an Elasticsearch URI query. This included making some interesting optimizations along with a basic n-ary preorder tree traversal to assemble the query string.&lt;/p&gt;
+
+&lt;p&gt;One of the greatest challenges was dealing with a schemaless design. Since there’s hundreds of fields, it isn’t managable to manually introduce every field in a fixed schema since teams are constantly adding or removing fields. Luckily, Elasticsearch provides the ability to give a &lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/dynamic-mapping.html&quot;&gt;dynamic schema&lt;/a&gt;, where it infers type. However, this was quickly proven unreliable because we experienced type collisions (ex: initially a field was &lt;code class=&quot;highlighter-rouge&quot;&gt;bool&lt;/code&gt;, later it would be indexed as &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;). Such a type collision would yield errors when ingesting metadata - later invalidating that instance from search results and returning incomplete data!&lt;/p&gt;
+
+&lt;p&gt;The solution to this was leveraging a &lt;a href=&quot;https://www.elastic.co/guide/en/elasticsearch/reference/current/dynamic-templates.html&quot;&gt;dynamic templated mapping&lt;/a&gt;. We would have four types: &lt;code class=&quot;highlighter-rouge&quot;&gt;*_str&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*_bool&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*_long&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*_float&lt;/code&gt;. The service would append to each field being ingested the type it thinks would be the type. This type would always conform with the equivalent Elasticsearch type, hence all ingestion requests would go through. The only concern now becomes - fields can sometimes be more sparse and scattered across multiple fields - at worst 4x worse performance! However, this rarely the case, and providing the guaranteed that documents will be ingested is more critical than &lt;em&gt;slightly&lt;/em&gt; slower retrieval.&lt;/p&gt;
+
+&lt;p&gt;How does this work for retrievals? All the retrieval queries would need to be appropriately tokenized, have type introspection occur and inspect the mapping of the index, and then adjusted accordingly. This includes expanding any numerical field queries to be &lt;code class=&quot;highlighter-rouge&quot;&gt;(field_long:val OR field_float:val)&lt;/code&gt;. While a tricky process for all the arguments that can be passed to the inventory service, the strict DSL and with a careful implementation and lots of unit tests it worked well.&lt;/p&gt;
+
+&lt;p&gt;The final benchmarks using Apache Bench and AWS CloudWatch yield &amp;lt;150ms p99 query times for indexing and &amp;lt;90ms p99 search queries while exceeding one million API requests daily.&lt;/p&gt;
+
+&lt;p&gt;To conclude, I learned a lot this term with an amazing mentor who was extremely helpful throughout the entire process - something which I think is invaluable and definitely made this one of my favourite terms.&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">YouTube: Analytics on 1.2 million views</title><link href="http://localhost:4000/blog/programming/2018/11/12/youtube.html" rel="alternate" type="text/html" title="YouTube: Analytics on 1.2 million views" /><published>2018-11-12T18:49:29-05:00</published><updated>2018-11-12T18:49:29-05:00</updated><id>http://localhost:4000/blog/programming/2018/11/12/youtube</id><content type="html" xml:base="http://localhost:4000/blog/programming/2018/11/12/youtube.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/youtube-cover.png&quot; alt=&quot;link&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I’ve been running my YouTube channel &lt;a href=&quot;https://www.youtube.com/user/ComputerBunnyMath123&quot; target=&quot;_blank&quot;&gt;SoftwareEngenius&lt;/a&gt; for the past six years. Initially, it started as a place to post videos regarding my hobbies (mostly computer tutorials and programming videos). It has mostly stayed that way, with more recent videos being very focused on software development.&lt;/p&gt;
 
@@ -71,7 +127,284 @@ Interestingly, there were more Macintosh users than Windows until around late 20
 
 
 ![link](/blog/assets/youtube-functional.png)
---&gt;</content><summary type="html"></summary></entry><entry><title type="html">Postmortem: Tenderloin + Yet another stolen road bike</title><link href="http://localhost:4000/blog/cycling/2018/11/04/bike-stolen.html" rel="alternate" type="text/html" title="Postmortem: Tenderloin + Yet another stolen road bike" /><published>2018-11-04T15:49:29-08:00</published><updated>2018-11-04T15:49:29-08:00</updated><id>http://localhost:4000/blog/cycling/2018/11/04/bike-stolen</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/11/04/bike-stolen.html">&lt;p&gt;On Saturday November 3, 2018 I decided to spend the day going on a warmup 65km ride down to Mountain View from San Francisco, meet up with a couple friends, then come back by Caltrain as preparation for a hard Sunday ride going up King’s Mountain.&lt;/p&gt;
+--&gt;</content><summary type="html"></summary></entry><entry><title type="html">Evolution of stravawindanalysis.com</title><link href="http://localhost:4000/blog/programming/2018/11/09/strava.html" rel="alternate" type="text/html" title="Evolution of stravawindanalysis.com" /><published>2018-11-09T18:49:29-05:00</published><updated>2018-11-09T18:49:29-05:00</updated><id>http://localhost:4000/blog/programming/2018/11/09/strava</id><content type="html" xml:base="http://localhost:4000/blog/programming/2018/11/09/strava.html">&lt;style type=&quot;text/css&quot;&gt;
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+&lt;/style&gt;
+
+&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/stravawindanalysis-logo.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt; Table of contents &lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro&quot;&gt; Motivation and Introduction &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#redesign&quot;&gt; Extensive Redesign &lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#features&quot;&gt; Features&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#architecture&quot;&gt; Architectural overview &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#models&quot;&gt; Models and algorithms&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#infrastructure&quot;&gt; Site infrastructure&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#youtube&quot;&gt; YouTube demo&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#original&quot;&gt; Original Design &lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#origarchitecture&quot;&gt; Architectural overview &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#origyoutube&quot;&gt; YouTube demo &lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#future&quot;&gt; Future Plans &lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#global&quot;&gt; Global neural network models &lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;intro&quot;&gt; Motivation and Introduction &lt;/h3&gt;
+
+&lt;p&gt;During high-school I was wondering if there was some way to determine how much wind affects road cyclists’ speeds.&lt;/p&gt;
+
+&lt;p&gt;Strava is a popular cycling platform, where riders “record” their rides and share with others. This is accomplished by using GPS that periodically captures longitutde/latitude and timestamps it in GPX format - so at any given moment Strava can recollect your position and calculate your speed. Segments are defined roughly as a string following a polyline starting from one coordinate and ending at another coordinate with a predefined shape. Over time, many people upload their rides and we can get a leaderboard of different people’s attempts at segments over time.&lt;/p&gt;
+
+&lt;p&gt;The critical issue with this segment functionality is that conditions aren’t always equal - if you have a 50km/h tailwind you will go have to displace less wattage to reach that winning speed - but how much does it really help you? Introducing Strava Wind Analysis!&lt;/p&gt;
+
+&lt;h2 id=&quot;redesign&quot;&gt; Extensive Redesign &lt;/h2&gt;
+&lt;p&gt;The most apparent issue with the initial design is the absence of a backend which severely limits the capabilities of the web app since everything resides client-sided. The newer design features a cloud-hosted architecture stored on Amazon Web Services, opening a world of possibilities.&lt;/p&gt;
+
+&lt;h3 id=&quot;features&quot;&gt; Features &lt;/h3&gt;
+&lt;p&gt;The newer version of the website expands beyond simply weather analytics to providing both historical and segment ride analytics. There are feature additions throughout, including:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved regression models for cycling wind impact determination&lt;/li&gt;
+  &lt;li&gt;Content-based segment recommendation engine for scrolling feed&lt;/li&gt;
+  &lt;li&gt;Interactive charts using chart.js&lt;/li&gt;
+  &lt;li&gt;Performance analytics on historical segment and aggregate data&lt;/li&gt;
+  &lt;li&gt;Individual modals with athlete-specific statistics on segment leaderboard&lt;/li&gt;
+  &lt;li&gt;Linear regression and interpolation tools using scikit-learn&lt;/li&gt;
+  &lt;li&gt;Segment and ride filtering options (distance, speed, etc.)&lt;/li&gt;
+  &lt;li&gt;Improved performance with Redis caching&lt;/li&gt;
+  &lt;li&gt;Integration with MongoDB including weather API throttling and user profiles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After users login, they are presented with the feed page. Powered by a content-based recommender system, this feed aims at featuring segments that are recent and may be of interest.&lt;/p&gt;
+
+&lt;p&gt;The new details page is redesigned, with tabs for different content for that segment.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/strava-details.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are modals now for individual athletes showing historical performance aggregate performance on segments. Similarily, there are modals on the ride selection screen showing a map of the ride.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/strava-modal.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The charting system allows the ability to do speed overlay for different athletes on a single chart.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/strava-comparison.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;architecture&quot;&gt; Architectural overview &lt;/h3&gt;
+&lt;p&gt;The newer architecture runs on Amazon Web Services using EC2 instances and Route53 for Elastic IPs. The infrastructure is managed using Terraform, which allows for reproducability and high scalability.&lt;/p&gt;
+
+&lt;p&gt;The core site is a monolithic repository written in Node.js leveraging Express to power the webserver layer, along with Handlebars as the templating engine for rendering the site headers and footers. The front-end leverages jQuery and Ink Framework. There is a seperate Python Flask service handling the machine learning components, which uses NumPy and Scikit-Learn for any statistical analysis and is communicated using a RESTful interface by the Node app. Both the Node and Python server are managed by PM2, which allows for thread forking and zero downtime restarts.&lt;/p&gt;
+
+&lt;p&gt;Redis is used as an in-memory cache for API look-ups (30 minutes TTL), and provides lifetime caching for weather data requests from DarkSky. Elasticsearch provides an index for segment and rides by rides, which periodically indexes upon login based on a previously set epoch-update time. Lastly, MongoDB is used for user profiles including throttling for abusive users.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/strava-system.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;models&quot;&gt; Models and Algorithms &lt;/h3&gt;
+
+&lt;h4&gt; Wind Impact Determination Algorithm &lt;/h4&gt;
+&lt;p&gt;The core intent of the Strava Wind Analysis site is to numerically quantify the impact of wind conditions on a cycling segment. Since this isn’t a solved problem and there is no method to verify the validity of the results, over time the algorithm evolved to take into consideration more factors which increases the likelyhood of accuracy.&lt;/p&gt;
+
+&lt;p&gt;The original algorithm used basic theory from relative physics, that is, we take two vectors representing the wind direction and ride direction, add then tip-to-tail, and then take the displacement vector which would be the resultant vector. The impact would be the delta between the original ride vector and the displacement.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/strava-relative.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The beginning set of improvements over the legacy vector-manipulation approach concerns drawing conclusions from the results of an empirical study on how wind affects cyclists. The following results are taken from Jobst Brandt’s &lt;em&gt;A Practical Analysis of Aerodynamic Drag&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The first observation is that the previous vector-based model falls victim to assuming that tailwind and headwind will equivalently affect riders which is incorrect.
+&lt;img src=&quot;/blog/assets/strava-normalized.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The second observation is to provide a mapping for how much a difference in speed makes for the wind impact. This is of course very difficult, but can be best modelled using a function. What is this function?&lt;/p&gt;
+
+&lt;p&gt;$f(x) = -0.004x^2 + 0.616x + 0.863$&lt;/p&gt;
+
+&lt;p&gt;How was this equation generated? Using quadratic regression on empirical riding data in a wind tunnel (assuming that the head-wind is direct), and with a constant wattage it’s possible to interpolate values.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/strava-wind-graph.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thus, $x$ is the wind-speed in direct head-wind, and $y$ would be the net change in wind-speed. Since wind isn’t always directed parallel to the cyclist, the former vector manipulation algorithm is executed but both units are turned into unit vectors, and then the displacement vector’s magnitude is multiplied by the value of this function yielding the final result.&lt;/p&gt;
+
+&lt;p&gt;This works fairly well in practice, however there is more to consider. There is a plethora of data containing historical wind performance and the speed at which the cyclist rode. Ignoring factors (amount of effort or energy the rider places), it’s possible to use non-anomalous efforts as training data for a statistical model.&lt;/p&gt;
+
+&lt;p&gt;Former segment efforts can be used as training data. Consider a function $H(x, y, z)$ where $x$ is the effort distance, $y$ is the effort slope, and $z$ is the direction-adjusted wind speed (see the former vector approach), and returns the expected segment effort speed. Clearly, every segment effort has values for $x$, $y$ and $z$ hence this becomes a classic application of regression and/or neural networks. At the end, calling the same function with $z=0$ will predict the speed without the influence of wind - hence $H(x, y, z) - H(x, y, 0)$ is the impact!&lt;/p&gt;
+
+&lt;p&gt;First attempt used multivariate linear regression with several features including effort distance, moving time, ride bearing, average speed for the whole ride, wind speed and wind bearing. After normalizing the values with a standard scalar, applying the vector manipulation approach, and using a 70%/15%/15% training/cross-validation/test split, below are some sample results:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sample predicted vs actual
+---
+25.26km/h vs 29.28km/h
+26.02km/h vs 28.65km/h
+26.57km/h vs 28.04km/h
+22.04km/h vs 22.6km/h
+22.11km/h vs 21.74km/h
+18.63km/h vs 19.85km/h
+27.04km/h vs 29.26km/h
+21.28km/h vs 23.02km/h
+26.2km/h vs 27.28km/h
+20.6km/h vs 22.46km/h
+26.34km/h vs 29.62km/h
+26.01km/h vs 27.42km/h
+29.27km/h vs 29.55km/h
+27.41km/h vs 29.61km/h
+---
+Root Mean Squared Error: 6.1968908459
+Coefficients:  [-0.31109429 -0.49802149 -3.11181539]
+Intercept:  25.9555685519
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;While the results are accurate on the most part, some results greatly increase the RMSE:&lt;/p&gt;
+
+&lt;p&gt;$RMSE(y)=\frac{1}{N}\sqrt{\sum_i{(f(x_i) - y_i)^2}}$&lt;/p&gt;
+
+&lt;p&gt;During actual segment efforts, this model is significant off inflating the expected result since most efforts during KOM attempts &lt;em&gt;are&lt;/em&gt; anomalous themselves! Hence, this model will be wrong, but that is OK since only $z$ is changing.&lt;/p&gt;
+
+&lt;p&gt;The other approach is using neural networks. Using a multilayered perceptron neural network, a similar process was used as the multivariate linear regression model in terms of features and approach. While it certainly sounds fancy, using the Scikit-Learn library it makes it relatively straightforward to apply.&lt;/p&gt;
+
+&lt;p&gt;The final results after doing some hyperparameter tuning (using the Stochastic Gradient Descent model):&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sample predicted vs actual
+---
+24.75km/h vs 22.36km/h
+25.5km/h vs 32.15km/h
+25.29km/h vs 18.81km/h
+24.6km/h vs 28.44km/h
+25.12km/h vs 29.28km/h
+25.99km/h vs 28.65km/h
+26.61km/h vs 28.04km/h
+21.36km/h vs 22.6km/h
+21.43km/h vs 21.74km/h
+17.36km/h vs 19.85km/h
+27.18km/h vs 29.26km/h
+20.47km/h vs 23.02km/h
+26.2km/h vs 27.28km/h
+19.66km/h vs 22.46km/h
+26.36km/h vs 29.62km/h
+25.99km/h vs 27.42km/h
+29.75km/h vs 29.55km/h
+27.6km/h vs 29.61km/h
+Root Mean Squared Error: 5.60815702584
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;While the root mean squared error is lower, this model performs better with the anomalous cases but poorer on median. With both models into consideration, the multivariate linear regression model remains the top choice as the core system for computing wind impact.&lt;/p&gt;
+
+&lt;h4&gt; Infinite Scrolling Segment Feed Recommendation Algorithm &lt;/h4&gt;
+&lt;p&gt;The motivator of the content-based feed from a product perspective is to provide:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Very fast way of showing relevant segments to the user (instead of searching for them)&lt;/li&gt;
+  &lt;li&gt;Allow the user to discover potentially unique or anomalous segments&lt;/li&gt;
+  &lt;li&gt;Provide an incentive for returning to the site by outlining fresh new content&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The most stressed factor is &lt;em&gt;new&lt;/em&gt; content, hence the recommender system heavily boosts more recent rides. As such, below are some factors taken into consideration when ranking segments:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;How recent was the ride that the segment took place on?&lt;/li&gt;
+  &lt;li&gt;Has there been a KOM/QOM achieved?&lt;/li&gt;
+  &lt;li&gt;Is there a new Personal Best or Top 10 rank achieved?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Another criteria for this recommender system is that it must be quick to retrieve results - since this is the first thing the user lands on once logging in. The rough algorithm looks as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Lazily fetch ride data from Strava API in sets of 3 rides
+    &lt;ul&gt;
+      &lt;li&gt;Redis will cache the newer than &lt;code class=&quot;highlighter-rouge&quot;&gt;index-epoch&lt;/code&gt; rides faster than Elasticsearch indices&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Iterate through all segments from those rides and rank candidates
+    &lt;ul&gt;
+      &lt;li&gt;This will use the points system below&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If there are less than &lt;code class=&quot;highlighter-rouge&quot;&gt;16&lt;/code&gt; segments retrieved, lazily load more until failure&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;How are segments ranked? This is computed as follows:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Factor&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Formula&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Factor Type&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ride Recency&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;10x, 5x or 1x&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Multiplier&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;KOM/QOM Achievement&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;20&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Addition&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Leaderboard Ranking&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;20 - rank&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Addition&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Personal Best&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;5 - rank&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Addition&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+This systematic scoring system provides a heuristic for rankings segments. In recommender system theory, this qualifies as a content-based recommender system since we rank content based solely on discrete characteristics.&lt;/p&gt;
+
+&lt;h3 id=&quot;youtube&quot;&gt; YouTube Demo &lt;/h3&gt;
+
+&lt;iframe width=&quot;740&quot; height=&quot;430&quot; src=&quot;https://www.youtube.com/embed/3eSN6_m8yao&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;&lt;br /&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;original&quot;&gt; Original Design &lt;/h2&gt;
+&lt;p&gt;For my first web-app ever, I created a single page web-app in high-school using client sided jQuery and JavaScript along with a simple vector manipulation algorithm. This design features both critical design flaws and is extremely limiting in terms of capabilities.&lt;/p&gt;
+
+&lt;h3 id=&quot;origarchitecture&quot;&gt; Architectural Overview &lt;/h3&gt;
+&lt;p&gt;As mention prior, everything is stored client-sided, so there is no session data persisted. The website design is created using Materialize CSS and jQuery. The core logic is written in JavaScript, which can actually be found at &lt;code class=&quot;highlighter-rouge&quot;&gt;src/js&lt;/code&gt;. The site interacts with the Strava API using OAuth, Google Maps API and Dark Sky API to fetch the weather data. The site can be found at &lt;code class=&quot;highlighter-rouge&quot;&gt;stravawindanalysis.com/legacy&lt;/code&gt;, with the exception of API keys which were stubbed with API calls to the newer backend.&lt;/p&gt;
+
+&lt;p&gt;The simple algorithm worked by fetching the wind data, the ride direction, normalizing the vectors, scaling the vectors by their respective speeds, and then checking the displacement when added tip-to-tail.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/stravawindanalysis-legacy.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;origyoutube&quot;&gt; Original Design YouTube Demo &lt;/h3&gt;
+
+&lt;iframe width=&quot;740&quot; height=&quot;430&quot; src=&quot;https://www.youtube.com/embed/v57Ok0zRMNI&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;future&quot;&gt; Future Plans &lt;/h2&gt;
+&lt;h3 id=&quot;global&quot;&gt; Global Neural Networks &lt;/h3&gt;
+
+&lt;p&gt;Extending from the idea of the current models, adding the ability to expand the training set to use information from other riders can allow for significantly more advanced capabilities. Additional features will be created dependent on the rider, for example the rider’s average speed, riding patterns, and then every user’s behavior can be contributed to a global state neural network.&lt;/p&gt;
+
+&lt;p&gt;Of course, users can subscribe/unsubscribe from donating their personal data - but these capabilites will allow for pooling more data and attempting to create a more accurate model for estimating speed given the ride environment and player type.&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Postmortem: Tenderloin + Yet another stolen road bike</title><link href="http://localhost:4000/blog/cycling/2018/11/04/bike-stolen.html" rel="alternate" type="text/html" title="Postmortem: Tenderloin + Yet another stolen road bike" /><published>2018-11-04T18:49:29-05:00</published><updated>2018-11-04T18:49:29-05:00</updated><id>http://localhost:4000/blog/cycling/2018/11/04/bike-stolen</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/11/04/bike-stolen.html">&lt;p&gt;On Saturday November 3, 2018 I decided to spend the day going on a warmup 65km ride down to Mountain View from San Francisco, meet up with a couple friends, then come back by Caltrain as preparation for a hard Sunday ride going up King’s Mountain.&lt;/p&gt;
 
 &lt;p&gt;On the return trip, the Caltrain was closed for repairs, so I had to take a bus from San Bruno to San Francisco. I tried to put my bike inside the bus, but the driver refused stating that it’s against their policy - so I put it on the rack outside. Looking out the window into darkness, the bus drove comfortably on the highway until getting to Market and 6th avenue.&lt;/p&gt;
 
@@ -143,7 +476,7 @@ Interestingly, there were more Macintosh users than Windows until around late 20
 
 &lt;h3 id=&quot;good-news&quot;&gt;Good news&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Update (November 13, 2018)&lt;/strong&gt;: My renter’s insurance happened to cover the entire road bike - so I got all my road bike’s value back and will be buying another one :)&lt;/p&gt;</content><summary type="html">On Saturday November 3, 2018 I decided to spend the day going on a warmup 65km ride down to Mountain View from San Francisco, meet up with a couple friends, then come back by Caltrain as preparation for a hard Sunday ride going up King’s Mountain.</summary></entry><entry><title type="html">Mount Tamalpais West Summit + Seven Sisters Climb</title><link href="http://localhost:4000/blog/cycling/2018/10/28/mt-tam.html" rel="alternate" type="text/html" title="Mount Tamalpais West Summit + Seven Sisters Climb" /><published>2018-10-28T16:49:29-07:00</published><updated>2018-10-28T16:49:29-07:00</updated><id>http://localhost:4000/blog/cycling/2018/10/28/mt-tam</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/10/28/mt-tam.html">&lt;p&gt;In my eyes, the ability to, within 20 minutes of riding, be immersed with stunning views, nature and elevation is the single best perk of being in San Francisco. You cannot find anything like it near Waterloo or Toronto, and it feels like you in picturesque scene in a movie!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update (November 13, 2018)&lt;/strong&gt;: My renter’s insurance happened to cover the entire road bike - so I got all my road bike’s value back and will be buying another one :)&lt;/p&gt;</content><summary type="html">On Saturday November 3, 2018 I decided to spend the day going on a warmup 65km ride down to Mountain View from San Francisco, meet up with a couple friends, then come back by Caltrain as preparation for a hard Sunday ride going up King’s Mountain.</summary></entry><entry><title type="html">Mount Tamalpais West Summit + Seven Sisters Climb</title><link href="http://localhost:4000/blog/cycling/2018/10/28/mt-tam.html" rel="alternate" type="text/html" title="Mount Tamalpais West Summit + Seven Sisters Climb" /><published>2018-10-28T19:49:29-04:00</published><updated>2018-10-28T19:49:29-04:00</updated><id>http://localhost:4000/blog/cycling/2018/10/28/mt-tam</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/10/28/mt-tam.html">&lt;p&gt;In my eyes, the ability to, within 20 minutes of riding, be immersed with stunning views, nature and elevation is the single best perk of being in San Francisco. You cannot find anything like it near Waterloo or Toronto, and it feels like you in picturesque scene in a movie!&lt;/p&gt;
 
 &lt;h3 id=&quot;gameplan&quot;&gt;Gameplan&lt;/h3&gt;
 &lt;p&gt;I had no prior experience climbing for extended periods of time. Depending on the derivative you choose, the route can vary widely in distance and elevation.&lt;/p&gt;
@@ -165,11 +498,11 @@ Interestingly, there were more Macintosh users than Windows until around late 20
 
 &lt;h3 id=&quot;beach-view&quot;&gt;Beach View&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/mount-tam-west-bay.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">In my eyes, the ability to, within 20 minutes of riding, be immersed with stunning views, nature and elevation is the single best perk of being in San Francisco. You cannot find anything like it near Waterloo or Toronto, and it feels like you in picturesque scene in a movie!</summary></entry><entry><title type="html">Giant TCR Advanced Road Bike</title><link href="http://localhost:4000/blog/cycling/2018/10/20/giant.html" rel="alternate" type="text/html" title="Giant TCR Advanced Road Bike" /><published>2018-10-20T16:49:29-07:00</published><updated>2018-10-20T16:49:29-07:00</updated><id>http://localhost:4000/blog/cycling/2018/10/20/giant</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/10/20/giant.html">&lt;p&gt;What’s more exciting than spending a co-op in San Francisco California and purchased a Giant TCR Advanced with upgraded parts? This road bike is &lt;em&gt;extremely&lt;/em&gt; light, carbon fiber frame, latest generation Ultegra 11-speed shifters giving me a healthy upgrade to a mid-range ~$4000 bike.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/mount-tam-west-bay.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">In my eyes, the ability to, within 20 minutes of riding, be immersed with stunning views, nature and elevation is the single best perk of being in San Francisco. You cannot find anything like it near Waterloo or Toronto, and it feels like you in picturesque scene in a movie!</summary></entry><entry><title type="html">Giant TCR Advanced Road Bike</title><link href="http://localhost:4000/blog/cycling/2018/10/20/giant.html" rel="alternate" type="text/html" title="Giant TCR Advanced Road Bike" /><published>2018-10-20T19:49:29-04:00</published><updated>2018-10-20T19:49:29-04:00</updated><id>http://localhost:4000/blog/cycling/2018/10/20/giant</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2018/10/20/giant.html">&lt;p&gt;What’s more exciting than spending a co-op in San Francisco California and purchased a Giant TCR Advanced with upgraded parts? This road bike is &lt;em&gt;extremely&lt;/em&gt; light, carbon fiber frame, latest generation Ultegra 11-speed shifters giving me a healthy upgrade to a mid-range ~$4000 bike.&lt;/p&gt;
 
 &lt;h3 id=&quot;looks&quot;&gt;Looks&lt;/h3&gt;
 &lt;p&gt;The brand isn’t joking, this bike is &lt;em&gt;giant&lt;/em&gt;… it’s designed for people around 6’1 - 6’5 so I barely fit this frame. I brought my Shimano SPD pedals from Canada, and the rest of the components are Shimano Ultegra including brakes, crank and shifters - with the exception of the groupset which is Shimano 105.
-&lt;img src=&quot;/blog/assets/giant-roadbike.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">What’s more exciting than spending a co-op in San Francisco California and purchased a Giant TCR Advanced with upgraded parts? This road bike is extremely light, carbon fiber frame, latest generation Ultegra 11-speed shifters giving me a healthy upgrade to a mid-range ~$4000 bike.</summary></entry><entry><title type="html">Living in New York for Eight Months</title><link href="http://localhost:4000/blog/coop/2018/05/03/nyc.html" rel="alternate" type="text/html" title="Living in New York for Eight Months" /><published>2018-05-03T16:49:29-07:00</published><updated>2018-05-03T16:49:29-07:00</updated><id>http://localhost:4000/blog/coop/2018/05/03/nyc</id><content type="html" xml:base="http://localhost:4000/blog/coop/2018/05/03/nyc.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;img src=&quot;/blog/assets/giant-roadbike.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">What’s more exciting than spending a co-op in San Francisco California and purchased a Giant TCR Advanced with upgraded parts? This road bike is extremely light, carbon fiber frame, latest generation Ultegra 11-speed shifters giving me a healthy upgrade to a mid-range ~$4000 bike.</summary></entry><entry><title type="html">Living in New York for Eight Months</title><link href="http://localhost:4000/blog/coop/2018/05/03/nyc.html" rel="alternate" type="text/html" title="Living in New York for Eight Months" /><published>2018-05-03T19:49:29-04:00</published><updated>2018-05-03T19:49:29-04:00</updated><id>http://localhost:4000/blog/coop/2018/05/03/nyc</id><content type="html" xml:base="http://localhost:4000/blog/coop/2018/05/03/nyc.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;I am fortunate to have received the opportunity of spending 8 months in New York City! I spent a summer here (May - August 2017), and a winter term (January - April 2018) in the upper east side of Manhattan. The experience was fantastic, and this post will be reserved to showing some interesting pictures.&lt;/p&gt;
 
@@ -265,7 +598,7 @@ View from 120 Park Upper Balcony
 
 &lt;h3 id=&quot;misc&quot;&gt;Misc&lt;/h3&gt;
 &lt;p&gt;This is 3rd avenue, the street behind the building where I lived
-&lt;img src=&quot;/blog/assets/nyc-third-avenue.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">Introduction</summary></entry><entry><title type="html">Software Engineering Internship: Bloomberg LP</title><link href="http://localhost:4000/blog/school/2018/05/02/bloomberg-internship.html" rel="alternate" type="text/html" title="Software Engineering Internship: Bloomberg LP" /><published>2018-05-02T16:49:29-07:00</published><updated>2018-05-02T16:49:29-07:00</updated><id>http://localhost:4000/blog/school/2018/05/02/bloomberg-internship</id><content type="html" xml:base="http://localhost:4000/blog/school/2018/05/02/bloomberg-internship.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/blog/assets/nyc-third-avenue.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">Introduction</summary></entry><entry><title type="html">Software Engineering Internship: Bloomberg LP</title><link href="http://localhost:4000/blog/school/2018/05/02/bloomberg-internship.html" rel="alternate" type="text/html" title="Software Engineering Internship: Bloomberg LP" /><published>2018-05-02T19:49:29-04:00</published><updated>2018-05-02T19:49:29-04:00</updated><id>http://localhost:4000/blog/school/2018/05/02/bloomberg-internship</id><content type="html" xml:base="http://localhost:4000/blog/school/2018/05/02/bloomberg-internship.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
 
@@ -377,7 +710,7 @@ View from 120 Park Upper Balcony
 &lt;p&gt;You get breakfast, soup at 12:00pm, and dinner at 8:00pm. The pantry is always open, and stocked with healthy and unhealthy food, though sometimes there’s special food at certain hours like ice-cream on Fridays and hot chocolate during the winter terms.&lt;/p&gt;
 
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
-&lt;p&gt;I had a great time at Bloomberg, as you can probably tell since I chose to return for another internship. When I got my return offer, I also had the option to work in the San Francisco, New York or London offices. Thanks for reading!&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #2: Distributed cross-collection joins</title><link href="http://localhost:4000/blog/school/2018/05/01/secondcoop.html" rel="alternate" type="text/html" title="Work Term #2: Distributed cross-collection joins" /><published>2018-05-01T16:49:29-07:00</published><updated>2018-05-01T16:49:29-07:00</updated><id>http://localhost:4000/blog/school/2018/05/01/secondcoop</id><content type="html" xml:base="http://localhost:4000/blog/school/2018/05/01/secondcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;I had a great time at Bloomberg, as you can probably tell since I chose to return for another internship. When I got my return offer, I also had the option to work in the San Francisco, New York or London offices. Thanks for reading!&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #2: Distributed cross-collection joins</title><link href="http://localhost:4000/blog/school/2018/05/01/secondcoop.html" rel="alternate" type="text/html" title="Work Term #2: Distributed cross-collection joins" /><published>2018-05-01T19:49:29-04:00</published><updated>2018-05-01T19:49:29-04:00</updated><id>http://localhost:4000/blog/school/2018/05/01/secondcoop</id><content type="html" xml:base="http://localhost:4000/blog/school/2018/05/01/secondcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
 
@@ -421,7 +754,7 @@ fq={!join from=inner_id to=outer_id zkHost=192.12.3.17 fromFq=&quot;....&quot; f
 
 &lt;p&gt;Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg’s service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.&lt;/p&gt;
 
-&lt;p&gt;As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #1: Recommender systems and chatbots</title><link href="http://localhost:4000/blog/school/2017/08/26/firstcoop.html" rel="alternate" type="text/html" title="Work Term #1: Recommender systems and chatbots" /><published>2017-08-26T16:49:29-07:00</published><updated>2017-08-26T16:49:29-07:00</updated><id>http://localhost:4000/blog/school/2017/08/26/firstcoop</id><content type="html" xml:base="http://localhost:4000/blog/school/2017/08/26/firstcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #1: Recommender systems and chatbots</title><link href="http://localhost:4000/blog/school/2017/08/26/firstcoop.html" rel="alternate" type="text/html" title="Work Term #1: Recommender systems and chatbots" /><published>2017-08-26T19:49:29-04:00</published><updated>2017-08-26T19:49:29-04:00</updated><id>http://localhost:4000/blog/school/2017/08/26/firstcoop</id><content type="html" xml:base="http://localhost:4000/blog/school/2017/08/26/firstcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
 
@@ -437,65 +770,4 @@ fq={!join from=inner_id to=outer_id zkHost=192.12.3.17 fromFq=&quot;....&quot; f
 &lt;br /&gt;&lt;br /&gt; After completing my first project I received another one, which was prototyping chatbot approaches for generating associated BQL (Bloomberg Query Language) queries for financial questions. Since my team was heavily invested in the Microsoft ecosystem it was worth testing their newly released Microsoft Bot Framework, which leverages their Cognitive Services suite for ML/NLP. 
 &lt;br /&gt;&lt;br /&gt; This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
 &lt;br /&gt;&lt;br /&gt;All in all, I enjoyed my first real work-term and had a helpful mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Specialized Allez Elite Road Bike</title><link href="http://localhost:4000/blog/cycling/2017/06/02/road-biking.html" rel="alternate" type="text/html" title="Specialized Allez Elite Road Bike" /><published>2017-06-02T16:49:29-07:00</published><updated>2017-06-02T16:49:29-07:00</updated><id>http://localhost:4000/blog/cycling/2017/06/02/road-biking</id><content type="html" xml:base="http://localhost:4000/blog/cycling/2017/06/02/road-biking.html">&lt;p&gt;As you may or may not know, I love road cycling. I remember when I was 9 years old and I went on a 50km ride to Etobikoe from North York. I really got into it in the summer before Grade 11, when I purchased this road bike and did over 2500km in 3 months!&lt;/p&gt;
-
-&lt;h3 id=&quot;looks&quot;&gt;Looks&lt;/h3&gt;
-&lt;p&gt;This road bike is an entry level bike, coming in at around $1300 CAD. The bike has a carbon fork, Shimano Tiagra 10-speed with 50/34T chain rings, 10-28 cassette and comes in at 21lbs. 
-&lt;img src=&quot;/blog/assets/specialized-roadbike.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;vdo-m6-cycling-computer&quot;&gt;VDO M6 Cycling Computer&lt;/h2&gt;
-&lt;p&gt;The VDO M6 cycling computer doesn’t use GPS, instead it uses a wireless receiver that you place on the fork and on a spoke along the front-wheel.&lt;/p&gt;
-
-&lt;p&gt;Features include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Heart rate using the chest-strap&lt;/li&gt;
-  &lt;li&gt;Cadence (rotation frequency for pedaling)&lt;/li&gt;
-  &lt;li&gt;Trip distance, overall distance&lt;/li&gt;
-  &lt;li&gt;Speedometer including current, average and maximum speed&lt;/li&gt;
-  &lt;li&gt;Barometer with current elevation, slope, average incline and maximum&lt;/li&gt;
-  &lt;li&gt;Temperature and clock&lt;/li&gt;
-  &lt;li&gt;Charts for heart rate, cadence, speed and elevation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Similar to the Garmin, though more limited, you can customize your screen views depending on how you enable/disable the different sensors.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/cycling-m6.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;iframe width=&quot;740&quot; height=&quot;430&quot; src=&quot;https://www.youtube.com/embed/y6svCthLp5A&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><summary type="html">As you may or may not know, I love road cycling. I remember when I was 9 years old and I went on a 50km ride to Etobikoe from North York. I really got into it in the summer before Grade 11, when I purchased this road bike and did over 2500km in 3 months!</summary></entry><entry><title type="html">Reflections on Term 1A</title><link href="http://localhost:4000/blog/school/2016/12/31/term1a-over.html" rel="alternate" type="text/html" title="Reflections on Term 1A" /><published>2016-12-31T15:49:29-08:00</published><updated>2016-12-31T15:49:29-08:00</updated><id>http://localhost:4000/blog/school/2016/12/31/term1a-over</id><content type="html" xml:base="http://localhost:4000/blog/school/2016/12/31/term1a-over.html">&lt;p&gt;With the winter break in swing, I had some time to reflect on my first term in the University of Waterloo’s Computer Science and Business Administration Double Degree program.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-didnt-go-so-well&quot;&gt;What didn’t go so well&lt;/h1&gt;
-&lt;p&gt;I made several big mistakes throughout the semester, which led to more and more problems.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Why go to class if I have a midterm worth 30% of my grade tomorrow?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The issue with midterms in the Faculty of Mathematics at Waterloo is that you have midterms concurrently with lectures and assignments. Naturally, you would aim to prioritize midterms (which are worth from 10% - 30% of your grade) over lectures, however when midterms are disperced throughout the semester it becomes easy to fall behind. To provide perspective, DD students had seven midterms this year, starting from the first week of October until the middle of November.&lt;/p&gt;
-
-&lt;p&gt;Somehow I ended up falling behind by five weeks in my Algebra course, causing me to skip classes (since I was already too behind), and being totally lost on assignments. As a result, I spent the last three weeks before finals hardcore studying the textbook. I would go back home in Toronto, without my laptop charger, and all I would have is ~150 pages of notes for math. I would go through all the chapters, do all the proofs on paper and that is all. In the end, I managed to pass the course well enough so I can be a teaching assistant next year.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Having 5 exams in 6 days, while being 2 months behind in Economics and Business&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The exam schedule this year for DD students was brutal, especially when compared with just Math/CS students who had a solid two or three days before each exam. This was my exam schedule:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Friday @7:00pm - Math 137 (Calculus)&lt;/li&gt;
-  &lt;li&gt;Saturday @11:30am - Bus 111 (Business)&lt;/li&gt;
-  &lt;li&gt;Monday @ 9:00am - Math 135 (Algebra)&lt;/li&gt;
-  &lt;li&gt;Tuesday @ 7:00pm - Econ 120 (Microeconomics)&lt;/li&gt;
-  &lt;li&gt;Thursday @ 12:00pm - Cs 135 (Functional Programming)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This was by far the most intense week for the whole semester. Especially considering I went to no business classes before that exam (zero! I went to no classes since midterms and the exam only covered material past the first midter), along with only going to half of my economics classes, that was truly a horrifying experience. Nonetheless, surviving off of goldfish crackers, not talking to anyone for a week, I managed to survive and do well in all my exams.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-went-well&quot;&gt;What went well&lt;/h1&gt;
-&lt;p&gt;Having a strong foundation in mathematics along with computer science already set me ahead of my peers. In fact, I already covered most of the curriculum in the introductory Math 137 Calculus course, and I already was aquainted with all of the algorithms used in CS 135 Functional Programming course.&lt;/p&gt;
-
-&lt;p&gt;I also learned how to survive in university. This includes balancing time, finding the best places to eat food and where to go when you want to do what. Surprisingly, it took quite a while to fully figure everything out, from the endless websites you use to submit assignments to figuring out how to add courses on Loris. It was quite a struggle. To end off, here’s some Racket code.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scheme&quot; data-lang=&quot;scheme&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lst&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;term&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;equal?&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;'1a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;lst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This code outputs a list with the terms ‘hello ‘term ‘1b. Thanks for reading.&lt;/p&gt;</content><summary type="html">With the winter break in swing, I had some time to reflect on my first term in the University of Waterloo’s Computer Science and Business Administration Double Degree program.</summary></entry></feed>
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><summary type="html"></summary></entry></feed>
