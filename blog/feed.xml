@@ -1,5 +1,317 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2018-12-29T22:52:04-05:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
-</subtitle><entry><title type="html">Work Term #3: Scalable cloud metadata search</title><link href="http://localhost:4000/blog/coop/2018/11/24/thirdcoop.html" rel="alternate" type="text/html" title="Work Term #3: Scalable cloud metadata search" /><published>2018-11-24T18:49:29-05:00</published><updated>2018-11-24T18:49:29-05:00</updated><id>http://localhost:4000/blog/coop/2018/11/24/thirdcoop</id><content type="html" xml:base="http://localhost:4000/blog/coop/2018/11/24/thirdcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/yelp-logo-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-07-22T16:59:09-04:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
+</subtitle><entry><title type="html">Living in Chicago for Fourth Months</title><link href="http://localhost:4000/blog/coop/2019/07/16/chicago.html" rel="alternate" type="text/html" title="Living in Chicago for Fourth Months" /><published>2019-07-16T19:49:29-04:00</published><updated>2019-07-16T19:49:29-04:00</updated><id>http://localhost:4000/blog/coop/2019/07/16/chicago</id><content type="html" xml:base="http://localhost:4000/blog/coop/2019/07/16/chicago.html">&lt;p&gt;I am fortunate to have spent an internship at Citadel Securities in Chicago, Illinois.&lt;/p&gt;
+
+&lt;p&gt;Citadel Securities is the largest market maker in the United States responsible for executing over 20% of US equity trades, including over 39.5% of retail shares traded. You can watch &lt;a href=&quot;https://www.youtube.com/watch?v=2u007Msq1qo&quot; target=&quot;_blank&quot;&gt;this video&lt;/a&gt; outlining high frequency trading (plus you get to see my co-workers, it was filmed behind my desk!).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-plane.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The provided corporate housing is a 2 bedroom + 2 bath luxery condo suite shared with 1 roommate being around 5 minutes walk from the office in the heart of the loop.&lt;/p&gt;
+
+&lt;p&gt;This has been by far the best corporate housing so far, we even had a weekly cleaner and lots of amenities including swimming pool, rooftop terrace/gym, billiards, and more!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-living.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-kitchen.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-bedroom.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The views from the corporate housing were great too.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-view1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-view2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-lightning-1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the view of Chicago from the Planetarium.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-planetarium-view.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The following are pictures of River North.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-river-north-1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-river-north-3.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-river-north-2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;View of Chicago from the Botanical Garden.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-botanical.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;John Hancock building on a foggy day.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-john-hancock.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-john-beach.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Views from John Hancock Tower 96th floor&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-john-north.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-john-east.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-john-south-east.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-john-south.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ken Griffin, the founder of Citadel, paid over $300 million for this painting.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-painting.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Citadel HQ (outside)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-citadel.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Chicago Botanical Garden&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-cascade.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-garden1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-garden2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-garden3.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-garden4.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-garden5.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly … &lt;a href=&quot;https://medium.com/@LumpyBatter/what-is-kobe-beef-and-why-is-it-so-expensive-4b76674ed2c1&quot; target=&quot;_blank&quot;&gt;3oz Wagyu Kobe Beef&lt;/a&gt; :)
+&lt;img src=&quot;/blog/assets/chicago-steak.jpg&quot; /&gt;&lt;/p&gt;</content><summary type="html">I am fortunate to have spent an internship at Citadel Securities in Chicago, Illinois.</summary></entry><entry><title type="html">Living in San Francisco for Fourth Months</title><link href="http://localhost:4000/blog/coop/2019/04/20/cali-round-1.html" rel="alternate" type="text/html" title="Living in San Francisco for Fourth Months" /><published>2019-04-20T19:49:29-04:00</published><updated>2019-04-20T19:49:29-04:00</updated><id>http://localhost:4000/blog/coop/2019/04/20/cali-round-1</id><content type="html" xml:base="http://localhost:4000/blog/coop/2019/04/20/cali-round-1.html">&lt;p&gt;Starting off, I’m roughly four months late! I decided to do one of these posts for each internship, and since I’m starting my next co-op in Chicago at Citadel Securities in less than 2 weeks, and I have an exam in 3 days, there’s no better time to procrastinate.&lt;/p&gt;
+
+&lt;p&gt;In my opinion, road biking let me explore the regions around San Francisco much better than I would be able to otherwise see (with the exception of having a car), so I hope you enjoy the views :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-11.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Golden Gate Bridge, fun fact is that it actually has an incline which is noticable while cycling&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-20.jpg&quot; /&gt; &lt;!-- remove 7 --&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;View from the Golden Gate Bridge&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-2.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Alongside Highway 1, around 2/3rds the way towards San Francisco form Santa Cruz&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-4.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Alongside Highway 1, halfway between San Francisco and Santa Cruz&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-3.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;View of downtown San Francisco at sunset from Twin Peaks&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-5.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Alpine Dam, south of Fairfax&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-10.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Overlooking Mill Valley&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-8.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Mount Tamalpais West Peak&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-18.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Mount Tamalpais East Peak&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-14.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Overlooking Muir Woods&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-15.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;More views of Muir Woods&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-9.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Overlooking Stinson Beach&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-13.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Clearer picture of Stinson Beach&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-16.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Overlooking San Rafael&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-17.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sunset view of Battery Spencer&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-22.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Marin Headlands, the descent reaches -18% slope (there’s a sign)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-21.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ocean Beach, just south of Lands’ End&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-24.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lake Merced Park&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-26.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Foggy Golden Gate Bridge&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-27.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;View from just past the Seven Sisters&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-31.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Amy’s Island Peak&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-23.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Alcatraz Island&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-28.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;View of a cell at Alcatraz&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/sf-25.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;San Francisco’s Cable Car Museum&lt;/p&gt;
+&lt;/blockquote&gt;</content><summary type="html">Starting off, I’m roughly four months late! I decided to do one of these posts for each internship, and since I’m starting my next co-op in Chicago at Citadel Securities in less than 2 weeks, and I have an exam in 3 days, there’s no better time to procrastinate.</summary></entry><entry><title type="html">Software Engineering Internship: Yelp Inc</title><link href="http://localhost:4000/blog/coop/2018/11/25/yelp.html" rel="alternate" type="text/html" title="Software Engineering Internship: Yelp Inc" /><published>2018-11-25T18:49:29-05:00</published><updated>2018-11-25T18:49:29-05:00</updated><id>http://localhost:4000/blog/coop/2018/11/25/yelp</id><content type="html" xml:base="http://localhost:4000/blog/coop/2018/11/25/yelp.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/yelp-logo-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Yelp.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt; Table of contents &lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro&quot;&gt; Introduction &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#application&quot;&gt; Application Process &lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#application&quot;&gt; Applying&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#interviews&quot;&gt; Interviews &lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#compensation&quot;&gt; Compensation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#projectselection&quot;&gt; Project Selection&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#internevents&quot;&gt; Internship Events &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#office&quot;&gt; 140 New Montgomery Office &lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;intro&quot;&gt; Introduction &lt;/h3&gt;
+&lt;p&gt;I did a co-op term at Yelp in Fall 2018 on the Production Engineering team in San Francisco, California. It went great with a lot of learning and an excellent team. Learn more about what I did at Yelp &lt;a href=&quot;/blog/coop/2018/11/24/thirdcoop.html&quot; target=&quot;_blank&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My favourite part was the amazing mentorship and getting to see my project rolled out to production. The experience overall felt “chill”, with the culture being more &lt;em&gt;startup-y&lt;/em&gt;, making room for a unique experience.&lt;/p&gt;
+
+&lt;h3 id=&quot;application&quot;&gt; Applying &lt;/h3&gt;
+
+&lt;p&gt;Since I attend the University of Waterloo, I went through our job board. I submitted my resume and grade report. I was then contacted to do a HackerRank challenge. The position was reasonably competitive, over 500 applicants for around 10-20 spots.&lt;/p&gt;
+
+&lt;h3 id=&quot;interviews&quot;&gt; Interviews &lt;/h3&gt;
+
+&lt;p&gt;The first step is a HackerRank challenge, which was one problem and you had 15 minutes to do it. It’s a very simple problem, mostly used to take out people who would be unlikely to pass the following rounds.&lt;/p&gt;
+
+&lt;p&gt;The second round is a 45 minute Skype call with another engineer, where I had a medium difficulty problem (dynamic programming), and talked about my previous work at Bloomberg.&lt;/p&gt;
+
+&lt;p&gt;The final round is two back-to-back 45 minute calls, including system design and another easy algorithms round along with some networking and operating system trivia.&lt;/p&gt;
+
+&lt;h3 id=&quot;compensation&quot;&gt; Compensation &lt;/h3&gt;
+
+&lt;p&gt;The compensation is ok, comparable to other Bay Area companies (similar to Google, lower than Facebook) but it was my lowest paying term. The issue with the compensation is the lack of corporate housing, since the housing stipend is heavily taxed and less than initially perceived.&lt;/p&gt;
+
+&lt;h3 id=&quot;projectselection&quot;&gt; Project Selection &lt;/h3&gt;
+
+&lt;p&gt;Since the roles are fairly specific (infrastructure, backend, fullstack, etc), you don’t know your team placement until a few weeks before the term begins.&lt;/p&gt;
+
+&lt;p&gt;For me specifically, I had no prior experience with production engineering and received that team placement which in my opinion seemed like a risky maneuver since I hadn’t previously shown any interest in the field.&lt;/p&gt;
+
+&lt;p&gt;However, in the end it turned out fine and got to learn many new topics including general infrastructure, cloud technologies and networking.&lt;/p&gt;
+
+&lt;h3 id=&quot;internevents&quot;&gt; Internship Events &lt;/h3&gt;
+&lt;p&gt;We had an impressive amount of events for an off-season internship including (but not limited to):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Exploratorium&lt;/li&gt;
+  &lt;li&gt;Bowling&lt;/li&gt;
+  &lt;li&gt;Mini-golf putt&lt;/li&gt;
+  &lt;li&gt;Escape room&lt;/li&gt;
+  &lt;li&gt;Hike + visit to Amy’s Island&lt;/li&gt;
+  &lt;li&gt;Magic show&lt;/li&gt;
+  &lt;li&gt;Ice skating trip&lt;/li&gt;
+  &lt;li&gt;Salsa dancing&lt;/li&gt;
+  &lt;li&gt;Pumpkin carving&lt;/li&gt;
+  &lt;li&gt;Lunch with executives&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And of course lots of food events!&lt;/p&gt;
+
+&lt;h3 id=&quot;office&quot;&gt;140 New Montgomery Office&lt;/h3&gt;
+
+&lt;p&gt;The office is very cute, and is actually a historic landmark and was formerly one of the tallest in SF!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/yelp-office.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The office was decorated and full of Christmas spirit :)
+&lt;img src=&quot;/blog/assets/yelp-office7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each floor had a pantry, so over 13 pantries which all look different!
+&lt;img src=&quot;/blog/assets/yelp-office6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/yelp-office5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/yelp-office2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another seasonal decoration, but for Halloween …
+&lt;img src=&quot;/blog/assets/yelp-office4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Guess who did this? We had a team event :-)
+&lt;img src=&quot;/blog/assets/sf-30.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I worked on Floor 11. Just as a fun fact, Bloomberg actually has their San Francisco Engineering office in the same building as Yelp, they are just several floors above!&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #3: Scalable cloud metadata search</title><link href="http://localhost:4000/blog/coop/2018/11/24/thirdcoop.html" rel="alternate" type="text/html" title="Work Term #3: Scalable cloud metadata search" /><published>2018-11-24T18:49:29-05:00</published><updated>2018-11-24T18:49:29-05:00</updated><id>http://localhost:4000/blog/coop/2018/11/24/thirdcoop</id><content type="html" xml:base="http://localhost:4000/blog/coop/2018/11/24/thirdcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/yelp-logo-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;During my third co-op, I developed and shipped a scalable cloud metadata search service at Yelp. The core service is written in Python, and I used Terraform and Puppet to provision and configure the infrastructure promoting reproducability and scalability. This is hosted on AWS, more specifically using a serverless architecture leveraging API Gateway and Lambda.&lt;/p&gt;
 
@@ -598,176 +910,4 @@ View from 120 Park Upper Balcony
 
 &lt;h3 id=&quot;misc&quot;&gt;Misc&lt;/h3&gt;
 &lt;p&gt;This is 3rd avenue, the street behind the building where I lived
-&lt;img src=&quot;/blog/assets/nyc-third-avenue.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">Introduction</summary></entry><entry><title type="html">Software Engineering Internship: Bloomberg LP</title><link href="http://localhost:4000/blog/school/2018/05/02/bloomberg-internship.html" rel="alternate" type="text/html" title="Software Engineering Internship: Bloomberg LP" /><published>2018-05-02T19:49:29-04:00</published><updated>2018-05-02T19:49:29-04:00</updated><id>http://localhost:4000/blog/school/2018/05/02/bloomberg-internship</id><content type="html" xml:base="http://localhost:4000/blog/school/2018/05/02/bloomberg-internship.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt; Table of contents &lt;/b&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;#intro&quot;&gt; Introduction &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#whatidid&quot;&gt; What I did at Bloomberg &lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#term1b&quot;&gt; Term 1B: Desktop API / Excel Add-In Team &lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#term2a&quot;&gt; Term 2A: Fixed Income Search Team &lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#application&quot;&gt; Application Process &lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#application&quot;&gt; Applying&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#interviews&quot;&gt; Interviews &lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#compensation&quot;&gt; Compensation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#projectselection&quot;&gt; Project Selection&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#housing&quot;&gt; Corporate Housing &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#internevents&quot;&gt; Internship Events &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#perks&quot;&gt; Perks &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#office&quot;&gt; 731 Lexington + 120 Park Offices&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div id=&quot;intro&quot;&gt;
-&lt;/div&gt;
-&lt;p&gt;Bloomberg LP is the world’s largest financial data company and provider of real-time analytics for the financial world. The Bloomberg Terminal, which costs ~$25,000 per customer has over 325,000 subscribers. The Terminal is an entire ecosystem. This includes chat, email, news, financial data, electronic trading platform, and much more.&lt;/p&gt;
-
-&lt;p&gt;The interesting part of Bloomberg is - there’s millions of financial instruments including stocks ticking several times per second in the markets, how can you make use of all that data?&lt;/p&gt;
-
-&lt;p&gt;Just one example, apart from setting all the infrastructure to retrieve, process, refine and persist all the ticks from exchanges around the world - is using sentimental analysis on news stories to predict how the market will react to a news release before humans have time to react.&lt;/p&gt;
-
-&lt;p&gt;I interned at Bloomberg in Summer 2017 and returned for Winter 2018. Below you can see a Terminal.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Bloomberg_Terminal.jpg/1200px-Bloomberg_Terminal.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;http://lebow.drexel.edu/sites/default/files/1422027615-bblaunchpadgraphic.PNG&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;term1b&quot;&gt; Term 1B: Desktop API / Excel Add-In Team&lt;/h3&gt;
-&lt;p&gt;Click &lt;a href=&quot;/blog/school/2017/08/26/firstcoop.html&quot; target=&quot;_blank&quot;&gt; here &lt;/a&gt; to learn about my work done during my first co-op.&lt;/p&gt;
-
-&lt;h3 id=&quot;term2a&quot;&gt; Term 2A: Fixed Income Search Team &lt;/h3&gt;
-&lt;p&gt;Click &lt;a href=&quot;/blog/school/2018/05/01/secondcoop.html&quot; target=&quot;_blank&quot;&gt; here &lt;/a&gt; to learn about my work done during my second co-op.&lt;/p&gt;
-
-&lt;h3 id=&quot;application&quot;&gt; Applying &lt;/h3&gt;
-&lt;p&gt;Since I attend the University of Waterloo, I went through our job board. I submitted my resume and grade report. I was then contacted for an on-campus interview. The position was fairly competitive, over 500 applicants for 8 spots. This was for the New York location.&lt;/p&gt;
-
-&lt;h4 id=&quot;interviews&quot;&gt; Interviews &lt;/h4&gt;
-&lt;p&gt;The interviews were similar to other top technology companies. First round was 60 minutes with two engineers mostly covering 2 algorithm problems (graphs, linked lists) and some language trivia in Java and C++. Second round was 15 minutes with human resources, 30 minutes with a hiring manager for team selection and 45 minutes with a senior developer for a system design question.&lt;/p&gt;
-
-&lt;h4 id=&quot;compensation&quot;&gt; Compensation &lt;/h4&gt;
-&lt;p&gt;Compensation is extremely competitive with the other giants (Google, Facebook), and for returning interns you get an additional $3/hr USD. You also receive corporate housing in Manhattan (or you can take $5100 post-tax stipend), and an additional $2000USD relocation stipend. There is also the option of doing overtime.&lt;/p&gt;
-
-&lt;h4 id=&quot;projectselection&quot;&gt; Project Selection &lt;/h4&gt;
-&lt;p&gt;I got to pick from 3-5 projects prior to accepting my offer. I have seen a large variety of projects, though generally you will work on your own self contained project. Common topics include research projects using machine learning which are more proof-of-concept work, or implementing a utility which may hit production. There’s a bunch of projects also involving databases (combdb2), distributed caches, and big data with Hadoop and Spark.&lt;/p&gt;
-
-&lt;h3 id=&quot;housing&quot;&gt; Corporate Housing &lt;/h3&gt;
-&lt;p&gt;Bloomberg provides housing. You can get to the office within 10 minutes taking the subway, or choose to walk within 25 minutes. The rooms themselves aren’t the best, but you get used to it. We also get access to the gym downstairs, swimming pool and a few events like concerts/talks within the 92y.&lt;/p&gt;
-
-&lt;p&gt;Below is a picture of the single-room dorm style corporate housing. There is also a shared kitchen and shared washrooms.
-&lt;img src=&quot;/blog/assets/bloomberg-housing.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Location wise, it is close to central park and several stores like Wholefoods.
-&lt;img src=&quot;/blog/assets/bloomberg-map.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;internevents&quot;&gt; Internship Events&lt;/h3&gt;
-&lt;p&gt;We had a ridiculous amount of events, though they are all optional if you’re not into them. Here’s a non-exhaustive list of my summer term:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data-center tour&lt;/li&gt;
-  &lt;li&gt;Broadway show&lt;/li&gt;
-  &lt;li&gt;Soccer game @ Yankees stadium&lt;/li&gt;
-  &lt;li&gt;Bloomberg’s annual picnic (rented island)&lt;/li&gt;
-  &lt;li&gt;Overnight puzzle challenge (16 hours overtime!)&lt;/li&gt;
-  &lt;li&gt;Volunteering day building bikes&lt;/li&gt;
-  &lt;li&gt;CodeCon algorithm contest&lt;/li&gt;
-  &lt;li&gt;Scavenger hunt around New York&lt;/li&gt;
-  &lt;li&gt;Board game nights&lt;/li&gt;
-  &lt;li&gt;Rubik’s cube event&lt;/li&gt;
-  &lt;li&gt;Laser tag&lt;/li&gt;
-  &lt;li&gt;Escape room trips&lt;/li&gt;
-  &lt;li&gt;Intern project showcase&lt;/li&gt;
-  &lt;li&gt;Speaker series (i.e, Michael Bloomberg)&lt;/li&gt;
-  &lt;li&gt;Weekly Tech Taco Tuesdays&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe width=&quot;740&quot; height=&quot;430&quot; src=&quot;https://www.youtube.com/embed/LUZZJq9JM4Q&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;h3 id=&quot;perks&quot;&gt; Perks&lt;/h3&gt;
-&lt;p&gt;You get access and can bring guests to over 90 museums in New York including the 9/11 memorial museum, intrepid, MOMA, Guggenheim, etc. You just have to show your badge!&lt;/p&gt;
-
-&lt;p&gt;For the most important part of every internship, here’s the stuff we got first day in the Winter 2018 term:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Q08JnBU.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;office&quot;&gt;Office&lt;/h2&gt;
-&lt;p&gt;The office is sleek and modern throughout. In New York you will be placed in 1 of 3 offices, either in 731 Lexington (HQ), 120 Park or 919 3rd Avenue. Here are several pictures:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://pixel.nymag.com/imgs/daily/intelligencer/2013/12/02/02-bloomberg-tower-731-lexington.w710.h473.2x.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.vno.com/img/244d4a343d7d2823d1d444cea2acb53174612590++600+0/731l_731l731_lex_1_large_1486362882.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://segd.org/sites/default/files/styles/galleryformatter_slide/public/04-bloomberg-honor-2006-award-gdap.jpg?itok=HGHaSt5r&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://media.glassdoor.com/l/79/d4/37/c5/pantry.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://media.glassdoor.com/l/07/91/27/06/120-park-new-york-office-pantry.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You get breakfast, soup at 12:00pm, and dinner at 8:00pm. The pantry is always open, and stocked with healthy and unhealthy food, though sometimes there’s special food at certain hours like ice-cream on Fridays and hot chocolate during the winter terms.&lt;/p&gt;
-
-&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
-&lt;p&gt;I had a great time at Bloomberg, as you can probably tell since I chose to return for another internship. When I got my return offer, I also had the option to work in the San Francisco, New York or London offices. Thanks for reading!&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #2: Distributed cross-collection joins</title><link href="http://localhost:4000/blog/school/2018/05/01/secondcoop.html" rel="alternate" type="text/html" title="Work Term #2: Distributed cross-collection joins" /><published>2018-05-01T19:49:29-04:00</published><updated>2018-05-01T19:49:29-04:00</updated><id>http://localhost:4000/blog/school/2018/05/01/secondcoop</id><content type="html" xml:base="http://localhost:4000/blog/school/2018/05/01/secondcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Click &lt;a href=&quot;/blog/school/2018/05/02/bloomberg-internship.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to learn more about my overall experience at Bloomberg.&lt;/p&gt;
-
-&lt;h3 id=&quot;term1b&quot;&gt; Fixed Income Core - Search Team&lt;/h3&gt;
-&lt;p&gt;In Winter 2018, I joined the Fixed Income Search Team. My team was responsible for powering all Fixed Income Search functionality on Bloomberg Terminals (including &lt;code&gt;SRCH&lt;/code&gt; and 70+ other functions including &lt;code&gt;DDIS&lt;/code&gt; and &lt;code&gt;LEAG&lt;/code&gt;). My work was heavily focused on their search infrastructure, and extending the capabilities of Apache Solr’s (open-source search platform) cross-collection join.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/apache-solr-lucene.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Introducing high-performance join capabilities for sharded collections and SolrCloud clusters to Solr was my primary project. By allowing for joins across sharded collections, the Lucene indices could be scaled horizontally across many nodes allowing for larger collections and faster performance. Joins across SolrCloud clusters allows different teams to perform joins across their datasets without the need of duplicate data - which was an issue for our team. As teams shift towards Bloomberg’s new infrastructure for “Solr as a service”, teams could very quickly join across data-sets by simply providing the ZooKeeper host address for the other SolrCloud cluster. This has impact not only for my team, but for many other teams across all of Bloomberg.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// ZooKeeper host allows for retrieval of clusterstate for cross-cloud joins
-fq={!join from=inner_id to=outer_id zkHost=192.12.3.17 fromIndex=cB}zzz:vvv
-
-// Allows for nested joins as well
-fq={!join from=inner_id to=outer_id zkHost=192.12.3.17 fromFq=&quot;....&quot; fromIndex=cB}zzz:vvv
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The general stages of the join are:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The join is invoked as a &lt;code class=&quot;highlighter-rouge&quot;&gt;PostFilter&lt;/code&gt;, meaning that its caching behavior indicates it runs after the other &lt;code class=&quot;highlighter-rouge&quot;&gt;fq&lt;/code&gt; queries. This is the best practice for heavier queries.&lt;/li&gt;
-  &lt;li&gt;The containerization process begins in &lt;code class=&quot;highlighter-rouge&quot;&gt;JoinQParserPlugin&lt;/code&gt;, which then will create a new &lt;code class=&quot;highlighter-rouge&quot;&gt;CrossCloudJoinPostFilter&lt;/code&gt; instead of the traditional single-sharded cross-core joins.&lt;/li&gt;
-  &lt;li&gt;After instantiating the query object, it extends the &lt;code class=&quot;highlighter-rouge&quot;&gt;ExtendedQueryBase&lt;/code&gt;, meaning terms will be collected in &lt;code class=&quot;highlighter-rouge&quot;&gt;DelegatingCollector&lt;/code&gt; and intersected with the “from collection” documents.&lt;/li&gt;
-  &lt;li&gt;Fetching the ZooKeeper clusterstate information, making it possible to map/reduce to all the shards and retrieve the values in a distributed fashion.&lt;/li&gt;
-  &lt;li&gt;For rapid retrieval of fields, Lucene uninverting data-structures (namely &lt;code class=&quot;highlighter-rouge&quot;&gt;NumericDocValues&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;BinaryDocValues&lt;/code&gt;) are used allowing for &lt;code class=&quot;highlighter-rouge&quot;&gt;O(n)&lt;/code&gt; retrieval (&lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; = document count)&lt;/li&gt;
-  &lt;li&gt;To trigger the uninverting data-structures, a custom request handler is invoked allowing for nested joins and marshalling the results back in &lt;code class=&quot;highlighter-rouge&quot;&gt;javabin&lt;/code&gt; serialization format.&lt;/li&gt;
-  &lt;li&gt;Results are unmarshalled and aggregated in either a hashset or roaring bitmap (cache friendly compressed bitset) and intersected while traversing using &lt;code class=&quot;highlighter-rouge&quot;&gt;LeafReaderContext&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Collect documents that intersect in the &lt;code class=&quot;highlighter-rouge&quot;&gt;DelegatingCollector&lt;/code&gt; if they are found in the bitmap or hashset - these are the final join result documents.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Performance is critical for Bloomberg Terminal users, and as a result the join was very heavily profiled and optimized. In short, migrating from streaming expression’s intersect to the newer join code reduces query times on average by 87.3%! I created an automated benchmarking system allowing for chart visualizations and regressions, appropriate JVM warming up, collection cache resetting along with deploying SolrCloud clusters and ZooKeeper ensembles across Bloomberg’s New York and New Jersey datacenters.&lt;/p&gt;
-
-&lt;p&gt;The most significant speed-up came from leveraging uninverting data-structures from Lucene, which allow for rapid field-lookups. By creating a custom request handler endpoint on Solr, this allows for rapid retrieval of fields that can be sent back in proprietary binary format over the network. I also researched heavily different data-structures and compression techniques. This included leveraging LZ4, Burrows-Wheeler Transform and Huffman Coding for strings, in addition to a custom join for my team leveraging compressed (roaring) bitmaps. At the end, I prepared the patch to be pushed upstream, which included documentation and unit tests.&lt;/p&gt;
-
-&lt;p&gt;For my team specifically, the compressed roaring bitmaps allowed for much superior performance due to CPU spatial cache locality, improvement of runs and reducing over the network latency via compression. Following the original implementation of the roaring bitmaps, the bitmaps is partioning into three types of sub-bitmaps depending on the density of runs.&lt;/p&gt;
-
-&lt;p&gt;The size of the partions are set to align with CPU cache lines, below is an example (albiet using the simpler binary-type roaring model):
-&lt;img src=&quot;/blog/assets/bloomberg-roaring.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lastly, I also worked on designing a middleware service integrating Solr with Bloomberg’s service oriented architecture. Applications of this includes augmenting search results with real-time pricing, leveraging Apache Spark services for time-series bond screening and more! This project involved creating custom handlers in Java for Solr, in addition to creating schemas and a C++ service that can interact with other Bloomberg services.&lt;/p&gt;
-
-&lt;p&gt;As always, I would like to thank my mentor and team lead (in addition to the open-source community!) for providing guidance on my work. I had a blast working on Solr, and found the project very challenging but also rewarding.&lt;/p&gt;</content><summary type="html"></summary></entry><entry><title type="html">Work Term #1: Recommender systems and chatbots</title><link href="http://localhost:4000/blog/school/2017/08/26/firstcoop.html" rel="alternate" type="text/html" title="Work Term #1: Recommender systems and chatbots" /><published>2017-08-26T19:49:29-04:00</published><updated>2017-08-26T19:49:29-04:00</updated><id>http://localhost:4000/blog/school/2017/08/26/firstcoop</id><content type="html" xml:base="http://localhost:4000/blog/school/2017/08/26/firstcoop.html">&lt;p&gt;&lt;img src=&quot;/blog/assets/logo-bloomberg.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Anything I say here is my own words, and does not represent Bloomberg LP. All images inside this post can either be found online or are public information.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Click &lt;a href=&quot;/blog/school/2018/05/02/bloomberg-internship.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to learn more about my overall experience at Bloomberg.&lt;/p&gt;
-
-&lt;h3 id=&quot;term1b&quot;&gt; Desktop API / Excel Add-In Team&lt;/h3&gt;
-&lt;p&gt;In Summer 2017, for my first co-op term, I joined the Excel Add-In team, also known as Desktop API. The Bloomberg Terminal comes with an Excel Add-In, allowing for users to import financial data from Bloomberg straight into their Excel spreadsheets and perform financial analysis. This includes both historical data in addition to real-time (for which the Excel cells update in real-time). There was a wide gamut of other features as well, such as charting and templates for financial documents.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/bloomberg-excel.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;My first project was developing a machine learning collaborative filtering recommender system to generate personalized recommendations for the 250,000+ monthly Excel Add-In users in terms of which Excel Add-In functions they should try. This was part of “Feature Explorer”, in an effort to make the users to become acquainted with the various functions Bloomberg provides in their Add-In. As part of my project, I worked with Python and several scientific/machine learning frameworks and libraries including NumPy, SciPy, Matplotlib and Scikit-Learn.  &lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt; I initially prototyped several different approaches to solving this problem, but after guidance from members of Bloomberg’s data-science teams we settled on an approach using statistical analysis on different clusters of users based on Bloomberg Terminal data. While I cannot go into details of the algorithm, some neat optimizations included lazily precomputing recommendations per-cluster instead of per-user, such that only once the service is queried - then it would lookup the historical feature usage data for that user and provide a recommendation. This significantly sped-up training time for the algorithm, while generating the recommendations remained near-constant time.
-&lt;br /&gt;&lt;br /&gt; After completing my first project I received another one, which was prototyping chatbot approaches for generating associated BQL (Bloomberg Query Language) queries for financial questions. Since my team was heavily invested in the Microsoft ecosystem it was worth testing their newly released Microsoft Bot Framework, which leverages their Cognitive Services suite for ML/NLP. 
-&lt;br /&gt;&lt;br /&gt; This project was much simpler in terms of data-science, but more challenge in terms of software engineering. The chatbot had many moving components which meant having a solid architectural design was critical. Examples include handling the user-interaction (localization, user interface, chatbot dialogs), fetching financial data from Bloomberg, fetching ML/NLP information from Cognitive Services and other sources, generating the BQL queries, all while ensuring everything is modular and adding/removing functionality can work flawlessly. It was surprisingly a lot of code, but I worked in Node.js which was fairly straightforward and fun to work with.
-&lt;br /&gt;&lt;br /&gt;All in all, I enjoyed my first real work-term and had a helpful mentor and manager who were very supportive and provided feedback. I learned a lot about machine learning and web development in this internship, both of which I found very fascinating and will be useful tools for the future.
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><summary type="html"></summary></entry></feed>
+&lt;img src=&quot;/blog/assets/nyc-third-avenue.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">Introduction</summary></entry></feed>
