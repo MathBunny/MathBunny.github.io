@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-07-22T17:23:49-04:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-07-24T13:17:28-04:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
 </subtitle><entry><title type="html">Living in Chicago for Fourth Months</title><link href="http://localhost:4000/blog/coop/2019/07/16/chicago.html" rel="alternate" type="text/html" title="Living in Chicago for Fourth Months" /><published>2019-07-16T19:49:29-04:00</published><updated>2019-07-16T19:49:29-04:00</updated><id>http://localhost:4000/blog/coop/2019/07/16/chicago</id><content type="html" xml:base="http://localhost:4000/blog/coop/2019/07/16/chicago.html">&lt;p&gt;I am fortunate to have spent an internship at Citadel Securities in Chicago, Illinois.&lt;/p&gt;
 
 &lt;p&gt;Citadel Securities is the largest market maker in the United States responsible for executing over 20% of US equity trades, including over 39.5% of retail shares traded. You can watch &lt;a href=&quot;https://www.youtube.com/watch?v=2u007Msq1qo&quot; target=&quot;_blank&quot;&gt;this video&lt;/a&gt; outlining high frequency trading (plus you get to see my co-workers, it was filmed behind my desk!).&lt;/p&gt;
@@ -21,7 +21,8 @@
 
 &lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-view2.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-lightning-1.jpg&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;/blog/assets/chicago-lightning-1.jpg&quot;/&gt; --&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/chicago-lightning.gif&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is the view of Chicago from the Planetarium.&lt;/p&gt;
 
