@@ -62,15 +62,15 @@
           this.setState({'disabled': filterArr, 'pageNumber': 1});
         }
 
-        handleNumPages(pageCount) {
+        handleNumPages(pageCount, results) {
           // Duplicate variables?
-          this.setState({ 'numPages': pageCount, 'endPageNum': Math.max(1, pageCount) });
+          this.setState({ 'numPages': pageCount, 'endPageNum': Math.max(1, pageCount), 'resultCount': results });
         }
 
         getModelData() {
             const http = new XMLHttpRequest();
             const url ='https://us-central1-toy-car-visualizer.cloudfunctions.net/retrieveModels';
-            http.open("GET", url);
+            http.open('GET', url);
             http.send();
 
             // Properly use async/await
@@ -86,83 +86,6 @@
         render() {
           if (this.modelData == undefined) {
             this.modelData = this.getModelData();
-            /*
-            // fetch data
-            this.modelData = [{
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            },
-            {
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            },
-            {
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            },
-            {
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            },
-            {
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            },
-            {
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            },
-            {
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            },
-            {
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            },
-            {
-              'brand': 'Mercedes-Benz',
-              'model': 'SLS AMG',
-              'color': 'silver',
-              'type': 'convertible',
-              'year': '2017',
-              'src': 'https://firebasestorage.googleapis.com/v0/b/toy-car-visualizer.appspot.com/o/testCar.jpg?alt=media&token=e1e5588a-9ef2-4f12-85d6-2579644b9f0f'
-            }
-            ];
-            //this.modelData = this.modelData.slice(0, 1);
-            //console.log(this.modelData);*/
           }
 
           return (
@@ -176,10 +99,10 @@
                 <div class="col-8">
                   <div class="container">
                     <div class="row">
-                      <PageView numPages={this.state.numPages} callback={this.handleNumPages.bind(this)} data={JSON.stringify(this.state.modelData)} disabled={this.state.disabled} currPage={this.state.pageNumber}/>
+                      <PageView numPages={this.state.numPages} callback={this.handleNumPages.bind(this)} data={JSON.stringify(this.state.modelData)} disabled={this.state.disabled} currPage={this.state.pageNumber} numRes={this.state.resultCount}/>
                     </div>
                   </div>
-                  <Pagination startPage={this.state.startPageNum} handlePageSet={this.handlePageSet.bind(this)} endPage={this.state.endPageNum} currPage={this.state.pageNumber}/>
+                  <Pagination startPage={this.state.startPageNum} handlePageSet={this.handlePageSet.bind(this)} endPage={this.state.endPageNum} currPage={this.state.pageNumber} numRes={this.state.resultCount} />
                 </div>
               </div>
             </div>
@@ -189,6 +112,8 @@
 
       class PageView extends React.Component {
         render() {
+          const RES_PER_PAGE = 20;
+
           let arr = [];
           this.props.data = JSON.parse(this.props.data);
           for (let x = 0; x < this.props.data.length; x++) {
@@ -206,14 +131,15 @@
 
           // Load images for those in the array!
           arr = arr.map(entry => <PictureComponent src={entry['src']} title={entry['brand'] + ' ' + entry['model']} year={entry['year']}/>);
+
           
-          let numPages = Math.ceil(arr.length / 8);
-          if (this.props.numPages != numPages) {
-              this.props.callback(numPages);
+          let numPages = Math.ceil(arr.length / RES_PER_PAGE);
+          if (this.props.numPages != numPages || this.props.numRes != arr.length) {
+              this.props.callback(numPages, arr.length);
           }
 
-          let offset = (this.props.currPage * 8) - 8;
-          arr = arr.slice(offset, offset + 8);
+          let offset = (this.props.currPage * RES_PER_PAGE) - RES_PER_PAGE;
+          arr = arr.slice(offset, offset + RES_PER_PAGE);
 
           let endPageNum = `numPages`;
 
@@ -225,12 +151,6 @@
           arr.forEach(entry => resp.push(entry));
           resp.push(<br/>);
           return resp;
-          /*
-          return (
-            <div>
-            {arr}
-            {paginator}
-           </div>);*/
         };
       }
 
@@ -314,6 +234,8 @@
                     {ticks}
                   </ul>
                 </nav>
+                <p> Result count: {this.props.numRes} </p>
+               {/* <p> Result count: {this.props.numRes} </p> */}
               </div>
             );
           }
@@ -326,8 +248,6 @@
         }
 
         refresh = () => {
-          console.log('refresh!');
-          console.log(this.state.set);
           this.props.callback(this.props.title, this.props.filter, this.state.set);
           this.props.update();
         }
@@ -353,7 +273,7 @@
           const filter = capitalizeFirstLetter(this.props.filter);
 
           return (
-            <div>
+            <div class={this.props.title}>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="checked" onChange={this.handleCheck.bind(this)} />
                 <label class="form-check-label active" for="inlineCheckbox1">{filter}</label>
@@ -372,6 +292,16 @@
       };
 
       class Filter extends React.Component {
+
+        toggleAll() {
+          Array.from(document.getElementsByClassName(this.props.title)).forEach(item => {
+            Array.from(item.getElementsByClassName('form-check-input')).forEach((input) => {
+              input.click();
+            });
+          }
+          );
+        }
+
         render() {
           const rows = [];
           this.props.filters.forEach(filter => {
@@ -382,6 +312,7 @@
             <div>
               <FilterTitle title={this.props.title}/>
               {rows}
+              <button type="button" id="toggle" class="btn btn-outline-primary" onClick={this.toggleAll.bind(this)}>Toggle</button>
               <hr/>
             </div>
           );
@@ -400,9 +331,6 @@
             models.forEach(model => {
                 const keys = Object.keys(model);
                 keys.filter(key => !blacklist.has(key)).forEach((key) => {
-                    if (!blacklist.has(key)) {
-
-                    }
 
                     if (attrib.get(key) === undefined) {
                         attrib.set(key, new Set());
@@ -417,6 +345,8 @@
               for (let o of attrib.get(key)) {
                 arr.push(o);
               }
+
+              arr.sort();
               filters.push(<Filter update={this.props.update} callback={this.props.callback} filters={arr} title={key}/>);
             });
 
@@ -441,7 +371,7 @@
 
             for (let o of Object.keys(this.state)) {
               if (this.state[o] == false) {
-                let vals = o.split('-');
+                let vals = o.split('=');
                 let resp = {};
                 resp[vals[0]] = vals[1];
                 arr.push(resp);
@@ -453,10 +383,10 @@
           callback(key, value, unset) {
             let diffObj = {};
             if (!unset) {
-              diffObj[key + '-' + value] = false;
+              diffObj[key + '=' + value] = false;
             }
             else {
-              diffObj[key + '-' + value] = true;
+              diffObj[key + '=' + value] = true;
             }
 
             this.setState(diffObj);//, this.updateParent);
@@ -471,7 +401,10 @@
               <div>
                 <h4> Filters </h4>
                 <Filters update={this.updateParent.bind(this)} callback={this.callback.bind(this)} models={this.props.models}/>
+                <br/>
                 <button type="button" id="toggle" class="btn btn-outline-primary" onClick={this.toggleAll}>Toggle</button> <button type="button" class="btn btn-primary" onClick={this.updateParent.bind(this)}>Search</button>
+                <br/>
+                <br/>
               </div>
             );
           }
@@ -483,7 +416,7 @@
             <div class="col3">
               <div class="container">
                 <div class="card bg-dark text-white">
-                  <img height="180" src={this.props.src}/>
+                  <img height="180" src={this.props.src}/> {/* {this.props.src} */}
                   <div class="card-img-overlay">
                     <h5 class="card-title">{this.props.title}</h5>
                     <br/><br/><br/><br/>
