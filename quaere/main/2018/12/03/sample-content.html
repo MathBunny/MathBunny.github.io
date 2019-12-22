@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Quaere Search Engine Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/quaere/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/quaere/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <a href="/"><h1 class="project-name" style="text-decoration:none; color:white;">Quaere Search Engine Library</h1></a>
+  <h2 class="project-tagline">Low-level search engine library and distributed search platform in C++</h2>
+  <a href="#" class="btn">View on GitHub</a>
+  <a href="#" class="btn">Download .zip</a>
+  <a href="#" class="btn">Download .tar.gz</a>
+</section>
+
+    <section class="main-content">
+      
+      <p>Welcome to the homepage of Quaere! Quaere provides a lower level search engine library and distributed search platform designed for fast indexing and large-scale search capabilities.</p>
+
+<p>It’s open-source and written entirely in C++.</p>
+
+<hr />
+
+<p>Setting up your own cluster can be accomplished in under 5 minutes:</p>
+
+<p>1) Download the <code class="highlighter-rouge">.zip</code> or <a href=""> build from GitHub </a></p>
+
+<p>2) Start the HTTP server (single instance on port 8080)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>./bin/quaere start <span class="nt">-p</span> 8080 <span class="nt">--single</span></code></pre></figure>
+
+<p>3) Create <code class="highlighter-rouge">classrooms</code> collection to store our data</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl <span class="nt">-XPUT</span> localhost:8080/classrooms <span class="nt">-H</span> <span class="s1">'content-type:application/xml'</span> <span class="nt">-d</span> <span class="s1">''</span></code></pre></figure>
+
+<p>4) Index our data to the collection</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl <span class="nt">-XPUT</span> localhost:8080/classrooms <span class="nt">-H</span> <span class="s1">'content-type:application/xml'</span> <span class="nt">-d</span> <span class="s1">''</span></code></pre></figure>
+
+<p>5) Load the cluster search dashboard</p>
+
+<p>6) Retrieve all students with cumulative GPA above 3.5</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Quaere Search Engine Library</a> is maintained by <a href="http://horatiulazu.ca">Horatiu Lazu</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
