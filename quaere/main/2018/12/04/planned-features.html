@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Quaere Search Engine Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/quaere/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/quaere/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <a href="/"><h1 class="project-name" style="text-decoration:none; color:white;">Quaere Search Engine Library</h1></a>
+  <h2 class="project-tagline">Low-level search engine library and distributed search platform in C++</h2>
+  <a href="#" class="btn">View on GitHub</a>
+  <a href="#" class="btn">Download .zip</a>
+  <a href="#" class="btn">Download .tar.gz</a>
+</section>
+
+    <section class="main-content">
+      
+      <style type="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+<h1 id="table-of-contents">Table of contents</h1>
+<ol>
+  <li>Core Engine
+    <ul>
+      <li><a href=""> Lovin and Porter’s Snowball Stemmer</a></li>
+      <li><a href=""> Compressed Terms Dictionary</a></li>
+      <li><a href=""> Terms Front Coding</a></li>
+      <li><a href=""> Compressed Postings List</a></li>
+      <li><a href=""> Positional Indexing</a></li>
+      <li><a href=""> Trigram Wildcard Index</a></li>
+      <li><a href=""> Single Pass In-Memory Index Construction</a></li>
+      <li><a href=""> Logarithmic Dynamic Index Merging</a></li>
+      <li><a href=""> Query Optimizations</a></li>
+      <li><a href=""> Uninverting Hybrid Data-Structures</a></li>
+    </ul>
+  </li>
+  <li>Distributed Platform
+    <ul>
+      <li><a href=""> Proxygen HTTP Server</a></li>
+      <li><a href=""> Swagger API Definitions</a></li>
+      <li><a href=""> XML Schema + Document Parser</a></li>
+      <li><a href=""> MapReduce Parser + Inverter</a></li>
+      <li><a href=""> ZooKeeper Registration and Heartbeat</a></li>
+      <li><a href=""> ZooKeeper Leadership Election</a></li>
+    </ul>
+  </li>
+  <li>Infrastructure
+    <ul>
+      <li><a href=""> Build system</a></li>
+      <li><a href=""> Continous Integration</a></li>
+      <li><a href="">Google Test Unit Testing</a></li>
+    </ul>
+  </li>
+  <li>Administrative Tools
+    <ul>
+      <li><a href="">Command-line Utilities</a></li>
+      <li><a href="">Qt Dashboard</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="core-engine-development-roadmap">Core Engine Development Roadmap</h1>
+<p><em>Last updated: December 7, 2018</em></p>
+
+<h3 id="lovin-and-porters-snowball-stemmer">Lovin and Porter’s Snowball Stemmer</h3>
+<blockquote>
+  <p><a href="https://github.com/MathBunny/quaere/issues/1" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<p>For every field of type <code class="highlighter-rouge">text</code>, the string is tokenized by whitespace, case folded (alternatively using an optional heuristic case normalizer), and then a stemmer is executed aiming to develop an equivalence class between normalized tokens. After, if applicable, stop words are eliminated from the types to yield the final terms list, which is added to the inverted index’s vocabulary.</p>
+
+<p>Lovin’s stemmer, originally created in 1968 is one of the original stemming algorithms published. It is an $O(n)$ algorithm which traverses the string just twice and instead has 294 endings, 29 conditions and 35 transformation rules. The transformation rules are used to handle English homological oddities caused by the Latin word’s behavior of the second conjugation (ex: assume, assumption).</p>
+
+<p>Porter’s stemmer, published in 1979 by Martin Porter is one of the most popular stemmers used. While still $O(n)$ complexity, the algorithm traverses the string five times but requires less memory usage. In 2001, Martin further enhanced the stemmer and released a new version called Porter2 (also known as Snowball Stemmer), and remains as one of the most popular stemmers to this day.</p>
+
+<h3 id="compressed-terms-dictionary">Compressed Terms Dictionary</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<p>The data-structure containing the terms dictionary features two optimizations including $k$-blocked storage and front coding. Disk space conservation is not the only advantage of compression, rather it improves disk I/O time, use of file-system cache and hence improves the speeds of searches.</p>
+
+<p>Blocked storage allows for unbounded string terms while remaining compact. First, all terms are sorted in lexiographical order. After, the dictionary of terms is partioning into $\lceil \frac{n}{k} \rceil$ buckets. Each bucket will contain a string with all the terms that fall within that bucket that is front-coded (see below). After, an index will contain the frequency of each term, along with a pointer to the postings list and for every $i^{th}$ item where $i \cong 0$ (mod $k$) a pointer to the terms for that bucket.</p>
+
+<p><img src="/assets/terms-dictionary.png" alt="" /></p>
+
+<p>(Note: The terms block pointer isn’t actually null, otherwise it will still consume 8 bytes of memory)</p>
+
+<h3 id="terms-front-coding">Terms Front Coding</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<p>The front-coding takes the $k^{th}$ block and preserves forward runs by taking a common prefix and indicated delta suffixes. Formally, for $n_0, …, n_{k-1}$ terms in the $k$ block, take a pointer $p$ where $0 ≤ p &lt; max(|n_i|)$ with $|n_i|$ being defined as the length of the term at block $n_i$, and return the maximum value of $p$ such that all the characters up to $k$ are common for each other term in that block. The string begins by outputting the $p$ length substring followed by *. The procedure then iterates from $n_1, …, n_{k-1}$, for each outputs $\Delta x_i i$ with $x_i$ defined as the unique suffix for the $i^{th}$ term.</p>
+
+<p>Here’s an example for $k=4$ and the following terms: “automata, automate, automatic, automation”:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; automata,automate,automatic,automation
+&gt; 8automata8automate9automatic10automation
+&gt; 8automat*a1Δa1Δe2Δic3Δion
+</code></pre></div></div>
+
+<p>It’s easy to see that this algorithm is $O(n)$ where $n$ is the length of the string containing all the terms concatenated.</p>
+
+<h3 id="compressed-postings-list">Compressed Postings List</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<p>For compression of docIDs, $\gamma$ compression is applied. Unary codes of $n$ is defined as a string of $n$ 1s followed by a 0. The $\gamma$ compression is composed of a pair of <em>length</em> and <em>offset</em> bits. For a number $M$, the offset is computed as $M$ with the first bit removed. The length is simply the unary code of the length of $M$, which is $\lceil log_{2} M \rceil + 1$. This process is similar to <a href="">run length encoding</a>.</p>
+
+<p>Clearly, the number of bits in the length is $\lceil log_{2}M \rceil +1$ and length has $\lceil log_{2}M \rceil$ bits, hence the total number of bits per docID is $2(\lceil log_{2}M \rceil) +1 \in O(logM)$. This is optimal, since if we consider any number $N$, the minimum number of bits required to represent $N$ would be $log_{2}N \in O(log_2{N})$, hence we have an optimal space complexity for loseless compression.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=&gt; [1,7,12,17,34,77]
+=&gt; [1,111,1100,10001,100010,1001101]
+=&gt; [(1, ), (3, 11), (4, 100), (5, 0001), (6, 00010), (7, 001101)]
+=&gt; 1011101111110100111110000111111100001011111110001101
+   ^ ^     ^       ^         ^           ^           
+   1 7     12      17        34          77
+</code></pre></div></div>
+
+<p>Another observation is that since the postings list has an increasing order, it’s possible to leverage delta encoding. The disadvantage of delta encoding is that you cannot perform any non-sequential operations on the postings list, such as binary search. However, the only advantage of having binary search capabilities on the postings list is for asymetric joins, which are not supported.</p>
+
+<h3 id="positional-indexing">Positional Indexing</h3>
+<p>To implement phrase searches (compound term queries), a positional postings list is required. This involves taking the postings list and augmenting information about the token location in the text. One approach is to have a pointer that points to a seperate list - however this would take an additional 8 bytes with no visible improvements.</p>
+
+<p>The better approach would be to integrate it as part of the postings list, however regular retrieval queries shouldn’t have to traverse the entire list of token occurances. Therefore, the list will contain the total length in bits $\gamma$ coded, along with a $\delta$ and $\gamma$ encoded list containing the token positions.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=&gt; [1,7,12,17,34,77]
+=&gt; [1,111,1100,10001,100010,1001101]
+=&gt; [(1, ), (3, 11), (4, 100), (5, 0001), (6, 00010), (7, 001101)]
+=&gt; 1011101111110100111110000111111100001011111110001101
+   ^ ^     ^       ^         ^           ^           
+   1 7     12      17        34          77
+</code></pre></div></div>
+
+<h3 id="trigram-wildcard-index">Trigram Wildcard Index</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<p>Trigram wildcard indexes ($k$-gram where $k=3$) allow for efficient wildcard searches on terms, and use significantly less memory than permuterm b-trees. The procedure to create a trigram wildcard index is to first prepend and append the character <code class="highlighter-rouge">$</code> to each term in the inverted index’s vocabulary.</p>
+
+<p>After, for each trigram in the updated term, add the term to the respective’s trigram’s postings list. It is critical that the postings list remains lexiographically sorted. For querying, all defined trigrams in the wildcarded term $T$ are queried in the index, and then using an $n$-merge for all $n$ trigrams from $T$ results are formed.</p>
+
+<p>However, this may yield incorrect responses. In the figure below, terms <code class="highlighter-rouge">bandaid</code> and <code class="highlighter-rouge">bananas</code> are indexed, and the wildcard query <code class="highlighter-rouge">ban*an*an</code> executed. Since the terms don’t count the location of the occurance, <code class="highlighter-rouge">bandaid</code> will match since it’s contained in the intersection of all the bigram’s postings lists.</p>
+
+<p><img src="/assets/bigram-error.png" alt="" /></p>
+
+<p>Therefore, a post-filter is executed using dynamic programming with $O(N^2)$ time complexity to verify candidate terms for wildcard matching. This is achieved using a simple bottom-up algorithm, as demonstrated below. The base condition is $f(0, 0) = 1$, with transition function for the string $S$ and candidate pattern $P$:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+f(x, y) = \begin{cases}
+1, & f(x-1, y) \vee f(x, y-1) \Leftrightarrow ((S[x]=P[y]) \vee (P[y]=*)) \\
+0
+\end{cases} %]]></script>
+
+<p>The final result is then $f(|{S}|, |P|)$.</p>
+
+<p><img src="/assets/wildcard-dp-table.png" alt="" /></p>
+
+<p>The observation that the transition function only looks one row above motivates only storing two rows at a time in the matrix, which improves space complexity from $O(PS)$ to $O(P)$.</p>
+
+<h3 id="single-pass-in-memory-index-construction">Single Pass In-Memory Index Construction</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<p>While an approach such as blocked sort-based indexing has good scaling properties, assuming that a term to termID mapping can be stored in-memory is too strong an assumption to make. Single pass in-memory indexing allows for efficient creation by using terms instead of termIDs, and writing each block’s dictionary to disk and starting new dictionaries for the next block. In essence, the time complexity is $O(T)$ since we use a bucket-sort approach with an incrementally constructed hash.</p>
+
+<p>Each postings list needs to be sorted in lexiographical ordering, to facilitate using a $n$ way merge for all $n$ blocks using a simple priority queue data-structure.</p>
+
+<h3 id="logarithmic-dynamic-index-merging">Logarithmic Dynamic Index Merging</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="query-optimizations">Query Optimizations</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="uninverting-hybrid-data-structures">Uninverting Hybrid Data-Structures</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h1 id="search-platform-development-roadmap">Search Platform Development Roadmap</h1>
+
+<h3 id="proxygen-http-server">Proxygen HTTP server</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="swagger-api-definitions">Swagger API Definitions</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="xml-schema--document-parser">XML Schema + Document Parser</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="mapreduce-parser-and-inverter">MapReduce Parser and Inverter</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="zookeeper-registration-and-heartbeat">ZooKeeper Registration and Heartbeat</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="zookeeper-leadership-election">ZooKeeper Leadership Election</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h1 id="infrastructure-roadmap">Infrastructure Roadmap</h1>
+<h3 id="build-system">Build system</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="continous-integration">Continous integration</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="google-test-unit-testing">Google Test Unit Testing</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h1 id="administration-tools-roadmap">Administration Tools Roadmap</h1>
+<h3 id="command-line-utilities">Command-line Utilities</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+<h3 id="qt-dashboard">Qt Dashboard</h3>
+<blockquote>
+  <p><a href="" target="_blank"> View the current status on GitHub</a></p>
+</blockquote>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Quaere Search Engine Library</a> is maintained by <a href="http://horatiulazu.ca">Horatiu Lazu</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

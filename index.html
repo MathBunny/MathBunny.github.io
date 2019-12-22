@@ -83,23 +83,40 @@
             <div class="col-sm-12 col-sm-offset-0">
                <div class="pfblock-header wow fadeInUp">
                   <br><br><br>
+                  <!-- <img src="./assets/images/MyName.png"/> -->
+
+                  <!-- style="font-family:Source Sans Pro" -->
                   <h1 class="pfblock-title" id="mainTitle">Welcome to my homepage!</h1>
                   <br>
                   <!-- Maybe make it wider? -->
                   <div class="pfblock-subtitle">
-                     Hello, my name is Horatiu Lazu, currently studying Computer Science at the University of Waterloo. I've done several internships in the past including <a href="https://www.citadelsecurities.com/" target="_blank">Citadel Securities</a> in Chicago, <a href="https://www.yelp.com/" target="_blank">Yelp</a>  in San Francisco and two internships at <a href="https://www.bloomberg.com/professional/" target="_blank">Bloomberg LP</a> in New York</a>.
+                     Hello, my name is Horatiu Lazu, currently studying Computer Science at the University of Waterloo. I'm an incoming Software Engineering Intern at <a href="http://facebook.com" target="_blank">Facebook</a> and <a href="http://google.com" target="_blank">Google</a>. Formerly at <a href="https://www.citadelsecurities.com/" target="_blank">Citadel Securities</a> in Chicago, <a href="https://www.yelp.com/" target="_blank">Yelp</a>  in San Francisco and twice at <a href="https://www.bloomberg.com/professional/" target="_blank">Bloomberg LP</a> in New York</a>.
                      <br><br>
-                     Road cycling is my hobby, with my <a href="http://stravawindanalysis.com" target="_blank">Strava Wind Analysis</a> site providing analytics and data visualization to over 70,000 users.<br> Feel free to visit my <a href="./blog/index.html" target="_blank">Blog</a>, <a href="http://github.com/MathBunny" target="_blank">GitHub</a>, or my <a href="http://youtube.com/ComputerBunnyMath123" target="_blank">YouTube Channel</a> that has over 1 million views.
+                     Road cycling is my hobby, with my <a href="http://stravawindanalysis.com" target="_blank">Strava Wind Analysis</a> site providing analytics and data visualization to over 110,000 users.<br> Feel free to visit my <a href="./blog/index.html" target="_blank">Blog</a>, <a href="http://github.com/MathBunny" target="_blank">GitHub</a>, or my <a href="http://youtube.com/ComputerBunnyMath123" target="_blank">YouTube Channel</a> that has over 1.3 million views.
                   </div>
                   <!-- <div class="pfblock-line"></div> -->
                </div>
             </div>
          </div>
          <hr>
+         <center style="margin-bottom:-70px">
+            <div class="pfblock-header wow zoomIn">
+               <img src="./assets/images/CitadelLogoMedium.png" style="margin-right:10px">
+               <img src="./assets/images/GoogleLogoMedium.png" style="margin-right:7px">
+               <img src="./assets/images/BloombergLogoMedium.png" style="margin-top:3px; margin-left:12px">
+               <img src="./assets/images/YelpLogoMedium.png" style="margin-left:12px; margin-top:-10px">
+               <img src="./assets/images/FacebookLogoMedium.png" style="margin-left:10px; margin-top:-5px">
+            </div>
+         </center>
+
          <div class="row" style="display: center; margin-bottom:-20px" id="coops">
             <div class="col-sm-12 col-sm-offset-0">
                <div class="pfblock-header wow zoomIn">
                   <!-- Maybe make it wider? -->
+                  <!-- <a href="#coops" id="google-show"> <img src="./assets/images/GoogleLogo.png"> </a> -->
+                  <a href="#coops" id="fb-show"> <img src="./assets/images/FBLogo.png"> </a>
+                  
+                  <!--<a href="#coops" id="uw-ura1-show"> <img src="./assets/images/WaterlooMathLogo.jpg"> </a> -->
                   <a href="#coops" id="citadel-show"> <img src="./assets/images/CitadelLogo2.png"> </a>
                   <a href="#coops" id="yelp-show"> <img src="./assets/images/YelpLogo.png"> </a>
                   <a href="#coops" id="bloomberg2-show"> <img src="./assets/images/BloombergLogo.png"> </a>
@@ -108,6 +125,74 @@
                </div>
             </div>
          </div>
+         <div class="row" id="fb-coop">
+            <div class="col-lg-12">
+               <div class="iconbox wow fadeIn">
+                  <div class="iconbox-text">
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="FBAccordian">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#FBAccordian" href="#FBCollapse">
+                                 </a>
+                              </div>
+                              <div id="FBCollapse" class="accordion-body collapse">
+                                 <a href=""><img src="./assets/images/FacebookLogoLarge.png"></a>
+                                 <br>
+                                 <div class="pfblock-subtitle" style="font-size:15px">
+                                    <br>In Winter 2020, I am excited to be joining Facebook in Seattle, Washington for the Messenger Real-Time Signals team. Stay posted!
+                                    <br>
+
+                                    <center><a href="#mainTitle"> 
+                                       <div class="scroll-up"></div>
+                                       <button onclick="hideAll();" href="#mainTitle">Hide</button>
+                                       </a>
+                                    </center>
+                                 </div>
+                                 <button id="FBShow" style="display:none;"class="FBSeeMore" data-toggle="collapse" href="#FBCollapse">See More</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!--<div class="row" id="uw-ura1">
+            <div class="col-lg-12">
+               <div class="iconbox wow fadeIn">
+                  <div class="iconbox-text">
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="URAAccordian1">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#URAAccordian1" href="#URACollapse1">
+                                 </a>
+                              </div>
+                              <div id="UWURACollapse1" class="accordion-body collapse">
+                                 <a href=""><img src="./assets/images/WaterlooMathLarge.gif"></a>
+                                 <br>
+                                 <div class="pfblock-subtitle" style="font-size:15px">
+                                    In Summer 2019 I joined Citadel Securities in Chicago, Illinois to work on the trading platform in C++. By combining low-latency software and quantitative research, Citadel Securities <a href="https://www.citadelsecurities.com/products/equities-and-options/" target="_blank">trades over a billion stocks daily</a> constituting ~40% of US retail equities trade volume and is the largest market maker in the US. 
+                                    <br><br>
+                                    <u> <a href="https://www.youtube.com/watch?v=2u007Msq1qo" target="_blank"> Learn more about HFT (High-Frequency Trading) and Citadel. </a> </u><br><br>
+
+                                    <center><a href="#mainTitle"> 
+                                       <div class="scroll-up"></div>
+                                       <button onclick="hideAll();" href="#mainTitle">Hide</button>
+                                       </a>
+                                    </center>
+                                 </div>
+                                 <button id="URAShow1" style="display:none;"class="URASeeMore1" data-toggle="collapse" href="#URACollapse1">See More</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> -->
          <div class="row" id="citadel-coop">
             <div class="col-lg-12">
                <div class="iconbox wow fadeIn">
@@ -345,6 +430,10 @@
                                  </a>
                               </div>
                               <div id="collapseFour" class="accordion-body collapse">
+                                 Google / Display Ads Infrastructure - Software Engineering Intern - 2020<br>
+                                 Facebook / Messenger RT Signals - Software Engineering Intern - 2020<br>
+                                 Citadel Securities / MM Trading Platform - Software Engineering Intern - 2019<br>
+                                 Yelp / Production Engineering - Software Engineering Intern - 2018 <br>
                                  Bloomberg LP / Fixed Income Search - Software Engineering Intern - 2018 <br>
                                  Bloomberg LP / Excel Add-In (DAPI) - Software Engineering Intern - 2017 <br>
                                  Bluesun (WealthServ) - Software Developer Intern - 2016 <br>
@@ -566,7 +655,8 @@
       	// The bug is because you're closing Citadel when opening it the second time from another!
       	 open_panes = {}
       	 fnc_map = {}
-		 companies = ['citadel-coop', 'bluesun-coop', 'bloomberg1-coop', 'bloomberg2-coop', 'yelp-coop'];
+		 // companies = ['citadel-coop', 'bluesun-coop', 'bloomberg1-coop', 'bloomberg2-coop', 'yelp-coop', 'uw-ura1'];
+       companies = ['citadel-coop', 'bluesun-coop', 'bloomberg1-coop', 'bloomberg2-coop', 'yelp-coop', 'fb-coop'];
 		 for (const company of companies) {
 		   	  open_panes[company] = false;   	 	
 		 }
@@ -576,9 +666,13 @@
 		 fnc_map[companies[2]] = 'Bloomberg1Show';
 		 fnc_map[companies[3]] = 'Bloomberg2Show';
 		 fnc_map[companies[4]] = 'YelpShow';
+       // fnc_map[companies[5]] = 'URAShow1';
+       fnc_map[companies[5]] = 'FBShow';
 
 
          function hideAll() {
+            // $("#uw-ura1").hide();
+            $("#fb-coop").hide();
          	$("#citadel-coop").hide();
          	$("#yelp-coop").hide();
          	$("#bloomberg2-coop").hide();
@@ -587,6 +681,31 @@
          }
          
          hideAll();
+         /*$("#uw-ura1-show").click(() => {
+            const company = 'uw-ura1';
+
+            hideAll();
+            $(`#${company}`).show();
+            if (!open_panes[company]) {
+               $(`#${fnc_map[company]}`).click();
+            }
+
+            open_panes[company] = true;
+         });*/
+
+         $("#fb-show").click(() => {
+            const company = 'fb-coop';
+
+            hideAll();
+            $(`#${company}`).show();
+            if (!open_panes[company]) {
+               $(`#${fnc_map[company]}`).click();
+            }
+
+            open_panes[company] = true;
+         });
+
+
          $("#citadel-show").click(() => {
          	const company = 'citadel-coop';
 
