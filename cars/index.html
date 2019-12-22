@@ -256,17 +256,16 @@
           this.state = { 'set': false };
         }
 
-        refresh = () => {
-          this.props.callback(this.props.title, this.props.filter, this.state.set);
+        refresh = (desiredState) => {
+          this.props.callback(this.props.title, this.props.filter, desiredState);
           this.props.update();
         }
 
         handleCheck(e) {
-          this.state.set = !this.state.set;
-          this.props.callback(this.props.title, this.props.filter, this.state.set);
-          /*this.setState(((state, props) => ({
-            'set': !state.set
-          })), this.refresh());*/
+          const desiredState = !this.state.set;
+          this.setState(((state, props) => ({
+            'set': desiredState
+          })), this.refresh(desiredState));
         }
 
         componentDidMount() {
@@ -447,7 +446,7 @@
               diffObj[key + '=' + value] = true;
             }
 
-            this.setState(diffObj);//, this.updateParent);
+            this.setState(diffObj, this.updateParent);
           }
 
           componentDidMount() {
