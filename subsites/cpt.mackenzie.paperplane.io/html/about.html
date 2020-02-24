@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mackenzie CPT</title>
+    <meta name="description" content="About the William Lyon Mackenzie CI Computer Programming Team.">
+    <meta name="author" content="Horatiu Lazu">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- load Ink's CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/ink-flex.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <!-- load Ink's CSS for IE8 -->
+    <!--[if lt IE 9 ]>
+    <link rel="stylesheet" href="../css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <![endif]-->
+    <!-- test browser flexbox support and load legacy grid if unsupported -->
+    <script type="text/javascript" src="../js/modernizr.js"></script>
+    <script type="text/javascript">
+      Modernizr.load({
+        test: Modernizr.flexbox,
+        nope : '../css/ink-legacy.min.css'
+      });
+    </script>
+    <!-- load Ink's javascript files -->
+    <script type="text/javascript" src="../js/holder.js"></script>
+    <script type="text/javascript" src="../js/ink-all.min.js"></script>
+    <script type="text/javascript" src="../js/autoload.js"></script>
+    <style type="text/css">
+      body {
+       background: #ededed;
+      }
+      header h1 small:before  {
+      content: "|";
+      margin: 0 0.5em;
+      font-size: 1.6em;
+      }
+      footer {
+      background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ink-grid">
+      <!--[if lt IE 9 ]>
+      <div class="ink-alert basic" role="alert">
+        <button class="ink-dismiss">&times;</button>
+        <p><strong>You are using an outdated Internet Explorer version.</strong>
+          Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> to improve your web experience.
+        </p>
+      </div>
+      <![endif]-->
+      <header class="vertical-space">
+        <h1>Computer Programming Team<small>Mackenzie</small></h1>
+        <nav class="ink-navigation">
+          <ul class="menu horizontal blue">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <!--  <li><a href="contests.html">Weekly Contests</a></li> -->
+            <li><a href="lessons.html">Club Material</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li class="active"><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="column-group gutters">
+        <div class="all-60">
+          <h2>2015/2016 Executive Team</h2>
+          <p> Below is the elected team for this academic year. </p>
+          <table class="ink-table hover alternating">
+            <thead>
+              <tr>
+                <th class="align-left">Position</th>
+                <th class="align-left">Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>President</td>
+                <td>Horatiu Lazu</td>
+              </tr>
+              <tr>
+                <td>Senior Vice-President</td>
+                <td>Salar Hosseini</td>
+              </tr>
+              <tr>
+                <td>Senior Vice-President</td>
+                <td>Siavash Samiei</td>
+              </tr>
+              <tr>
+                <td>Junior Vice-President</td>
+                <td>Kevin Shen</td>
+              </tr>
+              <tr>
+                <td>Junior Vice-President</td>
+                <td>Vincent Macri</td>
+              </tr>
+              <tr>
+                <td>Girls Vice-President</td>
+                <td>Elizabeth Tatar</td>
+              </tr>
+              <tr>
+                <td>Girls Vice-President</td>
+                <td>Julianah Oguntala</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="all-40 small-100 tiny-100">
+          <form class="ink-form">
+            <fieldset>
+              <legend>Monthly Poll</legend>
+              <div class="control-group">
+                <p class="label">How satisfied are you with the club's operations?</p>
+                <ul class="control unstyled">
+                  <li><input type="radio" id="rb1" name="rb" value="2"><label for="rb1">Very satisfied</label></li>
+                  <li><input type="radio" id="rb2" name="rb" value="1"><label for="rb2">Satisfied</label></li>
+                  <li><input type="radio" id="rb3" name="rb" value="0" checked><label for="rb3">Neutral</label></li>
+                  <li><input type="radio" id="rb4" name="rb" value="-1"><label for="rb4">Not satisfied</label></li>
+                  <li><input type="radio" id="rb5" name="rb" value="-2"><label for="rb5">Dissatisfied</label></li>
+                </ul>
+          <form class="ink-form">
+            <div class="column-group horizontal-gutters">
+              <!-- Append button -->
+              <div class="control-group all-100 small-100 tiny-100">
+                <div class="control append-button" role="search">
+                  <span><input type="text" name="name" id="name" placeholder="Feedback box (optional)"></span>
+                    <button class="ink-button">Submit</button>
+                    </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </fieldset>
+          </form>
+          <!--<form class="ink-form">
+            <div class="column-group horizontal-gutters">
+              <div class="control-group all-100">
+                  <label for="name"></label>
+                  <div class="control">
+                      <input type="text" name="name" id="name" placeholder="name">
+                  </div>
+              </div>
+              <br>
+              <div class="control-group all-100 small-100 tiny-100">
+                  <div class="control prepend-symbol">
+                      <span>
+                          <input type="text" name="email" placeholder="email">
+                          <i class="fa fa-envelope-o"></i>
+            
+                      </span>
+                  </div>
+              </div>
+            </div>
+            </form> -->
+          <!-- <img src="../img/console.png" alt=""> -->
+        </div>
+      </div>
+    </div>
+    <footer class="clearfix">
+      <div class="ink-grid">
+        <br>
+        <p class="note">&copy 2016 Horatiu Lazu </p>
+      </div>
+    </footer>
+  </body>
+</html>
