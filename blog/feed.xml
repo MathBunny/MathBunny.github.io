@@ -1,5 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-03-26T01:23:05-04:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
-</subtitle><entry><title type="html">Living in Chicago for Four Months</title><link href="http://localhost:4000/blog/coop/2019/07/16/chicago.html" rel="alternate" type="text/html" title="Living in Chicago for Four Months" /><published>2019-07-16T19:49:29-04:00</published><updated>2019-07-16T19:49:29-04:00</updated><id>http://localhost:4000/blog/coop/2019/07/16/chicago</id><content type="html" xml:base="http://localhost:4000/blog/coop/2019/07/16/chicago.html">&lt;p&gt;I am fortunate to have spent an internship at Citadel Securities in Chicago, Illinois.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2020-03-27T00:21:37-04:00</updated><id>http://localhost:4000/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
+</subtitle><entry><title type="html">Living in Seattle for Four Months</title><link href="http://localhost:4000/blog/hobby/2020/03/26/seattle.html" rel="alternate" type="text/html" title="Living in Seattle for Four Months" /><published>2020-03-26T19:49:29-04:00</published><updated>2020-03-26T19:49:29-04:00</updated><id>http://localhost:4000/blog/hobby/2020/03/26/seattle</id><content type="html" xml:base="http://localhost:4000/blog/hobby/2020/03/26/seattle.html">&lt;p&gt;I am fortunate to have spent three (not four) months in Seattle, Washington at Facebook! Here is an overview of some activities and sightseeing accomplished during the term.&lt;/p&gt;
+
+&lt;p&gt;Overall, the Seattle winter weather didn’t really play in the favor of outdoor activities (fact: January had 28 days of rain), but nonetheless it was a fun term with friends and nice co-workers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/GhX7YVj.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;why-end-early&quot;&gt;Why end early?&lt;/h3&gt;
+&lt;p&gt;The Coronavirus (COVID-19) essentially sprung from being ever so distant in Wuhan, China but eventually landed at the doorsteps in Washington. After border restrictions were put in place, the University of Waterloo, Canadian Government and Visa Sponsorer (Cultural Vistas) all recommended to return.&lt;/p&gt;
+
+&lt;p&gt;While I originally refused (as I wanted to spend more time at Facebook), eventually CECA (UW’s co-op department) told Facebook to make co-ops return. In retrospect, it was the right decision for safety.&lt;/p&gt;
+
+&lt;h3 id=&quot;living-situation&quot;&gt;Living Situation&lt;/h3&gt;
+&lt;p&gt;The corporate housing (&lt;a href=&quot;https://www.624yale.com/&quot; target=&quot;_blank&quot;&gt;624 Yale&lt;/a&gt;) was quite good - I’d place it between Bloomberg (&lt;a href=&quot;https://www.92y.org/residence&quot; target=&quot;_blank&quot;&gt;92y&lt;/a&gt;) and Citadel (&lt;a href=&quot;https://www.marqueeblock37.com/&quot; target=&quot;_blank&quot;&gt;Block 37 Marquee&lt;/a&gt;) in terms of desirability. Fully furnished 2 bedroom 2 bathroom in South Lake Union made it easy to get to Facebook Dexter, and it was in a safe and quiet neighborhood. The bathrooms and kitchen were fully equipt with just about anything you’d need.&lt;/p&gt;
+
+&lt;p&gt;The bi-weekly cleaners were also a plus, in addition to in-suite laundary. The building’s gym was quite poor compared to Citadel’s rooftop gym, or even Bloomberg’s 92y gym. There weren’t any other amenities offered in the building, such as a swimming pool, and the lobby felt small. In addition, there was no 24/7 reception. However, it was substantially quieter than both Citadel and Bloomberg’s, so I enjoyed it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ydZDcHM.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Seattle’s already dark and gloomy, the lack of lighting was a major issue during the winter rainy months.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/hN3qWfH.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;swag&quot;&gt;SWAG&lt;/h3&gt;
+&lt;p&gt;Of course, not an accomplishment or venture but the most important part of any internship; during my internship at Facebook I was on the Messenger RTC (Real-Time Communications) organization, more specifically focusing on call signaling. Not pictured here is a free Facebook Portal Mini.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/UZE1x9E.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mount-si&quot;&gt;Mount Si&lt;/h3&gt;
+&lt;p&gt;On the second weekend, I ventured out and hiked up Mount Si. I wasn’t entirely certain what to expect, but it turned out to be a fairly involved climb. The &lt;a href=&quot;https://www.strava.com/activities/3026758376&quot; target=&quot;_blank&quot;&gt;route&lt;/a&gt; can be seen below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/6l3QX0Z.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Coming in at around 1000m elevation gain (3300ft) over 14km roundtrip (8.7 miles), the route was certainly more involved than the Muir Woods trail in San Francisco several terms ago. The biggest difficulty wasn’t at all the actual route, but the lack of preparation on my part.&lt;/p&gt;
+
+&lt;p&gt;More specifically, I underestimated the amount of snow there was and I grossly missed on equipment such as spikes and poles. On several occasions I slipped on the ascent/descent, but slow and steady went ok in the end… in the future: gloves, spikes and poles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/n5dEGnX.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/HRo4oK7.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/QoIdwdA.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mount-squak&quot;&gt;Mount Squak&lt;/h3&gt;
+&lt;p&gt;Another smaller hike followed, which wasn’t anywhere near as challenging and the view was just fog. Nonetheless, some statistics for that hike here.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/YcRUsw3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mount-snoqualmie&quot;&gt;Mount Snoqualmie&lt;/h3&gt;
+
+&lt;p&gt;“Work from home Wednesdays”, aka paid ski trip for the entire Bellevue office.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/KQ4Ytdu.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;vancouver&quot;&gt;Vancouver&lt;/h3&gt;
+
+&lt;p&gt;Not the best weather, nor went up Whistler mountain, but nonetheless touring Stanley park was enjoyable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/v8UvEur.jpg&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;https://i.imgur.com/t1I7XZR.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/dG3FAcy.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ride-to-kenmore&quot;&gt;Ride to Kenmore&lt;/h3&gt;
+&lt;p&gt;One of my friends from high-school had just started full-time at Facebook Seattle and lent me his hybrid Giant bike. The Burke Gilman trail was particularily pleasant to ride on. 
+&lt;img src=&quot;https://i.imgur.com/TBrJ0AY.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/4bhbE5q.jpg&quot; /&gt;&lt;/p&gt;</content><summary type="html">I am fortunate to have spent three (not four) months in Seattle, Washington at Facebook! Here is an overview of some activities and sightseeing accomplished during the term.</summary></entry><entry><title type="html">Living in Chicago for Four Months</title><link href="http://localhost:4000/blog/coop/2019/07/16/chicago.html" rel="alternate" type="text/html" title="Living in Chicago for Four Months" /><published>2019-07-16T19:49:29-04:00</published><updated>2019-07-16T19:49:29-04:00</updated><id>http://localhost:4000/blog/coop/2019/07/16/chicago</id><content type="html" xml:base="http://localhost:4000/blog/coop/2019/07/16/chicago.html">&lt;p&gt;I am fortunate to have spent an internship at Citadel Securities in Chicago, Illinois.&lt;/p&gt;
 
 &lt;p&gt;Citadel Securities is the largest market maker in the United States responsible for executing over 20% of US equity trades, including over 39.5% of retail shares traded. You can watch &lt;a href=&quot;https://www.youtube.com/watch?v=2u007Msq1qo&quot; target=&quot;_blank&quot;&gt;this video&lt;/a&gt; outlining high frequency trading (plus you get to see my co-workers, it was filmed behind my desk!).&lt;/p&gt;
 
@@ -815,100 +882,4 @@ This systematic scoring system provides a heuristic for rankings segments. In re
 
 &lt;h3 id=&quot;looks&quot;&gt;Looks&lt;/h3&gt;
 &lt;p&gt;The brand isn’t joking, this bike is &lt;em&gt;giant&lt;/em&gt;… it’s designed for people around 6’1 - 6’5 so I barely fit this frame. I brought my Shimano SPD pedals from Canada, and the rest of the components are Shimano Ultegra including brakes, crank and shifters - with the exception of the groupset which is Shimano 105.
-&lt;img src=&quot;/blog/assets/giant-roadbike.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">What’s more exciting than spending a co-op in San Francisco California and purchased a Giant TCR Advanced with upgraded parts? This road bike is extremely light, carbon fiber frame, latest generation Ultegra 11-speed shifters giving me a healthy upgrade to a mid-range ~$4000 bike.</summary></entry><entry><title type="html">Living in New York for Eight Months</title><link href="http://localhost:4000/blog/coop/2018/05/03/nyc.html" rel="alternate" type="text/html" title="Living in New York for Eight Months" /><published>2018-05-03T19:49:29-04:00</published><updated>2018-05-03T19:49:29-04:00</updated><id>http://localhost:4000/blog/coop/2018/05/03/nyc</id><content type="html" xml:base="http://localhost:4000/blog/coop/2018/05/03/nyc.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;I am fortunate to have received the opportunity of spending 8 months in New York City! I spent a summer here (May - August 2017), and a winter term (January - April 2018) in the upper east side of Manhattan. The experience was fantastic, and this post will be reserved to showing some interesting pictures.&lt;/p&gt;
-
-&lt;h3 id=&quot;up-the-one-world-trade-center&quot;&gt;Up the One World Trade Center&lt;/h3&gt;
-&lt;p&gt;One of the tallest buildings in the world&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/nyc-worldtrade.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;governers-island&quot;&gt;Governer’s Island&lt;/h3&gt;
-&lt;p&gt;Here is the fanstatic view of Jersey City and Lower Manhattan
-&lt;img src=&quot;/blog/assets/nyc-jersey-view.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;yankees-stadium&quot;&gt;Yankee’s Stadium&lt;/h3&gt;
-&lt;p&gt;Of course, we got sent to a Toronto vs New York game :)
-&lt;img src=&quot;/blog/assets/nyc-yankee-game.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;/blog/assets/nyc-yankee-stadium.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;empire-state&quot;&gt;Empire State&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/blog/assets/nyc-empirestate.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;hudson-mountain-range-breakneck-ridge&quot;&gt;Hudson Mountain Range (Breakneck Ridge)&lt;/h3&gt;
-&lt;p&gt;Challenging hike with lots of very steep rocks, but was fun
-&lt;img src=&quot;/blog/assets/nyc-breakneck1.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;/blog/assets/nyc-breakneck2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;intrepid&quot;&gt;Intrepid&lt;/h3&gt;
-&lt;p&gt;Located in west Manhattan, it was one of my favourite attractions
-&lt;img src=&quot;/blog/assets/nyc-intrepid.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-You get to go inside the ship, at the hangar, and also a submarine
-&lt;img src=&quot;/blog/assets/nyc-intrepid2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;/blog/assets/nyc-intrepid3.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;brooklyn-bridge&quot;&gt;Brooklyn Bridge&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/blog/assets/nyc-brooklyn-bridge.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;/blog/assets/nyc-brooklyn-bridge2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;american-museum-of-natural-history&quot;&gt;American Museum of Natural History&lt;/h3&gt;
-&lt;p&gt;You can get some very scenic shots here, and they have some cool exhibits
-&lt;img src=&quot;/blog/assets/nyc-amnh.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;/blog/assets/nyc-amnh2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-metropolitan&quot;&gt;The Metropolitan&lt;/h3&gt;
-&lt;p&gt;This takes many hours to propertly iterate, I visited at least 4 times (I think)
-&lt;img src=&quot;/blog/assets/nyc-met.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-Corporate housing, anyone?
-&lt;img src=&quot;/blog/assets/nyc-met2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;guggenheim&quot;&gt;Guggenheim&lt;/h3&gt;
-&lt;p&gt;The building looks nice, but that’s all I can understand
-&lt;img src=&quot;/blog/assets/nyc-guggenheim.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;statue-of-liberty&quot;&gt;Statue of Liberty&lt;/h3&gt;
-&lt;p&gt;I didn’t actually go inside, unfortunately
-&lt;img src=&quot;/blog/assets/nyc-statue-liberty.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;brooklyn-museum&quot;&gt;Brooklyn Museum&lt;/h3&gt;
-&lt;p&gt;Very nice location around prospect park
-&lt;img src=&quot;/blog/assets/nyc-brooklyn-museum.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;brooklyn-botanical-garden&quot;&gt;Brooklyn Botanical Garden&lt;/h3&gt;
-&lt;p&gt;My favourite part was the Japanese Bonsai
-&lt;img src=&quot;/blog/assets/nyc-brooklyn-botanical.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;/blog/assets/nyc-brooklyn-botanical2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;broadway-show&quot;&gt;Broadway Show&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/blog/assets/nyc-book-mormon.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;/blog/assets/nyc-book-mormon2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;volunteering-event---building-bikes&quot;&gt;Volunteering Event - Building Bikes&lt;/h3&gt;
-&lt;p&gt;Had a couple interns building a few hundred bikes in a day :)
-&lt;img src=&quot;/blog/assets/nyc-bob-event.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;bronx-zoo&quot;&gt;Bronx Zoo&lt;/h3&gt;
-&lt;p&gt;The zoo was rather large, with quite some variety in animals
-&lt;img src=&quot;/blog/assets/nyc-bronx-zoo.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-&lt;img src=&quot;/blog/assets/nyc-bronx-zoo2.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;new-york-city-museum&quot;&gt;New York City Museum&lt;/h3&gt;
-&lt;p&gt;They included an older Bloomberg Terminal :)
-&lt;img src=&quot;/blog/assets/nyc-city-museum.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;blizzard--snow-day&quot;&gt;Blizzard / Snow Day&lt;/h3&gt;
-&lt;p&gt;Right outside my office, nearly nobody showed up to work
-&lt;img src=&quot;/blog/assets/nyc-blizzard.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;office-views&quot;&gt;Office Views&lt;/h3&gt;
-&lt;p&gt;View from 731 Lex Pantry (29th Floor)
-&lt;img src=&quot;/blog/assets/nyc-lex-29.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-View from 731 Lex (My Floor / 20th Floor)
-&lt;img src=&quot;/blog/assets/nyc-lex-20.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;
-View from 120 Park Upper Balcony
-&lt;img src=&quot;/blog/assets/nyc-park.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;misc&quot;&gt;Misc&lt;/h3&gt;
-&lt;p&gt;This is 3rd avenue, the street behind the building where I lived
-&lt;img src=&quot;/blog/assets/nyc-third-avenue.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">Introduction</summary></entry></feed>
+&lt;img src=&quot;/blog/assets/giant-roadbike.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">What’s more exciting than spending a co-op in San Francisco California and purchased a Giant TCR Advanced with upgraded parts? This road bike is extremely light, carbon fiber frame, latest generation Ultegra 11-speed shifters giving me a healthy upgrade to a mid-range ~$4000 bike.</summary></entry></feed>
