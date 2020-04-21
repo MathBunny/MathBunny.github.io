@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UW Co-op Statistics
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="http://fastly.ink.sapo.pt/3.1.10/css/ink.css">
+    <script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.10/js/ink-all.js">
+    </script> 
+    <!-- inks js bundle -->
+    <script type="application/javascript" src="https://unpkg.com/react@16.8.0/umd/react.production.min.js">
+    </script>
+    <script type="application/javascript" src="https://unpkg.com/react-dom@16.8.0/umd/react-dom.production.min.js">
+    </script>
+    <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js">
+    </script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="application/javascript" src="https://unpkg.com/react-autosuggest@9.3.2/dist/standalone/autosuggest.js">
+    </script>
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/then-request/2.2.0/request.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js">
+    </script>
+  </head>
+  <body class="bg-light fw-100">
+    <nav class="ink-navigation">
+      <ul class="menu horizontal blue">
+        <div class="ink-grid">
+          <li class="heading active">
+            <a href="./index.html">Home
+            </a>
+          </li>
+          <li>
+            <a href="./contribute.html">Contribute
+            </a>
+          </li>
+          <li>
+            <a href="./about.html">About
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <br>
+    <div class="ink-grid">
+      <div id="root">
+        <div id="app">
+        </div>
+        <div class="ink-grid">
+          <div class="column-group">
+            <div class="large-10 small-0">
+              <!-- Remove -->
+              <p>
+              </p>
+            </div>
+            <div class="large-80 small-100">
+              <div id="myChartContainer">
+                <canvas id="myChart" width="400" height="200">
+                </canvas>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="column-group">
+            <div class="large-50 medium-100">
+              <div id="myChartContainer2">
+                <canvas id="myChart2" width="400" height="200">
+                </canvas>
+              </div>
+            </div>
+            <div class="large-50 medium-100">
+              <div id="myChartContainer3">
+                <canvas id="myChart3" width="400" height="200">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/babel">
+      class Page extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = { 'companies': ['Facebook', 'Google', 'Bloomberg', 'Yelp', 'Citadel Investment Group'], 'companyData': {}, 'colorMap': {}};
+            request('GET', 'http://d255f9fqc5psux.cloudfront.net/Storage/waterlooworks_statistics.json').done((response) => {
+                const body = JSON.parse(response.getBody());
+                for(let x = 0; x < body['results'].length; x += 1) {
+                    body['results'][x]['company_name'] = this.stemCompanyName(body['results'][x]['company_name']);
+                }
+                this.setState({'companyData': body});
+            });
+          }
+          stemCompanyName(companyName) {
+            let stemmedCompanyName = companyName;
+            const terminations = ['Inc', 'Incorporated' ,'Investment Group', 'LLC', 'Technologies', 'Inc.', 'Corporation', 'Group'];
+            terminations.forEach((termination) => {
+                if (companyName.endsWith(termination)) {
+                    stemmedCompanyName = companyName.substring(0, companyName.indexOf(termination)).trim();
+                }
+            });
+            return stemmedCompanyName;
+          }
+
+          addCompany(companyName) {
+            if (!this.state['companies'].includes(companyName)) {
+                this.setState( state => ({'companies': [...state.companies, companyName]}) );
+            }
+          }
+
+          clearCompanies() {
+            this.setState( {'companies': []} );
+          }
+
+          removeCompany(companyNameRemove) {
+            this.setState({'companies': this.state.companies.filter((companyName) => companyName !== companyNameRemove) });
+          }
+
+          companyColorCallback(companyName, color) {
+            if (this.state['colorMap'][companyName] === undefined) {
+                this.setState((state) => {
+                const prev = {'colorMap': {...state.colorMap}};
+                prev['colorMap'][companyName] = color;
+                return prev;
+                });
+            }
+          }
+
+          render() {
+              return (
+                <div>
+                  <CustomizeSection addCompanyCallback={this.addCompany.bind(this)} removeCompanyCallback={this.removeCompany.bind(this)} companyData={this.state.companyData} companyNames={this.state.companies.join('|')} companyColorCallback={this.companyColorCallback.bind(this)} clearCompaniesCallback={this.clearCompanies.bind(this)}/>
+                  <hr/>
+                  <VisualizationSection companyData={this.state.companyData} colorMap={this.state.colorMap} companyNames={this.state.companies.join('|')}/>
+                </div>
+              );
+          }
+      }
+
+      class VisualizationSection extends React.Component {
+          getRGBColor(color) {
+            switch(color) {
+              case 'blue':
+                return 'rgb(33,150,243)';
+                break;
+              case 'orange':
+                return 'rgb(255,152,0)';
+                break;
+              case 'black':
+                return 'rgb(0,0,0)';
+                break;
+              case 'red':
+                return 'rgb(198,40,40)';
+                break;
+              case 'green':
+                return 'rgb(76,175,80)';
+                break;
+              case 'grey':
+                return 'rgb(158,158,158)';
+                break;
+              case 'yellow':
+                return 'rgb(253,216,53)';
+                break;
+              default:
+                return 'rgb(0,0,0)';
+            }
+          }
+
+          restoreCharts (){
+            // Remove all previous charts due to bug in reapplying adjusted datasets
+            let container = document.getElementById('myChartContainer');
+            let chart = document.getElementById('myChart');
+            chart.remove();
+            container.innerHTML += '<canvas id="myChart" width="400" height="200"></canvas>';
+
+            container = document.getElementById('myChartContainer2');
+            chart = document.getElementById('myChart2');
+            chart.remove();
+            container.innerHTML += '<canvas id="myChart2" width="400" height="200"></canvas>';
+
+            container = document.getElementById('myChartContainer3');
+            chart = document.getElementById('myChart3');
+            chart.remove();
+            container.innerHTML += '<canvas id="myChart3" width="400" height="200"></canvas>';
+          }
+
+          getTermCounts(companyName) {
+            let termCounts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            if (this.props.companyData['results'] === undefined) {
+                return termCounts;
+            }
+            this.props.companyData['results'].forEach((company) => {
+                if (company['company_name'] === companyName) {
+                    termCounts = company['term_counts'];
+                }
+            });
+            return termCounts;
+          }
+
+          getDictEntry(companyName, key) {
+            let ret = 0;
+            if (this.props.companyData['results'] === undefined) {
+                return 0;
+            }
+            this.props.companyData['results'].forEach((company) => {
+                if (company['company_name'] === companyName) {
+                    company['dict'].forEach((entry) => {
+                        if (entry[0] === key) {
+                            ret = entry[1].substring(0, entry[1].length-1);
+                        }
+                    });
+                }
+            });
+            return ret;
+          }
+
+          render() {
+            this.restoreCharts();
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const datasetsLine = [];
+            this.props.companyNames.split('|').forEach((companyName) => {
+                datasetsLine.push({
+                    label: companyName,
+                    backgroundColor: this.getRGBColor(this.props.colorMap[companyName]),
+                    fill: false,
+                    borderColor: this.getRGBColor(this.props.colorMap[companyName]),
+                    data: this.getTermCounts(companyName)
+                })
+            });
+            const studentsHiredOverTimeChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                labels: ['Winter 2017', 'Spring 2017', 'Fall 2017', 'Winter 2018', 'Spring 2018', 'Fall 2018', 'Winter 2019', 'Spring 2019', 'Fall 2019'],
+                datasets: datasetsLine,
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Students Hired over Time'
+                },
+                tooltips: {
+                    callbacks: {
+                        label: (tooltipItem, data) => {
+                            let label = data.datasets[tooltipItem.datasetIndex].label || '';
+                            if (label) {
+                                label = `${label}: ${tooltipItem.yLabel} students`;
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+            });
+            const studentsHiredByCoopChartObj = document.getElementById('myChart2').getContext('2d');
+            const datasetsTerm = [];
+            this.props.companyNames.split('|').forEach((companyName) => {
+                datasetsTerm.push({
+                    label: companyName,
+                    backgroundColor: this.getRGBColor(this.props.colorMap[companyName]),
+                    fill: false,
+                    borderColor: this.getRGBColor(this.props.colorMap[companyName]),
+                    data: [
+                        this.getDictEntry(companyName, 'First'),
+                        this.getDictEntry(companyName, 'Second'),
+                        this.getDictEntry(companyName, 'Third'),
+                        this.getDictEntry(companyName, 'Fourth'),
+                        this.getDictEntry(companyName, 'Fifth'),
+                        this.getDictEntry(companyName, 'Sixth +'),
+                    ]
+                })
+            });
+            const studentsHiredByCoopChart = new Chart(studentsHiredByCoopChartObj, {
+                type: 'bar',
+                data: {
+                labels: ['1st', '2nd', '3rd', '4th', '5th', '6th+'],
+                datasets: datasetsTerm,
+            },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Percentage of Students Hired per Co-op Number'
+                    },
+                    scales: {
+                    yAxes: [{
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return `${value}%`;
+                            }
+                        }
+                    }]
+                },
+                tooltips: {
+                    callbacks: {
+                        label: (tooltipItem, data) => {
+                            let label = data.datasets[tooltipItem.datasetIndex].label || '';
+                            if (label) {
+                                label = `${label}: ${tooltipItem.yLabel}%`;
+                            }
+                            return label;
+                        }
+                    }
+                }
+                }
+            });
+            const datasetsFaculty = [];
+            this.props.companyNames.split('|').forEach((companyName) => {
+                datasetsFaculty.push({
+                    label: companyName,
+                    backgroundColor: this.getRGBColor(this.props.colorMap[companyName]),
+                    fill: false,
+                    borderColor: this.getRGBColor(this.props.colorMap[companyName]),
+                    data: [
+                        this.getDictEntry(companyName, 'Applied Health Sciences'),
+                        this.getDictEntry(companyName, 'Arts'),
+                        this.getDictEntry(companyName, 'Environmental'),
+                        this.getDictEntry(companyName, 'Engineering'),
+                        this.getDictEntry(companyName, 'Mathematics'),
+                        this.getDictEntry(companyName, 'Science'),
+                    ]
+                })
+            });
+            const studentsHiredByFacultyChartObj = document.getElementById('myChart3').getContext('2d');
+            const studentsHiredByFaculty = new Chart(studentsHiredByFacultyChartObj, {
+                type: 'bar',
+                data: {
+                labels: ['AHS', 'Arts', 'Environmental', 'Engineering', 'Mathematics', 'Science'],
+                datasets: datasetsFaculty
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Percentage of Students Hired by Faculty'
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            callback: (value, index, values) => {
+                                return `${value}%`;
+                            }
+                        }
+                    }]
+                },
+                tooltips: {
+                    callbacks: {
+                        label: (tooltipItem, data) => {
+                            let label = data.datasets[tooltipItem.datasetIndex].label || '';
+                            if (label) {
+                                label = `${label}: ${tooltipItem.yLabel}%`;
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+            });
+              return <div></div>;
+          }
+      }
+      class CustomizeSection extends React.Component {
+          constructor(props) {
+            super(props);
+          }
+          render() {
+              return (
+                <div>
+                    <SearchBar clearCompaniesCallback={this.props.clearCompaniesCallback} companyData={this.props.companyData} addCompanyCallback={this.props.addCompanyCallback}/>
+                    <br/>
+                    <SelectedCompanies companyNames={this.props.companyNames} removeCompanyCallback={this.props.removeCompanyCallback} companyColorCallback={this.props.companyColorCallback}/>
+      </div>
+              );
+          }
+      }
+      class SelectedCompanies extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = {'companies': {}, 'counter': 0};
+          }
+
+          colorPicker(index) {
+            const colors = ['blue', 'orange', 'black', 'red', 'green', 'grey', 'yellow'];
+            return colors[index % colors.length];
+          }
+
+          render() {
+            const companyButtons = [];
+            let counter = this.state.counter;
+            this.props.companies = this.props.companyNames.split('|');
+            const addButton = (companyName) => {
+                const buttonColor = this.state['companies'][companyName]['color'];
+                companyButtons.push(<SelectedCompanyButton name={companyName} color={buttonColor} removeCompanyCallback={this.props.removeCompanyCallback}/>);
+                this.props.companyColorCallback(companyName, buttonColor);
+            };
+            this.props.companies.filter(companyName => companyName !== '').forEach((companyNameArg) => {
+                const companyName = companyNameArg;
+                if (this.state.companies[companyName] === undefined) {
+                    this.setState((state) => {
+                        const updatedCompanies = {'companies': { ... state.companies }};
+                        updatedCompanies['companies'][companyName] = {'color': this.colorPicker(counter)};
+                        updatedCompanies['counter'] = counter += 1;
+                        return updatedCompanies;
+                    }, addButton.bind(this, companyName));
+                } else {
+                    addButton(companyName);
+                }
+            });
+            return <div>{companyButtons}</div>;
+          }
+      }
+      class SelectedCompanyButton extends React.Component {
+          constructor(props) {
+              super(props);
+          }
+
+          clickEvent() {
+            this.props.removeCompanyCallback(this.props.name);
+          }
+
+          render() {
+              return (
+                  <div style={{'display':'inline'}}>
+                      <span class={`ink-badge ${this.props.color} no-select`} onClick={this.clickEvent.bind(this)}>{this.props.name}</span>
+                 </div>
+              );
+          }
+      }
+
+      let companyNamesAdded = new Set();
+      const companyNamesRegistered = [];
+      function escapeRegexCharacters(str) {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      }
+
+      function getSuggestions(value) {
+        const escapedValue = escapeRegexCharacters(value.trim());
+        if (escapedValue === '') {
+          return [];
+          }
+          const regex = new RegExp('^' + escapedValue, 'i');
+          return companyNamesRegistered.filter(company => regex.test(company.name));
+      }
+
+      function getSuggestionValue(suggestion) {
+        return suggestion.name;
+      }
+
+      function renderSuggestion(suggestion) {
+        return (
+          <span>{suggestion.name}</span>
+          );
+      }
+
+      class SearchBar extends React.Component {
+        renderCustomInput = inputProps => (
+              <input {...inputProps} onKeyUp={(e) => this.disableEnter(e)} />
+          );
+
+        constructor(props) {
+             super(props);
+              this.state = {
+                value: '',
+                suggestions: []
+            };    
+            this.props.companyDataList = [];
+            this.refreshCompanyDataList();
+          }
+
+        refreshCompanyDataList() {
+            this.props.companyDataList = [];
+            if (this.props.companyData['results'] !== undefined) {
+                this.props.companyData['results'].forEach((company) => {
+                    this.props.companyDataList.push(company);
+                });
+            }
+        }
+
+        componentDidUpdate() {
+            this.refreshCompanyDataList();
+            if (this.props.companyData['results'] !== undefined) {
+                this.props.companyData['results'].forEach((company) => {
+                    if (!companyNamesAdded.has(company['company_name'])) {
+                        companyNamesRegistered.push({name: company['company_name']});
+                        companyNamesAdded.add(company['company_name']);
+                    }
+                });
+            }
+        }
+
+      disableEnter = (event) => {
+       if (event.key === 'Enter') {
+          let found = false;
+          this.props['companyData']['results'].forEach((company) => {
+            if (company['company_name'] === this.state.value) {
+                found = true;
+            }
+          });    
+          if (found) {
+            this.props.addCompanyCallback(this.state.value);
+            this.setState({'value': ''});
+          } else {
+            alert(`Unfortunately, there was no known company called ${this.state.value}.`);
+          }
+       }
+     }
+
+      onChange = (event, { newValue, method }) => {
+          this.setState({
+            value: newValue
+        });
+      };
+
+      onSuggestionsFetchRequested = ({ value }) => {
+          this.setState({
+            suggestions: getSuggestions(value)
+        });
+      };
+
+      onSuggestionsClearRequested = () => {
+          this.setState({
+            suggestions: []
+        });
+      };
+
+      render() {
+          const { value, suggestions } = this.state;
+          const inputProps = {
+            placeholder: "Enter company name (click buttons to remove)",
+            value,
+            onChange: this.onChange
+        };
+        return (
+            <div>
+                <div style={{'display': 'inline-block'}}>
+                    <Autosuggest 
+                    renderInputComponent={this.renderCustomInput}
+                    suggestions={suggestions}
+                    onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                    onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                    getSuggestionValue={getSuggestionValue}
+                    renderSuggestion={renderSuggestion}
+                    inputProps={inputProps} />
+                </div>
+                <button type="button" class="btn btn-outline-primary btn-sm submit-button" onClick={this.props.clearCompaniesCallback}>Reset</button>
+                <button type="button" class="btn btn-primary btn-sm submit-button" onClick={this.disableEnter.bind(this, {'key': 'Enter'})}>Submit</button>
+            </div>
+            );
+        }
+      }
+      ReactDOM.render(<Page/>, document.getElementById('app'));
+    </script>
+  </body>
+</html>
