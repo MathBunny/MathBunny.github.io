@@ -58,9 +58,9 @@
               <p>
               </p>
             </div>
-            <div class="large-80 small-100">
-              <div id="myChartContainer">
-                <canvas id="myChart" width="400" height="200">
+            <div class="all-100">
+              <div id="hiredChartContainer">
+                <canvas id="hiredChart">
                 </canvas>
               </div>
             </div>
@@ -68,15 +68,15 @@
           <br>
           <br>
           <div class="column-group">
-            <div class="large-50 medium-100">
-              <div id="myChartContainer2">
-                <canvas id="myChart2" width="400" height="200">
+            <div class="xlarge-50 small-100 tiny-100">
+              <div id="termChartContainer2">
+                <canvas id="termChart">
                 </canvas>
               </div>
             </div>
-            <div class="large-50 medium-100">
-              <div id="myChartContainer3">
-                <canvas id="myChart3" width="400" height="200">
+            <div class="xlarge-50 small-100 tiny-100">
+              <div id="facultyChartContainer3">
+                <canvas id="facultyChart">
                 </canvas>
               </div>
             </div>
@@ -174,20 +174,20 @@
 
           restoreCharts (){
             // Remove all previous charts due to bug in reapplying adjusted datasets
-            let container = document.getElementById('myChartContainer');
-            let chart = document.getElementById('myChart');
+            let container = document.getElementById('hiredChartContainer');
+            let chart = document.getElementById('hiredChart');
             chart.remove();
-            container.innerHTML += '<canvas id="myChart" width="400" height="200"></canvas>';
+            container.innerHTML += '<canvas id="hiredChart"></canvas>';
 
-            container = document.getElementById('myChartContainer2');
-            chart = document.getElementById('myChart2');
+            container = document.getElementById('termChartContainer2');
+            chart = document.getElementById('termChart');
             chart.remove();
-            container.innerHTML += '<canvas id="myChart2" width="400" height="200"></canvas>';
+            container.innerHTML += '<canvas id="termChart"></canvas>';
 
-            container = document.getElementById('myChartContainer3');
-            chart = document.getElementById('myChart3');
+            container = document.getElementById('facultyChartContainer3');
+            chart = document.getElementById('facultyChart');
             chart.remove();
-            container.innerHTML += '<canvas id="myChart3" width="400" height="200"></canvas>';
+            container.innerHTML += '<canvas id="facultyChart"></canvas>';
           }
 
           getTermCounts(companyName) {
@@ -222,7 +222,7 @@
 
           render() {
             this.restoreCharts();
-            const ctx = document.getElementById('myChart').getContext('2d');
+            const ctx = document.getElementById('hiredChart').getContext('2d');
             const datasetsLine = [];
             this.props.companyNames.split('|').forEach((companyName) => {
                 datasetsLine.push({
@@ -254,10 +254,12 @@
                             return label;
                         }
                     }
-                }
+                },
+                responsive: true,
+                maintainAspectRatio: false
             }
             });
-            const studentsHiredByCoopChartObj = document.getElementById('myChart2').getContext('2d');
+            const studentsHiredByCoopChartObj = document.getElementById('termChart').getContext('2d');
             const datasetsTerm = [];
             this.props.companyNames.split('|').forEach((companyName) => {
                 datasetsTerm.push({
@@ -281,7 +283,7 @@
                 labels: ['1st', '2nd', '3rd', '4th', '5th', '6th+'],
                 datasets: datasetsTerm,
             },
-                options: {
+              options: {
                     title: {
                         display: true,
                         text: 'Percentage of Students Hired per Co-op Number'
@@ -293,7 +295,7 @@
                                 return `${value}%`;
                             }
                         }
-                    }]
+                    }],
                 },
                 tooltips: {
                     callbacks: {
@@ -305,8 +307,10 @@
                             return label;
                         }
                     }
-                }
-                }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+              }
             });
             const datasetsFaculty = [];
             this.props.companyNames.split('|').forEach((companyName) => {
@@ -325,7 +329,7 @@
                     ]
                 })
             });
-            const studentsHiredByFacultyChartObj = document.getElementById('myChart3').getContext('2d');
+            const studentsHiredByFacultyChartObj = document.getElementById('facultyChart').getContext('2d');
             const studentsHiredByFaculty = new Chart(studentsHiredByFacultyChartObj, {
                 type: 'bar',
                 data: {
@@ -356,7 +360,9 @@
                             return label;
                         }
                     }
-                }
+                },
+                responsive: true,
+                maintainAspectRatio: false
             }
             });
               return <div></div>;
@@ -534,9 +540,10 @@
             onChange: this.onChange
         };
         return (
-            <div>
-                <div style={{'display': 'inline-block'}}>
+            <div id='search-bar-section'>
+                <div id='autosuggest-container'>
                     <Autosuggest 
+                    id='autosuggest-bar'
                     renderInputComponent={this.renderCustomInput}
                     suggestions={suggestions}
                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
