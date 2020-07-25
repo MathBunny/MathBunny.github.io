@@ -93,7 +93,7 @@
                   <br>
                   <!-- Maybe make it wider? -->
                   <div class="pfblock-subtitle">
-                     Hello, my name is Horatiu Lazu, currently studying Computer Science at the University of Waterloo. I'm an incoming Software Engineering Intern at <a href="https://about.google/" target="_blank">Google</a>. Formerly at <a href="https://about.fb.com/company-info" target="_blank">Facebook</a> in Seattle, <a href="https://www.citadelsecurities.com/" target="_blank">Citadel Securities</a> in Chicago, <a href="https://www.yelp.com/" target="_blank">Yelp</a>  in San Francisco, twice at <a href="https://www.bloomberg.com/professional/" target="_blank">Bloomberg LP</a> in New York</a>.
+                     Hello, my name is Horatiu Lazu, currently studying Computer Science at the University of Waterloo. I'm currently a Software Engineering Intern at <a href="https://about.google/" target="_blank">Google</a>. Formerly at <a href="https://about.fb.com/company-info" target="_blank">Facebook</a> in Seattle, <a href="https://www.citadelsecurities.com/" target="_blank">Citadel Securities</a> in Chicago, <a href="https://www.yelp.com/" target="_blank">Yelp</a>  in San Francisco, twice at <a href="https://www.bloomberg.com/professional/" target="_blank">Bloomberg LP</a> in New York</a>.
                      <br><br>
                      Road cycling is my hobby, with my <a href="http://stravawindanalysis.com" target="_blank">Strava Wind Analysis</a> site providing analytics and data visualization to over 120,000 users.<br> Feel free to visit my <a href="./blog/index.html" target="_blank">Blog</a>, <a href="http://github.com/MathBunny" target="_blank">GitHub</a>, or my <a href="http://youtube.com/ComputerBunnyMath123" target="_blank">YouTube Channel</a> that has over 1.4 million views.
                   </div>
@@ -112,15 +112,15 @@
             <div class="col-sm-12 col-sm-offset-0">
                <div class="pfblock-header wow zoomIn">
                   <!-- Maybe make it wider? -->
-                  <!-- <a href="#coops" id="google-show"> <img src="./assets/images/GoogleLogo.png"> </a> -->
-                  <a href="#coops" id="fb-show"> <img src="./assets/images/FBLogo.png"> </a>
+                  <a href="#coops" id="google-show"> <img src="./assets/images/GoogleLogoCircular.png"> </a>
+                  <a href="#coops" id="fb-show"> <img src="./assets/images/FacebookLogoNewCircle.png"> </a>
                   
                   <!--<a href="#coops" id="uw-ura1-show"> <img src="./assets/images/WaterlooMathLogo.jpg"> </a> -->
-                  <a href="#coops" id="citadel-show"> <img src="./assets/images/CitadelLogo2.png"> </a>
-                  <a href="#coops" id="yelp-show"> <img src="./assets/images/YelpLogo.png"> </a>
-                  <a href="#coops" id="bloomberg2-show"> <img src="./assets/images/BloombergLogo.png"> </a>
-                  <a href="#coops" id="bloomberg1-show"> <img src="./assets/images/BloombergLogo.png"> </a>
-                  <a href="#coops" id="bluesun-show"> <img src="./assets/images/WealthServLogo2.png"> </a>
+                  <a href="#coops" id="citadel-show"> <img src="./assets/images/CitadelLogo2Circle.png"> </a>
+                  <a href="#coops" id="yelp-show"> <img src="./assets/images/YelpLogoCircle.png"> </a>
+                  <a href="#coops" id="bloomberg2-show"> <img src="./assets/images/BloombergLogoCircle.png"> </a>
+                  <a href="#coops" id="bloomberg1-show"> <img src="./assets/images/BloombergLogoCircle.png"> </a>
+                  <a href="#coops" id="bluesun-show"> <img src="./assets/images/WealthServLogo.png"> </a>
                </div>
             </div>
 
@@ -178,6 +178,44 @@
                </div>
             </div>
          </div>
+
+         <div class="row" id="google-coop">
+            <div class="col-lg-12">
+               <div class="iconbox wow fadeIn">
+                  <div class="iconbox-text">
+                     <div class="iconbox-desc">
+                        <div class="accordion" id="GoogleAccordian">
+                           <div class="accordion-group">
+                              <div class="accordion-heading">
+                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#GoogleAccordian" href="#GoogleCollapse">
+                                 </a>
+                              </div>
+                              <div id="GoogleCollapse" class="accordion-body collapse">
+                                 <a href=""><img src="./assets/images/GoogleLogoLarge2.png"></a>
+                                 <a href="https://firebase.google.com/" target="_blank"><img src="./assets/images/FirebaseLogoLarge.png"></a>
+                                 <br>
+                                 <div class="pfblock-subtitle" style="font-size:15px">
+                                    In Summer 2020 I joined Google for a remote internship (originally based out of Mountain View, California) on their Firebase SDKs team. <a href="https://firebase.google.com/" target="_blank">Firebase</a> is Google's mobile platform that helps you develop high-quality apps, known mostly for their real-time database but now consists of 18 other products as well.
+
+                                    <br><br>During my first month I <a href="https://github.com/firebase/firebase-admin-dotnet/commit/d5a7a3f1b34019f5656331b81e5a6f832f7f7a48" target="_blank">built</a> and <a href="https://twitter.com/FirebaseRelease/status/1273362463627579394" target="_blank">shipped</a> the ability to bulk import users into Firebase in C#. For the remainder of the internship, I am focusing on large-scale refactoring to modularize and auto-generate typings from the source for the Node.js Admin SDK.  
+                                    <br><br>
+                                    <center><a href="#mainTitle"> 
+                                       <div class="scroll-up">
+                                 </div>
+                                       <button onclick="hideAll();" href="#mainTitle">Hide</button>
+                                       </a>
+                                    </center>
+                                 </div>
+                                 <button id="GoogleShow" style="display:none;"class="GoogleSeeMore" data-toggle="collapse" href="#GoogleCollapse">See More</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
 
          <!--<div class="row" id="uw-ura1">
             <div class="col-lg-12">
@@ -676,7 +714,7 @@
       	 open_panes = {}
       	 fnc_map = {}
 		 // companies = ['citadel-coop', 'bluesun-coop', 'bloomberg1-coop', 'bloomberg2-coop', 'yelp-coop', 'uw-ura1'];
-       companies = ['citadel-coop', 'bluesun-coop', 'bloomberg1-coop', 'bloomberg2-coop', 'yelp-coop', 'fb-coop'];
+       companies = ['citadel-coop', 'bluesun-coop', 'bloomberg1-coop', 'bloomberg2-coop', 'yelp-coop', 'fb-coop', 'google-coop'];
 		 for (const company of companies) {
 		   	  open_panes[company] = false;   	 	
 		 }
@@ -688,10 +726,12 @@
 		 fnc_map[companies[4]] = 'YelpShow';
        // fnc_map[companies[5]] = 'URAShow1';
        fnc_map[companies[5]] = 'FBShow';
+       fnc_map[companies[6]] = 'GoogleShow';
 
 
          function hideAll() {
             // $("#uw-ura1").hide();
+            $("#google-coop").hide();
             $("#fb-coop").hide();
          	$("#citadel-coop").hide();
          	$("#yelp-coop").hide();
@@ -712,6 +752,18 @@
 
             open_panes[company] = true;
          });*/
+
+         $("#google-show").click(() => {
+            const company = 'google-coop';
+
+            hideAll();
+            $(`#${company}`).show();
+            if (!open_panes[company]) {
+               $(`#${fnc_map[company]}`).click();
+            }
+
+            open_panes[company] = true;
+         });
 
          $("#fb-show").click(() => {
             const company = 'fb-coop';
