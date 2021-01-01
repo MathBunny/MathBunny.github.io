@@ -1,5 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://horatiulazu.ca/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://horatiulazu.ca/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://horatiulazu.ca/blog/" rel="alternate" type="text/html" /><updated>2020-10-11T23:34:06-04:00</updated><id>http://horatiulazu.ca/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
-</subtitle><entry><title type="html">RTC (Real-Time Communication) at scale</title><link href="http://horatiulazu.ca/blog/coop/2020/05/02/rt-calling.html" rel="alternate" type="text/html" title="RTC (Real-Time Communication) at scale" /><published>2020-05-02T19:49:29-04:00</published><updated>2020-05-02T19:49:29-04:00</updated><id>http://horatiulazu.ca/blog/coop/2020/05/02/rt-calling</id><content type="html" xml:base="http://horatiulazu.ca/blog/coop/2020/05/02/rt-calling.html">&lt;p&gt;I recently did an internship at Facebook where I was part of the RTC (Real-Time Communications) org, responsible for the products and infrastructure powering voice/video calling across Facebook’s family of apps (such as Messenger and Instagram). My team was responsible for the P2P and multiway calling protocols, including lower-level services written in C++ and platform integrating with partner teams in PHP.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://horatiulazu.ca/blog/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://horatiulazu.ca/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://horatiulazu.ca/blog/" rel="alternate" type="text/html" /><updated>2020-12-31T22:51:53-05:00</updated><id>http://horatiulazu.ca/blog//</id><title type="html">Horatiu’s Blog</title><subtitle>My blog, discussing topics from university life.
+</subtitle><entry><title type="html">Living in Toronto for Eight Months (COVID-19 Edition)</title><link href="http://horatiulazu.ca/blog/general/2020/12/31/review-2020.html" rel="alternate" type="text/html" title="Living in Toronto for Eight Months (COVID-19 Edition)" /><published>2020-12-31T18:49:29-05:00</published><updated>2020-12-31T18:49:29-05:00</updated><id>http://horatiulazu.ca/blog/general/2020/12/31/review-2020</id><content type="html" xml:base="http://horatiulazu.ca/blog/general/2020/12/31/review-2020.html">&lt;h3 id=&quot;what-happened&quot;&gt;What happened?&lt;/h3&gt;
+
+&lt;p&gt;If you asked me a year ago I would be pretty shocked to see this title on my blog, knowing that I was not supposed to be in Toronto for even a single month in 2020. As you are all probably aware, COVID-19 led to many internships and school terms turning virtual and remote, and I followed suit with this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/6opeWEI.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Luckily, aside from location and being remote I wasn’t very impacted, and I am fortunate to have a safe place to live and continue my studies along with my parents at home.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/O42ktcy.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;april---may-2020&quot;&gt;April - May 2020&lt;/h3&gt;
+
+&lt;p&gt;This period marked the gap between my Facebook and Google internships. During this time, I received my first full-time return offer from Facebook which was very exciting, and I could be rest assured that despite the pandemic taking place, I could still secure full-time employment at a top choice company for me.&lt;/p&gt;
+
+&lt;p&gt;I also had some spare time to explore numerous side-projects. Several notable projects include:&lt;/p&gt;
+
+&lt;p&gt;1) Exploring the field of Real-Time Communication at large, which originated from a report I wrote for school in relation to my term at Facebook, and later I greatly expanded it out of personal interest. Feel free to &lt;a href=&quot;http://www.horatiulazu.ca/blog/assets/blog-report.pdf&quot; target=&quot;_blank&quot;&gt; download&lt;/a&gt; the paper.&lt;/p&gt;
+
+&lt;p&gt;2) Further learning of React and Selenium web-scraping to create a data visualization site for WaterlooWorks statistics. The project involved scraping data off of Waterloo’s job board, cleaning the data and placing it on a CDN along with making the responsive site. This is my first mobile responsive site and I’m fairly proud of it. Check it out &lt;a href=&quot;http://horatiulazu.ca/coop&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/TojfM67.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3) Creating the initial services for a major overhaul of my personal site and side-projects.&lt;/p&gt;
+
+&lt;p&gt;I will not go into details here yet (stay tuned in 2021!) but the essence is that I am working on creating my own Raspberry Pi farm to host all my side-projects, while having failover onto AWS. This distributed cross-cloud and micro-services architecture was motivated to allow me to reduce costs on AWS EC2 instances, while maintaining reliability and flexibility. It is an ambitious project that I plan to continue for fun on weekends once I start full-time.&lt;/p&gt;
+
+&lt;p&gt;During this time period, I focused on creating the low-level C++ server that leverages Boost.asio to create a multi-threaded HTTP reverse-proxy and handler for different types of requests, allowing for rerouting and redirection capabilities similar to Apache or NGINX. The multi-threaded server is capable of handling around 1350 requests per second on my 2012 MacBook Pro, and is configurable to most of my use-cases. The bulk implementation was completed, alongside a basic telemetry system with heart-beats that provides analytics on particular service health.&lt;/p&gt;
+
+&lt;h3 id=&quot;may---august-2020&quot;&gt;May - August 2020&lt;/h3&gt;
+
+&lt;!-- ![](http://www.horatiulazu.ca/assets/images/GoogleLogoLarge2.png) ![](http://www.horatiulazu.ca/assets/images/firebaselogolarge.png) --&gt;
+
+&lt;h4 id=&quot;google-internship&quot;&gt;Google Internship&lt;/h4&gt;
+
+&lt;p&gt;This period defines my Google internship on Firebase SDKs. While my last co-op was unfortunately virtual, the Google and Firebase culture certainly bled through and it was an absolute joy to work at such an extremely Engineering focused company. Special shoutout to my host and everyone else at Firebase!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/bZliosf.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/QUUOpMG.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/e5YoyGH.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;During my term at Firebase I focused on the server-sided Admin SDKs. In my first month I &lt;a href=&quot;https://github.com/firebase/firebase-admin-dotnet/commit/d5a7a3f1b34019f5656331b81e5a6f832f7f7a48&quot;&gt;built&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/FirebaseRelease/status/1273362463627579394&quot;&gt;shipped&lt;/a&gt; the ability to bulk import users into Firebase using the C# SDK. The remainder of my term focused on designing and prototyping the next-generation Firebase Node.js Admin SDK.&lt;/p&gt;
+
+&lt;p&gt;In particular, I researched best-practices on TypeScript (such as ECMAScript module export edge-cases) along with lessons learned from other SDKs to paint a picture on how the future SDK could look like. After careful evaluation of several designs, with heavy support of my host and members of adjacent teams, alongside 40+ pages of design documentation and several prototypes, I am proud to confirm that the formal proposal was approved (alongside some minor changes) and sets the future overarching design for the most popular Firebase server-sided SDK.&lt;/p&gt;
+
+&lt;p&gt;Alongside writing lots and lots of documents and prototypes, I started a new initiative to auto-generate typings from source. Previously, the Node.js SDK would have a separate &lt;code class=&quot;highlighter-rouge&quot;&gt;d.ts&lt;/code&gt; typings file for all TypeScript types manually annotated, which was required due to complex monkey-patching cache logic used to lazily load modules. This process is error-prone (I ended up finding and fixing &amp;gt;20 bugs related to this), and keeping them in sync can be non-trivial.&lt;/p&gt;
+
+&lt;p&gt;However, with some careful implementation, I refactored the majority of the SDK to auto-generate typings along with adopting several new open-source tools such as &lt;a href=&quot;https://www.npmjs.com/package/@microsoft/api-extractor&quot;&gt;API extractor&lt;/a&gt; and reviewing the documentation generators to play nicely with the new typing scheme. Shortly after I left, the remaining work was completed and as of today all typings are auto-generated in the Node.js SDK.&lt;/p&gt;
+
+&lt;h4 id=&quot;road-biking--tennis&quot;&gt;Road Biking + Tennis&lt;/h4&gt;
+
+&lt;p&gt;During the 2020 cycling season, I managed to bike 3,786.3km across 60 rides, making it furthest distance I biked thus far in a year. Nearly every weekend, I’d ride 115-140km with my dad to Oakville and back, which was a significant contributor to this. Special shoutout to my friends as well who I went on group rides with!&lt;/p&gt;
+
+&lt;!-- &lt;iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/3850798877/embed/b01315ac5386fdd4fc044ae071a7c155abd4f4fe'&gt;&lt;/iframe&gt; --&gt;
+
+&lt;p&gt;My previous cycling distance record was 209km set the day after graduating high-school. This year, I broke that record by riding 245.6km with an average speed of 28.0km/h from Toronto to St. Catherines and back.&lt;/p&gt;
+
+&lt;iframe height=&quot;405&quot; width=&quot;590&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://www.strava.com/activities/3918950301/embed/397f769f210f413cc042100a6215b946218b31db&quot;&gt;&lt;/iframe&gt;
+
+&lt;!-- ![](https://i.imgur.com/IVSRatG.png) --&gt;
+
+&lt;p&gt;Of course, I could not use that as an excuse to not do my annual Niagara Falls bike ride, so here it is! The following ride was pretty cute as well, thought it’d mention a shoutout. If you want to do that route, keep in mind the east side is 10x more photogenic than the west.&lt;/p&gt;
+
+&lt;iframe height=&quot;405&quot; width=&quot;590&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://www.strava.com/activities/3686058913/embed/32babc0a122a1cc1a04bb84344ae03731b7e9dd3&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe height=&quot;405&quot; width=&quot;590&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; scrolling=&quot;no&quot; src=&quot;https://www.strava.com/activities/4017632194/embed/23234310b9e3cc1414352748115fe4e775ea64a6&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In terms of other sports, I played tennis twice per week with several friends, and just went on regular walks.&lt;/p&gt;
+
+&lt;h4 id=&quot;youtube-learn-in-5-minutes-series&quot;&gt;YouTube (Learn in 5 Minutes Series)&lt;/h4&gt;
+
+&lt;p&gt;If you subscribe to me on YouTube, you would likely be aquainted with my “Learn in 5 Minutes” YouTube series. The objective is/was to provide short clips introducing viewers to a topic sufficiently for obtaining background in it. Every week I would post a video either related to algorithms or software engineering.&lt;/p&gt;
+
+&lt;p&gt;During the summer (and a bit into fall) I created 27 videos spanning numerous topics including number theory algorithms (sieves, modular combinatorics) and in-depth view at software engineering concepts such as HTTP header compression (HPACK/QPACK). Feel free to visit the repository &lt;a href=&quot;https://github.com/SoftwareEngenius/five-minute-tutorials&quot;&gt; repository&lt;/a&gt; or &lt;a href=&quot;https://softwareengenius.github.io/&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/R9mnjPgDCQk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ahYgoV8MDtg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Given my experience with YouTube, I expected two things:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;I will receive very few views at the beginning, particularily because my videos were traditionally scattered and my subscribers are saturated across various interests&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The occasional video will rank well, and consequently consistently receive views&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And turns out my hypothesis served correct so far. Broadly speaking, I have two types of videos: either it is consistently growing in views or it is dormant. Unfortunately, the vast majority of videos are in the second camp, but some still receive views and I am optimistic that they will receive more views later on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/XEQuNp8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/quIkCpO.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This entire project was extremely time consuming, and occasionally I wondered “is it worth it?”. For many of the topics chosen, I did not have expertise before the videos, so I would need to familiarize myself with the concepts to deliver a presentation, create the presentation, record, edit and upload. To upload at a cadence of one video per week, I would need to spend at least 6hrs/week creating videos.&lt;/p&gt;
+
+&lt;p&gt;I will not hide the fact that delivering content every week became a stressful ordeal at times.&lt;/p&gt;
+
+&lt;p&gt;However, the answer to this question is still yes. Even in the case of nobody watching the videos, at the very least I learned something new. All the topics in my videos are topics that I was always interested in but did not have the time to learn them comprehensively, and through the videos it motivated me to take a deeper look. Reading through the QPACK draft because there is very little online documentation on the bleeding edge of the standard takes some level of dedication. Secondly, the views are bonus, and I am glad when my viewers learn something new from my videos :)&lt;/p&gt;
+
+&lt;p&gt;I’m a fairly firm believer that building fundamentals is important, and this was an example of this. I am glad to confirm for more than half the videos, I already applied the particular knowledge gained in some area (Google conversion interview, univeristy course or casual conversation). My LZ77 compression video helped a friend with her interview (coincidentally that popped up!), HTTP XSS attacks were a core focus in CS 458 (security at Waterloo) and more. Moral of the story: learning is never a waste, and sometimes wish more people took this mindset instead of simply cramming and forgetting (i.e., Leetcode or school courses).&lt;/p&gt;
+
+&lt;!-- 
+#### Minecraft
+
+You may or may not know that throughout high-school I built out a fairly large Minecraft map of a giant house, alongside a city in the &quot;backyard&quot;. Throughout the years I continued to contribute to it here and there, but after my friend purchased Minecraft the idea of both working together on an island sounded interesting.
+
+Kind of nostalgic but here's a video from 7 years ago with the past state (feel strange watching it now):
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0pnZlDTMflQ&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+The new world was situated on an island, originally we started in survival mode but over time got lazy and used creative mode more and more. 
+
+![](https://i.imgur.com/8g9sXOJ.png)
+
+A core focus was automation, which I didn't really explore prior. Several examples include automated iron ores collection, a storage facility and farming. The options really do feel limitless in Minecraft.
+
+![](https://i.imgur.com/FlVvGKR.png)
+--&gt;
+
+&lt;h3 id=&quot;september---december-2020&quot;&gt;September - December 2020&lt;/h3&gt;
+
+&lt;p&gt;This period marks my 4A CS term. There is not much to outline for the academic term. As with many academic terms at Waterloo, my schedule quickly got busy as I had to conquer assignments from multiple classes with occasionally tricky deadlines. The school term for me was not too difficult, although it was time consuming because I took two “bird” courses that ended up having lots of essays to write.&lt;/p&gt;
+
+&lt;p&gt;I will outline one strategy that I used to keep myself at ease during the term, which was creating a structure during my days and trying to stick with it. Every night (morning?) at 12:00am I would make a TODO list for the next day, broken down into hourly chunks with goals. At the beginning of the term, I outlined hotspots with heavy assignment loads and ensured that I would start working on those assignments ahead of time.&lt;/p&gt;
+
+&lt;h3 id=&quot;forward-looking-at-2021&quot;&gt;Forward Looking at 2021&lt;/h3&gt;
+
+&lt;p&gt;Without a doubt, 2020 was a strange year. Next year will be significant for me as it marks the ending of my undergraduate time at the University of Waterloo, and the beginning of my full-time career as a Software Engineer. I am hoping to end off strong at Waterloo, have some rest, and start strong at Facebook in a team that will align with my interests.&lt;/p&gt;
+
+&lt;p&gt;As with any major transition period, while it comes with excitement for new beginnings it is critical to keep priorities aligned, goals set and move with an open-mind for potential changes and challenges.&lt;/p&gt;
+
+&lt;p&gt;I wish all the best for everyone in the New Year with lots of success, health and happiness.&lt;/p&gt;</content><summary type="html">What happened?</summary></entry><entry><title type="html">RTC (Real-Time Communication) at scale</title><link href="http://horatiulazu.ca/blog/coop/2020/05/02/rt-calling.html" rel="alternate" type="text/html" title="RTC (Real-Time Communication) at scale" /><published>2020-05-02T19:49:29-04:00</published><updated>2020-05-02T19:49:29-04:00</updated><id>http://horatiulazu.ca/blog/coop/2020/05/02/rt-calling</id><content type="html" xml:base="http://horatiulazu.ca/blog/coop/2020/05/02/rt-calling.html">&lt;p&gt;I recently did an internship at Facebook where I was part of the RTC (Real-Time Communications) org, responsible for the products and infrastructure powering voice/video calling across Facebook’s family of apps (such as Messenger and Instagram). My team was responsible for the P2P and multiway calling protocols, including lower-level services written in C++ and platform integrating with partner teams in PHP.&lt;/p&gt;
 
 &lt;p&gt;This post will dedicate itself to discussing some of the protocols that go into audio and video calling.&lt;/p&gt;
 
@@ -1350,26 +1485,4 @@ This systematic scoring system provides a heuristic for rankings segments. In re
 
 &lt;h3 id=&quot;good-news&quot;&gt;Good news&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Update (November 13, 2018)&lt;/strong&gt;: My renter’s insurance happened to cover the entire road bike - so I got all my road bike’s value back and will be buying another one :)&lt;/p&gt;</content><summary type="html">On Saturday November 3, 2018 I decided to spend the day going on a warmup 65km ride down to Mountain View from San Francisco, meet up with a couple friends, then come back by Caltrain as preparation for a hard Sunday ride going up King’s Mountain.</summary></entry><entry><title type="html">Mount Tamalpais West Summit + Seven Sisters Climb</title><link href="http://horatiulazu.ca/blog/cycling/2018/10/28/mt-tam.html" rel="alternate" type="text/html" title="Mount Tamalpais West Summit + Seven Sisters Climb" /><published>2018-10-28T19:49:29-04:00</published><updated>2018-10-28T19:49:29-04:00</updated><id>http://horatiulazu.ca/blog/cycling/2018/10/28/mt-tam</id><content type="html" xml:base="http://horatiulazu.ca/blog/cycling/2018/10/28/mt-tam.html">&lt;p&gt;In my eyes, the ability to, within 20 minutes of riding, be immersed with stunning views, nature and elevation is the single best perk of being in San Francisco. You cannot find anything like it near Waterloo or Toronto, and it feels like you in picturesque scene in a movie!&lt;/p&gt;
-
-&lt;h3 id=&quot;gameplan&quot;&gt;Gameplan&lt;/h3&gt;
-&lt;p&gt;I had no prior experience climbing for extended periods of time. Depending on the derivative you choose, the route can vary widely in distance and elevation.&lt;/p&gt;
-
-&lt;p&gt;I chose one of the more difficult routes - which is doing the Alpine Dam, Seven Sisters and then the West Summit yielding 100km (62 miles) distance and 1500m (5000 feet) elevation gain.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/mount-tam-map.png&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;ride-dynamics&quot;&gt;Ride Dynamics&lt;/h3&gt;
-&lt;p&gt;Waking up at 6:30am, I ate a full breakfast and set straight to riding. The beginning started off rough, with one of my friends actually crashing while crossing the Golden Gate Bridge due to extreme fog. Luckily he wasn’t badly hurt, and the fog cleared once we passed the bridge. Riding through Sausalito was a pleasure, and we eventually stopped at Fairfax before the climb to eat lunch.&lt;/p&gt;
-
-&lt;p&gt;The climbs started off challenging, at ~6% grade for around 20 minutes. We met up with two other locals, and we tried to hold on while climbing. After, the seven sisters (which is a series of seven descents and climbs) were grueling, since you pickup speed but that final stretch is extremely steep and tough. In fact, after doing the fourth sister I had to stop for a 1 minute break. Lastly, the final stretch was the west summit which was around 300 feet of elevation gain - but that made the view well worth it!&lt;/p&gt;
-
-&lt;p&gt;Descending was actually quite technical, reaching speeds of over 60km/h down the windy roads down a mountain for over 20 minutes will get your adrenaline rush going!&lt;/p&gt;
-
-&lt;h3 id=&quot;west-peak-view&quot;&gt;West Peak View&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/mount-tam.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;beach-view&quot;&gt;Beach View&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/blog/assets/mount-tam-west-bay.jpg&quot; alt=&quot;I'm an inline-style link&quot; /&gt;&lt;/p&gt;</content><summary type="html">In my eyes, the ability to, within 20 minutes of riding, be immersed with stunning views, nature and elevation is the single best perk of being in San Francisco. You cannot find anything like it near Waterloo or Toronto, and it feels like you in picturesque scene in a movie!</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;Update (November 13, 2018)&lt;/strong&gt;: My renter’s insurance happened to cover the entire road bike - so I got all my road bike’s value back and will be buying another one :)&lt;/p&gt;</content><summary type="html">On Saturday November 3, 2018 I decided to spend the day going on a warmup 65km ride down to Mountain View from San Francisco, meet up with a couple friends, then come back by Caltrain as preparation for a hard Sunday ride going up King’s Mountain.</summary></entry></feed>

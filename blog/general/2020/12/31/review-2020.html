@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Living in Toronto for Eight Months (COVID-19 Edition)</title>
+  <meta name="description" content="What happened?">
+
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="canonical" href="http://horatiulazu.ca/blog/general/2020/12/31/review-2020.html">
+  <link rel="alternate" type="application/rss+xml" title="Horatiu&#39;s Blog" href="/blog/feed.xml">
+  
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74979520-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/blog/">Horatiu&#39;s Blog</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/blog/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Living in Toronto for Eight Months (COVID-19 Edition)</h1>
+    <p class="post-meta"><time datetime="2020-12-31T18:49:29-05:00" itemprop="datePublished">Dec 31, 2020</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h3 id="what-happened">What happened?</h3>
+
+<p>If you asked me a year ago I would be pretty shocked to see this title on my blog, knowing that I was not supposed to be in Toronto for even a single month in 2020. As you are all probably aware, COVID-19 led to many internships and school terms turning virtual and remote, and I followed suit with this.</p>
+
+<p><img src="https://i.imgur.com/6opeWEI.jpg" alt="" /></p>
+
+<p>Luckily, aside from location and being remote I wasn’t very impacted, and I am fortunate to have a safe place to live and continue my studies along with my parents at home.</p>
+
+<p><img src="https://i.imgur.com/O42ktcy.jpg" alt="" /></p>
+
+<h3 id="april---may-2020">April - May 2020</h3>
+
+<p>This period marked the gap between my Facebook and Google internships. During this time, I received my first full-time return offer from Facebook which was very exciting, and I could be rest assured that despite the pandemic taking place, I could still secure full-time employment at a top choice company for me.</p>
+
+<p>I also had some spare time to explore numerous side-projects. Several notable projects include:</p>
+
+<p>1) Exploring the field of Real-Time Communication at large, which originated from a report I wrote for school in relation to my term at Facebook, and later I greatly expanded it out of personal interest. Feel free to <a href="http://www.horatiulazu.ca/blog/assets/blog-report.pdf" target="_blank"> download</a> the paper.</p>
+
+<p>2) Further learning of React and Selenium web-scraping to create a data visualization site for WaterlooWorks statistics. The project involved scraping data off of Waterloo’s job board, cleaning the data and placing it on a CDN along with making the responsive site. This is my first mobile responsive site and I’m fairly proud of it. Check it out <a href="http://horatiulazu.ca/coop" target="_blank">here</a>!</p>
+
+<p><img src="https://i.imgur.com/TojfM67.png" alt="" /></p>
+
+<p>3) Creating the initial services for a major overhaul of my personal site and side-projects.</p>
+
+<p>I will not go into details here yet (stay tuned in 2021!) but the essence is that I am working on creating my own Raspberry Pi farm to host all my side-projects, while having failover onto AWS. This distributed cross-cloud and micro-services architecture was motivated to allow me to reduce costs on AWS EC2 instances, while maintaining reliability and flexibility. It is an ambitious project that I plan to continue for fun on weekends once I start full-time.</p>
+
+<p>During this time period, I focused on creating the low-level C++ server that leverages Boost.asio to create a multi-threaded HTTP reverse-proxy and handler for different types of requests, allowing for rerouting and redirection capabilities similar to Apache or NGINX. The multi-threaded server is capable of handling around 1350 requests per second on my 2012 MacBook Pro, and is configurable to most of my use-cases. The bulk implementation was completed, alongside a basic telemetry system with heart-beats that provides analytics on particular service health.</p>
+
+<h3 id="may---august-2020">May - August 2020</h3>
+
+<!-- ![](http://www.horatiulazu.ca/assets/images/GoogleLogoLarge2.png) ![](http://www.horatiulazu.ca/assets/images/firebaselogolarge.png) -->
+
+<h4 id="google-internship">Google Internship</h4>
+
+<p>This period defines my Google internship on Firebase SDKs. While my last co-op was unfortunately virtual, the Google and Firebase culture certainly bled through and it was an absolute joy to work at such an extremely Engineering focused company. Special shoutout to my host and everyone else at Firebase!</p>
+
+<p><img src="https://i.imgur.com/bZliosf.png" alt="" /></p>
+
+<p><img src="https://i.imgur.com/QUUOpMG.png" alt="" /></p>
+
+<p><img src="https://i.imgur.com/e5YoyGH.png" alt="" /></p>
+
+<p>During my term at Firebase I focused on the server-sided Admin SDKs. In my first month I <a href="https://github.com/firebase/firebase-admin-dotnet/commit/d5a7a3f1b34019f5656331b81e5a6f832f7f7a48">built</a> and <a href="https://twitter.com/FirebaseRelease/status/1273362463627579394">shipped</a> the ability to bulk import users into Firebase using the C# SDK. The remainder of my term focused on designing and prototyping the next-generation Firebase Node.js Admin SDK.</p>
+
+<p>In particular, I researched best-practices on TypeScript (such as ECMAScript module export edge-cases) along with lessons learned from other SDKs to paint a picture on how the future SDK could look like. After careful evaluation of several designs, with heavy support of my host and members of adjacent teams, alongside 40+ pages of design documentation and several prototypes, I am proud to confirm that the formal proposal was approved (alongside some minor changes) and sets the future overarching design for the most popular Firebase server-sided SDK.</p>
+
+<p>Alongside writing lots and lots of documents and prototypes, I started a new initiative to auto-generate typings from source. Previously, the Node.js SDK would have a separate <code class="highlighter-rouge">d.ts</code> typings file for all TypeScript types manually annotated, which was required due to complex monkey-patching cache logic used to lazily load modules. This process is error-prone (I ended up finding and fixing &gt;20 bugs related to this), and keeping them in sync can be non-trivial.</p>
+
+<p>However, with some careful implementation, I refactored the majority of the SDK to auto-generate typings along with adopting several new open-source tools such as <a href="https://www.npmjs.com/package/@microsoft/api-extractor">API extractor</a> and reviewing the documentation generators to play nicely with the new typing scheme. Shortly after I left, the remaining work was completed and as of today all typings are auto-generated in the Node.js SDK.</p>
+
+<h4 id="road-biking--tennis">Road Biking + Tennis</h4>
+
+<p>During the 2020 cycling season, I managed to bike 3,786.3km across 60 rides, making it furthest distance I biked thus far in a year. Nearly every weekend, I’d ride 115-140km with my dad to Oakville and back, which was a significant contributor to this. Special shoutout to my friends as well who I went on group rides with!</p>
+
+<!-- <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/3850798877/embed/b01315ac5386fdd4fc044ae071a7c155abd4f4fe'></iframe> -->
+
+<p>My previous cycling distance record was 209km set the day after graduating high-school. This year, I broke that record by riding 245.6km with an average speed of 28.0km/h from Toronto to St. Catherines and back.</p>
+
+<iframe height="405" width="590" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/activities/3918950301/embed/397f769f210f413cc042100a6215b946218b31db"></iframe>
+
+<!-- ![](https://i.imgur.com/IVSRatG.png) -->
+
+<p>Of course, I could not use that as an excuse to not do my annual Niagara Falls bike ride, so here it is! The following ride was pretty cute as well, thought it’d mention a shoutout. If you want to do that route, keep in mind the east side is 10x more photogenic than the west.</p>
+
+<iframe height="405" width="590" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/activities/3686058913/embed/32babc0a122a1cc1a04bb84344ae03731b7e9dd3"></iframe>
+
+<iframe height="405" width="590" frameborder="0" allowtransparency="true" scrolling="no" src="https://www.strava.com/activities/4017632194/embed/23234310b9e3cc1414352748115fe4e775ea64a6"></iframe>
+
+<p>In terms of other sports, I played tennis twice per week with several friends, and just went on regular walks.</p>
+
+<h4 id="youtube-learn-in-5-minutes-series">YouTube (Learn in 5 Minutes Series)</h4>
+
+<p>If you subscribe to me on YouTube, you would likely be aquainted with my “Learn in 5 Minutes” YouTube series. The objective is/was to provide short clips introducing viewers to a topic sufficiently for obtaining background in it. Every week I would post a video either related to algorithms or software engineering.</p>
+
+<p>During the summer (and a bit into fall) I created 27 videos spanning numerous topics including number theory algorithms (sieves, modular combinatorics) and in-depth view at software engineering concepts such as HTTP header compression (HPACK/QPACK). Feel free to visit the repository <a href="https://github.com/SoftwareEngenius/five-minute-tutorials"> repository</a> or <a href="https://softwareengenius.github.io/">website</a>.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R9mnjPgDCQk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ahYgoV8MDtg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Given my experience with YouTube, I expected two things:</p>
+
+<ol>
+  <li>
+    <p>I will receive very few views at the beginning, particularily because my videos were traditionally scattered and my subscribers are saturated across various interests</p>
+  </li>
+  <li>
+    <p>The occasional video will rank well, and consequently consistently receive views</p>
+  </li>
+</ol>
+
+<p>And turns out my hypothesis served correct so far. Broadly speaking, I have two types of videos: either it is consistently growing in views or it is dormant. Unfortunately, the vast majority of videos are in the second camp, but some still receive views and I am optimistic that they will receive more views later on.</p>
+
+<p><img src="https://i.imgur.com/XEQuNp8.png" alt="" /></p>
+
+<p><img src="https://i.imgur.com/quIkCpO.png" alt="" /></p>
+
+<p>This entire project was extremely time consuming, and occasionally I wondered “is it worth it?”. For many of the topics chosen, I did not have expertise before the videos, so I would need to familiarize myself with the concepts to deliver a presentation, create the presentation, record, edit and upload. To upload at a cadence of one video per week, I would need to spend at least 6hrs/week creating videos.</p>
+
+<p>I will not hide the fact that delivering content every week became a stressful ordeal at times.</p>
+
+<p>However, the answer to this question is still yes. Even in the case of nobody watching the videos, at the very least I learned something new. All the topics in my videos are topics that I was always interested in but did not have the time to learn them comprehensively, and through the videos it motivated me to take a deeper look. Reading through the QPACK draft because there is very little online documentation on the bleeding edge of the standard takes some level of dedication. Secondly, the views are bonus, and I am glad when my viewers learn something new from my videos :)</p>
+
+<p>I’m a fairly firm believer that building fundamentals is important, and this was an example of this. I am glad to confirm for more than half the videos, I already applied the particular knowledge gained in some area (Google conversion interview, univeristy course or casual conversation). My LZ77 compression video helped a friend with her interview (coincidentally that popped up!), HTTP XSS attacks were a core focus in CS 458 (security at Waterloo) and more. Moral of the story: learning is never a waste, and sometimes wish more people took this mindset instead of simply cramming and forgetting (i.e., Leetcode or school courses).</p>
+
+<!-- 
+#### Minecraft
+
+You may or may not know that throughout high-school I built out a fairly large Minecraft map of a giant house, alongside a city in the "backyard". Throughout the years I continued to contribute to it here and there, but after my friend purchased Minecraft the idea of both working together on an island sounded interesting.
+
+Kind of nostalgic but here's a video from 7 years ago with the past state (feel strange watching it now):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0pnZlDTMflQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The new world was situated on an island, originally we started in survival mode but over time got lazy and used creative mode more and more. 
+
+![](https://i.imgur.com/8g9sXOJ.png)
+
+A core focus was automation, which I didn't really explore prior. Several examples include automated iron ores collection, a storage facility and farming. The options really do feel limitless in Minecraft.
+
+![](https://i.imgur.com/FlVvGKR.png)
+-->
+
+<h3 id="september---december-2020">September - December 2020</h3>
+
+<p>This period marks my 4A CS term. There is not much to outline for the academic term. As with many academic terms at Waterloo, my schedule quickly got busy as I had to conquer assignments from multiple classes with occasionally tricky deadlines. The school term for me was not too difficult, although it was time consuming because I took two “bird” courses that ended up having lots of essays to write.</p>
+
+<p>I will outline one strategy that I used to keep myself at ease during the term, which was creating a structure during my days and trying to stick with it. Every night (morning?) at 12:00am I would make a TODO list for the next day, broken down into hourly chunks with goals. At the beginning of the term, I outlined hotspots with heavy assignment loads and ensured that I would start working on those assignments ahead of time.</p>
+
+<h3 id="forward-looking-at-2021">Forward Looking at 2021</h3>
+
+<p>Without a doubt, 2020 was a strange year. Next year will be significant for me as it marks the ending of my undergraduate time at the University of Waterloo, and the beginning of my full-time career as a Software Engineer. I am hoping to end off strong at Waterloo, have some rest, and start strong at Facebook in a team that will align with my interests.</p>
+
+<p>As with any major transition period, while it comes with excitement for new beginnings it is critical to keep priorities aligned, goals set and move with an open-mind for potential changes and challenges.</p>
+
+<p>I wish all the best for everyone in the New Year with lots of success, health and happiness.</p>
+
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Horatiu&#39;s Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Horatiu&#39;s Blog
+            
+            </li>
+            
+            <li><a href="mailto:horatiulazu@gmail.com">horatiulazu@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/MathBunny"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">MathBunny</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>My blog, discussing topics from university life.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
